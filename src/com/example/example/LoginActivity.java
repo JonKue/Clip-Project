@@ -11,29 +11,42 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class LoginActivity extends Activity {
 
-	Button newActivity;
+	Button menuActivity;
 	EditText textBoxValue;
+	Button registerActivity;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login_activity);
         
-        newActivity = (Button) findViewById(R.id.buttonNavigateSecondActivity);
+        menuActivity = (Button) findViewById(R.id.buttonNavigateMainActivity);
+        registerActivity = (Button) findViewById(R.id.buttonNavigateRegisterActivity);
         textBoxValue = (EditText) findViewById(R.id.editText1);
         
-        newActivity.setOnClickListener(new OnClickListener() {
+        
+        menuActivity.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
 				String enteredValue = textBoxValue.getText().toString();
-				Intent i = new Intent(MainActivity.this, SecondActivity.class);
+				Intent i = new Intent(LoginActivity.this, MenuActivity.class);
 				i.putExtra("item", enteredValue);
 				startActivity(i);
 			//	finish();
 	         }
 		});
+        
+        registerActivity.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+				startActivity(i);
+			//	finish();
+	         }
+		});
+        
     }
 
     @Override
@@ -50,7 +63,7 @@ public class MainActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
-        	Intent i = new Intent(MainActivity.this, Settings.class);
+        	Intent i = new Intent(LoginActivity.this, Settings.class);
         	i.putExtra("name", "Settings");
 			startActivity(i);
 			//finish();
