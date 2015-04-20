@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class SecondActivity extends Activity{
+public class MenuActivity extends Activity{
 
 	TextView text;
 	
@@ -15,7 +15,7 @@ public class SecondActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.second_activity);
+		setContentView(R.layout.menu_activity);
 		text = (TextView) findViewById(R.id.textViewActivity2);
 		
 		Bundle b = getIntent().getExtras();
