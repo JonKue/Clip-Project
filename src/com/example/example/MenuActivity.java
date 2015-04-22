@@ -9,18 +9,18 @@ import android.widget.TextView;
 
 public class MenuActivity extends Activity{
 
-	TextView text;
+	//TextView text;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu_activity);
-		text = (TextView) findViewById(R.id.textViewActivity2);
+		//text = (TextView) findViewById(R.id.textViewActivity2);
 		
 		Bundle b = getIntent().getExtras();
 		String importedText = b.getString("item");
-		text.setText(importedText);
+		//text.setText(importedText);
 	}
 
     @Override

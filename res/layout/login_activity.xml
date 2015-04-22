@@ -44,20 +44,20 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/Space2"
         android:layout_centerHorizontal="true"
-        android:text="CLIP"
+        android:text="@string/CLIP"
         android:textSize="25sp" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/Main"
+        android:layout_below="@+id/Main"
         android:layout_marginTop="22dp"
         android:ems="10" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editText1"
@@ -80,13 +80,13 @@
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/Main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/TextView02"
         android:layout_below="@+id/TextView01"
         android:layout_marginTop="52dp"
-        android:text="Username:"
+        android:text="@string/username"
         android:textSize="15sp" />
 
     <Button
@@ -94,7 +94,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/editPassword"
         android:layout_marginTop="28dp"
         android:text="Submit" />
 
@@ -104,7 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/buttonNavigateMainActivity"
         android:layout_alignBottom="@+id/buttonNavigateMainActivity"
-        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignLeft="@+id/editPassword"
         android:text="Register" />
 
 </RelativeLayout>
