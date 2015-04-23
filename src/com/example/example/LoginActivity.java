@@ -30,6 +30,7 @@ public class LoginActivity extends Activity {
 	EditText userIdValue;
 	EditText passValue;
 	Button registerActivity;
+	Button forgotPassword;
 	TextView wrongPass;
 	
 	//test data for user authentication
@@ -46,6 +47,16 @@ public class LoginActivity extends Activity {
         userIdValue = (EditText) findViewById(R.id.editUserName);
         passValue = (EditText) findViewById(R.id.editPassword);
         wrongPass = (TextView) findViewById(R.id.wrongPass);
+        forgotPassword = (Button) findViewById(R.id.forgotPassword);
+        
+        forgotPassword.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+					Intent i = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+					startActivity(i);
+				//	finish();
+			}
+		});
         
         
         menuActivity.setOnClickListener(new OnClickListener() {
@@ -85,8 +96,10 @@ public class LoginActivity extends Activity {
 				//	finish();
 				}
 				else
+				{
 					wrongPass.setText("Incorrect username or password. Please try again.");
 					wrongPass.setVisibility(View.VISIBLE);
+				}
 	         }
 		});
         

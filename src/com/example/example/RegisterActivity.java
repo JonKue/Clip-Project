@@ -44,14 +44,8 @@ public class RegisterActivity extends Activity{
 				  outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
 				  outputStream.write(yea.getBytes());
 				  outputStream.close();
-				  Toast.makeText(getBaseContext(),
-							"Done writing 'user.txt'",
-							Toast.LENGTH_SHORT).show();
-				} 
-				catch (Exception e) {
-				  Toast.makeText(getBaseContext(), e.getMessage(),
-							Toast.LENGTH_SHORT).show();
-				  
+				} catch (Exception e) {
+				  e.printStackTrace();
 				}
 
 				

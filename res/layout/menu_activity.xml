@@ -20,7 +20,7 @@
         android:id="@+id/Button01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
+        android:layout_alignLeft="@+id/forgotPassword"
         android:layout_below="@+id/Main"
         android:layout_marginTop="161dp"
         android:text="@string/health" />
@@ -44,7 +44,7 @@
         android:text="@string/edu" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Main"

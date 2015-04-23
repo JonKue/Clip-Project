@@ -97,13 +97,24 @@
         android:text="@string/username"
         android:textSize="15sp" />
 
+    <TextView
+        android:id="@+id/wrongPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/denied"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible" />
+
     <Button
         android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editUserName"
+        android:layout_alignRight="@+id/editPassword"
         android:layout_below="@+id/editPassword"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="53dp"
         android:text="Submit" />
 
     <Button
@@ -115,15 +126,14 @@
         android:layout_alignLeft="@+id/editPassword"
         android:text="Register" />
 
-    <TextView
-        android:id="@+id/wrongPass"
+    <Button
+        android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TextView01"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/denied"
-        android:textColor="@android:color/holo_red_dark"
-        android:visibility="invisible" />
+        android:layout_above="@+id/buttonNavigateRegisterActivity"
+        android:layout_alignLeft="@+id/buttonNavigateRegisterActivity"
+        android:background="@android:color/black"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="@string/forgot" />
 
 </RelativeLayout>
