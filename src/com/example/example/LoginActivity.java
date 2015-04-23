@@ -1,5 +1,18 @@
 package com.example.example;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+import com.example.example.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,36 +27,102 @@ import android.widget.TextView;
 public class LoginActivity extends Activity {
 
 	Button menuActivity;
-	EditText textBoxValue;
+	EditText userIdValue;
+	EditText passValue;
 	Button registerActivity;
+	TextView wrongPass;
+	
+	//test data for user authentication
+	String userId;
+	String password;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
         
-        menuActivity = (Button) findViewById(R.id.buttonNavigateMainActivity);
+        menuActivity = (Button) findViewById(R.id.buttonRegister);
         registerActivity = (Button) findViewById(R.id.buttonNavigateRegisterActivity);
-        textBoxValue = (EditText) findViewById(R.id.editText1);
+        userIdValue = (EditText) findViewById(R.id.editUserName);
+        passValue = (EditText) findViewById(R.id.editPassword);
+        wrongPass = (TextView) findViewById(R.id.wrongPass);
         
         
         menuActivity.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				String enteredValue = textBoxValue.getText().toString();
-				Intent i = new Intent(LoginActivity.this, MenuActivity.class);
-				i.putExtra("item", enteredValue);
-				startActivity(i);
-			//	finish();
+				String enteredUserId = userIdValue.getText().toString();
+				String enteredPassword = passValue.getText().toString();
+				
+
+				try {
+					InputStream is = getAssets().open("user.txt");
+					int size = is.available();
+					byte[] buffer = new byte[size];
+					is.read(buffer);
+					
+					String value = new String(buffer);
+					
+					String[] n = value.split("\r\n");
+					
+					
+					
+					userId = n[0];
+					password = n[1];
+				}
+				catch  (Exception e) {  
+				}
+				
+				
+			
+				//if this is registered user, allow access to CLIP
+				if(enteredUserId.equals(userId)&& enteredPassword.equals(password))
+				{
+					Intent i = new Intent(LoginActivity.this, MenuActivity.class);
+					i.putExtra("item", enteredUserId);
+					wrongPass.setVisibility(View.INVISIBLE);
+					startActivity(i);
+				//	finish();
+				}
+				else
+					wrongPass.setText("Incorrect username or password. Please try again.");
+					wrongPass.setVisibility(View.VISIBLE);
 	         }
 		});
         
         registerActivity.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
-				startActivity(i);
-			//	finish();
+				//see if user has already been registered
+				try {
+					InputStream is = getAssets().open("user.txt");
+					int size = is.available();
+					byte[] buffer = new byte[size];
+					is.read(buffer);
+					
+					String value = new String(buffer);
+					
+					String[] n = value.split("\r\n");
+					
+					
+					
+					userId = n[0];
+					password = n[1];
+				}
+				catch  (Exception e)
+				{  
+				}
+				if(userId == "")
+				{
+					Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+						startActivity(i);
+					//	finish();
+				}
+				else
+				{
+					wrongPass.setText("User has already been registered.");
+					wrongPass.setVisibility(View.VISIBLE);
+				}
 	         }
 		});
         

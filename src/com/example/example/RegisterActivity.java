@@ -1,26 +1,66 @@
 package com.example.example;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+
+import com.example.example.R;
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 public class RegisterActivity extends Activity{
 
-	TextView text;
-	
+	Button register;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register_activity);
-		//text = (TextView) findViewById(R.id.textView1);
+		register = (Button) findViewById(R.id.buttonRegister);
+		Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
+		String[] items = new String[]{"Select security question", "What is your first dog's name?", "What is your hometown?"};
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, items);
+		dropdown.setAdapter(adapter);
 		
-		//Bundle b = getIntent().getExtras();
-		//String importedText = b.getString("item");
-		//text.setText("Register");
+		register.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				FileOutputStream outputStream;
+				String filename = "user.txt";
+				String yea = "yea";
+
+				try {
+				  outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+				  outputStream.write(yea.getBytes());
+				  outputStream.close();
+				  Toast.makeText(getBaseContext(),
+							"Done writing 'user.txt'",
+							Toast.LENGTH_SHORT).show();
+				} 
+				catch (Exception e) {
+				  Toast.makeText(getBaseContext(), e.getMessage(),
+							Toast.LENGTH_SHORT).show();
+				  
+				}
+
+				
+				Intent i = new Intent(RegisterActivity.this,LoginActivity.class);
+				startActivity(i);
+			//	finish();
+	         }
+		});
+        
 	}
 
     @Override
