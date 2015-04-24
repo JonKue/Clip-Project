@@ -6,30 +6,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.example.MainActivity" >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    tools:context="com.example.clip.MainActivity" >
 
     <Button
-        android:id="@+id/buttonNavigateSecondActivity"
+        android:id="@+id/bEducation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/button1"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="97dp"
+        android:layout_marginTop="104dp"
+        android:text="Education" />
 
-    <EditText
-        android:id="@+id/editText1"
+    <Button
+        android:id="@+id/bHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonNavigateSecondActivity"
+        android:layout_below="@+id/bEducation"
         android:layout_centerHorizontal="true"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
+        android:layout_marginTop="24dp"
+        android:text="Health" />
 
 </RelativeLayout>
