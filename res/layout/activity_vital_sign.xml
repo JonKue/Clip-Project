@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bVSBodyTemperature"
+        style="@android:style/DeviceDefault.Light.ButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vs_body_temperature" />
+    
+    <Button
+        android:id="@+id/bVSPulse"
+        style="@android:style/DeviceDefault.Light.ButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vs_pulse" />
+
+    <Button
+        android:id="@+id/bVSRespirationRate"
+        style="@android:style/DeviceDefault.Light.ButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vs_respiration_rate" />
+
+
+    <Button
+        android:id="@+id/bVSBloodPressure"
+        style="@android:style/DeviceDefault.Light.ButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vs_blood_pressure" />
+   
+</LinearLayout>
