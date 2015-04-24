@@ -48,6 +48,8 @@ public class LoginActivity extends Activity {
         passValue = (EditText) findViewById(R.id.editPassword);
         wrongPass = (TextView) findViewById(R.id.wrongPass);
         forgotPassword = (Button) findViewById(R.id.forgotPassword);
+
+		final DatabaseHelper db = new DatabaseHelper(this);
         
         forgotPassword.setOnClickListener(new OnClickListener() {
 			
@@ -66,7 +68,7 @@ public class LoginActivity extends Activity {
 				String enteredPassword = passValue.getText().toString();
 				
 
-				try {
+				/*try {
 					InputStream is = getAssets().open("user.txt");
 					int size = is.available();
 					byte[] buffer = new byte[size];
@@ -82,12 +84,12 @@ public class LoginActivity extends Activity {
 					password = n[1];
 				}
 				catch  (Exception e) {  
-				}
+				}*/
 				
-				
+				boolean isValidNamePass = db.loginUser(enteredUserId, enteredPassword);
 			
 				//if this is registered user, allow access to CLIP
-				if(enteredUserId.equals(userId)&& enteredPassword.equals(password))
+				if(isValidNamePass)
 				{
 					Intent i = new Intent(LoginActivity.this, MenuActivity.class);
 					i.putExtra("item", enteredUserId);
@@ -106,8 +108,12 @@ public class LoginActivity extends Activity {
         registerActivity.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
+
+				String enteredUserId = userIdValue.getText().toString();
+				String enteredPassword = passValue.getText().toString();
+
 				//see if user has already been registered
-				try {
+				/*try {
 					InputStream is = getAssets().open("user.txt");
 					int size = is.available();
 					byte[] buffer = new byte[size];
@@ -130,6 +136,14 @@ public class LoginActivity extends Activity {
 					Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
 						startActivity(i);
 					//	finish();
+				}*/
+
+				boolean nameCheck = db.isValidName(enteredUserId);
+
+				if(nameCheck) {
+					db.registerUser(enteredUserId, enteredPassword);
+					Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+					startActivity(i);
 				}
 				else
 				{
