@@ -15,18 +15,19 @@ import android.widget.TimePicker;
 public class MedicationActivity extends Activity{
 
 	private Context context = this;
-	private TextView pillName, startDate, endDate;
-	private EditText pillNameEntry, startDateEntry, endDateEntry;
-	private Button add, save;
+	private Button add;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_medication);
-		add = (Button) findViewById(R.id.bMaddPill);
+		setContentView(R.layout.activity_medication_allergy);
+		add = (Button) findViewById(R.id.bMAadd);
 		
 		add.setOnClickListener(new OnClickListener() {
+			TextView pillName, startDate, endDate;
+			EditText pillNameEntry, startDateEntry, endDateEntry;
+			Button save;
 
 			@Override
 			public void onClick(View v) {
@@ -34,15 +35,15 @@ public class MedicationActivity extends Activity{
 				final Dialog dialog = new Dialog(context);	
 				dialog.setContentView(R.layout.dialog_pill_info);
 				dialog.setTitle("Add Pill");
-				/*
+				
 				pillName = (TextView) dialog.findViewById(R.id.tvMpillName);
 				startDate = (TextView) dialog.findViewById(R.id.tvMstartDate);
 				endDate = (TextView) dialog.findViewById(R.id.tvMendDate);
 				pillNameEntry = (EditText) dialog.findViewById(R.id.etMpillName);
 				startDateEntry = (EditText) dialog.findViewById(R.id.etMstartDate);
-				endDateEntry = (EditText) dialog.findViewById(R.id.etMendDate);*/
+				endDateEntry = (EditText) dialog.findViewById(R.id.etMendDate);
 				
-				save = (Button) findViewById(R.id.bMsave);
+				save = (Button) dialog.findViewById(R.id.bMsave);
 				
 				save.setOnClickListener(new OnClickListener(){
 
