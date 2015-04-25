@@ -83,11 +83,11 @@ public class FutureEducationActivity extends Activity {
 				    {
 				    	appStatus = ApplicationStatus.APPLIED;
 				    }
-				    else if(degreeType.equalsIgnoreCase("ACCEPTED"))
+				    else if(appStat.equalsIgnoreCase("ACCEPTED"))
 				    {
 				    	appStatus = ApplicationStatus.ACCEPTED;
 				    }
-				    else if(degreeType.equalsIgnoreCase("REJECTED"))
+				    else if(appStat.equalsIgnoreCase("REJECTED"))
 				    {
 				    	appStatus = ApplicationStatus.REJECTED;
 				    }
