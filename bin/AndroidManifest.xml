@@ -169,6 +169,10 @@
             android:name=".DisplayScholarshipActivity"
             android:label="@string/title_activity_display_scholarship" >
         </activity>
+        <activity
+            android:name=".DisplayLoanActivity"
+            android:label="@string/title_activity_display_loan" >
+        </activity>
     </application>
 
 </manifest>
