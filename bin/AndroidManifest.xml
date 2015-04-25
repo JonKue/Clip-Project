@@ -165,6 +165,10 @@
             android:name=".DisplayFutureEducationActivity"
             android:label="@string/title_activity_display_future_education" >
         </activity>
+        <activity
+            android:name=".DisplayScholarshipActivity"
+            android:label="@string/title_activity_display_scholarship" >
+        </activity>
     </application>
 
 </manifest>

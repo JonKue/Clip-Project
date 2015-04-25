@@ -24,5 +24,6 @@
     <string name="title_activity_display_current_education">DisplayCurrentEducationActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_display_future_education">DisplayFutureEducationActivity</string>
+    <string name="title_activity_display_scholarship">DisplayScholarshipActivity</string>
 
 </resources>

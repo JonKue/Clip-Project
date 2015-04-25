@@ -2,7 +2,7 @@ package com.example.clip;
 
 public class Scholarship extends FinancialSupport {
 	private String name;
-	private String[] requirement;
+	private String requirement;
 	
 	public String getName() {
 		return name;
@@ -10,10 +10,10 @@ public class Scholarship extends FinancialSupport {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String[] getRequirement() {
+	public String getRequirement() {
 		return requirement;
 	}
-	public void setRequirement(String[] requirement) {
+	public void setRequirement(String requirement) {
 		this.requirement = requirement;
 	}
 	

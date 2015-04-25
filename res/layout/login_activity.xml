@@ -39,7 +39,7 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/tvDisplayRequirements"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/Space2"
@@ -51,8 +51,8 @@
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/tvDisplayScholarship"
+        android:layout_below="@+id/tvDisplayScholarship"
         android:layout_marginTop="22dp"
         android:ems="10" />
 
@@ -70,21 +70,21 @@
     </EditText>
 
     <TextView
-        android:id="@+id/TextView02"
+        android:id="@+id/tvDisplayApplicationStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText1"
         android:layout_marginTop="20dp"
-        android:layout_toLeftOf="@+id/TextView01"
+        android:layout_toLeftOf="@+id/tvDisplayRequirements"
         android:text="Password:"
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tvDisplayScholarship"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/TextView02"
-        android:layout_below="@+id/TextView01"
+        android:layout_alignLeft="@+id/tvDisplayApplicationStatus"
+        android:layout_below="@+id/tvDisplayRequirements"
         android:layout_marginTop="52dp"
         android:text="Username:"
         android:textSize="15sp" />

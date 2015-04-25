@@ -179,8 +179,8 @@ public class FutureEducationActivity extends Activity {
 			enter.setOnClickListener(new OnClickListener() {
 				
 				public void onClick(View v) {
-					Intent startCurrentEducationInfo = new Intent(FutureEducationActivity.this, FutureEducationInfoActivity.class );
-					startActivity(startCurrentEducationInfo);
+					Intent i = new Intent(FutureEducationActivity.this, FutureEducationInfoActivity.class );
+					startActivity(i);
 					finish();	// need to change of modify this 
 				}
 				
