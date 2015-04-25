@@ -23,5 +23,6 @@
     <string name="title_activity_health">Health</string>
     <string name="title_activity_display_current_education">DisplayCurrentEducationActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_display_future_education">DisplayFutureEducationActivity</string>
 
 </resources>

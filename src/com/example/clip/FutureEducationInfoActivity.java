@@ -30,6 +30,7 @@ public class FutureEducationInfoActivity extends Activity {
 	TextView applicationStatus;
 	EditText enterApplicationStatus;
 	Button submit;
+	TextView error;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +44,36 @@ public class FutureEducationInfoActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				//get strings from text boxes
+				String enteredSchool = enterSchoolName.getText().toString();
+				String enteredDegree = enterDegree.getText().toString();
+				String enteredProgram = enterProgram.getText().toString();
+				String enteredEnroll = enterEnrollmentStatus.getText().toString();
+				String enteredAppDate = enterApplicationDate.getText().toString();
+				String enteredAppStat = enterApplicationStatus.getText().toString();
+				
+				
+				//make sure all fields are filled in 
+				if(enteredSchool.equals("") || enteredDegree.equals("") || enteredProgram.equals("") || enteredEnroll.equals(""))
+				{
+					error.setVisibility(View.VISIBLE);
+				}
+				else
+				{
+					Intent j = new Intent(FutureEducationInfoActivity.this, FutureEducationActivity.class);
+					j.putExtra("schoolName", enteredSchool);
+					j.putExtra("degreeType", enteredDegree);
+					j.putExtra("program", enteredProgram);
+					j.putExtra("enrollment", enteredEnroll);
+					j.putExtra("appDate", enteredAppDate);
+					j.putExtra("appStat", enteredAppStat);
+					startActivity(j);
+				}
 			
 			}
+
 		});
 	}
 
@@ -61,6 +90,7 @@ public class FutureEducationInfoActivity extends Activity {
 		enterApplicationDate = (EditText) findViewById(R.id.etApplicationDate);
 		applicationStatus = (TextView) findViewById(R.id.tvApplicationStatus);
 		enterApplicationStatus = (EditText) findViewById(R.id.etApplicationStatus);
+		error = (TextView) findViewById(R.id.error);
 		submit = (Button) findViewById(R.id.bFuEdSubmit);
 				
 	}

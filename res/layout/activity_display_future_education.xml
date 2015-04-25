@@ -81,7 +81,7 @@
                 android:id="@+id/tvAppDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tuition:"
+                android:text="ApplicationDate:"
                 android:textSize="18sp" />
 
             <TextView
@@ -96,41 +96,11 @@
                 android:id="@+id/tvAppStat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Courses:"
+                android:text="Application Status:"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvDisplayAppStat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Medium Text"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/tvDateStart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date Started"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tvDisplayDateStarted"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Medium Text"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/tvDateGraduate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date Graduating"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tvDisplayDateGrad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Medium Text"

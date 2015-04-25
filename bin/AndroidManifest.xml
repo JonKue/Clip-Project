@@ -161,6 +161,10 @@
             android:name=".DisplayCurrentEducationActivity"
             android:label="@string/title_activity_display_current_education" >
         </activity>
+        <activity
+            android:name=".DisplayFutureEducationActivity"
+            android:label="@string/title_activity_display_future_education" >
+        </activity>
     </application>
 
 </manifest>

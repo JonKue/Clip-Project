@@ -87,9 +87,9 @@ public class CurrentEducationInfoActivity extends Activity {
 		enterProgram = (EditText) findViewById(R.id.etProgram);
 		enrollmentStatus = (TextView) findViewById(R.id.tvEnrollmentStatus);
 		enterEnrollmentStatus = (EditText) findViewById(R.id.etEnrollmentStatus);
-		tuition = (TextView) findViewById(R.id.tvTuition);
+		tuition = (TextView) findViewById(R.id.tvAppDate);
 		enterTuition = (EditText) findViewById(R.id.etTuition);
-		course = (TextView) findViewById(R.id.tvCoursesPlan);
+		course = (TextView) findViewById(R.id.tvAppStat);
 		enterCourse = (EditText) findViewById(R.id.etCourse);
 		dateStart = (TextView) findViewById(R.id.tvDateStart);
 		enterDateStart = (EditText) findViewById(R.id.etDateStart);

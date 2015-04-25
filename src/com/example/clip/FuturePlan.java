@@ -4,13 +4,13 @@ import java.util.Calendar;
 
 public class FuturePlan extends EducationPlan{
 	// Data Members
-	private Calendar applicationDate;
+	private String applicationDate;
 	private ApplicationStatus applicationStatus;
 	
-	public Calendar getApplicationDate() {
+	public String getApplicationDate() {
 		return applicationDate;
 	}
-	public void setApplicationDate(Calendar applicationDate) {
+	public void setApplicationDate(String applicationDate) {
 		this.applicationDate = applicationDate;
 	}
 	public ApplicationStatus getApplicationStatus() {
