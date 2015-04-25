@@ -43,27 +43,7 @@ public class FutureEducationInfoActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				try {
-					FutureEducationActivity.edInfFile.createNewFile();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				try {
-					fFuEdInfo = new FileOutputStream(
-							CurrentEducationActivity.edInfFile);
-
-					setContentView(R.layout.activity_main);
-
-					fFuEdInfo.close();
-				} catch (FileNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+			
 			}
 		});
 	}

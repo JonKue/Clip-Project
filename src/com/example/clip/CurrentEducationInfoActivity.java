@@ -50,13 +50,15 @@ public class CurrentEducationInfoActivity extends Activity {
 				String enteredDateGrad = enterDateGraduate.getText().toString();
 				
 				//make sure all fields are filled in 
-				if(enteredSchool == "" || enteredDegree == "" || enteredProgram == "" || enteredEnroll == "" ||
-						enteredTuition == "" || enteredCourse == "" || enteredDateStart == "" || enteredDateGrad == "")
+				if(enteredSchool.equals("") || enteredDegree.equals("") || enteredProgram.equals("") || enteredEnroll.equals("") ||
+						enteredTuition.equals("") || enteredCourse.equals("") || enteredDateStart.equals("") || enteredDateGrad.equals(""))
 				{
 					error.setVisibility(View.VISIBLE);
+					
 				}
 				else
 				{
+					
 					Intent j = new Intent(CurrentEducationInfoActivity.this, CurrentEducationActivity.class);
 					j.putExtra("schoolName", enteredSchool);
 					j.putExtra("degreeType", enteredDegree);
@@ -67,6 +69,7 @@ public class CurrentEducationInfoActivity extends Activity {
 					j.putExtra("dateStart", enteredDateStart);
 					j.putExtra("dateGrad", enteredDateGrad);
 					startActivity(j);
+					
 				}
 					
 				

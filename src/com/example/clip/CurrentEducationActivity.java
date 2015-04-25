@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class CurrentEducationActivity extends Activity {
-	static String filename = "CurrentEducationInfo";
 	Button enter;
 	TextView label;
 	ArrayList<CurrentPlan> plan;
@@ -30,7 +29,6 @@ public class CurrentEducationActivity extends Activity {
 	String tuition;
 	String course;
 	
-	public static File edInfFile = new File(filename);
 	@Override
 	protected void onCreate(Bundle noneState) {
 		// TODO Auto-generated method stub
@@ -39,22 +37,6 @@ public class CurrentEducationActivity extends Activity {
 		
 		plan = new ArrayList();
 		
-		/*
-		//displays a text view when user hasn't entered any current education
-		if(plan.size() == 0)
-		{
-			TextView none;
-			none = new TextView(getApplicationContext());
-		    none.setText("No current education at this time. Try entering some!");
-		    none.setTextSize(20);
-		    none.setPadding(15, 5, 15, 5);  
-		    ll.addView(none); 
-			
-		}*/
-		
-		plan.add(new CurrentPlan(new Institution("UT Arlington"), DegreeType.BACHELOR));
-		plan.add(new CurrentPlan(new Institution("PJC"), DegreeType.ASSOCIATE));
-		plan.add(new CurrentPlan(new Institution("UT Austin"), DegreeType.PHD));
 		
 		//get information from add current education
 		Bundle extras = getIntent().getExtras();
@@ -113,8 +95,6 @@ public class CurrentEducationActivity extends Activity {
 				    
 					
 			}
-		// File does not exist
-		if (!edInfFile.exists()){
 			setContentView(R.layout.activity_none);
 
 			enter = (Button) findViewById(R.id.bEnter);
@@ -151,8 +131,22 @@ public class CurrentEducationActivity extends Activity {
 			    });
 			    ll.addView(tv[i]);    
 			    
-			  
 			}
+			
+			//displays a text view when user hasn't entered any current education
+			if(plan.size() == 0)
+			{
+				TextView none;
+				none = new TextView(getApplicationContext());
+			    none.setText("No current education at this time. Try entering some!");
+			    none.setTextSize(20);
+			    none.setTextColor(Color.BLACK);
+			    none.setPadding(15, 5, 15, 5);  
+			    ll.addView(none); 
+				
+			}
+			
+			
 			  //add a home button at the bottom of the list
 		    Button back = new Button(getApplicationContext());
 		    back.setText("Back");
@@ -182,8 +176,8 @@ public class CurrentEducationActivity extends Activity {
 				}
 				
 			});
-		} else {
-			setContentView(R.layout.activity_main);
-		}
+
+			}
 	}
-}
+
+
