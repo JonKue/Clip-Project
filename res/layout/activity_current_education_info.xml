@@ -115,15 +115,6 @@
                 android:ems="10"
                 android:inputType="date" />
 
-            <TextView
-                android:id="@+id/error"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Please fill in all fields before submitting."
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@android:color/holo_red_dark"
-                android:visibility="invisible" />
-
         </LinearLayout>
     </ScrollView>
 
@@ -132,18 +123,33 @@
         android:layout_height="match_parent"
         android:layout_weight="80"
         android:gravity="center_horizontal"
-        android:orientation="vertical" >
+        android:orientation="vertical" ><![CDATA[
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
+
+        ]]>
 
         <Button
             android:id="@+id/bCuEdSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Submit" />
+            android:text="Submit"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please fill in all fields before submitting."
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="invisible"
+            android:layout_below="@+id/bCuEdSubmit"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
