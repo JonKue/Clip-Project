@@ -36,14 +36,26 @@
         </activity>
         <activity android:name=".RegisterActivity" >
         </activity>
-        <activity
+        <!--<activity
             android:name=".TestActivity"
             android:label="@string/title_activity_test" >
-        </activity>
+        </activity>-->
         <activity
             android:name=".ForgotPasswordActivity"
             android:label="@string/title_activity_forgot_password" >
         </activity>
+        <activity
+            android:name=".EducationActivity"
+            android:label="title_activity_education" />
+        <activity
+            android:name=".CurrentEducationActivity"
+            android:label="title_activity_current_education" />
+        <activity
+            android:name=".CurrentEducationInfoActivity"
+            android:label="title_current_education_info_activity" />
+        <activity
+            android:name=".DisplayCurrentEducationActivity"
+            android:label="title_display_current_education" />
     </application>
 
 </manifest>

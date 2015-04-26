@@ -1,6 +1,5 @@
 package com.example.example;
 
-import com.example.example.User;
 //-----UPDATE PACKAGE/IMPORTS FOR CLIP-----//
 
 import java.text.SimpleDateFormat;
@@ -38,8 +37,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE USER ( uid INTEGER PRIMARY KEY, " +
+        db.execSQL("CREATE TABLE USER ( uid INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "name TEXT, password TEXT)");
+        db.execSQL("CREATE TABLE SCHOOLS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "schoolName TEXT, degreeType TEXT, program TEXT, enrollment TEXT," +
+                "dateStart TEXT, dateGrad TEXT, tuition TEXT, course TEXT, "+
+                "appDate TEXT, appStat TEXT, type TEXT)");
     }
 
     // Upgrading database
@@ -47,16 +50,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS USER");
+        db.execSQL("DROP TABLE IF EXISTS SCHOOLS");
 
         // Create tables again
         onCreate(db);
     }
 
-  /*
-   * USER table operations
-   *
-   */
-    // Register new user
+    /*
+     * USER table operations
+     *
+     */
+        // Register new user
     void registerUser(String inputName, String inputPass) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -86,7 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         String selectQuery = "SELECT * FROM USER WHERE name = '" +name+
-                                "' AND password = '" + password +"'";
+                "' AND password = '" + password +"'";
 
 
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -127,7 +131,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Updating single user
     public int updateContact(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
-
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, contact.getName());
         values.put(KEY_PH_NO, contact.getPhoneNumber());
@@ -156,6 +159,139 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // return count
         return cursor.getCount();
     }*/
+
+    /*
+      * SCHOOLS table operations
+      *
+      */
+    void addSchool_Current(School school) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("schoolname", school.get_schoolName());
+        values.put("degreeType", school.get_degreeType());
+        values.put("program", school.get_program());
+        values.put("enrollment", school.get_enrollment());
+        values.put("dateStart", school.get_dateStart());
+        values.put("dateGrad", school.get_dateGrad());
+        values.put("tuition", school.get_tuition());
+        values.put("course", school.get_course());
+        values.put("type", "CURRENT");
+
+        // Inserting Row
+        db.insert("SCHOOLS", null, values);
+        db.close(); // Closing database connection
+    }
+
+    void addSchool_Future(School school) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("schoolname", school.get_schoolName());
+        values.put("degreeType", school.get_degreeType());
+        values.put("program", school.get_program());
+        values.put("enrollment", school.get_enrollment());
+        values.put("appDate", school.get_dateStart());
+        values.put("appStat", school.get_dateGrad());
+        values.put("type", "FUTURE");
+
+        // Inserting Row
+        db.insert("SCHOOLS", null, values);
+        db.close(); // Closing database connection
+    }
+
+    // Getting single school
+    School selectSchool(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String selectQuery = "SELECT * FROM SCHOOLS WHERE id = " +id;
+
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+
+        School school = new School(Integer.parseInt(cursor.getString(0)));
+        school.set_schoolName(cursor.getString(1));
+        school.set_degreeType(cursor.getString(2));
+        school.set_program(cursor.getString(3));
+        school.set_enrollment(cursor.getString(4));
+        school.set_dateStart(cursor.getString(5));
+        school.set_dateGrad(cursor.getString(6));
+        school.set_tuition(cursor.getString(7));
+        school.set_course(cursor.getString(8));
+        school.set_type(cursor.getString(11));
+
+        return school;
+    }
+
+    // Getting All Current Schools
+    public List<School> getAllCurrentSchools() {
+        List<School> schoolList = new ArrayList<>();
+        // Select All Query
+        String selectQuery = "SELECT * FROM SCHOOLS WHERE type = 'CURRENT'";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                School school = new School(Integer.parseInt(cursor.getString(0)));
+                school.set_schoolName(cursor.getString(1));
+                school.set_degreeType(cursor.getString(2));
+                school.set_program(cursor.getString(3));
+                school.set_enrollment(cursor.getString(4));
+                school.set_dateStart(cursor.getString(5));
+                school.set_dateGrad(cursor.getString(6));
+                school.set_tuition(cursor.getString(7));
+                school.set_course(cursor.getString(8));
+                school.set_type("CURRENT");
+                // Adding contact to list
+                schoolList.add(school);
+            } while (cursor.moveToNext());
+        }
+
+        // return user list
+        return schoolList;
+    }
+
+    // Getting All Current Schools
+    public List<School> getAllFutureSchools() {
+        List<School> schoolList = new ArrayList<>();
+        // Select All Query
+        String selectQuery = "SELECT * FROM SCHOOLS WHERE type = FUTURE";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                School school = new School(Integer.parseInt(cursor.getString(0)));
+                school.set_schoolName(cursor.getString(1));
+                school.set_degreeType(cursor.getString(2));
+                school.set_program(cursor.getString(3));
+                school.set_enrollment(cursor.getString(4));
+                school.set_appDate(cursor.getString(9));
+                school.set_appStat(cursor.getString(10));
+                school.set_type("FUTURE");
+                // Adding contact to list
+                schoolList.add(school);
+            } while (cursor.moveToNext());
+        }
+
+        // return user list
+        return schoolList;
+    }
+
+
+    public void deleteSchool(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("SCHOOLS", "id" + " = ?",
+                new String[] { String.valueOf(id) });
+        db.close();
+    }
+
 
 
 }

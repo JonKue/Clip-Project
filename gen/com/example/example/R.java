@@ -61,6 +61,7 @@ public final class R {
         public static final int menu_activity=0x7f030002;
         public static final int register_activity=0x7f030003;
         public static final int settings=0x7f030004;
+        public static final int education_activity=0x7f030004;
     }
     public static final class menu {
         public static final int global=0x7f070000;

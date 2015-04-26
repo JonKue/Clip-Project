@@ -7,12 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Button;
 
 public class MenuActivity extends Activity{
 
-	//TextView text;
-	
+	private Button EducationButton;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -23,6 +25,18 @@ public class MenuActivity extends Activity{
 		Bundle b = getIntent().getExtras();
 		String importedText = b.getString("item");
 		//text.setText(importedText);
+
+		EducationButton = (Button) findViewById(R.id.bEducation);
+
+
+		EducationButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent startCurrentEducation = new Intent(MenuActivity.this, EducationActivity.class);
+				startActivity(startCurrentEducation);
+				// finish();
+			}
+		});
 	}
 
     @Override

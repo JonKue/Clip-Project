@@ -35,13 +35,13 @@
         android:text="@string/finance" />
 
     <Button
-        android:id="@+id/Button03"
+        android:id="@+id/bEducation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/Button02"
         android:layout_below="@+id/Button02"
         android:layout_marginTop="47dp"
-        android:text="@string/edu" />
+        android:text="Education" />
 
     <Button
         android:id="@+id/forgotPassword"
