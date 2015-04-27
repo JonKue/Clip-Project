@@ -35,7 +35,14 @@
             android:name=".Settings"
             android:label="@string/app_name" >
         </activity>
-        
+        <activity
+            android:name=".Career"
+            android:label="@string/title_activity_career" >
+        </activity>
+        <activity
+            android:name=".Finance"
+            android:label="@string/title_activity_finance" >
+        </activity>
     </application>
 
 </manifest>
