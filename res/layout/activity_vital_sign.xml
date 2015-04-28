@@ -10,6 +10,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/vs_body_temperature" />
+
+    <TextView
+        android:id="@+id/tvVSbodyTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
     
     <Button
         android:id="@+id/bVSPulse"
@@ -18,6 +24,12 @@
         android:layout_height="wrap_content"
         android:text="@string/vs_pulse" />
 
+    <TextView
+        android:id="@+id/tvVSpulse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
     <Button
         android:id="@+id/bVSRespirationRate"
         style="@android:style/DeviceDefault.Light.ButtonBar"
@@ -25,6 +37,11 @@
         android:layout_height="wrap_content"
         android:text="@string/vs_respiration_rate" />
 
+    <TextView
+        android:id="@+id/tvVSrespirationRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <Button
         android:id="@+id/bVSBloodPressure"
@@ -32,5 +49,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/vs_blood_pressure" />
+
+    <TextView
+        android:id="@+id/tvVSbloodPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
    
 </LinearLayout>

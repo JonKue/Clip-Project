@@ -27,4 +27,12 @@
         android:layout_marginTop="24dp"
         android:text="Health" />
 
+    <Button
+        android:id="@+id/bCareer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bHealth"
+        android:layout_below="@+id/bHealth"
+        android:text="Career" />
+
 </RelativeLayout>

@@ -6,15 +6,21 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class VitalSignActivity extends Activity{
 	//private VitalSign myVitalSign = new VitalSign(0,0,0,0);
 	private Context context = this;
 	private Button bodyTemperature, pulseRate, respirationRate, bloodPressure;
+	private TextView bodyTempDisplay, pulseDisplay, respRateDisplay, bldPressDisplay;
 	//private TextView bodyTemperatureNum, pulseRateNum, respirationRateNum, bloodPressureNum;
+	
+	VitalSign myVitalSign; // Check for id check not sure....
+	DatabaseHelper db;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,23 @@ public class VitalSignActivity extends Activity{
 		setContentView(R.layout.activity_vital_sign);
 		
 		setUpVariables();
+		myVitalSign = new VitalSign(); // id ????
+		
+		db = new DatabaseHelper(this);
+		db.openDatabase();
+		
+		try {
+			myVitalSign = db.getVitalSign(0);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		bodyTempDisplay.setText(myVitalSign.getBodyTemperature());
+		//db.getVitalSign(myVitalSign.get_id());
+		//bodyTempDisplay.setText(myVitalSign.getBodyTemperature());*/
+		
+		//bodyTempDisplay.setText(myVitalSign.getBodyTemperature());
 		
 		bodyTemperature.setOnClickListener(new OnClickListener() {
 
@@ -33,21 +56,24 @@ public class VitalSignActivity extends Activity{
 				dialog.setContentView(R.layout.dialog_vital_sign_entry);
 				dialog.setTitle("Body Temperature");
 				Button save = (Button) dialog.findViewById(R.id.bVSsave);
-				EditText bdTempReading = (EditText) dialog.findViewById(R.id.etVSentry);
+				final EditText bodyTempReading = (EditText) dialog.findViewById(R.id.etVSentry);
+				//myVitalSign.setBodyTemperature(Integer.parseInt(bodyTempReading.getText().toString()));
+				
+				
 				
 				save.setOnClickListener(new OnClickListener(){
 
 					@Override
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
+						myVitalSign.setBodyTemperature(bodyTempReading.getText().toString());
 						dialog.dismiss();
 						// need implementaion here.......
 					}
 				});
-				dialog.show();
-			}
-			
-			
+				dialog.show();	
+				
+			}	
 		});
 		
 		pulseRate.setOnClickListener(new OnClickListener() {
@@ -117,11 +143,13 @@ public class VitalSignActivity extends Activity{
 					@Override
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
+						
 						dialog.dismiss();
 						// need implementaion here.......
 					}
 				});
 				dialog.show();
+				
 			}
 		});
 		
@@ -133,6 +161,10 @@ public class VitalSignActivity extends Activity{
 		pulseRate = (Button) findViewById(R.id.bVSPulse);
 		respirationRate = (Button) findViewById(R.id.bVSRespirationRate);
 		bloodPressure = (Button) findViewById(R.id.bVSBloodPressure);
+		bodyTempDisplay = (TextView) findViewById(R.id.tvVSbodyTemp);
+		pulseDisplay = (TextView) findViewById(R.id.tvVSpulse);
+		respRateDisplay = (TextView) findViewById(R.id.tvVSrespirationRate);
+		bldPressDisplay = (TextView) findViewById(R.id.tvVSbloodPressure);
 		/*bodyTemperatureNum = (TextView) findViewById(R.id.tvVSBodyTemperature);
 		pulseRateNum = (TextView) findViewById(R.id.tvVSPulse);
 		respirationRateNum = (TextView) findViewById(R.id.tvVSRespirationRate);

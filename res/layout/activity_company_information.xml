@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/svCI"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvCIcompanyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company Name" />
+
+            <EditText
+                android:id="@+id/etCIcompanyname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+
+              
+            <TextView
+                android:id="@+id/tvCIcompanyProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company Product" />
+
+            <EditText
+                android:id="@+id/etCIcompanyProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+            
+            <Button
+                android:id="@+id/bCIcontactInfo"
+                style="@android:style/DeviceDefault.Light.ButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Information:" />
+
+            <TextView
+                android:id="@+id/tvCIcontactInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/etCIkeyFacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:hint="Key facts about the company" />
+
+               
+            <Button
+                android:id="@+id/bCIreasonConsider"
+                style="@android:style/DeviceDefault.Light.ButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reasons for Consideration" />
+            
+             <TextView
+                android:id="@+id/tvCIreasonConsider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+          
+
+            <Button
+                android:id="@+id/bCIresumeSubDate"
+                style="@android:style/DeviceDefault.Light.ButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resume Submission Date" />
+
+            <TextView
+                android:id="@+id/tvCIresumeSubDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bCIinterviewInfo"
+                style="@android:style/DeviceDefault.Light.ButtonBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interview Information:" />
+
+            <TextView
+                android:id="@+id/tvCIinterviewInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/bCIsave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

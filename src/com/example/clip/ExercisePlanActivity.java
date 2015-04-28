@@ -44,7 +44,7 @@ public class ExercisePlanActivity extends Activity{
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
 						final Dialog dialog = new Dialog(context);	
-						dialog.setContentView(R.layout.dialog_ep_time);
+						dialog.setContentView(R.layout.dialog_pick_time);
 						dialog.setTitle("Set Time");
 						Button done = (Button) dialog.findViewById(R.id.bEPtimeDone);
 						TimePicker startTime = (TimePicker) dialog.findViewById(R.id.tpEPtime);
@@ -68,7 +68,7 @@ public class ExercisePlanActivity extends Activity{
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
 						final Dialog dialog = new Dialog(context);	
-						dialog.setContentView(R.layout.dialog_ep_time);
+						dialog.setContentView(R.layout.dialog_pick_time);
 						dialog.setTitle("Set Time");
 						Button done = (Button) dialog.findViewById(R.id.bEPtimeDone);
 						TimePicker endTime = (TimePicker) dialog.findViewById(R.id.tpEPtime);
@@ -93,7 +93,7 @@ public class ExercisePlanActivity extends Activity{
 						// TODO Auto-generated method stub
 						
 						// need implementaion here.......
-						finish();
+						onPostResume();
 					}
 				});
 			}

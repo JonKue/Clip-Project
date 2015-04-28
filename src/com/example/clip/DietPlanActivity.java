@@ -86,7 +86,7 @@ public class DietPlanActivity extends Activity implements View.OnClickListener{
 	
 	public void chooseTime(){
 		final Dialog dialog = new Dialog(context);	
-		dialog.setContentView(R.layout.dialog_dp_date);
+		dialog.setContentView(R.layout.dialog_pick_date);
 		dialog.setTitle("Set Date");
 		Button set = (Button) dialog.findViewById(R.id.bDPsetDate);
 		DatePicker date = (DatePicker) dialog.findViewById(R.id.dpDPselectDate);

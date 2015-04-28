@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/svCIF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+                
+
+            <EditText
+                android:id="@+id/etCIFphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="Phone" />
+
+
+            
+
+            <EditText
+                android:id="@+id/etCIFadd1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:hint="Address 1"/>
+
+
+            <EditText
+                android:id="@+id/etCIFadd2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:hint="Address 2"/>
+
+
+            <EditText
+                android:id="@+id/etCIFcity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:hint="City"/>
+
+           
+
+            <EditText
+                android:id="@+id/etCIFstate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:hint="State"/>
+
+
+            <EditText
+                android:id="@+id/etCIFzip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPostalAddress" 
+                android:hint="ZIP Code"/>
+
+
+            <EditText
+                android:id="@+id/etCIFcountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:hint="Country" />
+
+            <Button
+                android:id="@+id/bCIFok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
