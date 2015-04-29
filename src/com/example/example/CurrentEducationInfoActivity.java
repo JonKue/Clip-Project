@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class CurrentEducationInfoActivity extends Activity {
-    public FileOutputStream fCuEdInfo = null;
+//    public FileOutputStream fCuEdInfo = null;
 
     TextView schoolName, degree, program, enrollmentStatus, tuition, course, dateStart, dateGraduate;
     EditText enterSchoolName, enterDegree, enterProgram, enterEnrollmentStatus, enterTuition, enterCourse, enterDateStart, enterDateGraduate;
@@ -73,7 +73,7 @@ public class CurrentEducationInfoActivity extends Activity {
                     school.set_dateGrad(enteredDateGrad);
                     school.set_tuition(enteredTuition);
                     school.set_course(enteredCourse);
-                    school.set_type("CURRENT");
+//                    school.set_type("CURRENT");  -- Type set by addSchool
                     db.addSchool_Current(school);
 
                     Intent j = new Intent(CurrentEducationInfoActivity.this, CurrentEducationActivity.class);

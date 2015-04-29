@@ -10,48 +10,63 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegisterActivity extends Activity{
 
+	EditText username, password, confirm, answer;
 	Button register;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register_activity);
+
+		username = (EditText) findViewById(R.id.UsernameInput);
+		password = (EditText) findViewById(R.id.passwordInput);
+		confirm = (EditText) findViewById(R.id.passwordInputConfirmed);
+		answer = (EditText) findViewById(R.id.answer);
 		register = (Button) findViewById(R.id.buttonRegister);
-		Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
+		final Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
 		String[] items = new String[]{"Select security question", "What is your first dog's name?", "What is your hometown?"};
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, items);
+		ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
 		dropdown.setAdapter(adapter);
+
+		final DatabaseHelper db = new DatabaseHelper(this);
 		
 		register.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				FileOutputStream outputStream;
-				String filename = "user.txt";
-				String yea = "yea";
 
-				try {
-				  outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
-				  outputStream.write(yea.getBytes());
-				  outputStream.close();
-				} catch (Exception e) {
-				  e.printStackTrace();
+				String user = username.getText().toString();
+				String pass = password.getText().toString();
+				String conf = confirm.getText().toString();
+				String answ = answer.getText().toString();
+				int question = dropdown.getSelectedItemPosition();
+
+				if(/*question!=0 && conf.equals(pass) && !user.equals("") && !pass.equals("")*/ true)
+				{
+					Log.d("CLIP-DEGUG:: ", user + " " + pass);
+					db.registerUser(user, pass, question, answ); //TODO -- Hash passwords/answer???
+					Intent i = new Intent(RegisterActivity.this,MenuActivity.class);
+					i.putExtra("item", user);
+					startActivity(i);
+					finish();
 				}
+				else {
+					//TODO -- Show Error
 
-				
-				Intent i = new Intent(RegisterActivity.this,LoginActivity.class);
-				startActivity(i);
-			//	finish();
+				}
 	         }
 		});
         

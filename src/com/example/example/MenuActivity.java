@@ -14,7 +14,7 @@ import android.widget.Button;
 
 public class MenuActivity extends Activity{
 
-	private Button EducationButton;
+//	private Button EducationButton;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -22,11 +22,11 @@ public class MenuActivity extends Activity{
 		setContentView(R.layout.menu_activity);
 		//text = (TextView) findViewById(R.id.textViewActivity2);
 		
-		Bundle b = getIntent().getExtras();
-		String importedText = b.getString("item");
+//		Bundle b = getIntent().getExtras();
+//		String importedText = b.getString("item");
 		//text.setText(importedText);
 
-		EducationButton = (Button) findViewById(R.id.bEducation);
+		Button EducationButton = (Button) findViewById(R.id.bEducation);
 
 
 		EducationButton.setOnClickListener(new OnClickListener() {
@@ -34,7 +34,7 @@ public class MenuActivity extends Activity{
 			public void onClick(View v) {
 				Intent startCurrentEducation = new Intent(MenuActivity.this, EducationActivity.class);
 				startActivity(startCurrentEducation);
-				// finish();
+				//finish();
 			}
 		});
 	}

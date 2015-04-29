@@ -38,10 +38,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("CREATE TABLE USER ( uid INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "name TEXT, password TEXT)");
+                "name TEXT, password TEXT, question INTEGER, answer TEXT)");
         db.execSQL("CREATE TABLE SCHOOLS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "schoolName TEXT, degreeType TEXT, program TEXT, enrollment TEXT," +
-                "dateStart TEXT, dateGrad TEXT, tuition TEXT, course TEXT, "+
+                "dateStart TEXT, dateGrad TEXT, tuition TEXT, course TEXT, " +
                 "appDate TEXT, appStat TEXT, type TEXT)");
     }
 
@@ -61,18 +61,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      *
      */
         // Register new user
-    void registerUser(String inputName, String inputPass) {
+    void registerUser(String inputName, String inputPass, int inputQuestion, String inputAnswer) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put("name", inputName);
         values.put("password", inputPass);
+        values.put("question", inputQuestion);
+        values.put("answer", inputAnswer);
 
         // Inserting Row
         db.insert("USER", null, values);
         db.close(); // Closing database connection
     }
 
+    boolean isEmpty()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String selectQuery = "SELECT * FROM USER";
+
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        boolean res = !cursor.moveToFirst(); // True if Empty
+        cursor.close();
+        return res;
+    }
     boolean isValidName(String inputName) {
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -81,25 +96,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         Cursor cursor = db.rawQuery(selectQuery, null);
-
-        return !cursor.moveToFirst(); //If name exists return false
+        boolean res = !cursor.moveToFirst(); // True if Empty
+        cursor.close();
+        return res; //If name exists return false
     }
 
     // Getting single contact
     boolean loginUser(String name, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String selectQuery = "SELECT * FROM USER WHERE name = '" +name+
+        String selectQuery = "SELECT * FROM USER";
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        cursor.moveToFirst();/*
+        Log.d("CLIP-DEGUG::", "USER id: " + Integer.parseInt(cursor.getString(0)));
+        Log.d("CLIP-DEGUG::", "USER name: " + cursor.getString(1));
+        Log.d("CLIP-DEGUG::", "USER pass: " + cursor.getString(2));*/
+
+
+        selectQuery = "SELECT * FROM USER WHERE name = '" +name+
                 "' AND password = '" + password +"'";
 
 
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor = db.rawQuery(selectQuery, null);
 
         //Entry Exists
 //            User user = new User();
 // Username/Password incorrect
-
-        return cursor.moveToFirst();
+        boolean res = cursor.moveToFirst(); // True if Empty
+        cursor.close();
+        return res;
     }
 
     // Getting All Users    --Only needed for multiple user system
@@ -122,7 +149,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 userList.add(user);
             } while (cursor.moveToNext());
         }
-
+        cursor.close();
         // return user list
         return userList;
     }
@@ -221,6 +248,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         school.set_course(cursor.getString(8));
         school.set_type(cursor.getString(11));
 
+        cursor.close();
         return school;
     }
 
@@ -249,7 +277,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 // Adding contact to list
                 schoolList.add(school);
             } while (cursor.moveToNext());
-        }
+        } cursor.close();
 
         // return user list
         return schoolList;
@@ -259,7 +287,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public List<School> getAllFutureSchools() {
         List<School> schoolList = new ArrayList<>();
         // Select All Query
-        String selectQuery = "SELECT * FROM SCHOOLS WHERE type = FUTURE";
+        String selectQuery = "SELECT * FROM SCHOOLS WHERE type = 'FUTURE'";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -278,7 +306,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 // Adding contact to list
                 schoolList.add(school);
             } while (cursor.moveToNext());
-        }
+        } cursor.close();
 
         // return user list
         return schoolList;

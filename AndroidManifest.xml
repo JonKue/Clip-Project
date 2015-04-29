@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -16,7 +16,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/rough_icon"
         android:label="@string/CLIP"
         android:theme="@style/AppTheme" >
         <activity
@@ -36,10 +36,6 @@
         </activity>
         <activity android:name=".RegisterActivity" >
         </activity>
-        <!--<activity
-            android:name=".TestActivity"
-            android:label="@string/title_activity_test" >
-        </activity>-->
         <activity
             android:name=".ForgotPasswordActivity"
             android:label="@string/title_activity_forgot_password" >
@@ -56,6 +52,33 @@
         <activity
             android:name=".DisplayCurrentEducationActivity"
             android:label="title_display_current_education" />
+        <activity
+            android:name=".FutureEducationActivity"
+            android:label="title_future_education_activity" />
+        <activity
+            android:name=".FutureEducationInfoActivity"
+            android:label="title_future_education_info" />
+        <activity
+            android:name=".DisplayFutureEducationActivity"
+            android:label="title_display_future_education" />
+        <activity
+            android:name=".LoanActivity"
+            android:label="title_loan_activity" />
+        <activity
+            android:name=".LoanInfoActivity"
+            android:label="title_loan_info" />
+        <activity
+            android:name=".DisplayLoanActivity"
+            android:label="title_display_loan" />
+        <activity
+            android:name=".FinancialSupportActivity"
+            android:label="title_finacial_support" />
+        <activity
+            android:name=".ScholarshipActivity"
+            android:label="title_scholarship_activity" />
+        <activity
+            android:name=".ScholarshipInfoActivity"
+            android:label="title_scholarship_info" />
     </application>
 
 </manifest>

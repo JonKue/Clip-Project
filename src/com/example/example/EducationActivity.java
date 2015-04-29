@@ -16,34 +16,34 @@ public class EducationActivity extends Activity {
         super.onCreate(educationState);
         setContentView(R.layout.education_activity);
 
-        currentEducation = (Button) findViewById(R.id.bCurrentEducation);
-        futureEducation = (Button) findViewById(R.id.bFutureEducation);
-        financialSupport = (Button) findViewById(R.id.bFinancialSupport);
+        Button currentEducation = (Button) findViewById(R.id.bCurrentEducation),
+                futureEducation = (Button) findViewById(R.id.bFutureEducation),
+                financialSupport = (Button) findViewById(R.id.bFinancialSupport);
 
         currentEducation.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
                 Intent startCurrentEducation = new Intent(EducationActivity.this, CurrentEducationActivity.class);
                 startActivity(startCurrentEducation);
-                // finish();
+                finish();
             }
         });
 
         futureEducation.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-//                Intent startFutureEducation = new Intent(EducationActivity.this, FutureEducationActivity.class);
-//                startActivity(startFutureEducation);
-                // finish();
+                Intent startFutureEducation = new Intent(EducationActivity.this, FutureEducationActivity.class);
+                startActivity(startFutureEducation);
+                finish();
             }
         });
 
         financialSupport.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-//                Intent startFinancialSupport = new Intent(EducationActivity.this, FinancialSupportActivity.class);
-//                startActivity(startFinancialSupport);
-                // finish();
+                Intent startFinancialSupport = new Intent(EducationActivity.this, FinancialSupportActivity.class);
+                startActivity(startFinancialSupport);
+                finish();
             }
         });
     }
