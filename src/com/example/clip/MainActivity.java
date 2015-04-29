@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-	Button education, health;
+	Button education, health, finance;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		education = (Button) findViewById(R.id.bEducation);
 		health = (Button) findViewById(R.id.bHealth);
+		finance = (Button) findViewById(R.id.bFinance);
 
 		education.setOnClickListener(new OnClickListener() {
 
@@ -36,6 +37,16 @@ public class MainActivity extends Activity {
 				Intent startHealth = new Intent(MainActivity.this,
 						HealthActivity.class);
 				startActivity(startHealth);
+				// finish();
+			}
+		});
+		
+		finance.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this,
+						FinanceActivity.class);
+				startActivity(i);
 				// finish();
 			}
 		});

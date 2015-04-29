@@ -9,16 +9,6 @@
     tools:context="com.example.clip.MainActivity" >
 
     <Button
-        android:id="@+id/bEducation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="97dp"
-        android:layout_marginTop="104dp"
-        android:text="Education" />
-
-    <Button
         android:id="@+id/bHealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,5 +16,23 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:text="Health" />
+
+    <Button
+        android:id="@+id/bFinance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bHealth"
+        android:layout_below="@+id/bHealth"
+        android:layout_marginTop="50dp"
+        android:text="Finance" />
+
+    <Button
+        android:id="@+id/bEducation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="102dp"
+        android:text="Education" />
 
 </RelativeLayout>

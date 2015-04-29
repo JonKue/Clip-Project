@@ -166,12 +166,40 @@
             android:label="@string/title_activity_display_future_education" >
         </activity>
         <activity
-            android:name=".DisplayScholarshipActivity"
-            android:label="@string/title_activity_display_scholarship" >
+            android:name=".FinanceActivity"
+            android:label="@string/title_activity_finance" >
         </activity>
         <activity
-            android:name=".DisplayLoanActivity"
-            android:label="@string/title_activity_display_loan" >
+            android:name=".FinancialStateActivity"
+            android:label="@string/title_activity_financial_state" >
+        </activity>
+        <activity
+            android:name=".FinancialStateInfoActivity"
+            android:label="@string/title_activity_financial_state_info" >
+        </activity>
+        <activity
+            android:name=".DisplayFinancialStateActivity"
+            android:label="@string/title_activity_display_financial_state" >
+        </activity>
+        <activity
+            android:name=".StocksActivity"
+            android:label="@string/title_activity_stocks" >
+        </activity>
+        <activity
+            android:name=".StocksInfoActivity"
+            android:label="@string/title_activity_stocks_info" >
+        </activity>
+        <activity
+            android:name=".FinancialGoalsActivity"
+            android:label="@string/title_activity_financial_goals" >
+        </activity>
+        <activity
+            android:name=".FinanceGoalsInfoActivity"
+            android:label="@string/title_activity_finance_goals_info" >
+        </activity>
+        <activity
+            android:name=".DisplayFinancialGoalsActivity"
+            android:label="@string/title_activity_display_financial_goals" >
         </activity>
     </application>
 
