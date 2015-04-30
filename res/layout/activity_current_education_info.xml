@@ -8,12 +8,13 @@
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_weight="20" >
+        android:layout_weight="20"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvSchoolName"
@@ -25,8 +26,7 @@
                 android:id="@+id/etSchoolName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10" >
-            </EditText>
+                android:ems="10"/>
 
             <TextView
                 android:id="@+id/tvDegree"
@@ -123,28 +123,28 @@
         android:layout_height="match_parent"
         android:layout_weight="80"
         android:gravity="center_horizontal"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
 
         <Button
             android:id="@+id/bCuEdSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Submit"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="Submit" />
 
         <TextView
             android:id="@+id/error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/bCuEdSubmit"
+            android:layout_centerHorizontal="true"
             android:text="Please fill in all fields before submitting."
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@android:color/holo_red_dark"
-            android:visibility="invisible"
-            android:layout_below="@+id/bCuEdSubmit"
-            android:layout_centerHorizontal="true" />
+            android:visibility="invisible" />
 
     </RelativeLayout>
 
