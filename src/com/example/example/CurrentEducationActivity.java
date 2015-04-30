@@ -48,75 +48,6 @@ public class CurrentEducationActivity extends Activity {
 
         plan = db.getAllCurrentSchools();
 
-
-        /*//get information from add current education
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            schoolName = extras.getString("schoolName");
-            degreeType = extras.getString("degreeType");
-            program = extras.getString("program");
-            enrollment = extras.getString("enrollment");
-            dateStart = extras.getString("dateStart");
-            dateGrad = extras.getString("dateGrad");
-            tuition = extras.getString("tuition");
-            course = extras.getString("course");
-
-            //default value for enrollment status is none
-            EnrollmentStatus status = EnrollmentStatus.NONE;
-
-            if(enrollment.equalsIgnoreCase("FULLTIME"))
-            {
-                status = EnrollmentStatus.FULLTIME;
-            }
-            else if(enrollment.equalsIgnoreCase("FULLTIME"))
-            {
-                status = EnrollmentStatus.PARTTIME;
-            }
-
-            //default value for degree type is diploma
-            DegreeType degree = DegreeType.DIPLOMA;
-
-            if(degreeType.equalsIgnoreCase("ASSOCIATE"))
-            {
-                degree = DegreeType.ASSOCIATE;
-            }
-            else if(degreeType.equalsIgnoreCase("BACHELOR"))
-            {
-                degree = DegreeType.BACHELOR;
-            }
-            else if(degreeType.equalsIgnoreCase("MASTER"))
-            {
-                degree = DegreeType.MASTER;
-            }
-            else if(degreeType.equalsIgnoreCase("PHD"))
-            {
-                degree = DegreeType.PHD;
-            }
-
-            plan.add(new CurrentPlan(new Institution(schoolName), degree));
-
-            //set information for current education at the end of the array list
-            plan.get(plan.size()-1).setDegree(degree);
-            plan.get(plan.size()-1).setProgram(program);
-            plan.get(plan.size()-1).setEnrollmentStatus(status);
-            plan.get(plan.size()-1).setTuition(Integer.parseInt(tuition));
-            plan.get(plan.size()-1).setCoursePlanList(course);
-            plan.get(plan.size()-1).setDateStarted(dateStart);
-            plan.get(plan.size()-1).setDateGraduating(dateGrad);
-
-
-        }
-        setContentView(R.layout.activity_none);
-
-        enter = (Button) findViewById(R.id.bEnter);
-        label = (TextView) findViewById(R.id.tvNone);
-        enter.setText("Add");
-        label.setText("Current Education");
-
-        //for dynamic update of GUI
-        LinearLayout ll = (LinearLayout)findViewById(R.id.NoneLayout);
-*/
-
         //dynamically add buttons
         Button[] tv = new Button[plan.size()];
         for(int i=0;i<plan.size();i++){
@@ -162,7 +93,6 @@ public class CurrentEducationActivity extends Activity {
             none.setTextColor(Color.BLACK);
             none.setPadding(15, 5, 15, 5);
             ll.addView(none);
-
         }
 
 
@@ -192,6 +122,5 @@ public class CurrentEducationActivity extends Activity {
             }
 
         });
-
     }
 }

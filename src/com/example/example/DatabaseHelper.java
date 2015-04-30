@@ -26,9 +26,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Database Name
     private static final String DATABASE_NAME = "CLIP-data";
 
-    // TABLES
-    private static final String TABLE_USER = "USER";
-
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -43,6 +40,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "schoolName TEXT, degreeType TEXT, program TEXT, enrollment TEXT," +
                 "dateStart TEXT, dateGrad TEXT, tuition TEXT, course TEXT, " +
                 "appDate TEXT, appStat TEXT, type TEXT)");
+        db.execSQL("CREATE TABLE LOANS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "lenderName TEXT, amount TEXT, status TEXT)");
     }
 
     // Upgrading database
@@ -51,6 +50,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS USER");
         db.execSQL("DROP TABLE IF EXISTS SCHOOLS");
+        db.execSQL("DROP TABLE IF EXISTS LOANS");
+
+        // Create tables again
+        onCreate(db);
+    }
+
+    public void onWipe() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS USER");
+        db.execSQL("DROP TABLE IF EXISTS SCHOOLS");
+        db.execSQL("DROP TABLE IF EXISTS LOANS");
 
         // Create tables again
         onCreate(db);
@@ -109,11 +119,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Cursor cursor = db.rawQuery(selectQuery, null);
 
-        cursor.moveToFirst();/*
-        Log.d("CLIP-DEGUG::", "USER id: " + Integer.parseInt(cursor.getString(0)));
-        Log.d("CLIP-DEGUG::", "USER name: " + cursor.getString(1));
-        Log.d("CLIP-DEGUG::", "USER pass: " + cursor.getString(2));*/
-
+        cursor.moveToFirst();
 
         selectQuery = "SELECT * FROM USER WHERE name = '" +name+
                 "' AND password = '" + password +"'";
@@ -121,9 +127,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         cursor = db.rawQuery(selectQuery, null);
 
-        //Entry Exists
-//            User user = new User();
-// Username/Password incorrect
         boolean res = cursor.moveToFirst(); // True if Empty
         cursor.close();
         return res;
@@ -187,10 +190,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor.getCount();
     }*/
 
-    /*
-      * SCHOOLS table operations
-      *
-      */
+    /* ------------------------- *
+     * SCHOOLS table operations  *
+     * ------------------------- */
     void addSchool_Current(School school) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -316,7 +318,73 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void deleteSchool(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("SCHOOLS", "id" + " = ?",
-                new String[] { String.valueOf(id) });
+                new String[]{String.valueOf(id)});
+        db.close();
+    }
+
+
+    /*
+     * LOANS Table
+     */
+
+    void addLoan(Loan loan) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("lenderName", loan.getCompanyName());
+        values.put("amount", loan.getAmount());
+        values.put("status", loan.getApplicationStatus().toString());
+
+        // Inserting Row
+        db.insert("LOANS", null, values);
+        db.close(); // Closing database connection
+    }
+
+    Loan selectLoan(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String selectQuery = "SELECT * FROM LOANS WHERE id = " +id;
+
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+
+        Loan loan = new Loan(Integer.parseInt(cursor.getString(0)));
+        loan.setCompanyName(cursor.getString(1));
+        loan.setAmount(Integer.parseInt(cursor.getString(2)));
+        loan.setApplicationStatus(cursor.getString(3));
+
+        cursor.close();
+        return loan;
+    }
+
+    // Getting All Current Schools
+    public List<Loan> getAllLoans() {
+        List<Loan> loanList = new ArrayList<>();
+        String selectQuery = "SELECT * FROM LOANS";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Loan loan = new Loan(Integer.parseInt(cursor.getString (0)));
+                loan.setCompanyName(cursor.getString(1));
+                loan.setAmount(Integer.parseInt(cursor.getString(2)));
+                loan.setApplicationStatus(cursor.getString(3));
+                loanList.add(loan);
+            } while (cursor.moveToNext());
+        } cursor.close();
+
+        // return user list
+        return loanList;
+    }
+
+    public void deleteLoan(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("LOANS", "id" + " = ?",
+                new String[]{String.valueOf(id)});
         db.close();
     }
 

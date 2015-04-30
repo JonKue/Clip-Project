@@ -26,11 +26,10 @@ public class DisplayLoanActivity extends Activity {
         //get information from previous activity
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            companyName = extras.getString("name");
-            amt = extras.getString("amt");
-            appStat = extras.getString("appStat");
-
-
+            companyName = extras.getString("lenderName");
+            int am = extras.getInt("amount");
+            amt = am +"";
+            appStat = extras.getString("status");
         }
 
         //connect text views to xml

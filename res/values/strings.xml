@@ -24,5 +24,6 @@
     <string name="answer">Answer:</string>
     <string name="forgot">Forgot Password?</string>
     <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="wipe">Wipe All Data!?</string>
 
 </resources>

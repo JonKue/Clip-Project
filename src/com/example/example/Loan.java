@@ -2,44 +2,49 @@ package com.example.example;
 
 import java.util.Calendar;
 
-public class Loan extends FinancialSupport {
+public class Loan {
     // Data Members
-    private int remainingBalance;
+
+    private int id;
     private String companyName;
-    private int interestRate;
-    private Calendar dueDate;
-    private int dueAmount;
+    private int amount;
+    private EnumClasses.ApplicationStatus applicationStatus;
+//    private int remainingBalance;
+//    private int interestRate;
+//    private Calendar dueDate;
+//    private int dueAmount;
 
-    public int getRemainingBalance() {
-        return remainingBalance;
+    public Loan(int id) {
+        this.id = id;
     }
 
-    public void setRemainingBalance(int remainingBalance) {
-        this.remainingBalance = remainingBalance;
+    public int getAmount() {
+        return amount;
     }
-
-    public int getDueAmount() {
-        return dueAmount;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
-
-    public void setDueAmount(int dueAmount) {
-        this.dueAmount = dueAmount;
+    public int getId() {
+        return id;
     }
-
-    public Calendar getDueDate() {
-        return dueDate;
+    public void setId(int id) {
+        this.id = id;
     }
-
-    public void setDueDate(Calendar dueDate) {
-        this.dueDate = dueDate;
+    public EnumClasses.ApplicationStatus getApplicationStatus() {
+        return applicationStatus;
     }
-
-    public int getInterestRate() {
-        return interestRate;
+    public void setApplicationStatus(EnumClasses.ApplicationStatus applicationStatus) {
+        this.applicationStatus = applicationStatus;
     }
+    public void setApplicationStatus(String applicationStatus) {
+        int i;
+        this.applicationStatus = EnumClasses.ApplicationStatus.NONE;
+        for(i=0; i<EnumClasses.ApplicationStatus.values().length; i++)
+        {
+            if(applicationStatus.equals(EnumClasses.ApplicationStatus.values()[i].toString()))
+                this.applicationStatus = EnumClasses.ApplicationStatus.values()[i];
+        }
 
-    public void setInterestRate(int interestRate) {
-        this.interestRate = interestRate;
     }
 
     public String getCompanyName() {
@@ -50,15 +55,42 @@ public class Loan extends FinancialSupport {
         this.companyName = companyName;
     }
 
-    public Loan(String companyName) {
-        super();
-        this.companyName = companyName;
-    }
+//    public int getRemainingBalance() {
+//        return remainingBalance;
+//    }
+//
+//    public void setRemainingBalance(int remainingBalance) {
+//        this.remainingBalance = remainingBalance;
+//    }
+//
+//    public int getDueAmount() {
+//        return dueAmount;
+//    }
+//
+//    public void setDueAmount(int dueAmount) {
+//        this.dueAmount = dueAmount;
+//    }
+//
+//    public Calendar getDueDate() {
+//        return dueDate;
+//    }
+//
+//    public void setDueDate(Calendar dueDate) {
+//        this.dueDate = dueDate;
+//    }
+//
+//    public int getInterestRate() {
+//        return interestRate;
+//    }
+//
+//    public void setInterestRate(int interestRate) {
+//        this.interestRate = interestRate;
+//    }
 
     // Method for reminder of due date
-    public String dueDateReminder(Calendar currentDate){
-        String reminder = "";
-
-        return reminder;
-    }
+//    public String dueDateReminder(Calendar currentDate){
+//        String reminder = "";
+//
+//        return reminder;
+//    }
 }

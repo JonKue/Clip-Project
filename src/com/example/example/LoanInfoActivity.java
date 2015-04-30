@@ -3,6 +3,7 @@ package com.example.example;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -22,6 +23,8 @@ public class LoanInfoActivity extends Activity{
         setContentView(R.layout.activity_loan_info);
 
         setUpVariables();
+
+        final DatabaseHelper db = new DatabaseHelper(this);
 
         submit.setOnClickListener(new OnClickListener() {
 
@@ -43,11 +46,19 @@ public class LoanInfoActivity extends Activity{
                 }
                 else
                 {
+                    error.setVisibility(View.INVISIBLE);
+                    Loan loan = new Loan(0);
+                    loan.setCompanyName(enteredName);
+                    loan.setAmount(Integer.parseInt(enteredAmount));
+                    loan.setApplicationStatus(enteredAppStat);
+                    db.addLoan(loan);
+
                     Intent j = new Intent(LoanInfoActivity.this, LoanActivity.class);
-                    j.putExtra("name", enteredName);
-                    j.putExtra("amt", enteredAmount);
-                    j.putExtra("appStat", enteredAppStat);
+                    j.putExtra("lenderName", enteredName);
+                    j.putExtra("amount", enteredAmount);
+                    j.putExtra("status", enteredAppStat);
                     startActivity(j);
+                    finish();
                 }
 
             }

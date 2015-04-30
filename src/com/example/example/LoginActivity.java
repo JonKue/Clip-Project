@@ -43,7 +43,6 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.login_activity);
         
         menuActivity = (Button) findViewById(R.id.buttonRegister);
-        registerActivity = (Button) findViewById(R.id.buttonNavigateRegisterActivity);
         userIdValue = (EditText) findViewById(R.id.editUserName);
         passValue = (EditText) findViewById(R.id.editPassword);
         wrongPass = (TextView) findViewById(R.id.wrongPass);
@@ -54,10 +53,11 @@ public class LoginActivity extends Activity {
         
         forgotPassword.setOnClickListener(new OnClickListener() {
 			
-			public void onClick(View v) {
-					Intent i = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
-					startActivity(i);
-				//	finish();
+			public void onClick(View v) { //TODO -- USING TO RESET DATABASE
+				Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+				db.onWipe();
+				startActivity(i);
+				finish();
 			}
 		});
         
@@ -67,25 +67,6 @@ public class LoginActivity extends Activity {
 			public void onClick(View v) {
 				String enteredUserId = userIdValue.getText().toString();
 				String enteredPassword = passValue.getText().toString();
-				
-
-				/*try {
-					InputStream is = getAssets().open("user.txt");
-					int size = is.available();
-					byte[] buffer = new byte[size];
-					is.read(buffer);
-					
-					String value = new String(buffer);
-					
-					String[] n = value.split("\r\n");
-					
-					
-					
-					userId = n[0];
-					password = n[1];
-				}
-				catch  (Exception e) {  
-				}*/
 				
 				boolean isValidNamePass = db.loginUser(enteredUserId, enteredPassword);
 			
@@ -105,53 +86,6 @@ public class LoginActivity extends Activity {
 				}
 	         }
 		});
-        
-//        registerActivity.setOnClickListener(new OnClickListener() {
-//
-//			public void onClick(View v) {
-//
-//				String enteredUserId = userIdValue.getText().toString();
-//				String enteredPassword = passValue.getText().toString();
-//
-//				//see if user has already been registered
-//				/*try {
-//					InputStream is = getAssets().open("user.txt");
-//					int size = is.available();
-//					byte[] buffer = new byte[size];
-//					is.read(buffer);
-//
-//					String value = new String(buffer);
-//
-//					String[] n = value.split("\r\n");
-//
-//
-//
-//					userId = n[0];
-//					password = n[1];
-//				}
-//				catch  (Exception e)
-//				{
-//				}
-//				if(userId == "")
-//				{
-//					Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
-//						startActivity(i);
-//					//	finish();
-//				}*/
-//
-//				boolean nameCheck = db.isValidName(enteredUserId);
-//
-//				if(nameCheck) {
-//					Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
-//					startActivity(i);
-//				}
-//				else
-//				{
-//					wrongPass.setText("User has already been registered.");
-//					wrongPass.setVisibility(View.VISIBLE);
-//				}
-//	         }
-//		});
 
 		if(db.isEmpty()) {
 			Intent i = new Intent(LoginActivity.this, RegisterActivity.class);

@@ -17,15 +17,6 @@
             android:id="@+id/registerlinear"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/MainTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="Register"
-                android:textSize="25sp" />
-
             <EditText
                 android:id="@+id/UsernameInput"
                 android:layout_width="match_parent"
@@ -100,19 +91,20 @@
                 android:background="@android:color/white"
                 android:ems="10"
                 android:layout_marginRight="24dp"
-                android:padding="16dp" />
-
-            <Button
-                android:id="@+id/buttonRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/Main"
-                android:layout_below="@+id/spinner1"
-                android:layout_marginTop="20dp"
-                android:text="@string/register"
-                android:padding="20dp" />
+                android:padding="16dp"
+                android:hint="Answer" />
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Main"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginTop="20dp"
+        android:text="@string/register"
+        android:padding="20dp" />
 
 </LinearLayout>

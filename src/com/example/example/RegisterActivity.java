@@ -9,6 +9,8 @@ import com.example.example.R;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -38,7 +40,7 @@ public class RegisterActivity extends Activity{
 		answer = (EditText) findViewById(R.id.answer);
 		register = (Button) findViewById(R.id.buttonRegister);
 		final Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
-		String[] items = new String[]{"Select security question", "What is your first dog's name?", "What is your hometown?"};
+		String[] items = new String[]{"Select security question", "What is your first pet's name?", "What is your hometown?"};
 		ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
 		dropdown.setAdapter(adapter);
 
@@ -54,7 +56,7 @@ public class RegisterActivity extends Activity{
 				String answ = answer.getText().toString();
 				int question = dropdown.getSelectedItemPosition();
 
-				if(/*question!=0 && conf.equals(pass) && !user.equals("") && !pass.equals("")*/ true)
+				if(question!=0 && conf.equals(pass) && !user.equals("") && !pass.equals("") && !answ.equals(""))
 				{
 					Log.d("CLIP-DEGUG:: ", user + " " + pass);
 					db.registerUser(user, pass, question, answ); //TODO -- Hash passwords/answer???
@@ -64,8 +66,10 @@ public class RegisterActivity extends Activity{
 					finish();
 				}
 				else {
-					//TODO -- Show Error
-
+					username.setHintTextColor(Color.RED);
+					password.setHintTextColor(Color.RED);
+					confirm.setHintTextColor(Color.RED);
+					answer.setHintTextColor(Color.RED);
 				}
 	         }
 		});

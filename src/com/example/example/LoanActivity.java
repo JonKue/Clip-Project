@@ -7,8 +7,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,7 +18,7 @@ import android.widget.TextView;
 public class LoanActivity extends Activity {
     Button enter;
     TextView label;
-    List<Loan> loan;
+    List<Loan> loans;
 
     String companyName;
     String amount;
@@ -26,44 +28,6 @@ public class LoanActivity extends Activity {
     protected void onCreate(Bundle noneState) {
         // TODO Auto-generated method stub
         super.onCreate(noneState);
-
-
-        loan = new ArrayList();
-
-
-        //get information from add current education
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            companyName = extras.getString("name");
-            amount = extras.getString("amt");
-            appStat = extras.getString("appStat");
-
-
-            //default value for application status is none
-            EnumClasses.ApplicationStatus appStatus = EnumClasses.ApplicationStatus.NONE;
-            if(appStat.equalsIgnoreCase("APPLIED"))
-            {
-                appStatus = EnumClasses.ApplicationStatus.APPLIED;
-            }
-            else if(appStat.equalsIgnoreCase("ACCEPTED"))
-            {
-                appStatus = EnumClasses.ApplicationStatus.ACCEPTED;
-            }
-            else if(appStat.equalsIgnoreCase("REJECTED"))
-            {
-                appStatus = EnumClasses.ApplicationStatus.REJECTED;
-            }
-
-            loan.add(new Loan(companyName));
-
-            //set information for current education at the end of the array list
-            loan.get(loan.size()-1).setCompanyName(companyName);
-            loan.get(loan.size()-1).setAmount(Integer.parseInt(amount));
-            loan.get(loan.size()-1).setApplicationStatus(appStatus);
-
-
-
-        }
         setContentView(R.layout.activity_none);
 
         enter = (Button) findViewById(R.id.bEnter);
@@ -71,47 +35,54 @@ public class LoanActivity extends Activity {
         enter.setText("Add");
         label.setText("Loans");
 
-        //for dynamic update of GUI
         LinearLayout ll = (LinearLayout)findViewById(R.id.NoneLayout);
 
+        final DatabaseHelper db = new DatabaseHelper(this);
+
+        loans = db.getAllLoans();
 
         //dynamically add buttons
-        Button[] tv = new Button[loan.size()];
-        for(int i=0;i<loan.size();i++){
+        Button[] tv = new Button[loans.size()];
+        for(int i=0;i<loans.size();i++){
             final int index = i;
             tv[i] = new Button(getApplicationContext());
-            tv[i].setText(loan.get(i).getCompanyName());
+            tv[i].setText(loans.get(index).getCompanyName());
             tv[i].setTextSize(20);
-            tv[i].setPadding(15, 5, 15, 5);
+            tv[i].setPadding(15, 15, 15, 15);
             tv[i].setOnClickListener(new OnClickListener() {
 
                 public void onClick(View v) {
                     Intent j = new Intent(LoanActivity.this, DisplayLoanActivity.class);
-                    j.putExtra("name", loan.get(index).getCompanyName());
-                    j.putExtra("amt", String.valueOf(loan.get(index).getAmount()));
-                    j.putExtra("appStat", loan.get(index).getApplicationStatus().toString());
-
-
+                    j.putExtra("lenderName", ""+loans.get(index).getCompanyName());
+                    Log.d("CLIP_DEBUG:: -- ", ""+loans.get(index).getAmount());
+                    j.putExtra("amount", loans.get(index).getAmount());
+                    j.putExtra("status", loans.get(index).getApplicationStatus().toString());
                     startActivity(j);
                 }
             });
+            tv[i].setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    db.deleteLoan(loans.get(index).getId());
+                    ViewGroup parentView = (ViewGroup) v.getParent();
+                    parentView.removeView(v);
+                    return true;
+                }
+            });
             ll.addView(tv[i]);
-
         }
 
         //displays a text view when user hasn't entered any current education
-        if(loan.size() == 0)
+        if(loans.size() == 0)
         {
             TextView none;
             none = new TextView(getApplicationContext());
-            none.setText("No loans at this time. Try entering some!");
+            none.setText("You're all paid off!");
             none.setTextSize(20);
             none.setTextColor(Color.BLACK);
             none.setPadding(15, 5, 15, 5);
             ll.addView(none);
-
         }
-
 
         //add a home button at the bottom of the list
         Button back = new Button(getApplicationContext());
@@ -129,9 +100,6 @@ public class LoanActivity extends Activity {
             }
 
         });
-
-
-
 
         enter.setOnClickListener(new OnClickListener() {
 

@@ -86,7 +86,7 @@ public class CurrentEducationInfoActivity extends Activity {
                     j.putExtra("dateStart", enteredDateStart);
                     j.putExtra("dateGrad", enteredDateGrad);
                     startActivity(j);
-
+                    finish();
                 }
 
 

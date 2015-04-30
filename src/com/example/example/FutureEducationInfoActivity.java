@@ -84,6 +84,7 @@ public class FutureEducationInfoActivity extends Activity {
                     j.putExtra("appDate", enteredAppDate);
                     j.putExtra("appStat", enteredAppStat);
                     startActivity(j);
+                    finish();
                 }
 
             }

@@ -2,9 +2,17 @@ package com.example.example;
 
 public class FinancialSupport {
     // Data Members
+    private int id;
     private int amount;
     private EnumClasses.ApplicationStatus applicationStatus;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public int getAmount() {
         return amount;
     }
@@ -17,9 +25,14 @@ public class FinancialSupport {
     public void setApplicationStatus(EnumClasses.ApplicationStatus applicationStatus) {
         this.applicationStatus = applicationStatus;
     }
+    public void setApplicationStatus(String applicationStatus) {
+        int i;
+        this.applicationStatus = EnumClasses.ApplicationStatus.NONE;
+        for(i=0; i<EnumClasses.ApplicationStatus.values().length; i++)
+        {
+            if(applicationStatus.equals(EnumClasses.ApplicationStatus.values()[i].toString()))
+                this.applicationStatus = EnumClasses.ApplicationStatus.values()[i];
+        }
 
-    // method to update application status
-    public void updateApplicationStatus(EnumClasses.ApplicationStatus status){
-        this.setApplicationStatus(status);
     }
 }
