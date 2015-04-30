@@ -58,7 +58,7 @@ public final class R {
         public static final int textViewSettings=0x7f08001a;
         public static final int wrongPass=0x7f08000d;
     }
-    public static final class layout {
+    public static final class layout { // update
         public static final int activity_forgot_password=0x7f030000;
         public static final int login_activity=0x7f030001;
         public static final int menu_activity=0x7f030002;
