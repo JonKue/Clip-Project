@@ -79,6 +79,9 @@
         <activity
             android:name=".ScholarshipInfoActivity"
             android:label="title_scholarship_info" />
+        <activity
+            android:name=".LoginActivityBeta"
+            android:label="LOGIN" />
     </application>
 
 </manifest>

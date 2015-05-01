@@ -23,13 +23,16 @@ public class ScholarshipInfoActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scholarship_info);
 
+        final DatabaseHelper db = new DatabaseHelper(this);
+
         setUpVariables();
 
         submit.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
+
+
 
             }
         });

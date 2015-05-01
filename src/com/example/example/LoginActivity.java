@@ -73,7 +73,7 @@ public class LoginActivity extends Activity {
 				//if this is registered user, allow access to CLIP
 				if(isValidNamePass)
 				{
-					Intent i = new Intent(LoginActivity.this, MenuActivity.class);
+					Intent i = new Intent(LoginActivity.this, LoginActivityBeta.class);
 					i.putExtra("item", enteredUserId);
 					wrongPass.setVisibility(View.INVISIBLE);
 					startActivity(i);
