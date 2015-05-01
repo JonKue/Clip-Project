@@ -80,8 +80,11 @@
             android:name=".ScholarshipInfoActivity"
             android:label="title_scholarship_info" />
         <activity
+            android:name=".DisplayScholarshipActivity"
+            android:label="title_display_scholarship" />
+        <activity
             android:name=".LoginActivityBeta"
-            android:label="LOGIN" />
+            android:label="title_login_beta" />
     </application>
 
 </manifest>

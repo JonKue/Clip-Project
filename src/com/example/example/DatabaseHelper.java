@@ -42,6 +42,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "appDate TEXT, appStat TEXT, type TEXT)");
         db.execSQL("CREATE TABLE LOANS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "lenderName TEXT, amount TEXT, status TEXT)");
+        db.execSQL("CREATE TABLE SCHOLARSHIPS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "scholarshipName TEXT, requirements TEXT, amount TEXT, status TEXT)");
     }
 
     // Upgrading database
@@ -51,6 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS USER");
         db.execSQL("DROP TABLE IF EXISTS SCHOOLS");
         db.execSQL("DROP TABLE IF EXISTS LOANS");
+        db.execSQL("DROP TABLE IF EXISTS SCHOLARSHIPS");
 
         // Create tables again
         onCreate(db);
@@ -61,6 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS USER");
         db.execSQL("DROP TABLE IF EXISTS SCHOOLS");
         db.execSQL("DROP TABLE IF EXISTS LOANS");
+        db.execSQL("DROP TABLE IF EXISTS SCHOLARSHIPS");
 
         // Create tables again
         onCreate(db);
@@ -388,6 +392,73 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    
+    /*
+     * SCHOLARSHIPS Table
+     */
 
+    void addScholarship(Scholarship scholarship) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("scholarshipName", scholarship.getName());
+        values.put("requirements", scholarship.getRequirement());
+        values.put("amount", scholarship.getAmount());
+        values.put("status", scholarship.getApplicationStatus().toString());
+
+        // Inserting Row
+        db.insert("SCHOLARSHIPS", null, values);
+        db.close(); // Closing database connection
+    }
+
+    Scholarship selectScholarship(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String selectQuery = "SELECT * FROM SCHOLARSHIPS WHERE id = " +id;
+
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+
+        Scholarship scholarship = new Scholarship(Integer.parseInt(cursor.getString(0)));
+        scholarship.setName(cursor.getString(1));
+        scholarship.setRequirement(cursor.getString(2));
+        scholarship.setAmount(Integer.parseInt(cursor.getString(3)));
+        scholarship.setApplicationStatus(cursor.getString(4));
+
+        cursor.close();
+        return scholarship;
+    }
+
+    // Getting All Current Schools
+    public List<Scholarship> getAllScholarships() {
+        List<Scholarship> scholarshipList = new ArrayList<>();
+        String selectQuery = "SELECT * FROM SCHOLARSHIPS";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Scholarship scholarship = new Scholarship(Integer.parseInt(cursor.getString(0)));
+                scholarship.setName(cursor.getString(1));
+                scholarship.setRequirement(cursor.getString(2));
+                scholarship.setAmount(Integer.parseInt(cursor.getString(3)));
+                scholarship.setApplicationStatus(cursor.getString(4));
+                scholarshipList.add(scholarship);
+            } while (cursor.moveToNext());
+        } cursor.close();
+
+        // return user list
+        return scholarshipList;
+    }
+
+    public void deleteScholarship(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("SCHOLARSHIPS", "id" + " = ?",
+                new String[]{String.valueOf(id)});
+        db.close();
+    }
 
 }
