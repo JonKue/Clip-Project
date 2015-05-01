@@ -20,7 +20,7 @@ public class DatabaseCareerHelper extends SQLiteOpenHelper {
 	private static final String GOAL = "goal";
 
 	// job search Name
-	private static final String JOB_SEARCH = "jobsearch";
+	private static final String JOB_SEARCH = "JOB_SEARCH";
 
 	// Goal Columns names
 	private static final String KEY_GTYPE = "goaltype";

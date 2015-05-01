@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DatabaseHealthHelper extends SQLiteOpenHelper {
 
@@ -20,7 +21,7 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 	private static final String DATABASE_NAME = "Health-Data";
 
 	// Vital Signs table Name
-	private static final String VITAL_SIGN = "vitalSign";
+	private static final String VITAL_SIGN = "VITAL_SIGN";
 
 	// Medication table Name
 	private static final String MEDICATION = "medication";
@@ -54,7 +55,7 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 		// TODO Auto-generated method stub
 		// Create a table for Vital Sign
 		String CREATE_VITAL_SIGN_TABLE = "CREATE TABLE " + VITAL_SIGN + "("
-				 + KEY_BT + " REAL, " + KEY_PULSE + " INTEGER, " + KEY_RR + " INTEGER, "
+				+ KEY_BT + " REAL, " + KEY_PULSE + " INTEGER, " + KEY_RR + " INTEGER, "
 				+ KEY_SBP + " INTEGER, " + KEY_DBP + " INTEGER " + ")";
 		String CREATE_ALLERGY_TABLE = "CREATE TABLE " + ALLERGY + "("
 				+ KEY_AGNAME + " TEXT, " + KEY_AGDESCRIPTION + " TEXT " + ")";
@@ -103,6 +104,8 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 		// Inserting Row
 		long flag = db.insert("VITAL_SIGN", null, values);
 		db.close(); // Closing database connection
+		Log.d("CLIP: ", flag+"");
+
 		if (flag == -1)
 			return false;
 		else
@@ -117,19 +120,23 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 		String selectQuery = "SELECT * FROM VITAL_SIGN";
 
 		Cursor cursor = db.rawQuery(selectQuery, null);
-		cursor.moveToLast();
 
 		VitalSign vitalSign = new VitalSign();
+		if (cursor.moveToLast()) {
+
 		vitalSign.setBodyTemperature(cursor.getString(0));
 		vitalSign.setPulse(cursor.getString(1));
 		vitalSign.setRespirationRate(cursor.getString(2));
-		String[] bp = { cursor.getString(2), cursor.getString(4) };
+		String[] bp = {cursor.getString(3), cursor.getString(4)}; //TODO
 		vitalSign.setBloodPressure(bp);
+		}
+		cursor.close();
+		db.close();
 
 		return vitalSign;
 	}
 
-	// Add Medicaton
+	// Add Medication
 	public void addMedication(Medication md) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		ContentValues values = new ContentValues();

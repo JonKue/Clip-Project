@@ -64,15 +64,13 @@ public class VitalSign {
 	}
 
 	public VitalSign() {
-		super();
-		/*
-		this.bodyTemperature = 0.0;
-		this.pulse = 0;
-		this.respirationRate = 0;
+
+		this.bodyTemperature = -1.0;
+		this.pulse = -1;
+		this.respirationRate = -1;
 		this.bloodPressure = new int[2];
-		this.bloodPressure[0] = 0;
-		this.bloodPressure[1] = 0;
-		*/
+		this.bloodPressure[0] = -1;
+		this.bloodPressure[1] = -1;
 	}
 
 
