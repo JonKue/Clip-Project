@@ -23,7 +23,7 @@
             android:name=".LoginActivity"
             android:label="@string/CLIP" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -80,11 +80,45 @@
             android:name=".ScholarshipInfoActivity"
             android:label="title_scholarship_info" />
         <activity
-            android:name=".DisplayScholarshipActivity"
-            android:label="title_display_scholarship" />
+            android:name=".FinanceActivity"
+            android:label="@string/title_activity_finance" >
+        </activity>
         <activity
-            android:name=".LoginActivityBeta"
-            android:label="title_login_beta" />
+            android:name=".FinancialStateActivity"
+            android:label="@string/title_activity_financial_state" >
+        </activity>
+        <activity
+            android:name=".DisplayFinancialStateActivity"
+            android:label="@string/title_activity_display_financial_state" >
+        </activity>
+        <activity
+            android:name=".FinancialStateInfoActivity"
+            android:label="@string/title_activity_financial_state_info" >
+        </activity>
+        <activity
+            android:name=".StocksActivity"
+            android:label="@string/title_activity_stocks" >
+        </activity>
+        <activity
+            android:name=".StocksInfoActivity"
+            android:label="@string/title_activity_stocks_info" >
+        </activity>
+        <activity
+            android:name=".FinancialGoalsActivity"
+            android:label="@string/title_activity_financial_goals" >
+        </activity>
+        <activity
+            android:name=".DisplayFinancialGoalsActivity"
+            android:label="@string/title_activity_display_financial_goals" >
+        </activity>
+        <activity
+            android:name=".FinanceGoalsInfoActivity"
+            android:label="@string/title_activity_finance_goals_info" >
+        </activity>
+        <activity
+            android:name=".DisplayScholarshipActivity"
+            android:label="@string/title_activity_display_scholarship" >
+        </activity>
     </application>
 
 </manifest>

@@ -25,5 +25,15 @@
     <string name="forgot">Forgot Password?</string>
     <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
     <string name="wipe">Wipe All Data!?</string>
+    <string name="title_activity_finance">FinanceActivity</string>
+    <string name="title_activity_financial_state">FinancialStateActivity</string>
+    <string name="title_activity_display_financial_state">DisplayFinancialStateActivity</string>
+    <string name="title_activity_financial_state_info">FinancialStateInfoActivity</string>
+    <string name="title_activity_stocks">StocksActivity</string>
+    <string name="title_activity_stocks_info">StocksInfoActivity</string>
+    <string name="title_activity_financial_goals">FinancialGoalsActivity</string>
+    <string name="title_activity_display_financial_goals">DisplayFinancialGoalsActivity</string>
+    <string name="title_activity_finance_goals_info">FinanceGoalsInfoActivity</string>
+    <string name="title_activity_display_scholarship">DisplayScholarshipActivity</string>
 
 </resources>

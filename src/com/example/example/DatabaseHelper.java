@@ -36,6 +36,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE USER ( uid INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "name TEXT, password TEXT, question INTEGER, answer TEXT)");
+        
+        //tables for education section
         db.execSQL("CREATE TABLE SCHOOLS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "schoolName TEXT, degreeType TEXT, program TEXT, enrollment TEXT," +
                 "dateStart TEXT, dateGrad TEXT, tuition TEXT, course TEXT, " +
@@ -44,6 +46,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "lenderName TEXT, amount TEXT, status TEXT)");
         db.execSQL("CREATE TABLE SCHOLARSHIPS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "scholarshipName TEXT, requirements TEXT, amount TEXT, status TEXT)");
+        
+        
+        //tables for finance section
+        db.execSQL("CREATE TABLE STOCKS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "numStock TEXT, name TEXT)");
+        db.execSQL("CREATE TABLE STATES ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "date TEXT, cash TEXT, assets TEXT, liabilities TEXT, creditCards TEXT," +
+                "other TEXT)");
+        db.execSQL("CREATE TABLE FGOALS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "name TEXT, description TEXT, type TEXT, date TEXT)");
     }
 
     // Upgrading database
@@ -51,9 +63,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS USER");
+        //education section
         db.execSQL("DROP TABLE IF EXISTS SCHOOLS");
         db.execSQL("DROP TABLE IF EXISTS LOANS");
         db.execSQL("DROP TABLE IF EXISTS SCHOLARSHIPS");
+        
+        //finance section
+        db.execSQL("DROP TABLE IF EXISTS STOCKS");
+        db.execSQL("DROP TABLE IF EXISTS STATES");
+        db.execSQL("DROP TABLE IF EXISTS FGOALS");
 
         // Create tables again
         onCreate(db);
@@ -62,9 +80,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onWipe() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DROP TABLE IF EXISTS USER");
+        //education section
         db.execSQL("DROP TABLE IF EXISTS SCHOOLS");
         db.execSQL("DROP TABLE IF EXISTS LOANS");
         db.execSQL("DROP TABLE IF EXISTS SCHOLARSHIPS");
+        //finance section
+        db.execSQL("DROP TABLE IF EXISTS STOCKS");
+        db.execSQL("DROP TABLE IF EXISTS STATES");
+        db.execSQL("DROP TABLE IF EXISTS FGOALS");
 
         // Create tables again
         onCreate(db);
@@ -391,12 +414,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(id)});
         db.close();
     }
-
+    
+    
     
     /*
      * SCHOLARSHIPS Table
      */
-
     void addScholarship(Scholarship scholarship) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -460,5 +483,167 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(id)});
         db.close();
     }
+    
+
+    /*******************************
+     * Functions for Finance Section
+     * Inserting values into tables
+     * ******************************/
+    //attempting to work with stocks database implementation
+    void addStock(Stocks stock) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("numStock", stock.getNumStock());
+        values.put("name", stock.getName());
+
+        // Inserting Row
+        db.insert("STOCKS", null, values);
+        db.close(); // Closing database connection
+    }
+    
+    
+    //attempting to work with stocks database implementation
+    void addState(FinancialState state) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("date", state.getDate());
+        values.put("cash", state.getCash());
+        values.put("assets", state.getAssets());
+        values.put("liabilities", state.getLiabilities());
+        values.put("creditCards", state.getCreditCards());
+        values.put("other", state.getOther());
+
+        // Inserting Row
+        db.insert("STATES", null, values);
+        db.close(); // Closing database connection
+    }
+    
+    //add finance goals to the database
+    void addFGoal(FinanceGoal goal) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("name", goal.getName());
+        values.put("description", goal.getDescription());
+        values.put("type", goal.getType());
+        values.put("date", goal.getDate());
+
+
+        // Inserting Row
+        db.insert("FGOALS", null, values);
+        db.close(); // Closing database connection
+    }
+    
+    
+    
+    
+    /*
+    * Getting values from tables
+    * ******************************/
+ // Getting All StocksS
+    public List<Stocks> getAllStocks() {
+        List<Stocks> stockList = new ArrayList<>();
+        // Select All Query
+        String selectQuery = "SELECT * FROM STOCKS";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Stocks stock = new Stocks(Integer.parseInt(cursor.getString(0)));
+                stock.setNumStock(cursor.getString(1));
+                stock.setName(cursor.getString(2));
+                // Adding contact to list
+                stockList.add(stock);
+            } while (cursor.moveToNext());
+        }
+
+        // return user list
+        return stockList;
+    }
+    
+  //Getting All States
+   public List<FinancialState> getAllStates() {
+       List<FinancialState> stateList = new ArrayList<>();
+       // Select All Query
+       String selectQuery = "SELECT * FROM STATES";
+
+       SQLiteDatabase db = this.getWritableDatabase();
+       Cursor cursor = db.rawQuery(selectQuery, null);
+
+       // looping through all rows and adding to list
+       if (cursor.moveToFirst()) {
+           do {
+               FinancialState state = new FinancialState(Integer.parseInt(cursor.getString(0)));
+               state.setDate(cursor.getString(1));
+               state.setCash(cursor.getString(2));
+               state.setAssets(cursor.getString(3));
+               state.setLiabilities(cursor.getString(4));
+               state.setCreditCards(cursor.getString(5));
+               state.setOther(cursor.getString(6));
+               // Adding contact to list
+               stateList.add(state);
+           } while (cursor.moveToNext());
+       }
+
+       // return state list
+       return stateList;
+   }
+   
+  //Getting All Finance Goals
+  public List<FinanceGoal> getAllFGoals() {
+      List<FinanceGoal> goalList = new ArrayList<>();
+      // Select All Query
+      String selectQuery = "SELECT * FROM FGOALS";
+
+      SQLiteDatabase db = this.getWritableDatabase();
+      Cursor cursor = db.rawQuery(selectQuery, null);
+
+      // looping through all rows and adding to list
+      if (cursor.moveToFirst()) {
+          do {
+              FinanceGoal goal = new FinanceGoal(Integer.parseInt(cursor.getString(0)));
+              goal.setName(cursor.getString(1));
+              goal.setDescription(cursor.getString(2));
+              goal.setType(cursor.getString(3));
+              goal.setDate(cursor.getString(4));
+              // Adding contact to list
+              goalList.add(goal);
+          } while (cursor.moveToNext());
+      }
+
+      // return state list
+      return goalList;
+  }
+  
+  /*
+   * Deleting values from database
+   * *****************************
+   */  
+  	
+	  
+	  public void deleteStock(int id) {
+	      SQLiteDatabase db = this.getWritableDatabase();
+	      db.delete("STOCKS", "id" + " = ?",
+	              new String[] { String.valueOf(id) });
+	      db.close();
+	  }
+
+	  public void deleteState(int id) {
+	      SQLiteDatabase db = this.getWritableDatabase();
+	      db.delete("STATES", "id" + " = ?",
+	              new String[] { String.valueOf(id) });
+	      db.close();
+	  }
+	  public void deleteFGoal(int id) {
+	      SQLiteDatabase db = this.getWritableDatabase();
+	      db.delete("FGOALS", "id" + " = ?",
+	              new String[] { String.valueOf(id) });
+	      db.close();
+	  }
 
 }

@@ -27,13 +27,22 @@ public class MenuActivity extends Activity{
 		//text.setText(importedText);
 
 		Button EducationButton = (Button) findViewById(R.id.bEducation);
-
+		Button FinanceButton = (Button) findViewById(R.id.bFinance);
 
 		EducationButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				Intent startCurrentEducation = new Intent(MenuActivity.this, EducationActivity.class);
 				startActivity(startCurrentEducation);
+				//finish();
+			}
+		});
+		
+		FinanceButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent j = new Intent(MenuActivity.this, FinanceActivity.class);
+				startActivity(j);
 				//finish();
 			}
 		});
