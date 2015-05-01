@@ -3,47 +3,105 @@ package com.example.clip;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class GoalActivity extends Activity{
-	private Context context = this;
-	private TextView stg, ltg, stg_text, ltg_text;
-	private Button stg_add, ltg_add;
-	private ScrollView stg_scroll, ltg_scroll;
+	Context context = this;
+	RadioButton stgButton, ltgButton;
+	Button save, done;
+	EditText goalEntry;
+	DatabaseCareerHelper db;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_goal);
+		db = new DatabaseCareerHelper(this);
+		Cursor c = db.getAllGoal();
+
+		// for dynamic update of GUI
+		TextView tv;
+		LinearLayout ll = (LinearLayout) findViewById(R.id.llGoal);
+
+		if (c.getCount() == 0) {
+			tv = new TextView(getApplicationContext());
+			tv.setText("None");
+			tv.setTextSize(20);
+			tv.setPadding(15, 15, 15, 15);
+			ll.addView(tv);	
+		} else {
+			int count = 1;
+			while (c.moveToNext()){
+				tv = new TextView(getApplicationContext());
+				String type = c.getString(0);
+				String name = c.getString(1);
+				
+				String str = type + ": " + name;
+				tv.setText(str);
+				ll.addView(tv);
+				/*
+				if (type.matches(GoalType.SHORT_TERM.toString())){
+					String str = "Short-Term Goal: " + name 
+							+ "\n";
+					
+					tv.setText(str);
+					tv.setTextSize(20);
+					tv.setPadding(15, 15, 15, 15);
+					ll.addView(tv);
+				}
+				if (type.matches(GoalType.LONG_TERM.toString())){
+					String str = "Long-Term Goal: " + name 
+							+ "\n";
+					
+					tv.setText(str);
+					tv.setTextSize(20);
+					tv.setPadding(15, 15, 15, 15);
+					ll.addView(tv);
+				}
+				*/
+				count++;
+			}
+		}
 		
-		setUpVariables();
+		Button add = (Button) findViewById(R.id.bGadd);
 		
-		stg_add.setOnClickListener(new OnClickListener() {
+		add.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				final Dialog dialog = new Dialog(context);	
-				dialog.setContentView(R.layout.dialog_goal_entry);
-				dialog.setTitle("Short Term Goal");
-				Button save = (Button) dialog.findViewById(R.id.bGsave);
-				Button done = (Button) dialog.findViewById(R.id.bGdone);
-				final EditText stgEntry = (EditText) dialog.findViewById(R.id.etGoalEntry);
+				setContentView(R.layout.activity_goal_entry);
+				
+				setUpVariables();
 				
 				save.setOnClickListener(new OnClickListener(){
 					@Override
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
-						//dialog.dismiss();
-						// need implementaion here.......
-						// save data in database
+						EditText stgEntry = (EditText) findViewById(R.id.etGoalEntry);
+						GoalType type;
+						if (stgButton.isChecked())
+							type = GoalType.SHORT_TERM;
+						else
+							type = GoalType.LONG_TERM;
+						Goal goal = new Goal();
+						goal.setType(type);
+						goal.setName(stgEntry.getText().toString());
+						db.addGoal(goal);
+						String text = "Your goal is saved.";
+						Toast.makeText(context, text, Toast.LENGTH_LONG);
+						
 					}
 				});
 				
@@ -51,66 +109,23 @@ public class GoalActivity extends Activity{
 					@Override
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
-						dialog.dismiss();
+						
+						recreate();
 						// need implementaion here.......
 						// save data in database
 						// Display data in Goal Activity
 					}
-				});
-				
-				dialog.show();	
-				
-			}	
-		});
-		
-		ltg_add.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				final Dialog dialog = new Dialog(context);	
-				dialog.setContentView(R.layout.dialog_goal_entry);
-				dialog.setTitle("Long Term Goal");
-				Button save = (Button) dialog.findViewById(R.id.bGsave);
-				Button done = (Button) dialog.findViewById(R.id.bGdone);
-				final EditText stgEntry = (EditText) dialog.findViewById(R.id.etGoalEntry);
-				
-				save.setOnClickListener(new OnClickListener(){
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						//dialog.dismiss();
-						// need implementaion here.......
-						// save data in database
-					}
-				});
-				
-				done.setOnClickListener(new OnClickListener(){
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						dialog.dismiss();
-						// need implementaion here.......
-						// save data in database
-						// Display data in Goal Activity
-					}
-				});
-				
-				dialog.show();	
-				
-			}	
+				});	
+			}
+			
+			private void setUpVariables() {
+				stgButton = (RadioButton) findViewById(R.id.rbSTG);
+				ltgButton = (RadioButton) findViewById(R.id.rbLTG);
+				save = (Button) findViewById(R.id.bGsave);
+				done = (Button) findViewById(R.id.bGdone);
+			}
 		});
 		
 	}
 
-	private void setUpVariables() {
-		stg = (TextView) findViewById(R.id.tvSTG);
-		ltg = (TextView) findViewById(R.id.tvLTG);
-		stg_add = (Button) findViewById(R.id.bSTGadd);
-		ltg_add = (Button) findViewById(R.id.bLTGadd);
-		stg_scroll = (ScrollView) findViewById(R.id.svSTG);
-		ltg_scroll = (ScrollView) findViewById(R.id.svLTG);
-		stg_text = (TextView) findViewById(R.id.tvSTGentry);
-		ltg_text = (TextView) findViewById(R.id.tvLTGentry);
-	}
 }

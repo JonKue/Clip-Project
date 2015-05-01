@@ -30,7 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="date" />
+        android:inputType="date"
+        android:hint="mm/dd/yyyy" />
 
     <TextView
         android:id="@+id/tvMendDate"
@@ -43,7 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="date" />
+        android:inputType="date"
+        android:hint="mm/dd/yyyy"  />
 
     <Button
         android:id="@+id/bMsave"

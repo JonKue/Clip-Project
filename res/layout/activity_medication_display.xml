@@ -5,34 +5,27 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/tvAname"
+        android:id="@+id/tvMDpillName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name" />
-
-    <EditText
-        android:id="@+id/etAname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10" />
+        android:text="Pill Name: " />
 
     <TextView
-        android:id="@+id/tvAdescription"
+        android:id="@+id/tvMDstartDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Description" />
+        android:text="Started Date: " />
 
-    <EditText
-        android:id="@+id/etAdescription"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvMDendDate"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textMultiLine" />
+        android:text="End Date: " />
 
     <Button
-        android:id="@+id/bAsave"
+        android:id="@+id/bMDbace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save" />
+        android:text="Back" />
 
 </LinearLayout>

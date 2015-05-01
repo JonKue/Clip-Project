@@ -2,8 +2,7 @@ package com.example.clip;
 
 public class VitalSign {
 	// Data Members
-	//final int _id;
-	private int bodyTemperature;
+	private double bodyTemperature;
 	private int pulse;
 	private int respirationRate;
 	private int[] bloodPressure;
@@ -13,21 +12,22 @@ public class VitalSign {
 
 	
 	
-	public int getBodyTemperature() {
-		return bodyTemperature;
+	public String getBodyTemperature() {
+		String s;
+		s = String.valueOf(this.bodyTemperature);
+		return s;
 	}
-/*
-	public int get_id() {
-		return _id;
-	}
-*/
+
+
 	public void setBodyTemperature(String string) {
-		int bt = Integer.parseInt(string);
+		double bt = Double.parseDouble(string);
 		this.bodyTemperature = bt;
 	}
 
-	public int getPulse() {
-		return pulse;
+	public String getPulse() {
+		String s;
+		s = String.valueOf(this.pulse);
+		return s;
 	}
 
 	public void setPulse(String string) {
@@ -36,8 +36,10 @@ public class VitalSign {
 	}
 
 	
-	public int getRespirationRate() {
-		return respirationRate;
+	public String getRespirationRate() {
+		String s;
+		s = String.valueOf(this.respirationRate);
+		return s;
 	}
 
 	public void setRespirationRate(String string) {
@@ -47,8 +49,11 @@ public class VitalSign {
 
 	
 	
-	public int[] getBloodPressure() {
-		return bloodPressure;
+	public String[] getBloodPressure() {
+		String s = String.valueOf(this.bloodPressure[0]);
+		String d = String.valueOf(this.bloodPressure[1]);
+		String[] bp = {s,d};
+		return bp;
 	}
 
 	public void setBloodPressure(String[] string) {
@@ -60,14 +65,27 @@ public class VitalSign {
 
 	public VitalSign() {
 		super();
-		//this._id = _id;
-		this.bodyTemperature = 0;
+		/*
+		this.bodyTemperature = 0.0;
 		this.pulse = 0;
 		this.respirationRate = 0;
 		this.bloodPressure = new int[2];
 		this.bloodPressure[0] = 0;
 		this.bloodPressure[1] = 0;
+		*/
 	}
+
+
+	public VitalSign(double bodyTemperature, int pulse, int respirationRate,
+			int[] bloodPressure) {
+		super();
+		this.bodyTemperature = bodyTemperature;
+		this.pulse = pulse;
+		this.respirationRate = respirationRate;
+		this.bloodPressure = bloodPressure;
+	}
+	
+	
 
 	
 

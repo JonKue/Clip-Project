@@ -5,20 +5,22 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/bGadd"
-        android:layout_width="wrap_content"
+        android:id="@+id/bCareerAdd"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add" />
+        android:text="ADD" />
+
     <ScrollView
-        android:id="@+id/scrollView1"
+        android:id="@+id/svCareerAdd"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
         <LinearLayout
-            android:id="@+id/llGoal"
+            android:id="@+id/llJobSearch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical" >
+
         </LinearLayout>
     </ScrollView>
 

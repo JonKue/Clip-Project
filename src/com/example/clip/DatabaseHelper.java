@@ -44,8 +44,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     	
     	onUpgrade(db,0,1);
     	
-    	
-    	
     }
 
     // Creating Tables
@@ -72,15 +70,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS SCHOOLS");
         db.execSQL("DROP TABLE IF EXISTS VITALSIGNS");
 
-
-        
 //    	File path = con.getDatabasePath(DATABASE_NAME);
         
 //      db.openOrCreateDatabase(path, null);
 
-        
-        
-        
         // Create tables again
         onCreate(db);
     }
@@ -93,8 +86,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     void addVitalSign(VitalSign myVitalSign) {
        SQLiteDatabase db = this.getWritableDatabase();
-       
-              
        
        ContentValues values = new ContentValues();
        //values.put("id", myVitalSign.get_id());
@@ -116,7 +107,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
        Cursor cursor = db.rawQuery(selectQuery, null);
-       cursor.moveToFirst();
+       cursor.moveToLast();
 
        VitalSign vitalSign = new VitalSign();
        vitalSign.setBodyTemperature(cursor.getString(1));

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class JobSearch {
 	private String jobName;
-	private Date date;
+	private String date;
 	private String status;
 	private String note;
 	
@@ -14,11 +14,11 @@ public class JobSearch {
 	public void setJobName(String jobName) {
 		this.jobName = jobName;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDate(String string) {
+		this.date = string;
 	}
 	
 	public String getStatus() {
@@ -34,9 +34,9 @@ public class JobSearch {
 	public void setNote(String note) {
 		this.note = note;
 	}
-	public JobSearch(String jobName) {
+	public JobSearch() {
 		super();
-		this.jobName = jobName;
+		//this.jobName = jobName;
 	}
 	
 }

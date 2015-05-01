@@ -8,8 +8,8 @@ public class Goal {
 	private GoalType type;
 	
 	
-	public GoalType getType() {
-		return type;
+	public String getType() {
+		return type.toString();
 	}
 	public void setType(GoalType type) {
 		this.type = type;
@@ -21,9 +21,9 @@ public class Goal {
 		this.name = name;
 	}
 	
-	public Goal(String name) {
+	public Goal() {
 		super();
-		this.name = name;
+		//this.name = name;
 	}
 	
 	
