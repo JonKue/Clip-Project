@@ -67,6 +67,7 @@ public class FinanceGoalsInfoActivity extends Activity {
 					
 					
 					startActivity(j);
+					finish();
 					
 				}
 					

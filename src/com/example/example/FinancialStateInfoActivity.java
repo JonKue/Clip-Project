@@ -82,6 +82,7 @@ public class FinancialStateInfoActivity extends Activity {
 					
 					db.addState(state);
 					startActivity(j);
+					finish();
 					
 				}
 					
