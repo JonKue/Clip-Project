@@ -44,7 +44,9 @@
                 style="@android:style/DeviceDefault.Light.ButtonBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contact Information:" />
+                android:text="Contact Information:"
+                android:background="@android:drawable/btn_default_small"
+                android:layout_gravity="left" />
 
             <TextView
                 android:id="@+id/tvCIcontactInfo"

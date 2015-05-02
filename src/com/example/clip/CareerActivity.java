@@ -38,7 +38,7 @@ public class CareerActivity extends Activity{
 		comInfo.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				Intent startCompanyInfo = new Intent(CareerActivity.this, CompanyInformationActivity.class);
+				Intent startCompanyInfo = new Intent(CareerActivity.this, CompanyInfoActivity.class);
 				startActivity(startCompanyInfo);
 			}
 		});

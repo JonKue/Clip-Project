@@ -41,14 +41,21 @@ public class DatabaseCareerHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
 		// Create a table for Vital Sign
-		String CREATE_GOAL_TABLE = "CREATE TABLE " + GOAL + "(" + KEY_GTYPE
+		String CREATE_GOAL_TABLE = "CREATE TABLE " + GOAL + "(" +
+				"id INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_GTYPE
 				+ " TEXT, " + KEY_GNAME + " TEXT " + ")";
-		String CREATE_JOB_SEARCH_TABLE = "CREATE TABLE " + JOB_SEARCH + "("
+		String CREATE_JOB_SEARCH_TABLE = "CREATE TABLE " + JOB_SEARCH + "(" +
+				"id INTEGER PRIMARY KEY AUTOINCREMENT, "
 				+ KEY_JSNAME + " TEXT, " + KEY_JSDATE + " TEXT, "
 				+ KEY_JSSTATUS + " TEXT, " + KEY_JSOTHERNOTE + " TEXT " + ")";
 
 		db.execSQL(CREATE_GOAL_TABLE);
 		db.execSQL(CREATE_JOB_SEARCH_TABLE);
+
+		db.execSQL("CREATE TABLE COMPANY ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+				"companyName TEXT, product TEXT, address TEXT, phone TEXT, " +
+				"facts TEXT, reasons TEXT, subDate TEXT, interviewDate TEXT, " +
+				"outcome TEXT, notes TEXT)");
 	}
 
 	@Override
@@ -57,6 +64,7 @@ public class DatabaseCareerHelper extends SQLiteOpenHelper {
 		// Drop older table if existed
 		db.execSQL("DROP TABLE IF EXISTS " + GOAL);
 		db.execSQL("DROP TABLE IF EXISTS " + JOB_SEARCH);
+		db.execSQL("DROP TABLE IF EXISTS COMPANY");
 
 		// Create tables again
 	}
@@ -105,7 +113,13 @@ public class DatabaseCareerHelper extends SQLiteOpenHelper {
 
 		db.insert("JOB_SEARCH", null, values);
 		db.close();
+	}
 
+	public void deleteJobSearch(int id) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.delete("JOB_SEARCH", "id" + " = ?",
+				new String[]{String.valueOf(id)});
+		db.close();
 	}
 
 	// Getting All job search
@@ -115,6 +129,40 @@ public class DatabaseCareerHelper extends SQLiteOpenHelper {
 		Cursor cursor = db.rawQuery(selectQuery, null);
 		return cursor;
 
+	}
+
+	public void addCompanyInfo(CompanyInformation companyInformation) {
+		SQLiteDatabase db = this.getWritableDatabase();
+
+		ContentValues values = new ContentValues();
+		values.put("companyName", companyInformation.getComName());
+		values.put("product", companyInformation.getComProduct());
+		values.put("address", companyInformation.getPhoneNum());
+		values.put("phone", companyInformation.getLocation());
+		values.put("facts", companyInformation.getKeyFacts());
+		values.put("reasons", companyInformation.getReasons());
+		values.put("subDate", companyInformation.getResumeSubDate());
+		values.put("interviewDate", companyInformation.getInterviewDate());
+		values.put("outcome", companyInformation.getInterviewResult().toString());
+		values.put("notes", companyInformation.getNotes().toString());
+
+		db.insert("COMPANY", null, values);
+		db.close();
+	}
+
+	public void deleteCompany(int id) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.delete("COMPANY", "id" + " = ?",
+				new String[]{String.valueOf(id)});
+		db.close();
+	}
+
+	// Getting All job search
+	public Cursor getAllCompany() {
+		SQLiteDatabase db = this.getWritableDatabase();
+		String selectQuery = "Select * from COMPANY";
+		Cursor cursor = db.rawQuery(selectQuery, null);
+		return cursor;
 	}
 
 }

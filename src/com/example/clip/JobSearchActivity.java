@@ -7,8 +7,10 @@ import android.app.Dialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -30,7 +32,7 @@ public class JobSearchActivity extends Activity {
 		setContentView(R.layout.activity_jobsearch_add);
 
 		db = new DatabaseCareerHelper(this);
-		Cursor c = db.getAllJobSearch();
+		final Cursor c = db.getAllJobSearch();
 
 		// for dynamic update of GUI
 		LinearLayout ll = (LinearLayout) findViewById(R.id.llJobSearch);
@@ -48,17 +50,55 @@ public class JobSearchActivity extends Activity {
 			i = 0;
 			while (c.moveToNext()) {
 				b[i] = new Button(getApplicationContext());
-				b[i].setText(c.getString(0));
+				final int id = Integer.parseInt(c.getString(0));
+				final String app = c.getString(1);
+				final String dates = c.getString(2);
+				final String stat = c.getString(3);
+				final String note = c.getString(4);
+
+				b[i].setText(app);
+
 				b[i].setTextSize(20);
 
 				b[i].setOnClickListener(new OnClickListener() {
 
 					@Override
 					public void onClick(View v) {
-						// TODO Auto-generated method stub
+						final Dialog dialog = new Dialog(context);
+						dialog.setContentView(R.layout.activity_display_job_search);
+						dialog.setTitle("Job Search");
+						Button dismiss = (Button) dialog.findViewById(R.id.jobsearch_dismiss);
 
-						recreate();
+						TextView applied = (TextView) dialog.findViewById(R.id.jobsearch_applied);
+						TextView date = (TextView) dialog.findViewById(R.id.jobsearch_date);
+						TextView status = (TextView) dialog.findViewById(R.id.jobsearch_status);
+						TextView notes = (TextView) dialog.findViewById(R.id.jobsearch_notes);
 
+						applied.setText(app);
+						date.setText(dates);
+						status.setText(stat);
+						notes.setText(note);
+
+						dismiss.setOnClickListener(new OnClickListener() {
+
+							@Override
+							public void onClick(View v) {
+								dialog.dismiss();
+							}
+						});
+						dialog.show();
+					}
+
+
+				});
+
+				b[i].setOnLongClickListener(new View.OnLongClickListener() {
+					@Override
+					public boolean onLongClick(View v) {
+						db.deleteJobSearch(id);
+						ViewGroup parentView = (ViewGroup) v.getParent();
+						parentView.removeView(v);
+						return true;
 					}
 				});
 
@@ -109,7 +149,7 @@ public class JobSearchActivity extends Activity {
 								DatePicker date = (DatePicker) dialog
 										.findViewById(R.id.dpDPselectDate);
 								int day = date.getDayOfMonth();
-								int month = date.getMonth() + 1;
+								int month = date.getMonth();
 								int year = date.getYear();
 								Date d = new Date();
 								d.setDate(day);
