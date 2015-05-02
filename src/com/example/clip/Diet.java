@@ -4,9 +4,10 @@ import java.util.Date;
 
 public class Diet {
 	// Date Members
+	private final int _id;
 	private String dietType;
-	private Date startDate;
-	private Date endDate;
+	private String startDate;
+	private String endDate;
 	private String otherInfo;
 	
 	public String getDietType() {
@@ -15,29 +16,34 @@ public class Diet {
 	public void setDietType(String dietType) {
 		this.dietType = dietType;
 	}
-	public Date getStartDate() {
+	
+	
+	public String getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
-	public Date getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
-	
+	public int get_id() {
+		return _id;
+	}
 	public String getOtherInfo() {
 		return otherInfo;
 	}
 	public void setOtherInfo(String otherInfo) {
 		this.otherInfo = otherInfo;
 	}
-	public Diet(String dietType) {
+	public Diet(int _id) {
 		super();
-		this.dietType = dietType;
+		this._id = _id;
 	}
+	
 	
 	
 }

@@ -31,7 +31,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name=".HealthActivity"
             android:label="@string/title_activity_health" >
             <intent-filter>
@@ -40,7 +40,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-       
         <activity
             android:name=".CurrentEducationActivity"
             android:label="@string/app_name" >
@@ -185,7 +184,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-       <activity
+        <activity
             android:name=".JobSearchActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -220,6 +219,18 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".DisplayMedicationActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".DisplayDietPlanActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".DisplayExercisePlanActivity"
+            android:label="@string/app_name" >
         </activity>
     </application>
 

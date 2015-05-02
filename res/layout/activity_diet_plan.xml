@@ -5,61 +5,28 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/bDPstartDate"
-        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/bDPadd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Date" />
+        android:text="Add" />
 
     <Button
-        android:id="@+id/bDPendDate"
-        style="?android:attr/buttonStyleSmall"
+        android:id="@+id/bDPback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="End Date" />
+        android:text="Back" />
 
-    <Button
-        android:id="@+id/bDPmonday"
+    <ScrollView
+        android:id="@+id/svDP"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Monday" />
+        android:layout_height="wrap_content" >
 
-    <Button
-        android:id="@+id/bDPtuesday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tuesday" />
-
-    <Button
-        android:id="@+id/bDPwednesday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Wednesday" />
-
-    <Button
-        android:id="@+id/bDPthursday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Thursday" />
-
-    <Button
-        android:id="@+id/bDPfriday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Friday" />
-
-    <Button
-        android:id="@+id/bDPsaturday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Saturday" />
-
-    <Button
-        android:id="@+id/bDPsunday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sunday" />
-
-    
+        <LinearLayout
+            android:id="@+id/llDP"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
