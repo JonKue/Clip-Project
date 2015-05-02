@@ -1,24 +1,32 @@
 package com.example.clip;
 
 /*
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+ import java.text.ParseException;
+ import java.text.SimpleDateFormat;
+ import java.util.Date;
 
-import android.text.format.Formatter;*/
+ import android.text.format.Formatter;*/
 
 public class Medication {
 	// Data Members
+	private final int _id;
 	private String pillName;
+	private String noOfDosage;
 	private String dateStarted;
 	private String dateEnded;
 	boolean setReminder;
-/*
-	SimpleDateFormat dateFormat1 = new SimpleDateFormat("mmm d, yyyy");
-	SimpleDateFormat dateFormat2 = new SimpleDateFormat("mm/dd/yyyy");
-*/
+
+	/*
+	 * SimpleDateFormat dateFormat1 = new SimpleDateFormat("mmm d, yyyy");
+	 * SimpleDateFormat dateFormat2 = new SimpleDateFormat("mm/dd/yyyy");
+	 */
+
 	public String getPillName() {
 		return pillName;
+	}
+
+	public int get_id() {
+		return _id;
 	}
 
 	public void setPillName(String pillName) {
@@ -26,6 +34,14 @@ public class Medication {
 	}
 
 	
+
+	public String getNoOfDosage() {
+		return noOfDosage;
+	}
+
+	public void setNoOfDosage(String noOfDosage) {
+		this.noOfDosage = noOfDosage;
+	}
 
 	public String getDateStarted() {
 		return dateStarted;
@@ -51,9 +67,9 @@ public class Medication {
 		this.setReminder = setReminder;
 	}
 
-	public Medication(String pillName) {
+	public Medication(int _id) {
 		super();
-		this.pillName = pillName;
+		this._id = _id;
 	}
 
 }

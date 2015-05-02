@@ -4,10 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Spinner
-        android:id="@+id/sDPmeal"
+    <TextView
+        android:id="@+id/tvDPtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diet Type" />
+
+    <EditText
+        android:id="@+id/etDPtype"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine" />
 
     <TextView
         android:id="@+id/tvDPdescription"
@@ -20,25 +28,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textMultiLine" >
+        android:inputType="textMultiLine" />
 
-        <requestFocus />
-    </EditText>
-
-    <LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal" >
-    <Button
-        android:id="@+id/bDPsave"
+    <TextView
+        android:id="@+id/tvDPstartDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save" />
+        android:text="Start Date" />
 
-    <Button
-        android:id="@+id/bDPdone"
+    <EditText
+        android:id="@+id/etDPstartDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="mm/dd/yyyy"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/tvDPendDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Done" />
-</LinearLayout>
+        android:text="End Date" />
+
+    <EditText
+        android:id="@+id/etDPendDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="mm/dd/yyyy"
+        android:inputType="date" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bDPsave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save" />
+    </LinearLayout>
+
 </LinearLayout>

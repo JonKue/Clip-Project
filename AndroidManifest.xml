@@ -221,12 +221,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DisplayJobSearch"
-            android:label="title_display_job_search" />
-        <activity
-            android:name=".CompanyInfoActivity"
-            android:label="title_company" />
     </application>
 
 </manifest>

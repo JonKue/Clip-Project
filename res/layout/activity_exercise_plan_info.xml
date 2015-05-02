@@ -8,7 +8,7 @@
         android:id="@+id/tvEPname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/name" />
+        android:text="Plan" />
 
     <EditText
         android:id="@+id/etEPname"
@@ -17,25 +17,38 @@
         android:ems="10"
         android:inputType="text" >
     </EditText>
+    <TextView
+        android:id="@+id/tvEProutine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Routine" />
 
-    <Spinner
-        android:id="@+id/sEProutine"
+    <EditText
+        android:id="@+id/etEProutine"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/bEPStartTime"
-        style="@android:style/DeviceDefault.Light.ButtonBar"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Time" />
+        android:ems="10"
+        android:inputType="text" >
+    </EditText>
 
-    <Button
-        android:id="@+id/bEPEndTime"
-        style="@android:style/DeviceDefault.Light.ButtonBar"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etEPstarttime"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="End Time" />
+        android:ems="10"
+        android:inputType="time"
+        android:hint="HH:MM" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etEPendtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time" 
+        android:hint="HH:MM" />
 
     <TextView
         android:id="@+id/tvEPotherInfo"
@@ -55,5 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/save" />
+    
+   
 
 </LinearLayout>

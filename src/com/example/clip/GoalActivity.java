@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -18,7 +20,7 @@ import android.widget.Toast;
 public class GoalActivity extends Activity{
 	Context context = this;
 	RadioButton stgButton, ltgButton;
-	Button save, done;
+	Button save, done, delete;
 	EditText goalEntry;
 	DatabaseCareerHelper db;
 	
@@ -32,6 +34,7 @@ public class GoalActivity extends Activity{
 
 		// for dynamic update of GUI
 		TextView tv;
+		CheckBox cb;
 		LinearLayout ll = (LinearLayout) findViewById(R.id.llGoal);
 
 		if (c.getCount() == 0) {
@@ -43,13 +46,26 @@ public class GoalActivity extends Activity{
 		} else {
 			int count = 1;
 			while (c.moveToNext()){
-				tv = new TextView(getApplicationContext());
+				cb = new CheckBox(getApplicationContext());
 				String type = c.getString(0);
 				String name = c.getString(1);
 				
 				String str = type + ": " + name;
-				tv.setText(str);
-				ll.addView(tv);
+				cb.setText(str);
+				cb.setTextColor(Color.BLUE);
+				ll.addView(cb);
+				
+				if (cb.isChecked()){
+					delete.setOnClickListener(new OnClickListener(){
+
+						@Override
+						public void onClick(View v) {
+							// TODO Auto-generated method stub
+							
+						}
+						
+					});
+				}
 				/*
 				if (type.matches(GoalType.SHORT_TERM.toString())){
 					String str = "Short-Term Goal: " + name 
@@ -123,6 +139,7 @@ public class GoalActivity extends Activity{
 				ltgButton = (RadioButton) findViewById(R.id.rbLTG);
 				save = (Button) findViewById(R.id.bGsave);
 				done = (Button) findViewById(R.id.bGdone);
+				delete = (Button) findViewById(R.id.bGdelete);
 			}
 		});
 		

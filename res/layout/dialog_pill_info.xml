@@ -14,10 +14,15 @@
         android:id="@+id/etMpillName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
+        android:ems="10" />
 
-        <requestFocus />
-    </EditText>
+    <EditText
+        android:id="@+id/etMnoDosage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Number of Dosage per day"
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/tvMstartDate"
@@ -30,8 +35,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="date"
-        android:hint="mm/dd/yyyy" />
+        android:hint="mm/dd/yyyy"
+        android:inputType="date" />
 
     <TextView
         android:id="@+id/tvMendDate"
@@ -44,8 +49,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="date"
-        android:hint="mm/dd/yyyy"  />
+        android:hint="mm/dd/yyyy"
+        android:inputType="date" />
 
     <Button
         android:id="@+id/bMsave"
