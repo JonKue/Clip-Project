@@ -59,8 +59,9 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 				+ KEY_BT + " TEXT, " + KEY_PULSE + " TEXT, " + KEY_RR
 				+ " TEXT, " + KEY_SBP + " TEXT, " + KEY_DBP + " TEXT " + ")";
 
-		String CREATE_ALLERGY_TABLE = "CREATE TABLE " + ALLERGY + "("
-				+ KEY_AGNAME + " TEXT, " + KEY_AGDESCRIPTION + " TEXT " + ")";
+		String CREATE_ALLERGY_TABLE = "CREATE TABLE " + ALLERGY 
+				+ "( id INTEGER PRIMARY KEY AUTOINCREMENT, "
+				 + KEY_AGNAME + " TEXT, " + KEY_AGDESCRIPTION + " TEXT " + ")";
 
 		db.execSQL(CREATE_VITAL_SIGN_TABLE);
 
@@ -105,7 +106,7 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 		// Inserting Row
 		long flag = db.insert("VITAL_SIGN", null, values);
 		db.close(); // Closing database connection
-		Log.d("CLIP: ", flag + "");
+		//Log.d("CLIP: ", flag + "");
 
 		if (flag == -1)
 			return false;
@@ -268,6 +269,32 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 		// return user list
 		return medicationList;
 	}
+	
+	// Getting All Allergy
+	public List<Allergy> getAllAllergy() {
+		List<Allergy> allergyList = new ArrayList<Allergy>();
+		// Select All Query
+		String selectQuery = "SELECT * FROM ALLERGY";
+
+		SQLiteDatabase db = this.getWritableDatabase();
+		Cursor cursor = db.rawQuery(selectQuery, null);
+
+		// looping through all rows and adding to list
+		if (cursor.moveToFirst()) {
+			do {
+				Allergy allergy = new Allergy(Integer.parseInt(cursor
+						.getString(0)));
+				
+				allergy.setAllergyName(cursor.getString(1));
+				allergy.setAllergyDescription(cursor.getString(2));
+				
+				allergyList.add(allergy);
+			} while (cursor.moveToNext());
+		}
+
+		// return user list
+		return allergyList;
+	}
 
 	/*** Deleting values from Database ***/
 
@@ -294,6 +321,15 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 				new String[] { String.valueOf(id) });
 		db.close();
 	}
+	
+	// Delete allergy
+	// Delete medication
+		public void deleteAllergy(int id) {
+			SQLiteDatabase db = this.getWritableDatabase();
+			db.delete("ALLERGY", "id" + " = ?",
+					new String[] { String.valueOf(id) });
+			db.close();
+		}
 
 	// Add allergy
 	public void addAllergy(Allergy ag) {
@@ -309,6 +345,7 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 		db.close();
 	}
 
+	/*
 	// Getting All allergy
 	public Cursor getAllAllergy() {
 		SQLiteDatabase db = this.getWritableDatabase();
@@ -317,6 +354,7 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 		return cursor;
 
 	}
+	*/
 
 	// Get allergy
 	public Allergy getAllergy(String name) {
@@ -326,7 +364,7 @@ public class DatabaseHealthHelper extends SQLiteOpenHelper {
 
 		Cursor cursor = db.rawQuery(selectQuery, null);
 		cursor.moveToFirst();
-		Allergy ag = new Allergy();
+		Allergy ag = new Allergy(0);
 		ag.setAllergyName(cursor.getString(1));
 		ag.setAllergyDescription(cursor.getString(2));
 
