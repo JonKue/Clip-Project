@@ -5,28 +5,28 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/tvEPplanName"
+        android:id="@+id/tvDEPplanName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/tvEProutDate"
+        android:id="@+id/tvDEProutDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/tvEPdes"
+        android:id="@+id/tvDEPdes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/bEPback"
+        android:id="@+id/bDEPback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back" />

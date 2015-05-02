@@ -3,25 +3,24 @@ package com.example.clip;
 import java.util.List;
 
 import android.app.Activity;
-import android.app.Dialog;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.TimePicker;
+
+//import android.widget.TextView;
 
 public class ExercisePlanActivity extends Activity {
 
 	protected static final Context ExercisePlanActivity = null;
-	private Context context = this;
+
 	private Button add, back;
 	DatabaseHealthHelper db;
 
@@ -55,7 +54,8 @@ public class ExercisePlanActivity extends Activity {
 				public void onClick(View v) {
 					Intent j = new Intent(ExercisePlanActivity.this,
 							DisplayExercisePlanActivity.class);
-					j.putExtra("exercisePlan", epList.get(index).getExerciseName());
+					j.putExtra("exercisePlan", epList.get(index)
+							.getExerciseName());
 					j.putExtra("routine", epList.get(index).getRoutine());
 					j.putExtra("startTime", epList.get(index).getStartTime());
 					j.putExtra("endTime", epList.get(index).getEndTime());
@@ -80,110 +80,50 @@ public class ExercisePlanActivity extends Activity {
 		add = (Button) findViewById(R.id.bEPadd);
 
 		add.setOnClickListener(new OnClickListener() {
-			TextView name, otherInfo;
-			EditText nameEntry, otherInfoEntry;
-			Spinner routine;
-			TimePicker st, et;
-			Button startTime, endTime, save;
-			ExercisePlan ep = new ExercisePlan(0);
-			
+			//TextView name, otherInfo;
+			EditText nameEntry, routine, startTime, endTime, otherInfoEntry;
+			/*
+			 * Spinner routine; TimePicker st, et;
+			 */
+			Button save;
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				setContentView(R.layout.activity_exercise_plan_info);
 				setUpVariable();
-				
-				String[] items = new String[]{"NONE","DAILY","WEEKLY","MONTHLY"};
-				ArrayAdapter<String> adapter = new ArrayAdapter<String>(ExercisePlanActivity,android.R.layout.simple_spinner_item, items);
-				adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-				routine.setAdapter(adapter);
-					
-			
-				
-				startTime.setOnClickListener(new OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						final Dialog dialog = new Dialog(context);
-						dialog.setContentView(R.layout.dialog_pick_time);
-						dialog.setTitle("Set Time");
-						Button done = (Button) dialog
-								.findViewById(R.id.bEPtimeDone);
-						
-
-						done.setOnClickListener(new OnClickListener() {
-
-							@Override
-							public void onClick(View v) {
-								// TODO Auto-generated method stub
-								st = (TimePicker) dialog
-										.findViewById(R.id.tpEPtime);
-								
-								dialog.dismiss();
-								// need implementaion here.......
-							}
-						});
-						dialog.show();
-					}
-				});
-
-				endTime.setOnClickListener(new OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						final Dialog dialog = new Dialog(context);
-						dialog.setContentView(R.layout.dialog_pick_time);
-						dialog.setTitle("Set Time");
-						Button done = (Button) dialog
-								.findViewById(R.id.bEPtimeDone);
-						
-
-						done.setOnClickListener(new OnClickListener() {
-
-							@Override
-							public void onClick(View v) {
-								// TODO Auto-generated method stub
-								et = (TimePicker) dialog
-										.findViewById(R.id.tpEPtime);
-								
-								dialog.dismiss();
-								// need implementaion here.......
-							}
-						});
-						dialog.show();
-					}
-				});
 
 				save.setOnClickListener(new OnClickListener() {
 
 					@Override
 					public void onClick(View v) {
 						// TODO Auto-generated method stub
+						ExercisePlan ep = new ExercisePlan(0);
 						ep.setExerciseName(nameEntry.getText().toString());
-						ep.setStartTime(st.toString());
-						ep.setEndTime(et.toString());
+						ep.setRoutine(routine.getText().toString());
+						ep.setStartTime(startTime.getText().toString());
+						ep.setEndTime(endTime.getText().toString());
 						ep.setOtherInfo(otherInfoEntry.getText().toString());
-						onPostResume();
+						db.addExercisePlan(ep);
+						recreate();
 					}
 				});
 			}
 
 			public void setUpVariable() {
-				name = (TextView) findViewById(R.id.tvEPname);
-				otherInfo = (TextView) findViewById(R.id.tvEPotherInfo);
+				//name = (TextView) findViewById(R.id.tvEPname);
+				//otherInfo = (TextView) findViewById(R.id.tvEPotherInfo);
 				nameEntry = (EditText) findViewById(R.id.etEPname);
+				routine = (EditText) findViewById(R.id.etEProutine);
+				startTime = (EditText) findViewById(R.id.etEPstarttime);
+				endTime = (EditText) findViewById(R.id.etEPendtime);
 				otherInfoEntry = (EditText) findViewById(R.id.etEPotherInfo);
-				routine = (Spinner) findViewById(R.id.sEProutine);
-				startTime = (Button) findViewById(R.id.bEPStartTime);
-				endTime = (Button) findViewById(R.id.bEPEndTime);
 				save = (Button) findViewById(R.id.bEPsave);
+
 			}
 
 		});
-		
+
 		back = (Button) findViewById(R.id.bEPback);
 
 		back.setOnClickListener(new OnClickListener() {
@@ -200,3 +140,48 @@ public class ExercisePlanActivity extends Activity {
 	}
 
 }
+
+/*
+ * String[] items = new String[]{"NONE","DAILY","WEEKLY","MONTHLY"};
+ * ArrayAdapter<String> adapter = new
+ * ArrayAdapter<String>(ExercisePlanActivity,android
+ * .R.layout.simple_spinner_item, items);
+ * adapter.setDropDownViewResource(android
+ * .R.layout.simple_spinner_dropdown_item); routine.setAdapter(adapter);
+ * 
+ * 
+ * 
+ * startTime.setOnClickListener(new OnClickListener() {
+ * 
+ * @Override public void onClick(View v) { // TODO Auto-generated method stub
+ * final Dialog dialog = new Dialog(context);
+ * dialog.setContentView(R.layout.dialog_pick_time);
+ * dialog.setTitle("Set Time"); Button done = (Button) dialog
+ * .findViewById(R.id.bEPtimeDone);
+ * 
+ * 
+ * done.setOnClickListener(new OnClickListener() {
+ * 
+ * @Override public void onClick(View v) { // TODO Auto-generated method stub st
+ * = (TimePicker) dialog .findViewById(R.id.tpEPtime);
+ * 
+ * dialog.dismiss(); // need implementaion here....... } }); dialog.show(); }
+ * });
+ * 
+ * endTime.setOnClickListener(new OnClickListener() {
+ * 
+ * @Override public void onClick(View v) { // TODO Auto-generated method stub
+ * final Dialog dialog = new Dialog(context);
+ * dialog.setContentView(R.layout.dialog_pick_time);
+ * dialog.setTitle("Set Time"); Button done = (Button) dialog
+ * .findViewById(R.id.bEPtimeDone);
+ * 
+ * 
+ * done.setOnClickListener(new OnClickListener() {
+ * 
+ * @Override public void onClick(View v) { // TODO Auto-generated method stub et
+ * = (TimePicker) dialog .findViewById(R.id.tpEPtime);
+ * 
+ * dialog.dismiss(); // need implementaion here....... } }); dialog.show(); }
+ * });
+ */
