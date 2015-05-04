@@ -111,7 +111,7 @@
                 android:id="@+id/tvDateStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date Started"
+                android:text="Date Started:"
                 android:textSize="18sp" />
 
             <TextView
@@ -126,7 +126,7 @@
                 android:id="@+id/tvDateGraduate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date Graduating"
+                android:text="Date Graduating:"
                 android:textSize="18sp" />
 
             <TextView

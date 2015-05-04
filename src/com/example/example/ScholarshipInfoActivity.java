@@ -1,26 +1,30 @@
 package com.example.example;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class ScholarshipInfoActivity extends Activity {
+    private final Context context = this;
+
     private EditText enterName;
     private EditText enterRequirement;
     private EditText enterAmount;
-    private EditText enterApplicationStatus;
+    private Spinner enterApplicationStatus;
     private Button submit;
     private TextView error;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scholarship_info);
 
@@ -35,11 +39,11 @@ public class ScholarshipInfoActivity extends Activity {
                 String enteredName = enterName.getText().toString();
                 String enteredRequirement = enterRequirement.getText().toString();
                 String enteredAmount = enterAmount.getText().toString();
-                String enteredAppStat = enterApplicationStatus.getText().toString();
+                String enteredAppStat = enterApplicationStatus.getSelectedItem().toString();
 
 
                 //make sure all fields are filled in
-                if (enteredName.equals("") || enteredAmount.equals("") || enteredAppStat.equals("") || enteredRequirement.equals("")) {
+                if (enteredName.equals("") || enteredAmount.equals("") || enteredRequirement.equals("")) {
                     error.setVisibility(View.VISIBLE);
                 } else {
                     error.setVisibility(View.INVISIBLE);
@@ -58,7 +62,6 @@ public class ScholarshipInfoActivity extends Activity {
                     startActivity(j);
                     finish();
                 }
-
             }
         });
     }
@@ -67,7 +70,11 @@ public class ScholarshipInfoActivity extends Activity {
         enterName = (EditText) findViewById(R.id.etScName);
         enterRequirement = (EditText) findViewById(R.id.etScRequirement);
         enterAmount = (EditText) findViewById(R.id.etScAmount);
-        enterApplicationStatus = (EditText) findViewById(R.id.etScApplicationStatus);
+        enterApplicationStatus = (Spinner) findViewById(R.id.spScApplicationStatus);
+        ArrayAdapter<CharSequence> spinnerMenuList3 = ArrayAdapter.createFromResource(context, R.array.APP_STATUS, android.R.layout.simple_spinner_item);
+        spinnerMenuList3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        enterApplicationStatus.setAdapter(spinnerMenuList3);
+
         submit = (Button) findViewById(R.id.bScSubmit);
         error = (TextView) findViewById(R.id.error);
     }

@@ -52,12 +52,10 @@
         android:layout_height="wrap_content"
         android:text="Enter Application Status:" />
 
-    <EditText
-        android:id="@+id/etScApplicationStatus"
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textMultiLine" />
+        android:id="@+id/spScApplicationStatus" />
 
     <TextView
         android:id="@+id/error"

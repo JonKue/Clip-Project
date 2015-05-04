@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.Date;
@@ -108,13 +110,12 @@ public class JobSearchActivity extends Activity {
 
             final JobSearch jobSearch = new JobSearch();
             TextView appFor, status, dateDisplay, note;
-            EditText appForEntry, statusEntry, noteEntry;
+            EditText appForEntry, noteEntry;
+            Spinner statusEntry;
             Button date, save;
 
             @Override
             public void onClick(View v) {
-
-                // TODO Auto-generated method stub
 
                 setContentView(R.layout.activity_job_search_info);
 
@@ -124,7 +125,6 @@ public class JobSearchActivity extends Activity {
 
                     @Override
                     public void onClick(View v) {
-                        // TODO Auto-generated method stub
                         final Dialog dialog = new Dialog(context);
                         dialog.setContentView(R.layout.dialog_pick_date);
                         dialog.setTitle("Select Date");
@@ -138,7 +138,6 @@ public class JobSearchActivity extends Activity {
                             @SuppressWarnings("deprecation")
                             @Override
                             public void onClick(View v) {
-                                // TODO Auto-generated method stub
                                 DatePicker date = (DatePicker) dialog
                                         .findViewById(R.id.dpDPselectDate);
                                 int day = date.getDayOfMonth();
@@ -162,26 +161,29 @@ public class JobSearchActivity extends Activity {
 
                     @Override
                     public void onClick(View v) {
-                        // TODO Auto-generated method stub
                         jobSearch.setJobName(appForEntry.getText().toString());
                         jobSearch.setDate(dateDisplay.getText().toString());
-                        jobSearch.setStatus(statusEntry.getText().toString());
+                        jobSearch.setStatus(statusEntry.getSelectedItem().toString());
                         jobSearch.setNote(noteEntry.getText().toString());
                         db.addJobSearch(jobSearch);
                         recreate();
                     }
 
                 });
-
             }
 
             public void setUpVariable() {
                 appFor = (TextView) findViewById(R.id.tvJSappliedFor);
                 status = (TextView) findViewById(R.id.tvJSstatus);
+
                 dateDisplay = (TextView) findViewById(R.id.tvJSdate);
                 note = (TextView) findViewById(R.id.tvJSnote);
                 appForEntry = (EditText) findViewById(R.id.etJSappliedFor);
-                statusEntry = (EditText) findViewById(R.id.etJSstatus);
+                statusEntry = (Spinner) findViewById(R.id.spJSstatus);
+                ArrayAdapter<CharSequence> spinnerMenuList3 = ArrayAdapter.createFromResource(context, R.array.APP_STATUS, android.R.layout.simple_spinner_item);
+                spinnerMenuList3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                statusEntry.setAdapter(spinnerMenuList3);
+
                 noteEntry = (EditText) findViewById(R.id.etJSnote);
                 date = (Button) findViewById(R.id.bJSdate);
                 save = (Button) findViewById(R.id.bJSsave);

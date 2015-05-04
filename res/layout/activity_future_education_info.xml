@@ -34,11 +34,10 @@
                 android:layout_height="wrap_content"
                 android:text="Degree Type:" />
 
-            <EditText
-                android:id="@+id/etFDegree"
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10" />
+                android:id="@+id/spFDegree" />
 
             <TextView
                 android:id="@+id/tvFProgram"
@@ -58,11 +57,10 @@
                 android:layout_height="wrap_content"
                 android:text="Enrollment Status:" />
 
-            <EditText
-                android:id="@+id/etFEnrollmentStatus"
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10" />
+                android:id="@+id/spFEnrollment" />
 
             <TextView
                 android:id="@+id/tvApplicationDate"
@@ -83,11 +81,10 @@
                 android:layout_height="wrap_content"
                 android:text="Application Status:" />
 
-            <EditText
-                android:id="@+id/etApplicationStatus"
+            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10" />
+                android:id="@+id/spAppStatus" />
 
         </LinearLayout>
     </ScrollView>
