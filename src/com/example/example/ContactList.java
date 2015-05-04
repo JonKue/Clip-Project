@@ -1,11 +1,9 @@
 package com.example.example;
 
-import java.util.Date;
-
-public class ContactList {
+class ContactList {
 
     //private variables
-    final int _id;
+    private final int _id;
     private String name;
     private String affiliation;
     private String establishedDate;

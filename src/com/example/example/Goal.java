@@ -2,7 +2,7 @@ package com.example.example;
 
 
 
-public class Goal {
+class Goal {
     // Data fields
     private String name;
     private GoalType type;

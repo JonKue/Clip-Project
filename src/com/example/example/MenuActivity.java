@@ -9,10 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.TextView;
 import android.widget.Button;
-
-import org.apache.http.HttpEntity;
 
 public class MenuActivity extends Activity{
 
@@ -93,21 +90,4 @@ public class MenuActivity extends Activity{
         return super.onOptionsItemSelected(item);
     }
 
-	@Override
-	protected void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-	}
-
-	@Override
-	protected void onPause() {
-		// TODO Auto-generated method stub
-		super.onPause();
-	}
-
-	@Override
-	protected void onDestroy() {
-		// TODO Auto-generated method stub
-		super.onDestroy();
-	}
 }

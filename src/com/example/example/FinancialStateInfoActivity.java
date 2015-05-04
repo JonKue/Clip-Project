@@ -1,14 +1,11 @@
 package com.example.example;
 
-import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -17,10 +14,13 @@ import android.widget.TextView;
 
 public class FinancialStateInfoActivity extends Activity {
 
-	TextView cash, assets, liabilities, creditCards, other;
-	EditText enterCash, enterAssets, enterLiabilities, enterCreditCards, enterOther;
-	Button submit;
-	TextView error;
+	private EditText enterCash;
+	private EditText enterAssets;
+	private EditText enterLiabilities;
+	private EditText enterCreditCards;
+	private EditText enterOther;
+	private Button submit;
+	private TextView error;
 
 	
 	@Override
@@ -93,15 +93,10 @@ public class FinancialStateInfoActivity extends Activity {
 	}
 
 	private void setUpVariables() {
-		cash = (TextView) findViewById(R.id.tvCash);
 		enterCash = (EditText) findViewById(R.id.etCash);
-		assets = (TextView) findViewById(R.id.tvAssets);
 		enterAssets = (EditText) findViewById(R.id.etAssets);
-		liabilities = (TextView) findViewById(R.id.tvLiabilities);
 		enterLiabilities = (EditText) findViewById(R.id.etLiabilities);
-		creditCards = (TextView) findViewById(R.id.tvCreditCards);
 		enterCreditCards = (EditText) findViewById(R.id.etCreditCards);
-		other = (TextView) findViewById(R.id.tvOther);
 		enterOther = (EditText) findViewById(R.id.etOther);
 		submit = (Button) findViewById(R.id.bFSSubmit);
 		error = (TextView) findViewById(R.id.error);

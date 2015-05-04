@@ -9,25 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-/**
- * Created by blaw on 5/1/15.
- */
 public class CompanyInfoActivity extends Activity {
-    private Context context = this;
-    private Button add;
-    DatabaseHelper db;
-    Button[] b;
-    int i;
+    private final Context context = this;
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +39,8 @@ public class CompanyInfoActivity extends Activity {
             ll.addView(tv);
         } else {
             int count = c.getCount();
-            b = new Button[count];
-            i = 0;
+            Button[] b = new Button[count];
+            int i = 0;
             while (c.moveToNext()) {
                 b[i] = new Button(getApplicationContext());
                 final int id = Integer.parseInt(c.getString(0));
@@ -131,11 +120,11 @@ public class CompanyInfoActivity extends Activity {
             }
         }
 
-        add = (Button) findViewById(R.id.bCompanyAdd);
+        Button add = (Button) findViewById(R.id.bCompanyAdd);
 
         add.setOnClickListener(new View.OnClickListener() {
 
-            CompanyInformation companyInformation = new CompanyInformation(0);
+            final CompanyInformation companyInformation = new CompanyInformation();
 
             @Override
             public void onClick(View v) {

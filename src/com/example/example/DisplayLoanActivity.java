@@ -2,19 +2,14 @@ package com.example.example;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 public class DisplayLoanActivity extends Activity {
-    TextView name;
-    TextView amount;
-    TextView appStatus;
 
 
-    String companyName;
-    String amt;
-    String appStat;
+    private String companyName;
+    private String amt;
+    private String appStat;
 
 
 
@@ -33,9 +28,9 @@ public class DisplayLoanActivity extends Activity {
         }
 
         //connect text views to xml
-        name = (TextView) findViewById(R.id.tvDisplayCompanyName);
-        amount = (TextView) findViewById(R.id.tvDisplayLoanAmount);
-        appStatus = (TextView) findViewById(R.id.tvDisplayLoanApplicationStatus);
+        TextView name = (TextView) findViewById(R.id.tvDisplayCompanyName);
+        TextView amount = (TextView) findViewById(R.id.tvDisplayLoanAmount);
+        TextView appStatus = (TextView) findViewById(R.id.tvDisplayLoanApplicationStatus);
 
         //set text views to passed in text values
         name.setText(companyName);

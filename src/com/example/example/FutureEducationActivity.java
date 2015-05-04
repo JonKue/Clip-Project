@@ -1,9 +1,6 @@
 package com.example.example;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Future;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,9 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class FutureEducationActivity extends Activity {
-    Button enter;
-    TextView label;
-    List<School> plan;
+    private List<School> plan;
 
     String schoolName;
     String degreeType;
@@ -35,8 +30,8 @@ public class FutureEducationActivity extends Activity {
 
         setContentView(R.layout.activity_none);
 
-        enter = (Button) findViewById(R.id.bEnter);
-        label = (TextView) findViewById(R.id.tvNone);
+        Button enter = (Button) findViewById(R.id.bEnter);
+        TextView label = (TextView) findViewById(R.id.tvNone);
         enter.setText("Add");
         label.setText("Future Education");
         LinearLayout ll = (LinearLayout)findViewById(R.id.NoneLayout);
@@ -112,9 +107,9 @@ public class FutureEducationActivity extends Activity {
         enter.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-                Intent startFutureEducationInfo = new Intent(FutureEducationActivity.this, FutureEducationInfoActivity.class );
+                Intent startFutureEducationInfo = new Intent(FutureEducationActivity.this, FutureEducationInfoActivity.class);
                 startActivity(startFutureEducationInfo);
-                finish();	// need to change of modify this
+                finish();    // need to change of modify this
             }
 
         });

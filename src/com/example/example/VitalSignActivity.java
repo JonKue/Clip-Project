@@ -3,20 +3,16 @@ package com.example.example;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class VitalSignActivity extends Activity {
     // private VitalSign myVitalSign = new VitalSign(0,0,0,0);
-    private Context context = this;
+    private final Context context = this;
     private Button bodyTemperature, pulseRate, respirationRate, bloodPressure;
     private TextView bodyTempDisplay, pulseDisplay, respRateDisplay,
             bldPressDisplay;
@@ -25,8 +21,8 @@ public class VitalSignActivity extends Activity {
 
     // id ???? // Check for id check
     // not sure....
-    DatabaseHelper db;
-    VitalSign myVitalSign;
+    private DatabaseHelper db;
+    private VitalSign myVitalSign;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

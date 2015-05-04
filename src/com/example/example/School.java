@@ -1,22 +1,22 @@
 package com.example.example;
 
-public class School {
+class School {
 
     //private variables
-    final int _id;
+    private final int _id;
 
-    String _schoolName;
-    String _degreeType;
-    String _program;
+    private String _schoolName;
+    private String _degreeType;
+    private String _program;
 
-    String _enrollment;
-    String _dateStart;
-    String _dateGrad;
-    String _tuition;
-    String _course;
-    String _appDate;
-    String _appStat;
-    String _type; // Current/Future Education
+    private String _enrollment;
+    private String _dateStart;
+    private String _dateGrad;
+    private String _tuition;
+    private String _course;
+    private String _appDate;
+    private String _appStat;
+    private String _type; // Current/Future Education
 
     public School(int _id) {
         this._id = _id;

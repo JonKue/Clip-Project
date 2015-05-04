@@ -1,26 +1,22 @@
 package com.example.example;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class ElectronicIdentityActivity extends Activity {
-    private Context context = this;
-    private Button add;
+    private final Context context = this;
     private List<ElectronicIdentity> id;
 
     @Override
@@ -93,7 +89,7 @@ public class ElectronicIdentityActivity extends Activity {
             ll.addView(tv[i]);
         }
 
-        add = (Button) findViewById(R.id.bCareerAdd);
+        Button add = (Button) findViewById(R.id.bCareerAdd);
 
         add.setOnClickListener(new OnClickListener() {
 

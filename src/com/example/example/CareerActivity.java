@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class CareerActivity extends Activity{
+public class CareerActivity extends Activity {
     private Button goal, jobSearch, comInfo, elecIdentity, contactList;
 
     @Override
@@ -77,13 +77,10 @@ public class CareerActivity extends Activity{
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        return id == R.id.action_settings || super.onOptionsItemSelected(item);
     }
 
-    public void setUpVariables(){
+    public void setUpVariables() {
         goal = (Button) findViewById(R.id.bGoal);
         jobSearch = (Button) findViewById(R.id.bJobSearch);
         comInfo = (Button) findViewById(R.id.bCompanyInfo);

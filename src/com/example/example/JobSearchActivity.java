@@ -7,7 +7,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -15,15 +14,11 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class JobSearchActivity extends Activity {
-    private Context context = this;
-    private Button add;
-    DatabaseHelper db;
-    Button[] b;
-    int i;
+    private final Context context = this;
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +41,8 @@ public class JobSearchActivity extends Activity {
             ll.addView(tv);
         } else {
             int count = c.getCount();
-            b = new Button[count];
-            i = 0;
+            Button[] b = new Button[count];
+            int i = 0;
             while (c.moveToNext()) {
                 b[i] = new Button(getApplicationContext());
                 final int id = Integer.parseInt(c.getString(0));
@@ -107,14 +102,14 @@ public class JobSearchActivity extends Activity {
             }
         }
 
-        add = (Button) findViewById(R.id.bCareerAdd);
+        Button add = (Button) findViewById(R.id.bCareerAdd);
 
         add.setOnClickListener(new OnClickListener() {
 
             TextView appFor, status, dateDisplay, note;
             EditText appForEntry, statusEntry, noteEntry;
             Button date, save;
-            JobSearch jobSearch = new JobSearch();
+            final JobSearch jobSearch = new JobSearch();
 
             @Override
             public void onClick(View v) {
@@ -135,8 +130,6 @@ public class JobSearchActivity extends Activity {
                         dialog.setTitle("Select Date");
                         Button select = (Button) dialog
                                 .findViewById(R.id.bDPsetDate);
-                        DatePicker date = (DatePicker) dialog
-                                .findViewById(R.id.dpDPselectDate);
 
                         select.setText("Select");
 

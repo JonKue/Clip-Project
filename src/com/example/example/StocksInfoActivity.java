@@ -3,8 +3,6 @@ package com.example.example;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -12,10 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class StocksInfoActivity extends Activity {
-	TextView numStock, nameStock;
-	EditText enterNum, enterName;
-	Button submit;
-	TextView error;
+	private EditText enterNum;
+	private EditText enterName;
+	private Button submit;
+	private TextView error;
 
 	
 	@Override
@@ -67,9 +65,7 @@ public class StocksInfoActivity extends Activity {
 	}
 
 	private void setUpVariables() {
-		numStock = (TextView) findViewById(R.id.tvNumStocks);
 		enterNum = (EditText) findViewById(R.id.etNumStocks);
-		nameStock = (TextView) findViewById(R.id.tvNameStocks);
 		enterName = (EditText) findViewById(R.id.etNameStocks);
 		submit = (Button) findViewById(R.id.bStocksSubmit);
 		error = (TextView) findViewById(R.id.error);

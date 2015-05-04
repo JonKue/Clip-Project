@@ -1,7 +1,6 @@
 package com.example.example;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -11,16 +10,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class GoalActivity extends Activity{
-    Context context = this;
-    RadioButton stgButton, ltgButton;
-    Button save, done;
+    private final Context context = this;
+    private RadioButton stgButton;
+    private RadioButton ltgButton;
+    private Button save;
+    private Button done;
     EditText goalEntry;
-    DatabaseHelper db;
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,8 +100,8 @@ public class GoalActivity extends Activity{
                         goal.setName(stgEntry.getText().toString());
                         db.addGoal(goal);
                         String text = "Your goal is saved.";
-                        Toast.makeText(context, text, Toast.LENGTH_LONG);
-
+                        Toast toast = Toast.makeText(context, text, Toast.LENGTH_LONG);
+                        toast.show();
                     }
                 });
 

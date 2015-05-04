@@ -1,9 +1,5 @@
 package com.example.example;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import android.app.Activity;
@@ -18,9 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class CurrentEducationActivity extends Activity {
-    Button enter;
-    TextView label;
-    List<School> plan;
+    private List<School> plan;
 
     String schoolName;
     String degreeType;
@@ -38,8 +32,8 @@ public class CurrentEducationActivity extends Activity {
 
         setContentView(R.layout.activity_none);
 
-        enter = (Button) findViewById(R.id.bEnter);
-        label = (TextView) findViewById(R.id.tvNone);
+        Button enter = (Button) findViewById(R.id.bEnter);
+        TextView label = (TextView) findViewById(R.id.tvNone);
         enter.setText("Add");
         label.setText("Current Education");
         LinearLayout ll = (LinearLayout)findViewById(R.id.NoneLayout);
@@ -116,9 +110,9 @@ public class CurrentEducationActivity extends Activity {
         enter.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-                Intent startCurrentEducationInfo = new Intent(CurrentEducationActivity.this, CurrentEducationInfoActivity.class );
+                Intent startCurrentEducationInfo = new Intent(CurrentEducationActivity.this, CurrentEducationInfoActivity.class);
                 startActivity(startCurrentEducationInfo);
-                finish();	// need to change of modify this
+                finish();    // need to change of modify this
             }
 
         });

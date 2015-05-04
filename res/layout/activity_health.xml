@@ -6,31 +6,31 @@
 
     <Button
         android:id="@+id/bVitalSign"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/vital_sign" />
 
     <Button
         android:id="@+id/bExercisPlan"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/exercise_plan" />
 
     <Button
         android:id="@+id/bDietPlan"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/diet_plan" />
 
     <Button
         android:id="@+id/bMedication"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/medication" />
 
     <Button
         android:id="@+id/bAllergy"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/allergy" />
 

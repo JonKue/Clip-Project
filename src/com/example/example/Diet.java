@@ -1,8 +1,6 @@
 package com.example.example;
 
-import java.util.Date;
-
-public class Diet {
+class Diet {
     // Date Members
     private final int _id;
     private String dietType;

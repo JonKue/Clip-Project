@@ -2,27 +2,16 @@ package com.example.example;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
-
-import java.util.List;
 
 public class DisplayFutureEducationActivity extends Activity {
 
-    TextView name;
-    TextView type;
-    TextView prog;
-    TextView enroll;
-    TextView aDate;
-    TextView aStat;
-
-    String schoolName;
-    String degreeType;
-    String program;
-    String enrollment;
-    String appDate;
-    String appStat;
+    private String schoolName;
+    private String degreeType;
+    private String program;
+    private String enrollment;
+    private String appDate;
+    private String appStat;
 
 
     @Override
@@ -45,12 +34,12 @@ public class DisplayFutureEducationActivity extends Activity {
         }
 
         //connect text views to xml
-        name = (TextView) findViewById(R.id.tvDisplayFSchoolName);
-        type = (TextView) findViewById(R.id.tvDisplayFDegree);
-        prog = (TextView) findViewById(R.id.tvDisplayFProgram);
-        enroll = (TextView) findViewById(R.id.tvDisplayFES);
-        aDate = (TextView) findViewById(R.id.tvDisplayAppDate);
-        aStat = (TextView) findViewById(R.id.tvDisplayAppStat);
+        TextView name = (TextView) findViewById(R.id.tvDisplayFSchoolName);
+        TextView type = (TextView) findViewById(R.id.tvDisplayFDegree);
+        TextView prog = (TextView) findViewById(R.id.tvDisplayFProgram);
+        TextView enroll = (TextView) findViewById(R.id.tvDisplayFES);
+        TextView aDate = (TextView) findViewById(R.id.tvDisplayAppDate);
+        TextView aStat = (TextView) findViewById(R.id.tvDisplayAppStat);
 
         //set text views to passed in text values
         name.setText(schoolName);

@@ -1,8 +1,6 @@
 package com.example.example;
 
-import android.text.format.Time;
-
-public class ExercisePlan {
+class ExercisePlan {
     // Date Members
     private final int _id;
     private String exerciseName;

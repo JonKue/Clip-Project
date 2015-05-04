@@ -1,8 +1,6 @@
 package com.example.example;
 
-import java.util.Calendar;
-
-public class Loan {
+class Loan {
     // Data Members
 
     private int id;

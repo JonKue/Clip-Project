@@ -9,15 +9,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class DisplayExercisePlanActivity extends Activity{
-    TextView name;
-    TextView routDate;
-    TextView des;
 
-    String exercisePlan;
-    String routine;
-    String startTime;
-    String endTime;
-    String otherInfo;
+    private String exercisePlan;
+    private String routine;
+    private String startTime;
+    private String endTime;
+    private String otherInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +35,9 @@ public class DisplayExercisePlanActivity extends Activity{
         }
 
         // connect text views to xml
-        name = (TextView) findViewById(R.id.tvDEPplanName);
-        routDate = (TextView) findViewById(R.id.tvDEProutDate);
-        des = (TextView) findViewById(R.id.tvDEPdes);
+        TextView name = (TextView) findViewById(R.id.tvDEPplanName);
+        TextView routDate = (TextView) findViewById(R.id.tvDEProutDate);
+        TextView des = (TextView) findViewById(R.id.tvDEPdes);
 
         // set text views to passed in text values
         name.setText("Exercise Plan: Do " + exercisePlan);

@@ -8,8 +8,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class FinancialSupportActivity extends Activity{
-    Button scholarship;
-    Button loan;
 
 
     @Override
@@ -17,8 +15,8 @@ public class FinancialSupportActivity extends Activity{
         super.onCreate(financialSupportState);
         setContentView(R.layout.activity_financial_support);
 
-        scholarship = (Button) findViewById(R.id.bScholarship);
-        loan = (Button) findViewById(R.id.bLoan);
+        Button scholarship = (Button) findViewById(R.id.bScholarship);
+        Button loan = (Button) findViewById(R.id.bLoan);
 
 
         scholarship.setOnClickListener(new OnClickListener() {

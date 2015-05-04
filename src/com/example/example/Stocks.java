@@ -1,6 +1,6 @@
 package com.example.example;
 
-public class Stocks {
+class Stocks {
 	
 	 //private variables
     private final int _id;

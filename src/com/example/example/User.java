@@ -1,12 +1,12 @@
 package com.example.example;
 
-public class User {
+class User {
 
     //private variables
     static int userCount = 0;
-    int _id;
-    String _name;
-    String _password;
+    private int _id;
+    private String _name;
+    private String _password;
 
     // Empty constructor
     public User(){

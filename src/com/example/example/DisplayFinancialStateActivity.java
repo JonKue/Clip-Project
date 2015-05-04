@@ -2,23 +2,15 @@ package com.example.example;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 public class DisplayFinancialStateActivity extends Activity {
 
-	TextView cash;
-	TextView assets;
-	TextView liabilities;
-	TextView creditCards;
-	TextView other;
-	
-	String entCash;
-	String entAssets;
-	String entLiabilities;
-	String entCreditCards;
-	String entOther;
+	private String entCash;
+	private String entAssets;
+	private String entLiabilities;
+	private String entCreditCards;
+	private String entOther;
 	
 	
 	@Override
@@ -40,11 +32,11 @@ public class DisplayFinancialStateActivity extends Activity {
 		}
 		
 		//connect text views to xml
-		cash = (TextView) findViewById(R.id.tvDisplayEntCash);
-		assets = (TextView) findViewById(R.id.tvDisplayEntAssets);
-		liabilities = (TextView) findViewById(R.id.tvDisplayEntLiabilities);
-		creditCards = (TextView) findViewById(R.id.tvDisplayEntCreditCards);
-		other = (TextView) findViewById(R.id.tvDisplayEntOther);
+		TextView cash = (TextView) findViewById(R.id.tvDisplayEntCash);
+		TextView assets = (TextView) findViewById(R.id.tvDisplayEntAssets);
+		TextView liabilities = (TextView) findViewById(R.id.tvDisplayEntLiabilities);
+		TextView creditCards = (TextView) findViewById(R.id.tvDisplayEntCreditCards);
+		TextView other = (TextView) findViewById(R.id.tvDisplayEntOther);
 
 		
 		//set text views to passed in text values

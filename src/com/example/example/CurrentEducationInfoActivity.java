@@ -1,29 +1,27 @@
 package com.example.example;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 import android.app.Activity;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class CurrentEducationInfoActivity extends Activity {
 //    public FileOutputStream fCuEdInfo = null;
 
-    TextView schoolName, degree, program, enrollmentStatus, tuition, course, dateStart, dateGraduate;
-    EditText enterSchoolName, enterDegree, enterProgram, enterEnrollmentStatus, enterTuition, enterCourse, enterDateStart, enterDateGraduate;
-    Button submit;
-    TextView error;
+    private EditText enterSchoolName;
+    private EditText enterDegree;
+    private EditText enterProgram;
+    private EditText enterEnrollmentStatus;
+    private EditText enterTuition;
+    private EditText enterCourse;
+    private EditText enterDateStart;
+    private EditText enterDateGraduate;
+    private Button submit;
+    private TextView error;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,21 +94,12 @@ public class CurrentEducationInfoActivity extends Activity {
     }
 
     private void setUpVariables() {
-        schoolName = (TextView) findViewById(R.id.tvSchoolName);
         enterSchoolName = (EditText) findViewById(R.id.etSchoolName);
-        degree = (TextView) findViewById(R.id.tvDegree);
         enterDegree = (EditText) findViewById(R.id.etDegree);
-        program = (TextView) findViewById(R.id.tvProgram);
         enterProgram = (EditText) findViewById(R.id.etProgram);
-        enrollmentStatus = (TextView) findViewById(R.id.tvEnrollmentStatus);
         enterEnrollmentStatus = (EditText) findViewById(R.id.etEnrollmentStatus);
-        tuition = (TextView) findViewById(R.id.tvAppDate);
-        enterTuition = (EditText) findViewById(R.id.etTuition);
-        course = (TextView) findViewById(R.id.tvAppStat);
         enterCourse = (EditText) findViewById(R.id.etCourse);
-        dateStart = (TextView) findViewById(R.id.tvDateStart);
         enterDateStart = (EditText) findViewById(R.id.etDateStart);
-        dateGraduate = (TextView) findViewById(R.id.tvDateGraduate);
         enterDateGraduate = (EditText) findViewById(R.id.etDateGraduate);
         submit = (Button) findViewById(R.id.bCuEdSubmit);
         error = (TextView) findViewById(R.id.error);

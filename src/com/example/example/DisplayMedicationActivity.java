@@ -9,14 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class DisplayMedicationActivity extends Activity {
-    TextView pillName;
-    TextView num;
-    TextView date;
 
-    String pill;
-    String numDose;
-    String dstart;
-    String dend;
+    private String pill;
+    private String numDose;
+    private String dstart;
+    private String dend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +31,9 @@ public class DisplayMedicationActivity extends Activity {
         }
 
         // connect text views to xml
-        pillName = (TextView) findViewById(R.id.tvDMpillName);
-        num = (TextView) findViewById(R.id.tvDMnumDosage);
-        date = (TextView) findViewById(R.id.tvDMdate);
+        TextView pillName = (TextView) findViewById(R.id.tvDMpillName);
+        TextView num = (TextView) findViewById(R.id.tvDMnumDosage);
+        TextView date = (TextView) findViewById(R.id.tvDMdate);
 
         // set text views to passed in text values
         pillName.setText("Pill Name: " + pill);

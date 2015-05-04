@@ -6,8 +6,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,21 +13,18 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 public class MedicationActivity extends Activity {
 
-    private Context context = this;
-    private Button add, back;
-    DatabaseHelper db;
+    private final Context context = this;
+    private DatabaseHelper db;
 
     String pillName;
     String noDosage;
     String startDate;
     String dateEnd;
-    List<Medication> mdList;
+    private List<Medication> mdList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +71,7 @@ public class MedicationActivity extends Activity {
 
         }
 
-        add = (Button) findViewById(R.id.bMadd);
+        Button add = (Button) findViewById(R.id.bMadd);
 
         add.setOnClickListener(new OnClickListener() {
             TextView pillName, startDate, endDate;
@@ -128,7 +123,7 @@ public class MedicationActivity extends Activity {
 
         });
 
-        back = (Button) findViewById(R.id.bMback);
+        Button back = (Button) findViewById(R.id.bMback);
 
         back.setOnClickListener(new OnClickListener() {
 

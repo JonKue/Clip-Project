@@ -1,6 +1,6 @@
 package com.example.example;
 
-public class FinancialSupport {
+class FinancialSupport {
     // Data Members
     private int id;
     private int amount;

@@ -16,15 +16,14 @@ import android.widget.LinearLayout;
 
 public class DietPlanActivity extends Activity {
 
-    private Context context = this;
-    private Button add, back;
-    DatabaseHelper db;
+    private final Context context = this;
+    private DatabaseHelper db;
 
     String dietType;
     String dietDescription;
     String startDate;
     String dateEnd;
-    List<Diet> dpList;
+    private List<Diet> dpList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +70,7 @@ public class DietPlanActivity extends Activity {
 
         }
 
-        add = (Button) findViewById(R.id.bDPadd);
+        Button add = (Button) findViewById(R.id.bDPadd);
 
         add.setOnClickListener(new OnClickListener() {
 
@@ -109,7 +108,6 @@ public class DietPlanActivity extends Activity {
                         dietPlan.setEndDate(endDateEntry.getText().toString());
 
                         db.addDietPlan(dietPlan);
-                        ;
                         dialog.dismiss();
                         // need implementaion here.......
                         recreate();
@@ -120,7 +118,7 @@ public class DietPlanActivity extends Activity {
 
         });
 
-        back = (Button) findViewById(R.id.bDPback);
+        Button back = (Button) findViewById(R.id.bDPback);
 
         back.setOnClickListener(new OnClickListener() {
 

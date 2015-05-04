@@ -3,7 +3,6 @@ package com.example.example;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -11,10 +10,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class LoanInfoActivity extends Activity{
-    TextView companyName, amount, applicationStatus;
-    EditText enterCompanyName, enterAmount, enterApplicationStatus;
-    Button submit;
-    TextView error;
+    private EditText enterCompanyName;
+    private EditText enterAmount;
+    private EditText enterApplicationStatus;
+    private Button submit;
+    private TextView error;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +68,6 @@ public class LoanInfoActivity extends Activity{
 
 
     private void setUpVariables() {
-        companyName = (TextView) findViewById(R.id.tvLoCompanyName);
-        amount = (TextView) findViewById(R.id.tvLoAmount);
-        applicationStatus = (TextView) findViewById(R.id.tvLoApplicationStatus);
         enterCompanyName = (EditText) findViewById(R.id.etLoCompanyName);
         enterAmount = (EditText) findViewById(R.id.etLoAmount);
         enterApplicationStatus = (EditText) findViewById(R.id.etLoApplicationStatus);

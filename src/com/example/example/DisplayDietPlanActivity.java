@@ -9,14 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class DisplayDietPlanActivity extends Activity{
-    TextView dietType;
-    TextView description;
-    TextView date;
 
-    String type;
-    String des;
-    String dstart;
-    String dend;
+    private String type;
+    private String des;
+    private String dstart;
+    private String dend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +31,9 @@ public class DisplayDietPlanActivity extends Activity{
         }
 
         // connect text views to xml
-        dietType = (TextView) findViewById(R.id.tvDDPdietType);
-        description = (TextView) findViewById(R.id.tvDDPdescription);
-        date = (TextView) findViewById(R.id.tvDDPdate);
+        TextView dietType = (TextView) findViewById(R.id.tvDDPdietType);
+        TextView description = (TextView) findViewById(R.id.tvDDPdescription);
+        TextView date = (TextView) findViewById(R.id.tvDDPdate);
 
         // set text views to passed in text values
         dietType.setText("Diet Type: " + type);

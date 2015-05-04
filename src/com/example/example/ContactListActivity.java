@@ -1,6 +1,5 @@
 package com.example.example;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -11,15 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class ContactListActivity extends Activity {
-    private Context context = this;
-    private Button add;
+    private final Context context = this;
     private List<ContactList> contacts;
 
     @Override
@@ -28,7 +25,7 @@ public class ContactListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jobsearch_add);
 
-        add = (Button) findViewById(R.id.bCareerAdd);
+        Button add = (Button) findViewById(R.id.bCareerAdd);
         LinearLayout ll = (LinearLayout)findViewById(R.id.llJobSearch);
 
         final DatabaseHelper db = new DatabaseHelper(this);
@@ -128,7 +125,6 @@ public class ContactListActivity extends Activity {
                         ContactList contact = new ContactList(0);
                         contact.setName(entName);
                         contact.setAffiliation(entAffil);
-                        ;
                         contact.setEstablishedDate(entDate);
                         contact.setTimesUsed(entTimes);
                         contact.setComments(entComments);

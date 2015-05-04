@@ -1,9 +1,9 @@
 package com.example.example;
 
-public class ElectronicIdentity {
+class ElectronicIdentity {
 
     //private variables
-    final int _id;
+    private final int _id;
 
     private String name;
     private String website;

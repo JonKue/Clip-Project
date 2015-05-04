@@ -7,14 +7,14 @@ package com.example.example;
 
  import android.text.format.Formatter;*/
 
-public class Medication {
+class Medication {
     // Data Members
     private final int _id;
     private String pillName;
     private String noOfDosage;
     private String dateStarted;
     private String dateEnded;
-    boolean setReminder;
+    private boolean setReminder;
 
 	/*
 	 * SimpleDateFormat dateFormat1 = new SimpleDateFormat("mmm d, yyyy");

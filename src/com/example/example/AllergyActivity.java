@@ -5,28 +5,22 @@ import java.util.List;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 public class AllergyActivity extends Activity {
 
-    private Context context = this;
-    private Button add, delete;
-    DatabaseHelper db;
-    List<Allergy> agList;
-    CheckBox[] b;
+    private final Context context = this;
+    private DatabaseHelper db;
+    private List<Allergy> agList;
+    private CheckBox[] b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +44,9 @@ public class AllergyActivity extends Activity {
             ll.addView(tv);
         } else {
             for (int i = 0; i < agList.size(); i++) {
-                final int index = i;
                 b[i] = new CheckBox(getApplicationContext());
-                String name = agList.get(index).getAllergyName();
-                String description = agList.get(index).getAllergyDescription();
+                String name = agList.get(i).getAllergyName();
+                String description = agList.get(i).getAllergyDescription();
                 if (description.matches(""))
                     description = "None";
                 String str = name + "\n" + "\t\tDescription: " + description;
@@ -64,7 +57,7 @@ public class AllergyActivity extends Activity {
             }
         }
 
-        add = (Button) findViewById(R.id.bAadd);
+        Button add = (Button) findViewById(R.id.bAadd);
 
         add.setOnClickListener(new OnClickListener() {
             TextView name, description;
@@ -106,16 +99,15 @@ public class AllergyActivity extends Activity {
             }
         });
 
-        delete = (Button) findViewById(R.id.bAdelete);
+        Button delete = (Button) findViewById(R.id.bAdelete);
         delete.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 for (int i = 0; i < agList.size(); i++) {
-                    final int index = i;
-                    if (b[index].isChecked()) {
-                        db.deleteAllergy(agList.get(index).get_id());
+                    if (b[i].isChecked()) {
+                        db.deleteAllergy(agList.get(i).get_id());
                         recreate();
                     }
 

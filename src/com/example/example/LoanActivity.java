@@ -1,6 +1,5 @@
 package com.example.example;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -16,9 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class LoanActivity extends Activity {
-    Button enter;
-    TextView label;
-    List<Loan> loans;
+    private List<Loan> loans;
 
     String companyName;
     String amount;
@@ -30,8 +27,8 @@ public class LoanActivity extends Activity {
         super.onCreate(noneState);
         setContentView(R.layout.activity_none);
 
-        enter = (Button) findViewById(R.id.bEnter);
-        label = (TextView) findViewById(R.id.tvNone);
+        Button enter = (Button) findViewById(R.id.bEnter);
+        TextView label = (TextView) findViewById(R.id.tvNone);
         enter.setText("Add");
         label.setText("Loans");
 
@@ -104,7 +101,7 @@ public class LoanActivity extends Activity {
         enter.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-                Intent i = new Intent(LoanActivity.this, LoanInfoActivity.class );
+                Intent i = new Intent(LoanActivity.this, LoanInfoActivity.class);
                 startActivity(i);
             }
 

@@ -2,22 +2,15 @@ package com.example.example;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 public class DisplayFinancialGoalsActivity extends Activity {
 
-	TextView name;
-	TextView desc;
-	TextView type;
-	TextView date;
-	
-	
-	String entName;
-	String entDesc;
-	String entType;
-	String entDate;
+
+	private String entName;
+	private String entDesc;
+	private String entType;
+	private String entDate;
 	
 	
 	@Override
@@ -39,10 +32,10 @@ public class DisplayFinancialGoalsActivity extends Activity {
 		}
 		
 		//connect text views to xml
-		name = (TextView) findViewById(R.id.tvDisplayFGoalName);
-		desc = (TextView) findViewById(R.id.tvDisplayFGoalDesc);
-		type = (TextView) findViewById(R.id.tvDisplayFGoalType);
-		date = (TextView) findViewById(R.id.tvDisplayFGoalDate);
+		TextView name = (TextView) findViewById(R.id.tvDisplayFGoalName);
+		TextView desc = (TextView) findViewById(R.id.tvDisplayFGoalDesc);
+		TextView type = (TextView) findViewById(R.id.tvDisplayFGoalType);
+		TextView date = (TextView) findViewById(R.id.tvDisplayFGoalDate);
 
 
 		

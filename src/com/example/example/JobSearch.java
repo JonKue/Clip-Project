@@ -1,8 +1,6 @@
 package com.example.example;
 
-import java.util.Date;
-
-public class JobSearch {
+class JobSearch {
     private String jobName;
     private String date;
     private String status;

@@ -21,15 +21,14 @@ public class ExercisePlanActivity extends Activity {
 
     protected static final Context ExercisePlanActivity = null;
 
-    private Button add, back;
-    DatabaseHelper db;
+    private DatabaseHelper db;
 
     String exercisePlan;
     String routine;
     String startTime;
     String endTime;
     String otherInfo;
-    List<ExercisePlan> epList;
+    private List<ExercisePlan> epList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +76,7 @@ public class ExercisePlanActivity extends Activity {
 
         }
 
-        add = (Button) findViewById(R.id.bEPadd);
+        Button add = (Button) findViewById(R.id.bEPadd);
 
         add.setOnClickListener(new OnClickListener() {
             //TextView name, otherInfo;
@@ -124,7 +123,7 @@ public class ExercisePlanActivity extends Activity {
 
         });
 
-        back = (Button) findViewById(R.id.bEPback);
+        Button back = (Button) findViewById(R.id.bEPback);
 
         back.setOnClickListener(new OnClickListener() {
 

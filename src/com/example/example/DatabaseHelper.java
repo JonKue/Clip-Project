@@ -2,11 +2,10 @@ package com.example.example;
 
 //-----UPDATE PACKAGE/IMPORTS FOR CLIP-----//
 
-import java.text.SimpleDateFormat;
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -15,7 +14,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+class DatabaseHelper extends SQLiteOpenHelper {
 
     // Logcat tag
     private static final String LOG = "DatabaseHelper";
@@ -47,16 +46,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String VITAL_SIGN = "VITAL_SIGN";
 
     // Exercise Plan table Name
-    private static final String EXERCISE_PLAN = "exerciseplan";
+    private static final String EXERCISE_PLAN = "EXERCISE_PLAN";
 
     // Diet Plan table Name
-    private static final String DIET_PLAN = "dietplan";
+    private static final String DIET_PLAN = "DIET_PLAN";
 
     // Medication table Name
-    private static final String MEDICATION = "medication";
+    private static final String MEDICATION = "MEDICATION";
 
     // Allergy table Name
-    private static final String ALLERGY = "allergy";
+    private static final String ALLERGY = "ALLERGY";
 
     // Vital Signs Columns names
     private static final String KEY_BT = "bodyTemp";
@@ -216,18 +215,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      *
      */
         // Register new user
-    void registerUser(String inputName, String inputPass, int inputQuestion, String inputAnswer) {
+    boolean registerUser(String inputName, String inputPass, int inputQuestion, String inputAnswer) {
         SQLiteDatabase db = this.getWritableDatabase();
+        String hashedpass = "", hashedansw = "";
 
+        try {
+            hashedpass = Encryption.SHA1(inputPass);
+            hashedansw = Encryption.SHA1(inputAnswer);
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        Log.d("CLIP-DEBUG:: --", ""+hashedpass);
         ContentValues values = new ContentValues();
         values.put("name", inputName);
-        values.put("password", inputPass);
+
+        values.put("password", hashedpass);
         values.put("question", inputQuestion);
-        values.put("answer", inputAnswer);
+        values.put("answer", hashedansw);
 
         // Inserting Row
-        db.insert("USER", null, values);
-        db.close(); // Closing database connection
+        if(!hashedpass.equals("")) {
+            db.insert("USER", null, values);
+            db.close();
+            return true;
+        }
+        db.close();
+        return false;
     }
 
     boolean isEmpty()
@@ -261,13 +274,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         String selectQuery = "SELECT * FROM USER";
+        String hashedpass = "";
 
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         cursor.moveToFirst();
 
-        selectQuery = "SELECT * FROM USER WHERE name = '" +name+
-                "' AND password = '" + password +"'";
+        try {
+            hashedpass = Encryption.SHA1(password);
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        Log.d("CLIP-DEBUG:: --", ""+hashedpass);
+        if(!hashedpass.equals(""))
+            selectQuery = "SELECT * FROM USER WHERE name = '" +name+
+                "' AND password = '" + hashedpass +"'";
 
 
         cursor = db.rawQuery(selectQuery, null);
@@ -680,6 +702,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
+        cursor.close();
+        db.close();
         // return user list
         return stockList;
     }
@@ -708,6 +732,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
            } while (cursor.moveToNext());
        }
 
+       cursor.close();
+       db.close();
        // return state list
        return stateList;
    }
@@ -734,6 +760,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
           } while (cursor.moveToNext());
       }
 
+      cursor.close();
+      db.close();
       // return state list
       return goalList;
   }
@@ -783,8 +811,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Cursor getAllGoal() {
         SQLiteDatabase db = this.getWritableDatabase();
         String selectQuery = "Select * from GOAL";
-        Cursor cursor = db.rawQuery(selectQuery, null);
-        return cursor;
+        return db.rawQuery(selectQuery, null);
 
     }
 
@@ -807,8 +834,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Cursor getAllJobSearch() {
         SQLiteDatabase db = this.getWritableDatabase();
         String selectQuery = "Select * from JOB_SEARCH";
-        Cursor cursor = db.rawQuery(selectQuery, null);
-        return cursor;
+        return db.rawQuery(selectQuery, null);
 
     }
 
@@ -842,8 +868,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Cursor getAllCompany() {
         SQLiteDatabase db = this.getWritableDatabase();
         String selectQuery = "Select * from COMPANY";
-        Cursor cursor = db.rawQuery(selectQuery, null);
-        return cursor;
+        return db.rawQuery(selectQuery, null);
 
     }
 
@@ -954,7 +979,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     // Add vital signs
-    public boolean addVitalSign(VitalSign vs) {
+    public void addVitalSign(VitalSign vs) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -965,14 +990,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(KEY_SBP, vs.getBloodPressure()[0]);
         values.put(KEY_DBP, vs.getBloodPressure()[1]);
         // Inserting Row
-        long flag = db.insert("VITAL_SIGN", null, values);
+        db.insert("VITAL_SIGN", null, values);
         db.close(); // Closing database connection
-        //Log.d("CLIP: ", flag + "");
 
-        if (flag == -1)
-            return false;
-        else
-            return true;
 
     }
 
@@ -1009,9 +1029,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         values.put("planName", ep.getExerciseName());
-        values.put("routine", ep.getRoutine().toString());
-        values.put("starttime", ep.getStartTime().toString());
-        values.put("endtime", ep.getEndTime().toString());
+        values.put("routine", ep.getRoutine());
+        values.put("starttime", ep.getStartTime());
+        values.put("endtime", ep.getEndTime());
         values.put("otherinfo", ep.getOtherInfo());
 
         db.insert("EXERCISE_PLAN", null, values);
@@ -1053,7 +1073,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Getting All Exercise Plan
     public List<ExercisePlan> getAllExercisePlan() {
-        List<ExercisePlan> exercisePlanList = new ArrayList<ExercisePlan>();
+        List<ExercisePlan> exercisePlanList = new ArrayList<>();
         // Select All Query
         String selectQuery = "SELECT * FROM EXERCISE_PLAN";
 
@@ -1074,13 +1094,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
+
+        cursor.close();
+        db.close();
+
         // return user list
         return exercisePlanList;
     }
 
     // Getting All Diet Plan
     public List<Diet> getAllDietPlan() {
-        List<Diet> dietPlanList = new ArrayList<Diet>();
+        List<Diet> dietPlanList = new ArrayList<>();
         // Select All Query
         String selectQuery = "SELECT * FROM DIET_PLAN";
 
@@ -1100,13 +1124,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
+
+        cursor.close();
+        db.close();
+
         // return user list
         return dietPlanList;
     }
 
     // Getting All Medication
     public List<Medication> getAllMedication() {
-        List<Medication> medicationList = new ArrayList<Medication>();
+        List<Medication> medicationList = new ArrayList<>();
         // Select All Query
         String selectQuery = "SELECT * FROM MEDICATION";
 
@@ -1127,13 +1155,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
+
+        cursor.close();
+        db.close();
+
         // return user list
         return medicationList;
     }
 
     // Getting All Allergy
     public List<Allergy> getAllAllergy() {
-        List<Allergy> allergyList = new ArrayList<Allergy>();
+        List<Allergy> allergyList = new ArrayList<>();
         // Select All Query
         String selectQuery = "SELECT * FROM ALLERGY";
 
@@ -1152,6 +1184,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 allergyList.add(allergy);
             } while (cursor.moveToNext());
         }
+
+
+        cursor.close();
+        db.close();
 
         // return user list
         return allergyList;
@@ -1228,6 +1264,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Allergy ag = new Allergy(0);
         ag.setAllergyName(cursor.getString(1));
         ag.setAllergyDescription(cursor.getString(2));
+
+
+        cursor.close();
+        db.close();
 
         return ag;
     }

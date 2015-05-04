@@ -1,8 +1,6 @@
 package com.example.example;
 
-import java.util.Date;
-
-public class FinancialState {
+class FinancialState {
 	 //private variables
     private final int _id;
 	

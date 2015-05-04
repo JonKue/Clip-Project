@@ -1,14 +1,11 @@
 package com.example.example;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
@@ -18,9 +15,7 @@ import android.widget.TextView;
 
 public class FinancialGoalsActivity extends Activity {
 
-	Button enter;
-	TextView label;
-	List<FinanceGoal> goals;
+	private List<FinanceGoal> goals;
 	
 	String name;
 	String description;
@@ -32,13 +27,7 @@ public class FinancialGoalsActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(nonestates);
 		
-		
-		goals = new ArrayList();
-		
-		
 		final DatabaseHelper db = new DatabaseHelper(this);
-		goals = new ArrayList();
-
 		//get states from database
 		goals = db.getAllFGoals();
 		/*
@@ -56,8 +45,8 @@ public class FinancialGoalsActivity extends Activity {
 			}*/
 			setContentView(R.layout.activity_none);
 
-			enter = (Button) findViewById(R.id.bEnter);
-			label = (TextView) findViewById(R.id.tvNone);
+		Button enter = (Button) findViewById(R.id.bEnter);
+		TextView label = (TextView) findViewById(R.id.tvNone);
 			enter.setText("Add");
 			label.setText("Goals");
 			
@@ -133,12 +122,12 @@ public class FinancialGoalsActivity extends Activity {
 			
 			
 			enter.setOnClickListener(new OnClickListener() {
-				
+
 				public void onClick(View v) {
-					Intent i = new Intent(FinancialGoalsActivity.this, FinanceGoalsInfoActivity.class );
+					Intent i = new Intent(FinancialGoalsActivity.this, FinanceGoalsInfoActivity.class);
 					startActivity(i);
 				}
-				
+
 			});
 
 			}

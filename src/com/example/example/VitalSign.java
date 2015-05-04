@@ -20,8 +20,7 @@ public class VitalSign {
 
 
     public void setBodyTemperature(String string) {
-        double bt = Double.parseDouble(string);
-        this.bodyTemperature = bt;
+        this.bodyTemperature = Double.parseDouble(string);
     }
 
     public String getPulse() {
@@ -31,8 +30,7 @@ public class VitalSign {
     }
 
     public void setPulse(String string) {
-        int p = Integer.parseInt(string);
-        this.pulse = p;
+        this.pulse = Integer.parseInt(string);
     }
 
 
@@ -43,8 +41,7 @@ public class VitalSign {
     }
 
     public void setRespirationRate(String string) {
-        int rr = Integer.parseInt(string);
-        this.respirationRate = rr;
+        this.respirationRate = Integer.parseInt(string);
     }
 
 
@@ -52,8 +49,7 @@ public class VitalSign {
     public String[] getBloodPressure() {
         String s = String.valueOf(this.bloodPressure[0]);
         String d = String.valueOf(this.bloodPressure[1]);
-        String[] bp = {s,d};
-        return bp;
+        return new String[]{s,d};
     }
 
     public void setBloodPressure(String[] string) {

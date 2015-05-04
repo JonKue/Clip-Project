@@ -3,8 +3,6 @@ package com.example.example;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -12,10 +10,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class FinanceGoalsInfoActivity extends Activity {
-	TextView goalName, goalDesc, goalType, goalDate;
-	EditText enterName, enterDesc, enterType, enterDate;
-	Button submit;
-	TextView error;
+	private EditText enterName;
+	private EditText enterDesc;
+	private EditText enterType;
+	private EditText enterDate;
+	private Button submit;
+	private TextView error;
 
 	
 	@Override
@@ -78,10 +78,6 @@ public class FinanceGoalsInfoActivity extends Activity {
 	}
 
 	private void setUpVariables() {
-		goalName = (TextView) findViewById(R.id.tvGoalName);
-		goalDesc = (TextView) findViewById(R.id.tvFGoalDesc);
-		goalType = (TextView) findViewById(R.id.tvFGoalType);
-		goalDate = (TextView) findViewById(R.id.tvFDate);
 		enterName = (EditText) findViewById(R.id.etFGoalName);
 		enterDesc = (EditText) findViewById(R.id.etFGoalDesc);
 		enterType = (EditText) findViewById(R.id.etFGoalType);
