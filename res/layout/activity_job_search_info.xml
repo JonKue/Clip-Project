@@ -35,11 +35,10 @@
         android:layout_height="wrap_content"
         android:text="Status" />
 
-    <EditText
-        android:id="@+id/etJSstatus"
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:id="@+id/spJSstatus" />
 
     <TextView
         android:id="@+id/tvJSnote"

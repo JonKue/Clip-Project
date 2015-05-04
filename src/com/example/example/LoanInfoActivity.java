@@ -1,18 +1,23 @@
 package com.example.example;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class LoanInfoActivity extends Activity {
+    private final Context context = this;
+
     private EditText enterCompanyName;
     private EditText enterAmount;
-    private EditText enterApplicationStatus;
+    private Spinner enterApplicationStatus;
     private Button submit;
     private TextView error;
 
@@ -35,11 +40,11 @@ public class LoanInfoActivity extends Activity {
                 //get strings from text boxes
                 String enteredName = enterCompanyName.getText().toString();
                 String enteredAmount = enterAmount.getText().toString();
-                String enteredAppStat = enterApplicationStatus.getText().toString();
+                String enteredAppStat = enterApplicationStatus.getSelectedItem().toString();
 
 
                 //make sure all fields are filled in
-                if (enteredName.equals("") || enteredAmount.equals("") || enteredAppStat.equals("")) {
+                if (enteredName.equals("") || enteredAmount.equals("")) {
                     error.setVisibility(View.VISIBLE);
                 } else {
                     error.setVisibility(View.INVISIBLE);
@@ -66,7 +71,10 @@ public class LoanInfoActivity extends Activity {
     private void setUpVariables() {
         enterCompanyName = (EditText) findViewById(R.id.etLoCompanyName);
         enterAmount = (EditText) findViewById(R.id.etLoAmount);
-        enterApplicationStatus = (EditText) findViewById(R.id.etLoApplicationStatus);
+        enterApplicationStatus = (Spinner) findViewById(R.id.spLoApplicationStatus);
+        ArrayAdapter<CharSequence> spinnerMenuList3 = ArrayAdapter.createFromResource(context, R.array.APP_STATUS, android.R.layout.simple_spinner_item);
+        spinnerMenuList3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        enterApplicationStatus.setAdapter(spinnerMenuList3);
         submit = (Button) findViewById(R.id.bLoSubmit);
         error = (TextView) findViewById(R.id.error);
     }

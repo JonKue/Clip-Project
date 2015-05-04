@@ -45,11 +45,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/etFGoalType"
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:id="@+id/spFGoalType"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/tvFDate"

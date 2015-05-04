@@ -47,6 +47,8 @@ public class FutureEducationActivity extends Activity {
             tv[i].setText(plan.get(index).toString());
             tv[i].setTextSize(20);
             tv[i].setPadding(15, 15, 15, 15);
+            tv[i].setBackgroundColor(Color.WHITE);
+            tv[i].setTextColor(Color.BLACK);
             tv[i].setOnClickListener(new OnClickListener() {
 
                 public void onClick(View v) {
@@ -94,10 +96,8 @@ public class FutureEducationActivity extends Activity {
         //action listener for home button
         back.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-
                 Intent j = new Intent(FutureEducationActivity.this, EducationActivity.class);
                 startActivity(j);
-
             }
 
         });

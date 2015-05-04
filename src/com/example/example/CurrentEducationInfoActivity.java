@@ -15,7 +15,6 @@ import android.widget.TextView;
 public class CurrentEducationInfoActivity extends Activity {
     private final Context context = this;
 
-
     private EditText enterSchoolName;
     private Spinner enterDegree;
     private EditText enterProgram;

@@ -78,6 +78,10 @@
         <item>FULLTIME</item>
         <item>NONE</item>
     </string-array>
+    <string-array name="GOAL_TYPE">
+        <item>SHORT/-TERM</item>
+        <item>LONG-TERM</item>
+    </string-array>
 
 
 
