@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvDisplayContactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Affiliation:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvDisplayContactAffiliation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Established Date:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvDisplayContactDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# of Times Used:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvDisplayContactUse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comments: "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvDisplayContactComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/bDismiss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dismiss" />
+
+</LinearLayout>

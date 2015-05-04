@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvJSappliedFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Applied For:" />
+
+    <EditText
+        android:id="@+id/etJSappliedFor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/bJSdate"
+        style="@android:style/DeviceDefault.Light.ButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date" />
+
+    <TextView
+        android:id="@+id/tvJSdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvJSstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status" />
+
+    <EditText
+        android:id="@+id/etJSstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tvJSnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other Note" />
+
+    <EditText
+        android:id="@+id/etJSnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/bJSsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+
+</LinearLayout>

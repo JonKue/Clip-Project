@@ -146,6 +146,24 @@
         <activity
             android:name=".AllergyActivity"
             android:label="Allergy" />
+        <activity
+            android:name=".CareerActivity"
+            android:label="Career" />
+        <activity
+            android:name=".GoalActivity"
+            android:label="activity_goal" />
+        <activity
+            android:name=".JobSearchActivity"
+            android:label="Job Search" />
+        <activity
+            android:name=".CompanyInfoActivity"
+            android:label="Company Information" />
+        <activity
+            android:name=".ElectronicIdentityActivity"
+            android:label="Electronic Identity" />
+        <activity
+            android:name=".ContactListActivity"
+            android:label="Contact List" />
     </application>
 
 </manifest>

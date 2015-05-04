@@ -59,6 +59,16 @@ public class MenuActivity extends Activity{
 				//finish();
 			}
 		});
+
+
+		CareerButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent j = new Intent(MenuActivity.this, CareerActivity.class);
+				startActivity(j);
+				//finish();
+			}
+		});
 	}
 
     @Override

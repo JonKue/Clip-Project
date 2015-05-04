@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/svEI"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/etEIname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Name" />
+
+
+
+            <EditText
+                android:id="@+id/etEIwebsite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="website" />
+
+            <EditText
+                android:id="@+id/etEIusername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Username" />
+
+            <EditText
+                android:id="@+id/etEIpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Password" />
+
+            <Button
+                android:id="@+id/bEIsave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
