@@ -14,4 +14,5 @@ public class EnumClasses {
         APPLIED, ACCEPTED, REJECTED, NONE
     }
 
+
 }

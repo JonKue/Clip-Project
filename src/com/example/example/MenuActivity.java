@@ -12,6 +12,8 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.Button;
 
+import org.apache.http.HttpEntity;
+
 public class MenuActivity extends Activity{
 
 //	private Button EducationButton;
@@ -28,6 +30,8 @@ public class MenuActivity extends Activity{
 
 		Button EducationButton = (Button) findViewById(R.id.bEducation);
 		Button FinanceButton = (Button) findViewById(R.id.bFinance);
+		Button HealthButton = (Button) findViewById(R.id.bHealth);
+		Button CareerButton = (Button) findViewById(R.id.bCareer);
 
 		EducationButton.setOnClickListener(new OnClickListener() {
 
@@ -37,11 +41,20 @@ public class MenuActivity extends Activity{
 				//finish();
 			}
 		});
-		
+
 		FinanceButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				Intent j = new Intent(MenuActivity.this, FinanceActivity.class);
+				startActivity(j);
+				//finish();
+			}
+		});
+
+		HealthButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent j = new Intent(MenuActivity.this, HealthActivity.class);
 				startActivity(j);
 				//finish();
 			}

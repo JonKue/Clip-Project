@@ -36,4 +36,31 @@
     <string name="title_activity_finance_goals_info">FinanceGoalsInfoActivity</string>
     <string name="title_activity_display_scholarship">DisplayScholarshipActivity</string>
 
+    <string name="vital_sign">Vital Sign</string>
+    <string name="exercise_plan">Exercise Plan</string>
+    <string name="diet_plan">Diet Plan</string>
+    <string name="medication">Medication</string>
+    <string name="allergy">Allergy</string>
+    <string name="others">Others</string>
+
+
+    <string name="vs_body_temperature">Body Temperature</string>
+    <string name="vs_pulse">Pulse</string>
+    <string name="vs_respiration_rate">Respiration Rate</string>
+    <string name="vs_blood_pressure">Blood Pressure</string>
+    <string name="vsdialog_save">Save</string>
+    <string name="epdialog_add">+</string>
+    <string name="name">Name</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="other_info">Other Information</string>
+    <string name="save">Save</string>
+    <string name="title_activity_health">Health</string>
+    <string-array name="APP_STATUS">
+        <item>APPLIED</item>
+        <item>ACCEPTED</item>
+        <item>REJECTED</item>
+        <item>NONE</item>
+    </string-array>
+
 </resources>
