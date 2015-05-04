@@ -80,7 +80,7 @@ public class HealthActivity extends Activity {
         return id == R.id.action_settings || super.onOptionsItemSelected(item);
     }
 
-    public void setUpVariables(){
+    public void setUpVariables() {
         vitalSign = (Button) findViewById(R.id.bVitalSign);
         exercisePlan = (Button) findViewById(R.id.bExercisPlan);
         dietPlan = (Button) findViewById(R.id.bDietPlan);

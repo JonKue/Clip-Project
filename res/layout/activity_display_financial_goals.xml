@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <TextView
         android:id="@+id/tvGoalName"
@@ -72,7 +72,6 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </RelativeLayout>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

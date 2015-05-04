@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoanInfoActivity extends Activity{
+public class LoanInfoActivity extends Activity {
     private EditText enterCompanyName;
     private EditText enterAmount;
     private EditText enterApplicationStatus;
@@ -38,14 +38,10 @@ public class LoanInfoActivity extends Activity{
                 String enteredAppStat = enterApplicationStatus.getText().toString();
 
 
-
                 //make sure all fields are filled in
-                if(enteredName.equals("") || enteredAmount.equals("") || enteredAppStat.equals(""))
-                {
+                if (enteredName.equals("") || enteredAmount.equals("") || enteredAppStat.equals("")) {
                     error.setVisibility(View.VISIBLE);
-                }
-                else
-                {
+                } else {
                     error.setVisibility(View.INVISIBLE);
                     Loan loan = new Loan(0);
                     loan.setCompanyName(enteredName);

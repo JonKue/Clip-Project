@@ -8,7 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class DisplayExercisePlanActivity extends Activity{
+public class DisplayExercisePlanActivity extends Activity {
 
     private String exercisePlan;
     private String routine;

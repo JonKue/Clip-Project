@@ -13,13 +13,13 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class GoalActivity extends Activity{
+public class GoalActivity extends Activity {
     private final Context context = this;
+    EditText goalEntry;
     private RadioButton stgButton;
     private RadioButton ltgButton;
     private Button save;
     private Button done;
-    EditText goalEntry;
     private DatabaseHelper db;
 
     @Override
@@ -42,7 +42,7 @@ public class GoalActivity extends Activity{
             ll.addView(tv);
         } else {
             int count = 1;
-            while (c.moveToNext()){
+            while (c.moveToNext()) {
                 tv = new TextView(getApplicationContext());
                 String type = c.getString(0);
                 String name = c.getString(1);
@@ -50,7 +50,7 @@ public class GoalActivity extends Activity{
                 String str = type + ": " + name;
                 tv.setText(str);
                 ll.addView(tv);
-				/*
+                /*
 				if (type.matches(GoalType.SHORT_TERM.toString())){
 					String str = "Short-Term Goal: " + name 
 							+ "\n";

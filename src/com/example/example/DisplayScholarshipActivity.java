@@ -13,7 +13,6 @@ public class DisplayScholarshipActivity extends Activity {
     private String appStat;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +24,7 @@ public class DisplayScholarshipActivity extends Activity {
             companyName = extras.getString("scholarshipName");
             reqs = extras.getString("requirements");
             int am = extras.getInt("amount");
-            amt = am +"";
+            amt = am + "";
             appStat = extras.getString("status");
         }
 

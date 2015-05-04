@@ -54,11 +54,32 @@
     <string name="other_info">Other Information</string>
     <string name="save">Save</string>
     <string name="title_activity_health">Health</string>
+
+    <!-- Enums for Spinners-->
+    <string-array name="PASSWORD_RESET_QUESTIONS">
+        <item>What was your first pet\'s name?</item>
+        <item>What is your hometown?</item>
+    </string-array>
     <string-array name="APP_STATUS">
         <item>APPLIED</item>
         <item>ACCEPTED</item>
         <item>REJECTED</item>
+        <item>OTHER</item>
+    </string-array>
+    <string-array name="DEGREE_TYPE">
+        <item>ASSOCIATE</item>
+        <item>DIPLOMA</item>
+        <item>BACHELOR</item>
+        <item>MASTER</item>
+        <item>PHD</item>
+    </string-array>
+    <string-array name="ENROLLMENT_STATUS">
+        <item>PARTTIME</item>
+        <item>FULLTIME</item>
         <item>NONE</item>
     </string-array>
+
+
+
 
 </resources>

@@ -1,19 +1,19 @@
 package com.example.example;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import java.util.List;
 
 public class ContactListActivity extends Activity {
     private final Context context = this;
@@ -26,7 +26,7 @@ public class ContactListActivity extends Activity {
         setContentView(R.layout.activity_jobsearch_add);
 
         Button add = (Button) findViewById(R.id.bCareerAdd);
-        LinearLayout ll = (LinearLayout)findViewById(R.id.llJobSearch);
+        LinearLayout ll = (LinearLayout) findViewById(R.id.llJobSearch);
 
         final DatabaseHelper db = new DatabaseHelper(this);
 
@@ -34,7 +34,7 @@ public class ContactListActivity extends Activity {
 
         //dynamically add buttons
         Button[] tv = new Button[contacts.size()];
-        for(int i=0;i<contacts.size();i++){
+        for (int i = 0; i < contacts.size(); i++) {
             final int index = i;
             final String n = contacts.get(i).getName();
             final String aff = contacts.get(i).getAffiliation();
@@ -94,7 +94,6 @@ public class ContactListActivity extends Activity {
 
             ll.addView(tv[i]);
         }
-
 
 
         add.setOnClickListener(new OnClickListener() {

@@ -1,7 +1,5 @@
 package com.example.example;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -13,13 +11,14 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class ScholarshipActivity extends Activity {
-    private List<Scholarship> scholarships;
+import java.util.List;
 
+public class ScholarshipActivity extends Activity {
     String name;
     String[] req;
     String amount;
     String appStat;
+    private List<Scholarship> scholarships;
 
     @Override
     protected void onCreate(Bundle noneState) {
@@ -32,7 +31,7 @@ public class ScholarshipActivity extends Activity {
         enter.setText("Add");
         label.setText("Scholarships");
 
-        LinearLayout ll = (LinearLayout)findViewById(R.id.NoneLayout);
+        LinearLayout ll = (LinearLayout) findViewById(R.id.NoneLayout);
 
         final DatabaseHelper db = new DatabaseHelper(this);
 
@@ -40,7 +39,7 @@ public class ScholarshipActivity extends Activity {
 
         //dynamically add buttons
         Button[] tv = new Button[scholarships.size()];
-        for(int i=0;i<scholarships.size();i++){
+        for (int i = 0; i < scholarships.size(); i++) {
             final int index = i;
             tv[i] = new Button(getApplicationContext());
             tv[i].setText(scholarships.get(index).getName());
@@ -70,8 +69,7 @@ public class ScholarshipActivity extends Activity {
         }
 
         //displays a text view when user hasn't entered any current education
-        if(scholarships.size() == 0)
-        {
+        if (scholarships.size() == 0) {
             TextView none;
             none = new TextView(getApplicationContext());
             none.setText("You're all paid off!");

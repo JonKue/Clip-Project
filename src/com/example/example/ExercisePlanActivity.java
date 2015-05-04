@@ -1,33 +1,29 @@
 package com.example.example;
 
-import java.util.List;
-
 import android.app.Activity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+
+import java.util.List;
 
 //import android.widget.TextView;
 
 public class ExercisePlanActivity extends Activity {
 
     protected static final Context ExercisePlanActivity = null;
-
-    private DatabaseHelper db;
-
     String exercisePlan;
     String routine;
     String startTime;
     String endTime;
     String otherInfo;
+    private DatabaseHelper db;
     private List<ExercisePlan> epList;
 
     @Override

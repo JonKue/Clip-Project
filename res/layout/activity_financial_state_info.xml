@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <TextView
         android:id="@+id/tvCash"
@@ -29,7 +29,7 @@
         android:id="@+id/etAssets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
+        android:ems="10">
 
         <requestFocus />
     </EditText>
@@ -84,7 +84,7 @@
         android:layout_height="match_parent"
         android:layout_weight="80"
         android:gravity="center_horizontal"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/bFSSubmit"

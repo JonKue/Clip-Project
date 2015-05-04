@@ -1,7 +1,5 @@
 package com.example.example;
 
-import java.io.FileOutputStream;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.io.FileOutputStream;
 
 public class FutureEducationInfoActivity extends Activity {
     public FileOutputStream fFuEdInfo = null;
@@ -48,12 +48,9 @@ public class FutureEducationInfoActivity extends Activity {
 
 
                 //make sure all fields are filled in
-                if(enteredSchool.equals("") || enteredDegree.equals("") || enteredProgram.equals("") || enteredEnroll.equals(""))
-                {
+                if (enteredSchool.equals("") || enteredDegree.equals("") || enteredProgram.equals("") || enteredEnroll.equals("")) {
                     error.setVisibility(View.VISIBLE);
-                }
-                else
-                {
+                } else {
                     error.setVisibility(View.INVISIBLE);
 
                     School school = new School(0); //Databse sets id automatically

@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class FinancialSupportActivity extends Activity{
+public class FinancialSupportActivity extends Activity {
 
 
     @Override

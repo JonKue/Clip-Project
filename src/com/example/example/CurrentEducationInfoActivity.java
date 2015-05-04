@@ -1,21 +1,25 @@
 package com.example.example;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class CurrentEducationInfoActivity extends Activity {
-//    public FileOutputStream fCuEdInfo = null;
+    private final Context context = this;
+
 
     private EditText enterSchoolName;
-    private EditText enterDegree;
+    private Spinner enterDegree;
     private EditText enterProgram;
-    private EditText enterEnrollmentStatus;
+    private Spinner enterEnrollmentStatus;
     private EditText enterTuition;
     private EditText enterCourse;
     private EditText enterDateStart;
@@ -37,28 +41,24 @@ public class CurrentEducationInfoActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
 
                 //get strings from text boxes
                 String enteredSchool = enterSchoolName.getText().toString();
-                String enteredDegree = enterDegree.getText().toString();
+                String enteredDegree = enterDegree.getSelectedItem().toString();
                 String enteredProgram = enterProgram.getText().toString();
-                String enteredEnroll = enterEnrollmentStatus.getText().toString();
+                String enteredEnroll = enterEnrollmentStatus.getSelectedItem().toString();
                 String enteredTuition = enterTuition.getText().toString();
-                String enteredCourse= enterCourse.getText().toString();
+                String enteredCourse = enterCourse.getText().toString();
                 String enteredDateStart = enterDateStart.getText().toString();
                 String enteredDateGrad = enterDateGraduate.getText().toString();
 
                 //make sure all fields are filled in
-                if(enteredSchool.equals("") || enteredDegree.equals("") || enteredProgram.equals("") || enteredEnroll.equals("") ||
-                        enteredTuition.equals("") || enteredCourse.equals("") || enteredDateStart.equals("") || enteredDateGrad.equals(""))
-                {
+                if (enteredSchool.equals("") || enteredProgram.equals("") || enteredEnroll.equals("") ||
+                        enteredTuition.equals("") || enteredDateStart.equals("") || enteredDateGrad.equals("")) {
                     error.setText("Please fill all fields...");
                     error.setVisibility(View.VISIBLE);
 
-                }
-                else
-                {
+                } else {
 
                     error.setVisibility(View.INVISIBLE);
 
@@ -95,9 +95,19 @@ public class CurrentEducationInfoActivity extends Activity {
 
     private void setUpVariables() {
         enterSchoolName = (EditText) findViewById(R.id.etSchoolName);
-        enterDegree = (EditText) findViewById(R.id.etDegree);
+
+        enterDegree = (Spinner) findViewById(R.id.spDegreeType);
+        ArrayAdapter<CharSequence> spinnerMenuList = ArrayAdapter.createFromResource(context, R.array.DEGREE_TYPE, android.R.layout.simple_spinner_item);
+        spinnerMenuList.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        enterDegree.setAdapter(spinnerMenuList);
+
+        enterTuition = (EditText) findViewById(R.id.etTuition);
         enterProgram = (EditText) findViewById(R.id.etProgram);
-        enterEnrollmentStatus = (EditText) findViewById(R.id.etEnrollmentStatus);
+        enterEnrollmentStatus = (Spinner) findViewById(R.id.spEnrollment);
+        ArrayAdapter<CharSequence> spinnerMenuList2 = ArrayAdapter.createFromResource(context, R.array.ENROLLMENT_STATUS, android.R.layout.simple_spinner_item);
+        spinnerMenuList2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        enterEnrollmentStatus.setAdapter(spinnerMenuList2);
+
         enterCourse = (EditText) findViewById(R.id.etCourse);
         enterDateStart = (EditText) findViewById(R.id.etDateStart);
         enterDateGraduate = (EditText) findViewById(R.id.etDateGraduate);

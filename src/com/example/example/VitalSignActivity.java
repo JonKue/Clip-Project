@@ -30,8 +30,8 @@ public class VitalSignActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vital_sign);
 
-        int[] bp = {0,0};
-        myVitalSign = new VitalSign(0,0,0,bp);
+        int[] bp = {0, 0};
+        myVitalSign = new VitalSign(0, 0, 0, bp);
 
         setUpVariables();
         db = new DatabaseHelper(this);
@@ -50,7 +50,7 @@ public class VitalSignActivity extends Activity {
         String sysBP = myVitalSign.getBloodPressure()[0];
         String diasBP = myVitalSign.getBloodPressure()[1];
         bldPressDisplay.setText(sysBP + "/" + diasBP);
-		
+
 		/*
 		 * db = new DatabaseHelper(this); db.openDatabase();
 		 * 
@@ -167,7 +167,7 @@ public class VitalSignActivity extends Activity {
                                 .findViewById(R.id.etDSysentry);
                         String sbp = systolicReading.getText().toString();
                         String dbp = diasystolicReading.getText().toString();
-                        String[] bp = { sbp, dbp };
+                        String[] bp = {sbp, dbp};
                         myVitalSign.setBloodPressure(bp);
                         db.addVitalSign(myVitalSign);
                         dialog.dismiss();

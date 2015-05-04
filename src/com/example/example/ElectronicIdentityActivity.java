@@ -1,7 +1,5 @@
 package com.example.example;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -15,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class ElectronicIdentityActivity extends Activity {
     private final Context context = this;
     private List<ElectronicIdentity> id;
@@ -24,14 +24,14 @@ public class ElectronicIdentityActivity extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jobsearch_add);
-        LinearLayout ll = (LinearLayout)findViewById(R.id.llJobSearch);
+        LinearLayout ll = (LinearLayout) findViewById(R.id.llJobSearch);
         final DatabaseHelper db = new DatabaseHelper(this);
 
         id = db.getAllIdentities();
 
         //dynamically add buttons
         Button[] tv = new Button[id.size()];
-        for(int i=0;i<id.size();i++){
+        for (int i = 0; i < id.size(); i++) {
             final int index = i;
             final String n = id.get(i).getName();
             final String site = id.get(i).getWebsite();

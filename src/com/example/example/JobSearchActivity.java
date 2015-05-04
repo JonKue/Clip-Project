@@ -1,7 +1,5 @@
 package com.example.example;
 
-import java.util.Date;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -15,6 +13,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.util.Date;
 
 public class JobSearchActivity extends Activity {
     private final Context context = this;
@@ -106,10 +106,10 @@ public class JobSearchActivity extends Activity {
 
         add.setOnClickListener(new OnClickListener() {
 
+            final JobSearch jobSearch = new JobSearch();
             TextView appFor, status, dateDisplay, note;
             EditText appForEntry, statusEntry, noteEntry;
             Button date, save;
-            final JobSearch jobSearch = new JobSearch();
 
             @Override
             public void onClick(View v) {

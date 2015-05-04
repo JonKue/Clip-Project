@@ -9,46 +9,47 @@ import android.widget.Button;
 
 public class FinanceActivity extends Activity {
 
-	Button summary;
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_finance);
+    Button summary;
 
-		Button state = (Button) findViewById(R.id.bFinancialState);
-		Button stocks = (Button) findViewById(R.id.bStocksAndSecurities);
-		Button goals = (Button) findViewById(R.id.bFinancialGoals);
-		
-		 state.setOnClickListener(new OnClickListener() {
-			 public void onClick(View v) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_finance);
 
-				 Intent j = new Intent(FinanceActivity.this, FinancialStateActivity.class);
-				 startActivity(j);
+        Button state = (Button) findViewById(R.id.bFinancialState);
+        Button stocks = (Button) findViewById(R.id.bStocksAndSecurities);
+        Button goals = (Button) findViewById(R.id.bFinancialGoals);
 
-			 }
+        state.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
 
-		 });
-		 
-		 stocks.setOnClickListener(new OnClickListener() {
-			 public void onClick(View v) {
+                Intent j = new Intent(FinanceActivity.this, FinancialStateActivity.class);
+                startActivity(j);
 
-				 Intent j = new Intent(FinanceActivity.this, StocksActivity.class);
-				 startActivity(j);
+            }
 
-			 }
+        });
 
-		 });
-		
-		 goals.setOnClickListener(new OnClickListener() {
-			 public void onClick(View v) {
+        stocks.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
 
-				 Intent j = new Intent(FinanceActivity.this, FinancialGoalsActivity.class);
-				 startActivity(j);
+                Intent j = new Intent(FinanceActivity.this, StocksActivity.class);
+                startActivity(j);
 
-			 }
+            }
 
-		 });
-		
-		
-	}
+        });
+
+        goals.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+
+                Intent j = new Intent(FinanceActivity.this, FinancialGoalsActivity.class);
+                startActivity(j);
+
+            }
+
+        });
+
+
+    }
 }

@@ -17,23 +17,26 @@ class Medication {
     private boolean setReminder;
 
 	/*
-	 * SimpleDateFormat dateFormat1 = new SimpleDateFormat("mmm d, yyyy");
+     * SimpleDateFormat dateFormat1 = new SimpleDateFormat("mmm d, yyyy");
 	 * SimpleDateFormat dateFormat2 = new SimpleDateFormat("mm/dd/yyyy");
 	 */
 
-    public String getPillName() {
-        return pillName;
+    public Medication(int _id) {
+        super();
+        this._id = _id;
     }
 
-    public int get_id() {
-        return _id;
+    public String getPillName() {
+        return pillName;
     }
 
     public void setPillName(String pillName) {
         this.pillName = pillName;
     }
 
-
+    public int get_id() {
+        return _id;
+    }
 
     public String getNoOfDosage() {
         return noOfDosage;
@@ -65,11 +68,6 @@ class Medication {
 
     public void setSetReminder(boolean setReminder) {
         this.setReminder = setReminder;
-    }
-
-    public Medication(int _id) {
-        super();
-        this._id = _id;
     }
 
 }

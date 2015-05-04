@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class ScholarshipInfoActivity extends Activity{
+public class ScholarshipInfoActivity extends Activity {
     private EditText enterName;
     private EditText enterRequirement;
     private EditText enterAmount;
@@ -38,14 +38,10 @@ public class ScholarshipInfoActivity extends Activity{
                 String enteredAppStat = enterApplicationStatus.getText().toString();
 
 
-
                 //make sure all fields are filled in
-                if(enteredName.equals("") || enteredAmount.equals("") || enteredAppStat.equals("") || enteredRequirement.equals(""))
-                {
+                if (enteredName.equals("") || enteredAmount.equals("") || enteredAppStat.equals("") || enteredRequirement.equals("")) {
                     error.setVisibility(View.VISIBLE);
-                }
-                else
-                {
+                } else {
                     error.setVisibility(View.INVISIBLE);
                     Scholarship scholarship = new Scholarship(0);
                     scholarship.setName(enteredName);

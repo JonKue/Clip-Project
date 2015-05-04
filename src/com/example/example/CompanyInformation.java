@@ -84,11 +84,12 @@ class CompanyInformation {
         return interviewResult;
     }
 
-    private void setInterviewResult(ApplicationStatus interviewResult) {
-        this.interviewResult = interviewResult;
-    }
     public void setInterviewResult(String result) {
         this.setInterviewResult(ApplicationStatus.valueOf(result));
+    }
+
+    private void setInterviewResult(ApplicationStatus interviewResult) {
+        this.interviewResult = interviewResult;
     }
 
     public String getNotes() {

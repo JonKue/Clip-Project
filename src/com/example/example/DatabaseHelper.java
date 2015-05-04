@@ -2,17 +2,17 @@ package com.example.example;
 
 //-----UPDATE PACKAGE/IMPORTS FOR CLIP-----//
 
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.List;
 
 class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -69,7 +69,6 @@ class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_AGDESCRIPTION = "adescription";
 
 
-
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -80,7 +79,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE USER ( uid INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "name TEXT, password TEXT, question INTEGER, answer TEXT)");
-        
+
         //tables for education section
         db.execSQL("CREATE TABLE SCHOOLS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "schoolName TEXT, degreeType TEXT, program TEXT, enrollment TEXT," +
@@ -90,8 +89,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 "lenderName TEXT, amount TEXT, status TEXT)");
         db.execSQL("CREATE TABLE SCHOLARSHIPS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "scholarshipName TEXT, requirements TEXT, amount TEXT, status TEXT)");
-        
-        
+
+
         //tables for finance section
         db.execSQL("CREATE TABLE STOCKS ( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "numStock TEXT, name TEXT)");
@@ -125,7 +124,6 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 "name TEXT, affiliation TEXT, date TEXT, timesUsed TEXT, comments TEXT)");
 
 
-
         String CREATE_VITAL_SIGN_TABLE = "CREATE TABLE " + VITAL_SIGN + "("
                 + KEY_BT + " TEXT, " + KEY_PULSE + " TEXT, " + KEY_RR
                 + " TEXT, " + KEY_SBP + " TEXT, " + KEY_DBP + " TEXT " + ")";
@@ -157,7 +155,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS SCHOOLS");
         db.execSQL("DROP TABLE IF EXISTS LOANS");
         db.execSQL("DROP TABLE IF EXISTS SCHOLARSHIPS");
-        
+
         //finance section
         db.execSQL("DROP TABLE IF EXISTS STOCKS");
         db.execSQL("DROP TABLE IF EXISTS STATES");
@@ -214,7 +212,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
      * USER table operations
      *
      */
-        // Register new user
+    // Register new user
     boolean registerUser(String inputName, String inputPass, int inputQuestion, String inputAnswer) {
         SQLiteDatabase db = this.getWritableDatabase();
         String hashedpass = "", hashedansw = "";
@@ -225,7 +223,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
         } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        Log.d("CLIP-DEBUG:: --", ""+hashedpass);
+        Log.d("CLIP-DEBUG:: --", "" + hashedpass);
         ContentValues values = new ContentValues();
         values.put("name", inputName);
 
@@ -234,7 +232,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
         values.put("answer", hashedansw);
 
         // Inserting Row
-        if(!hashedpass.equals("")) {
+        if (!hashedpass.equals("")) {
             db.insert("USER", null, values);
             db.close();
             return true;
@@ -243,8 +241,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
-    boolean isEmpty()
-    {
+    boolean isEmpty() {
         SQLiteDatabase db = this.getReadableDatabase();
 
         String selectQuery = "SELECT * FROM USER";
@@ -256,11 +253,12 @@ class DatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         return res;
     }
+
     boolean isValidName(String inputName) {
 
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String selectQuery = "SELECT * FROM USER WHERE name = '" +inputName +"'";
+        String selectQuery = "SELECT * FROM USER WHERE name = '" + inputName + "'";
 
 
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -286,10 +284,10 @@ class DatabaseHelper extends SQLiteOpenHelper {
             e.printStackTrace();
         }
 
-        Log.d("CLIP-DEBUG:: --", ""+hashedpass);
-        if(!hashedpass.equals(""))
-            selectQuery = "SELECT * FROM USER WHERE name = '" +name+
-                "' AND password = '" + hashedpass +"'";
+        Log.d("CLIP-DEBUG:: --", "" + hashedpass);
+        if (!hashedpass.equals(""))
+            selectQuery = "SELECT * FROM USER WHERE name = '" + name +
+                    "' AND password = '" + hashedpass + "'";
 
 
         cursor = db.rawQuery(selectQuery, null);
@@ -400,7 +398,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
     School selectSchool(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String selectQuery = "SELECT * FROM SCHOOLS WHERE id = " +id;
+        String selectQuery = "SELECT * FROM SCHOOLS WHERE id = " + id;
 
 
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -446,7 +444,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 // Adding contact to list
                 schoolList.add(school);
             } while (cursor.moveToNext());
-        } cursor.close();
+        }
+        cursor.close();
 
         // return user list
         return schoolList;
@@ -475,7 +474,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 // Adding contact to list
                 schoolList.add(school);
             } while (cursor.moveToNext());
-        } cursor.close();
+        }
+        cursor.close();
 
         // return user list
         return schoolList;
@@ -510,7 +510,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
     Loan selectLoan(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String selectQuery = "SELECT * FROM LOANS WHERE id = " +id;
+        String selectQuery = "SELECT * FROM LOANS WHERE id = " + id;
 
 
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -536,13 +536,14 @@ class DatabaseHelper extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Loan loan = new Loan(Integer.parseInt(cursor.getString (0)));
+                Loan loan = new Loan(Integer.parseInt(cursor.getString(0)));
                 loan.setCompanyName(cursor.getString(1));
                 loan.setAmount(Integer.parseInt(cursor.getString(2)));
                 loan.setApplicationStatus(cursor.getString(3));
                 loanList.add(loan);
             } while (cursor.moveToNext());
-        } cursor.close();
+        }
+        cursor.close();
 
         // return user list
         return loanList;
@@ -554,9 +555,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(id)});
         db.close();
     }
-    
-    
-    
+
+
     /*
      * SCHOLARSHIPS Table
      */
@@ -577,7 +577,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
     Scholarship selectScholarship(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String selectQuery = "SELECT * FROM SCHOLARSHIPS WHERE id = " +id;
+        String selectQuery = "SELECT * FROM SCHOLARSHIPS WHERE id = " + id;
 
 
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -611,7 +611,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 scholarship.setApplicationStatus(cursor.getString(4));
                 scholarshipList.add(scholarship);
             } while (cursor.moveToNext());
-        } cursor.close();
+        }
+        cursor.close();
 
         // return user list
         return scholarshipList;
@@ -623,12 +624,14 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(id)});
         db.close();
     }
-    
 
-    /*******************************
+
+    /**
+     * ****************************
      * Functions for Finance Section
      * Inserting values into tables
-     * ******************************/
+     * *****************************
+     */
     //attempting to work with stocks database implementation
     void addStock(Stocks stock) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -641,8 +644,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
         db.insert("STOCKS", null, values);
         db.close(); // Closing database connection
     }
-    
-    
+
+
     //attempting to work with stocks database implementation
     void addState(FinancialState state) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -659,7 +662,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
         db.insert("STATES", null, values);
         db.close(); // Closing database connection
     }
-    
+
     //add finance goals to the database
     void addFGoal(FinanceGoal goal) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -675,14 +678,12 @@ class DatabaseHelper extends SQLiteOpenHelper {
         db.insert("FGOALS", null, values);
         db.close(); // Closing database connection
     }
-    
-    
-    
-    
+
+
     /*
     * Getting values from tables
     * ******************************/
- // Getting All StocksS
+    // Getting All StocksS
     public List<Stocks> getAllStocks() {
         List<Stocks> stockList = new ArrayList<>();
         // Select All Query
@@ -707,90 +708,91 @@ class DatabaseHelper extends SQLiteOpenHelper {
         // return user list
         return stockList;
     }
-    
-  //Getting All States
-   public List<FinancialState> getAllStates() {
-       List<FinancialState> stateList = new ArrayList<>();
-       // Select All Query
-       String selectQuery = "SELECT * FROM STATES";
 
-       SQLiteDatabase db = this.getWritableDatabase();
-       Cursor cursor = db.rawQuery(selectQuery, null);
+    //Getting All States
+    public List<FinancialState> getAllStates() {
+        List<FinancialState> stateList = new ArrayList<>();
+        // Select All Query
+        String selectQuery = "SELECT * FROM STATES";
 
-       // looping through all rows and adding to list
-       if (cursor.moveToFirst()) {
-           do {
-               FinancialState state = new FinancialState(Integer.parseInt(cursor.getString(0)));
-               state.setDate(cursor.getString(1));
-               state.setCash(cursor.getString(2));
-               state.setAssets(cursor.getString(3));
-               state.setLiabilities(cursor.getString(4));
-               state.setCreditCards(cursor.getString(5));
-               state.setOther(cursor.getString(6));
-               // Adding contact to list
-               stateList.add(state);
-           } while (cursor.moveToNext());
-       }
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
 
-       cursor.close();
-       db.close();
-       // return state list
-       return stateList;
-   }
-   
-  //Getting All Finance Goals
-  public List<FinanceGoal> getAllFGoals() {
-      List<FinanceGoal> goalList = new ArrayList<>();
-      // Select All Query
-      String selectQuery = "SELECT * FROM FGOALS";
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                FinancialState state = new FinancialState(Integer.parseInt(cursor.getString(0)));
+                state.setDate(cursor.getString(1));
+                state.setCash(cursor.getString(2));
+                state.setAssets(cursor.getString(3));
+                state.setLiabilities(cursor.getString(4));
+                state.setCreditCards(cursor.getString(5));
+                state.setOther(cursor.getString(6));
+                // Adding contact to list
+                stateList.add(state);
+            } while (cursor.moveToNext());
+        }
 
-      SQLiteDatabase db = this.getWritableDatabase();
-      Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.close();
+        db.close();
+        // return state list
+        return stateList;
+    }
 
-      // looping through all rows and adding to list
-      if (cursor.moveToFirst()) {
-          do {
-              FinanceGoal goal = new FinanceGoal(Integer.parseInt(cursor.getString(0)));
-              goal.setName(cursor.getString(1));
-              goal.setDescription(cursor.getString(2));
-              goal.setType(cursor.getString(3));
-              goal.setDate(cursor.getString(4));
-              // Adding contact to list
-              goalList.add(goal);
-          } while (cursor.moveToNext());
-      }
+    //Getting All Finance Goals
+    public List<FinanceGoal> getAllFGoals() {
+        List<FinanceGoal> goalList = new ArrayList<>();
+        // Select All Query
+        String selectQuery = "SELECT * FROM FGOALS";
 
-      cursor.close();
-      db.close();
-      // return state list
-      return goalList;
-  }
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                FinanceGoal goal = new FinanceGoal(Integer.parseInt(cursor.getString(0)));
+                goal.setName(cursor.getString(1));
+                goal.setDescription(cursor.getString(2));
+                goal.setType(cursor.getString(3));
+                goal.setDate(cursor.getString(4));
+                // Adding contact to list
+                goalList.add(goal);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        // return state list
+        return goalList;
+    }
   
   /*
    * Deleting values from database
    * *****************************
-   */  
-  	
-	  
-	  public void deleteStock(int id) {
-	      SQLiteDatabase db = this.getWritableDatabase();
-	      db.delete("STOCKS", "id" + " = ?",
-	              new String[] { String.valueOf(id) });
-	      db.close();
-	  }
+   */
 
-	  public void deleteState(int id) {
-	      SQLiteDatabase db = this.getWritableDatabase();
-	      db.delete("STATES", "id" + " = ?",
-	              new String[] { String.valueOf(id) });
-	      db.close();
-	  }
-	  public void deleteFGoal(int id) {
-	      SQLiteDatabase db = this.getWritableDatabase();
-	      db.delete("FGOALS", "id" + " = ?",
-	              new String[] { String.valueOf(id) });
-	      db.close();
-	  }
+
+    public void deleteStock(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("STOCKS", "id" + " = ?",
+                new String[]{String.valueOf(id)});
+        db.close();
+    }
+
+    public void deleteState(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("STATES", "id" + " = ?",
+                new String[]{String.valueOf(id)});
+        db.close();
+    }
+
+    public void deleteFGoal(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("FGOALS", "id" + " = ?",
+                new String[]{String.valueOf(id)});
+        db.close();
+    }
 
 
     // Add goal
@@ -913,7 +915,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 id.setPassWord(cursor.getString(4));
                 idList.add(id);
             } while (cursor.moveToNext());
-        } cursor.close();
+        }
+        cursor.close();
 
         // return user list
         return idList;
@@ -963,7 +966,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
                 contact.setComments(cursor.getString(5));
                 contactList.add(contact);
             } while (cursor.moveToNext());
-        } cursor.close();
+        }
+        cursor.close();
 
         // return contact list
         return contactList;
@@ -1010,7 +1014,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
             vitalSign.setBodyTemperature(cursor.getString(0));
             vitalSign.setPulse(cursor.getString(1));
             vitalSign.setRespirationRate(cursor.getString(2));
-            String[] bp = { cursor.getString(3), cursor.getString(4) }; // TODO
+            String[] bp = {cursor.getString(3), cursor.getString(4)}; // TODO
             vitalSign.setBloodPressure(bp);
         }
         cursor.close();
@@ -1021,7 +1025,9 @@ class DatabaseHelper extends SQLiteOpenHelper {
 
     // Add Medication
 
-    /*** ADD data ***/
+    /**
+     * ADD data **
+     */
 
     // Add Exercise Plan
     public void addExercisePlan(ExercisePlan ep) {
@@ -1069,7 +1075,9 @@ class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    /*** Getting all information ***/
+    /**
+     * Getting all information **
+     */
 
     // Getting All Exercise Plan
     public List<ExercisePlan> getAllExercisePlan() {
@@ -1193,13 +1201,15 @@ class DatabaseHelper extends SQLiteOpenHelper {
         return allergyList;
     }
 
-    /*** Deleting values from Database ***/
+    /**
+     * Deleting values from Database **
+     */
 
     // Delete ExercisePlan
     public void deleteExercisePlan(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("EXERCISE_PLAN", "id" + " = ?",
-                new String[] { String.valueOf(id) });
+                new String[]{String.valueOf(id)});
         db.close();
     }
 
@@ -1207,7 +1217,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
     public void deleteDietPlan(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("DIET_PLAN", "id" + " = ?",
-                new String[] { String.valueOf(id) });
+                new String[]{String.valueOf(id)});
         db.close();
     }
 
@@ -1215,7 +1225,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
     public void deleteMedication(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("MEDICATION", "id" + " = ?",
-                new String[] { String.valueOf(id) });
+                new String[]{String.valueOf(id)});
         db.close();
     }
 
@@ -1224,7 +1234,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
     public void deleteAllergy(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("ALLERGY", "id" + " = ?",
-                new String[] { String.valueOf(id) });
+                new String[]{String.valueOf(id)});
         db.close();
     }
 
@@ -1243,7 +1253,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 	/*
-	// Getting All allergy
+    // Getting All allergy
 	public Cursor getAllAllergy() {
 		SQLiteDatabase db = this.getWritableDatabase();
 		String selectQuery = "Select * from ALLERGY";

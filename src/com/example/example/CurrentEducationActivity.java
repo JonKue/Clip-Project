@@ -1,7 +1,5 @@
 package com.example.example;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -13,9 +11,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class CurrentEducationActivity extends Activity {
-    private List<School> plan;
+import java.util.List;
 
+public class CurrentEducationActivity extends Activity {
     String schoolName;
     String degreeType;
     String program;
@@ -24,6 +22,7 @@ public class CurrentEducationActivity extends Activity {
     String dateGrad;
     String tuition;
     String course;
+    private List<School> plan;
 
     @Override
     protected void onCreate(Bundle noneState) {
@@ -36,7 +35,7 @@ public class CurrentEducationActivity extends Activity {
         TextView label = (TextView) findViewById(R.id.tvNone);
         enter.setText("Add");
         label.setText("Current Education");
-        LinearLayout ll = (LinearLayout)findViewById(R.id.NoneLayout);
+        LinearLayout ll = (LinearLayout) findViewById(R.id.NoneLayout);
 
         final DatabaseHelper db = new DatabaseHelper(this);
 
@@ -44,7 +43,7 @@ public class CurrentEducationActivity extends Activity {
 
         //dynamically add buttons
         Button[] tv = new Button[plan.size()];
-        for(int i=0;i<plan.size();i++){
+        for (int i = 0; i < plan.size(); i++) {
             final int index = i;
             tv[i] = new Button(getApplicationContext());
             tv[i].setText(plan.get(index).toString());
@@ -78,8 +77,7 @@ public class CurrentEducationActivity extends Activity {
         }
 
         //displays a text view when user hasn't entered any current education
-        if(plan.size() == 0)
-        {
+        if (plan.size() == 0) {
             TextView none;
             none = new TextView(getApplicationContext());
             none.setText("No current education at this time. Try entering some!");

@@ -1,7 +1,5 @@
 package com.example.example;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,12 +12,13 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class LoanActivity extends Activity {
-    private List<Loan> loans;
+import java.util.List;
 
+public class LoanActivity extends Activity {
     String companyName;
     String amount;
     String appStat;
+    private List<Loan> loans;
 
     @Override
     protected void onCreate(Bundle noneState) {
@@ -32,7 +31,7 @@ public class LoanActivity extends Activity {
         enter.setText("Add");
         label.setText("Loans");
 
-        LinearLayout ll = (LinearLayout)findViewById(R.id.NoneLayout);
+        LinearLayout ll = (LinearLayout) findViewById(R.id.NoneLayout);
 
         final DatabaseHelper db = new DatabaseHelper(this);
 
@@ -40,7 +39,7 @@ public class LoanActivity extends Activity {
 
         //dynamically add buttons
         Button[] tv = new Button[loans.size()];
-        for(int i=0;i<loans.size();i++){
+        for (int i = 0; i < loans.size(); i++) {
             final int index = i;
             tv[i] = new Button(getApplicationContext());
             tv[i].setText(loans.get(index).getCompanyName());
@@ -50,8 +49,8 @@ public class LoanActivity extends Activity {
 
                 public void onClick(View v) {
                     Intent j = new Intent(LoanActivity.this, DisplayLoanActivity.class);
-                    j.putExtra("lenderName", ""+loans.get(index).getCompanyName());
-                    Log.d("CLIP_DEBUG:: -- ", ""+loans.get(index).getAmount());
+                    j.putExtra("lenderName", "" + loans.get(index).getCompanyName());
+                    Log.d("CLIP_DEBUG:: -- ", "" + loans.get(index).getAmount());
                     j.putExtra("amount", loans.get(index).getAmount());
                     j.putExtra("status", loans.get(index).getApplicationStatus().toString());
                     startActivity(j);
@@ -70,8 +69,7 @@ public class LoanActivity extends Activity {
         }
 
         //displays a text view when user hasn't entered any current education
-        if(loans.size() == 0)
-        {
+        if (loans.size() == 0) {
             TextView none;
             none = new TextView(getApplicationContext());
             none.setText("You're all paid off!");

@@ -7,21 +7,24 @@ public class Scholarship extends FinancialSupport {
     private int amount;
     private EnumClasses.ApplicationStatus applicationStatus;
 
+    public Scholarship(int id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getRequirement() {
         return requirement;
     }
+
     public void setRequirement(String requirement) {
         this.requirement = requirement;
-    }
-
-    public Scholarship(int id) {
-        this.id = id;
     }
 
     @Override
@@ -49,19 +52,18 @@ public class Scholarship extends FinancialSupport {
         return applicationStatus;
     }
 
-    @Override
-    public void setApplicationStatus(EnumClasses.ApplicationStatus applicationStatus) {
-        this.applicationStatus = applicationStatus;
-    }
-
     public void setApplicationStatus(String applicationStatus) {
         int i;
         this.applicationStatus = EnumClasses.ApplicationStatus.NONE;
-        for(i=0; i<EnumClasses.ApplicationStatus.values().length; i++)
-        {
-            if(applicationStatus.equals(EnumClasses.ApplicationStatus.values()[i].toString()))
+        for (i = 0; i < EnumClasses.ApplicationStatus.values().length; i++) {
+            if (applicationStatus.equals(EnumClasses.ApplicationStatus.values()[i].toString()))
                 this.applicationStatus = EnumClasses.ApplicationStatus.values()[i];
         }
 
+    }
+
+    @Override
+    public void setApplicationStatus(EnumClasses.ApplicationStatus applicationStatus) {
+        this.applicationStatus = applicationStatus;
     }
 }

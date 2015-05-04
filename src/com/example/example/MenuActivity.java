@@ -1,7 +1,5 @@
 package com.example.example;
 
-import com.example.example.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,62 +9,62 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MenuActivity extends Activity{
+public class MenuActivity extends Activity {
 
-//	private Button EducationButton;
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.menu_activity);
-		//text = (TextView) findViewById(R.id.textViewActivity2);
-		
+    //	private Button EducationButton;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.menu_activity);
+        //text = (TextView) findViewById(R.id.textViewActivity2);
+
 //		Bundle b = getIntent().getExtras();
 //		String importedText = b.getString("item");
-		//text.setText(importedText);
+        //text.setText(importedText);
 
-		Button EducationButton = (Button) findViewById(R.id.bEducation);
-		Button FinanceButton = (Button) findViewById(R.id.bFinance);
-		Button HealthButton = (Button) findViewById(R.id.bHealth);
-		Button CareerButton = (Button) findViewById(R.id.bCareer);
+        Button EducationButton = (Button) findViewById(R.id.bEducation);
+        Button FinanceButton = (Button) findViewById(R.id.bFinance);
+        Button HealthButton = (Button) findViewById(R.id.bHealth);
+        Button CareerButton = (Button) findViewById(R.id.bCareer);
 
-		EducationButton.setOnClickListener(new OnClickListener() {
+        EducationButton.setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
-				Intent startCurrentEducation = new Intent(MenuActivity.this, EducationActivity.class);
-				startActivity(startCurrentEducation);
-				//finish();
-			}
-		});
+            public void onClick(View v) {
+                Intent startCurrentEducation = new Intent(MenuActivity.this, EducationActivity.class);
+                startActivity(startCurrentEducation);
+                //finish();
+            }
+        });
 
-		FinanceButton.setOnClickListener(new OnClickListener() {
+        FinanceButton.setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
-				Intent j = new Intent(MenuActivity.this, FinanceActivity.class);
-				startActivity(j);
-				//finish();
-			}
-		});
+            public void onClick(View v) {
+                Intent j = new Intent(MenuActivity.this, FinanceActivity.class);
+                startActivity(j);
+                //finish();
+            }
+        });
 
-		HealthButton.setOnClickListener(new OnClickListener() {
+        HealthButton.setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
-				Intent j = new Intent(MenuActivity.this, HealthActivity.class);
-				startActivity(j);
-				//finish();
-			}
-		});
+            public void onClick(View v) {
+                Intent j = new Intent(MenuActivity.this, HealthActivity.class);
+                startActivity(j);
+                //finish();
+            }
+        });
 
 
-		CareerButton.setOnClickListener(new OnClickListener() {
+        CareerButton.setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v) {
-				Intent j = new Intent(MenuActivity.this, CareerActivity.class);
-				startActivity(j);
-				//finish();
-			}
-		});
-	}
+            public void onClick(View v) {
+                Intent j = new Intent(MenuActivity.this, CareerActivity.class);
+                startActivity(j);
+                //finish();
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -82,9 +80,9 @@ public class MenuActivity extends Activity{
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
-        	Intent i = new Intent(this, LoginActivity.class);
-			startActivity(i);
-			finish();
+            Intent i = new Intent(this, LoginActivity.class);
+            startActivity(i);
+            finish();
             return true;
         }
         return super.onOptionsItemSelected(item);

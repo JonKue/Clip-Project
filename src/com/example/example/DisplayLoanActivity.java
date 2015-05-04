@@ -12,7 +12,6 @@ public class DisplayLoanActivity extends Activity {
     private String appStat;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +22,7 @@ public class DisplayLoanActivity extends Activity {
         if (extras != null) {
             companyName = extras.getString("lenderName");
             int am = extras.getInt("amount");
-            amt = am +"";
+            amt = am + "";
             appStat = extras.getString("status");
         }
 

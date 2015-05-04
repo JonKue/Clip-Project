@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}" >
+    tools:context="${relativePackage}.${activityClass}">
 
     <TextView
         android:id="@+id/tvGoalName"
@@ -18,7 +18,7 @@
         android:id="@+id/etFGoalName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
+        android:ems="10">
 
         <requestFocus />
     </EditText>
@@ -63,8 +63,7 @@
         android:id="@+id/etFGoalDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" >
-    </EditText>
+        android:ems="10"/>
 
     <TextView
         android:id="@+id/error"
@@ -77,7 +76,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/bFGoalsSubmit"

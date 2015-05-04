@@ -52,7 +52,7 @@ public class CompanyInfoActivity extends Activity {
                 final String reasons = c.getString(5);
                 final String resumeSubDate = c.getString(6);
                 final String interviewDate = c.getString(7);
-                final String interviewResult  = c.getString(8);
+                final String interviewResult = c.getString(8);
                 final String notes = c.getString(9);
 
                 b[i].setText(comName);
@@ -67,7 +67,6 @@ public class CompanyInfoActivity extends Activity {
                         dialog.setContentView(R.layout.dialog_display_company);
                         dialog.setTitle("Company Information");
                         Button dismiss = (Button) dialog.findViewById(R.id.company_dismiss);
-
 
                         TextView company_name = (TextView) dialog.findViewById(R.id.company_name);
                         TextView company_product = (TextView) dialog.findViewById(R.id.company_product);

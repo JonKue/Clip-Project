@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.example"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -18,28 +18,24 @@
         android:allowBackup="true"
         android:icon="@mipmap/rough_icon"
         android:label="@string/CLIP"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".LoginActivity"
-            android:label="@string/CLIP" >
+            android:label="@string/CLIP">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity" >
-        </activity>
+        <activity android:name=".MenuActivity"/>
         <activity
             android:name=".Settings"
-            android:label="@string/CLIP" >
-        </activity>
-        <activity android:name=".RegisterActivity" >
-        </activity>
+            android:label="@string/CLIP"/>
+        <activity android:name=".RegisterActivity"/>
         <activity
             android:name=".ForgotPasswordActivity"
-            android:label="@string/title_activity_forgot_password" >
-        </activity>
+            android:label="@string/title_activity_forgot_password"/>
         <activity
             android:name=".EducationActivity"
             android:label="title_activity_education" />
@@ -81,44 +77,34 @@
             android:label="title_scholarship_info" />
         <activity
             android:name=".FinanceActivity"
-            android:label="@string/title_activity_finance" >
-        </activity>
+            android:label="@string/title_activity_finance"/>
         <activity
             android:name=".FinancialStateActivity"
-            android:label="@string/title_activity_financial_state" >
-        </activity>
+            android:label="@string/title_activity_financial_state"/>
         <activity
             android:name=".DisplayFinancialStateActivity"
-            android:label="@string/title_activity_display_financial_state" >
-        </activity>
+            android:label="@string/title_activity_display_financial_state"/>
         <activity
             android:name=".FinancialStateInfoActivity"
-            android:label="@string/title_activity_financial_state_info" >
-        </activity>
+            android:label="@string/title_activity_financial_state_info"/>
         <activity
             android:name=".StocksActivity"
-            android:label="@string/title_activity_stocks" >
-        </activity>
+            android:label="@string/title_activity_stocks"/>
         <activity
             android:name=".StocksInfoActivity"
-            android:label="@string/title_activity_stocks_info" >
-        </activity>
+            android:label="@string/title_activity_stocks_info"/>
         <activity
             android:name=".FinancialGoalsActivity"
-            android:label="@string/title_activity_financial_goals" >
-        </activity>
+            android:label="@string/title_activity_financial_goals"/>
         <activity
             android:name=".DisplayFinancialGoalsActivity"
-            android:label="@string/title_activity_display_financial_goals" >
-        </activity>
+            android:label="@string/title_activity_display_financial_goals"/>
         <activity
             android:name=".FinanceGoalsInfoActivity"
-            android:label="@string/title_activity_finance_goals_info" >
-        </activity>
+            android:label="@string/title_activity_finance_goals_info"/>
         <activity
             android:name=".DisplayScholarshipActivity"
-            android:label="@string/title_activity_display_scholarship" >
-        </activity>
+            android:label="@string/title_activity_display_scholarship"/>
         <activity
             android:name=".HealthActivity"
             android:label="Health" />
