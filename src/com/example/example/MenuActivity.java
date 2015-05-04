@@ -85,10 +85,9 @@ public class MenuActivity extends Activity{
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
-        	Intent i = new Intent(this, Settings.class);
-        	i.putExtra("name", "string2");
+        	Intent i = new Intent(this, LoginActivity.class);
 			startActivity(i);
-			//finish();
+			finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
