@@ -104,11 +104,7 @@
             android:label="Finance"/>
         <activity
             android:name=".DisplayScholarshipActivity"
-<<<<<<< HEAD
-            android:label="@string/title_activity_display_scholarship"/>
-=======
             android:label="Finance"/>
->>>>>>> origin/Alex
         <activity
             android:name=".HealthActivity"
             android:label="Health" />
@@ -123,11 +119,7 @@
             android:label="Exercise Plan" />
         <activity
             android:name=".DietPlanActivity"
-<<<<<<< HEAD
-            android:label="activity_diet_plan" />
-=======
             android:label="Diet Plan" />
->>>>>>> origin/Alex
         <activity
             android:name=".DisplayDietPlanActivity"
             android:label="Diet Plan" />
@@ -145,11 +137,7 @@
             android:label="Career" />
         <activity
             android:name=".GoalActivity"
-<<<<<<< HEAD
-            android:label="activity_goal" />
-=======
             android:label="Goals" />
->>>>>>> origin/Alex
         <activity
             android:name=".JobSearchActivity"
             android:label="Job Search" />
