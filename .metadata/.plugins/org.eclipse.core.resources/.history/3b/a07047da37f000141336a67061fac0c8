@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvFGoalName"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/Finance Background Green"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/bFinancialState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Financial State" />
+
+    <Button
+        android:id="@+id/bStocksAndSecurities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stocks and Securities" />
+
+    <Button
+        android:id="@+id/bFinancialGoals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Goals" />
+
+</LinearLayout>

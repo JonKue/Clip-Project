@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/EducationBackground"
+    tools:context=".EducationActivity">
+
+    <Button
+        android:id="@+id/bCurrentEducation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Education"/>
+
+    <Button
+        android:id="@+id/bFutureEducation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Future Education" />
+
+    <Button
+        android:id="@+id/bFinancialSupport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Financial Support" />
+
+</LinearLayout>

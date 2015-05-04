@@ -1,5 +1,18 @@
 package com.example.example;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+import com.example.example.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,38 +27,71 @@ import android.widget.TextView;
 public class LoginActivity extends Activity {
 
 	Button menuActivity;
-	EditText textBoxValue;
+	EditText userIdValue;
+	EditText passValue;
 	Button registerActivity;
+	Button forgotPassword;
+	TextView wrongPass;
+	
+	//test data for user authentication
+	String userId;
+	String password;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
         
-        menuActivity = (Button) findViewById(R.id.buttonNavigateMainActivity);
-        registerActivity = (Button) findViewById(R.id.buttonNavigateRegisterActivity);
-        textBoxValue = (EditText) findViewById(R.id.editText1);
+        menuActivity = (Button) findViewById(R.id.buttonRegister);
+        userIdValue = (EditText) findViewById(R.id.editUserName);
+        passValue = (EditText) findViewById(R.id.editPassword);
+        wrongPass = (TextView) findViewById(R.id.wrongPass);
+        forgotPassword = (Button) findViewById(R.id.forgotPassword);
+
+		final DatabaseHelper db = new DatabaseHelper(this);
+
+        
+        forgotPassword.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) { //TODO -- USING TO RESET DATABASE
+				Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+				db.onWipe();
+				startActivity(i);
+				finish();
+			}
+		});
         
         
         menuActivity.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				String enteredValue = textBoxValue.getText().toString();
-				Intent i = new Intent(LoginActivity.this, MenuActivity.class);
-				i.putExtra("item", enteredValue);
-				startActivity(i);
-			//	finish();
-	         }
-		});
-        
-        registerActivity.setOnClickListener(new OnClickListener() {
+				String enteredUserId = userIdValue.getText().toString();
+				String enteredPassword = passValue.getText().toString();
+				
+				boolean isValidNamePass = db.loginUser(enteredUserId, enteredPassword);
 			
-			public void onClick(View v) {
-				Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
-				startActivity(i);
-			//	finish();
+				//if this is registered user, allow access to CLIP
+				if(isValidNamePass)
+				{
+					Intent i = new Intent(LoginActivity.this, MenuActivity.class);
+					i.putExtra("item", enteredUserId);
+					wrongPass.setVisibility(View.INVISIBLE);
+					startActivity(i);
+					finish();
+				}
+				else
+				{
+					wrongPass.setText("Incorrect username or password. Please try again.");
+					wrongPass.setVisibility(View.VISIBLE);
+				}
 	         }
 		});
+
+		if(db.isEmpty()) {
+			Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
+			startActivity(i);
+			finish();
+		}
         
     }
 

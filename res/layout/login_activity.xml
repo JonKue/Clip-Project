@@ -3,108 +3,94 @@
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.example.LoginActivity" >
+    tools:context="com.example.example.LoginActivity">
 
-    <Space
-        android:id="@+id/Space1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill_vertical" />
 
-    <Space
-        android:id="@+id/Space3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="fill_vertical" />
-
-   
-
-    <Space
-        android:id="@+id/Space2"
-        android:layout_width="1dp"
-        android:layout_height="15dp"
-        android:layout_alignParentLeft="true"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp" />
+        android:orientation="vertical"
+        android:showDividers="beginning|middle|end">
 
-    <FrameLayout
-        android:id="@+id/FrameLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </FrameLayout>
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/CLIP"
+            android:textColor="@android:color/black"
+            android:textSize="40dp" />
 
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/Space2"
-        android:layout_centerHorizontal="true"
-        android:text="CLIP"
-        android:textSize="25sp" />
+        <EditText
+            android:id="@+id/editUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView01"
+            android:layout_marginTop="50dp"
+            android:layout_toLeftOf="@+id/TextView01"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:hint="Username"
+            android:padding="20dp">
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="22dp"
-        android:ems="10" />
+            <requestFocus />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="43dp"
-        android:ems="10"
-        android:inputType="textPassword" >
+        </EditText>
 
-        <requestFocus />
-    </EditText>
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/forgotPassword"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/TextView01"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="20dp"/>
 
-    <TextView
-        android:id="@+id/TextView02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="20dp"
-        android:layout_toLeftOf="@+id/TextView01"
-        android:text="Password:"
-        android:textSize="15sp" />
+        <Button
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_toLeftOf="@+id/TextView01"
+            android:background="@android:color/darker_gray"
+            android:text="@string/wipe"
+            android:textColor="@android:color/holo_blue_dark" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/TextView02"
-        android:layout_below="@+id/TextView01"
-        android:layout_marginTop="52dp"
-        android:text="Username:"
-        android:textSize="15sp" />
+        <TextView
+            android:id="@+id/wrongPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView01"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/denied"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="invisible" />
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/buttonNavigateMainActivity"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/editText2"
-        android:layout_marginTop="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="20dp"
         android:text="Submit" />
-
-    <Button
-        android:id="@+id/buttonNavigateRegisterActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/buttonNavigateMainActivity"
-        android:layout_alignBottom="@+id/buttonNavigateMainActivity"
-        android:layout_alignLeft="@+id/editText2"
-        android:text="Register" />
 
 </RelativeLayout>

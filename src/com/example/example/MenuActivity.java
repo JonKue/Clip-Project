@@ -1,26 +1,51 @@
 package com.example.example;
 
+import com.example.example.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Button;
 
 public class MenuActivity extends Activity{
 
-	TextView text;
-	
+//	private Button EducationButton;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu_activity);
-		text = (TextView) findViewById(R.id.textViewActivity2);
+		//text = (TextView) findViewById(R.id.textViewActivity2);
 		
-		Bundle b = getIntent().getExtras();
-		String importedText = b.getString("item");
-		text.setText(importedText);
+//		Bundle b = getIntent().getExtras();
+//		String importedText = b.getString("item");
+		//text.setText(importedText);
+
+		Button EducationButton = (Button) findViewById(R.id.bEducation);
+		Button FinanceButton = (Button) findViewById(R.id.bFinance);
+
+		EducationButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent startCurrentEducation = new Intent(MenuActivity.this, EducationActivity.class);
+				startActivity(startCurrentEducation);
+				//finish();
+			}
+		});
+		
+		FinanceButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent j = new Intent(MenuActivity.this, FinanceActivity.class);
+				startActivity(j);
+				//finish();
+			}
+		});
 	}
 
     @Override

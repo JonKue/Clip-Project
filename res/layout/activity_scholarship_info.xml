@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/EducationBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvScName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:" />
+
+    <EditText
+        android:id="@+id/etScName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/White"
+        android:ems="10"
+        android:inputType="textMultiLine">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvScRequirement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Requirements:" />
+
+    <EditText
+        android:id="@+id/etScRequirement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/tvScAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scholarship Amount:" />
+
+    <EditText
+        android:id="@+id/etScAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tvScApplicationStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Application Status:" />
+
+    <EditText
+        android:id="@+id/etScApplicationStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please fill in all fields before submitting."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bScSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Submit" />
+
+</LinearLayout>

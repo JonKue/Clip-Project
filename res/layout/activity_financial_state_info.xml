@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvFGoalName"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/FinanceGreen"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/tvCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cash: " />
+
+    <EditText
+        android:id="@+id/etCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tvAssets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assets:" />
+
+    <EditText
+        android:id="@+id/etAssets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvLiabilities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liabilities:" />
+
+    <EditText
+        android:id="@+id/etLiabilities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tvCreditCards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credit Cards: " />
+
+    <EditText
+        android:id="@+id/etCreditCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tvOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other: " />
+
+    <EditText
+        android:id="@+id/etOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please fill in all fields before submitting."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="80"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/bFSSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -6,7 +6,34 @@
     <string name="action_settings">Settings</string>
     <string name="button1">Activity 2</string>
     <string name="title_activity_main_activity2">MainActivity2</string>
-    <string name="title_activity_career">Career</string>
-    <string name="title_activity_finance">Finance</string>
+    <string name="CLIP">CLIP</string>
+    <string name="username">Username:</string>
+    <string name="career">Career</string>
+    <string name="health">Health</string>
+    <string name="finance">Finance</string>
+    <string name="edu">Education</string>
+    <string name="register">Register</string>
+    <string name="denied">Incorrect username or password. Please try again.</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="answer">Answer:</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="wipe">Wipe All Data!?</string>
+    <string name="title_activity_finance">FinanceActivity</string>
+    <string name="title_activity_financial_state">FinancialStateActivity</string>
+    <string name="title_activity_display_financial_state">DisplayFinancialStateActivity</string>
+    <string name="title_activity_financial_state_info">FinancialStateInfoActivity</string>
+    <string name="title_activity_stocks">StocksActivity</string>
+    <string name="title_activity_stocks_info">StocksInfoActivity</string>
+    <string name="title_activity_financial_goals">FinancialGoalsActivity</string>
+    <string name="title_activity_display_financial_goals">DisplayFinancialGoalsActivity</string>
+    <string name="title_activity_finance_goals_info">FinanceGoalsInfoActivity</string>
+    <string name="title_activity_display_scholarship">DisplayScholarshipActivity</string>
 
 </resources>

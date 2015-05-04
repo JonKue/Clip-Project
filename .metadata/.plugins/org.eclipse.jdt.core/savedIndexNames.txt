@@ -1,0 +1,4 @@
+INDEX VERSION 1.127+C:\Users\jon\Desktop\Clip\.metadata\.plugins\org.eclipse.jdt.core
+783658040.index
+611044998.index
+2167468824.index
