@@ -844,6 +844,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
  		return goalList;
  	}
 
+ 	
  	public List<Goal> getAllLongTermGoal() {
  		List<Goal> goalList = new ArrayList<Goal>();
  		// Select All Query

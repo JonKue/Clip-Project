@@ -1,13 +1,11 @@
 package com.example.example;
 
-
+// change
 public class Goal {
 	// Data fields
 	private final int _id;
 	private String name;
 	private String type;
-	
-	
 	
 	public int get_id() {
 		return _id;

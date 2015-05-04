@@ -20,6 +20,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// change
 public class GoalActivity extends Activity {
 	private Context context = this;
 	Button add, delete, back;
