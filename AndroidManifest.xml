@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.example"
     android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0" android:installLocation="auto">
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -38,73 +38,73 @@
             android:label="@string/title_activity_forgot_password"/>
         <activity
             android:name=".EducationActivity"
-            android:label="title_activity_education" />
+            android:label="Education" />
         <activity
             android:name=".CurrentEducationActivity"
-            android:label="title_activity_current_education" />
+            android:label="Education" />
         <activity
             android:name=".CurrentEducationInfoActivity"
-            android:label="title_current_education_info_activity" />
+            android:label="Education" />
         <activity
             android:name=".DisplayCurrentEducationActivity"
-            android:label="title_display_current_education" />
+            android:label="Education" />
         <activity
             android:name=".FutureEducationActivity"
-            android:label="title_future_education_activity" />
+            android:label="Education" />
         <activity
             android:name=".FutureEducationInfoActivity"
-            android:label="title_future_education_info" />
+            android:label="Education" />
         <activity
             android:name=".DisplayFutureEducationActivity"
-            android:label="title_display_future_education" />
+            android:label="Education" />
         <activity
             android:name=".LoanActivity"
-            android:label="title_loan_activity" />
+            android:label="Education" />
         <activity
             android:name=".LoanInfoActivity"
-            android:label="title_loan_info" />
+            android:label="Education" />
         <activity
             android:name=".DisplayLoanActivity"
-            android:label="title_display_loan" />
+            android:label="Education" />
         <activity
             android:name=".FinancialSupportActivity"
-            android:label="title_finacial_support" />
+            android:label="Education" />
         <activity
             android:name=".ScholarshipActivity"
-            android:label="title_scholarship_activity" />
+            android:label="Education" />
         <activity
             android:name=".ScholarshipInfoActivity"
-            android:label="title_scholarship_info" />
+            android:label="Education" />
         <activity
             android:name=".FinanceActivity"
-            android:label="@string/title_activity_finance"/>
+            android:label="Finance"/>
         <activity
             android:name=".FinancialStateActivity"
-            android:label="@string/title_activity_financial_state"/>
+            android:label="Finance"/>
         <activity
             android:name=".DisplayFinancialStateActivity"
-            android:label="@string/title_activity_display_financial_state"/>
+            android:label="Finance"/>
         <activity
             android:name=".FinancialStateInfoActivity"
-            android:label="@string/title_activity_financial_state_info"/>
+            android:label="Finance"/>
         <activity
             android:name=".StocksActivity"
-            android:label="@string/title_activity_stocks"/>
+            android:label="Finance"/>
         <activity
             android:name=".StocksInfoActivity"
-            android:label="@string/title_activity_stocks_info"/>
+            android:label="Finance"/>
         <activity
             android:name=".FinancialGoalsActivity"
-            android:label="@string/title_activity_financial_goals"/>
+            android:label="Finance"/>
         <activity
             android:name=".DisplayFinancialGoalsActivity"
-            android:label="@string/title_activity_display_financial_goals"/>
+            android:label="Finance"/>
         <activity
             android:name=".FinanceGoalsInfoActivity"
-            android:label="@string/title_activity_finance_goals_info"/>
+            android:label="Finance"/>
         <activity
             android:name=".DisplayScholarshipActivity"
-            android:label="@string/title_activity_display_scholarship"/>
+            android:label="Finance"/>
         <activity
             android:name=".HealthActivity"
             android:label="Health" />
@@ -119,7 +119,7 @@
             android:label="Exercise Plan" />
         <activity
             android:name=".DietPlanActivity"
-            android:label="activity_diet_plan" />
+            android:label="Diet Plan" />
         <activity
             android:name=".DisplayDietPlanActivity"
             android:label="Diet Plan" />
@@ -137,7 +137,7 @@
             android:label="Career" />
         <activity
             android:name=".GoalActivity"
-            android:label="activity_goal" />
+            android:label="Goals" />
         <activity
             android:name=".JobSearchActivity"
             android:label="Job Search" />

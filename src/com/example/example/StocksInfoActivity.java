@@ -52,6 +52,7 @@ public class StocksInfoActivity extends Activity {
                     db.addStock(stock);
 
                     startActivity(j);
+                    finish();
 
                 }
 
