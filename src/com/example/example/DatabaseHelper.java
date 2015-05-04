@@ -27,10 +27,10 @@ class DatabaseHelper extends SQLiteOpenHelper {
 
 
     // goal table Name
-    private static final String GOAL = "GOAL";
+    private static final String GOAL = "goal";
 
     // job search Name
-    private static final String JOB_SEARCH = "JOB_SEARCH";
+    private static final String JOB_SEARCH = "jobsearch";
 
     // Goal Columns names
     private static final String KEY_GTYPE = "goaltype";
@@ -103,8 +103,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
         //
 
         String CREATE_GOAL_TABLE = "CREATE TABLE " + GOAL + "(" +
-                "id INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_GTYPE
-                + " TEXT, " + KEY_GNAME + " TEXT " + ")";
+				"id INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_GTYPE
+				+ " TEXT, " + KEY_GNAME + " TEXT " + ")";
         String CREATE_JOB_SEARCH_TABLE = "CREATE TABLE " + JOB_SEARCH + "(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + KEY_JSNAME + " TEXT, " + KEY_JSDATE + " TEXT, "
@@ -162,7 +162,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS FGOALS");
 
 
-        db.execSQL("DROP TABLE IF EXISTS GOAL");
+        db.execSQL("DROP TABLE IF EXISTS " + GOAL);
         db.execSQL("DROP TABLE IF EXISTS JOB_SEARCH");
         db.execSQL("DROP TABLE IF EXISTS COMPANY");
         db.execSQL("DROP TABLE IF EXISTS IDENTITY");
@@ -795,27 +795,90 @@ class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    // Add goal
-    public void addGoal(Goal goal) {
+ // Add goal
+ 	public void addGoal(Goal goal) {
 
-        SQLiteDatabase db = this.getWritableDatabase();
+ 		SQLiteDatabase db = this.getWritableDatabase();
 
-        ContentValues values = new ContentValues();
+ 		ContentValues values = new ContentValues();
 
-        values.put(KEY_GTYPE, goal.getType());
-        values.put(KEY_GNAME, goal.getName());
+ 		values.put(KEY_GTYPE, goal.getType());
+ 		values.put(KEY_GNAME, goal.getName());
 
-        db.insert("GOAL", null, values);
-        db.close();
-    }
+ 		db.insert("GOAL", null, values);
+ 		db.close();
+ 	}
 
-    // Getting All goal
-    public Cursor getAllGoal() {
-        SQLiteDatabase db = this.getWritableDatabase();
-        String selectQuery = "Select * from GOAL";
-        return db.rawQuery(selectQuery, null);
+ // Getting All goal
+ 	public Cursor getAllGoal() {
+ 		SQLiteDatabase db = this.getWritableDatabase();
+ 		String selectQuery = "Select * from GOAL";
+ 		Cursor cursor = db.rawQuery(selectQuery, null);
+ 		return cursor;
 
-    }
+ 	}
+ 	
+ // Get all short term goal
+ 	public List<Goal> getAllShortTermGoal() {
+ 		List<Goal> goalList = new ArrayList<Goal>();
+ 		// Select All Query
+ 		String selectQuery = "SELECT * FROM GOAL WHERE " + KEY_GTYPE
+ 				+ " = 'SHORT_TERM'";
+
+ 		SQLiteDatabase db = this.getWritableDatabase();
+ 		Cursor cursor = db.rawQuery(selectQuery, null);
+
+ 		// looping through all rows and adding to list
+ 		if (cursor.moveToFirst()) {
+ 			do {
+ 				Goal goal = new Goal(Integer.parseInt(cursor.getString(0)));
+
+ 				goal.setType(cursor.getString(1));
+ 				goal.setName(cursor.getString(2));
+
+ 				goalList.add(goal);
+ 			} while (cursor.moveToNext());
+ 		}
+
+ 		// return user list
+ 		return goalList;
+ 	}
+
+ 	public List<Goal> getAllLongTermGoal() {
+ 		List<Goal> goalList = new ArrayList<Goal>();
+ 		// Select All Query
+ 		String selectQuery = "SELECT * FROM GOAL WHERE " + KEY_GTYPE
+ 				+ " = 'LONG_TERM'";
+
+ 		SQLiteDatabase db = this.getWritableDatabase();
+ 		Cursor cursor = db.rawQuery(selectQuery, null);
+
+ 		// looping through all rows and adding to list
+ 		if (cursor.moveToFirst()) {
+ 			do {
+ 				Goal goal = new Goal(Integer.parseInt(cursor.getString(0)));
+
+ 				goal.setType(cursor.getString(1));
+ 				goal.setName(cursor.getString(2));
+
+ 				goalList.add(goal);
+ 			} while (cursor.moveToNext());
+ 		}
+
+ 		// return user list
+ 		return goalList;
+ 	}
+ 	
+ // Delete goal
+ 	public void deleteCareerGoal(int id) {
+ 		SQLiteDatabase db = this.getWritableDatabase();
+ 		db.delete("GOAL", "id" + " = ?", new String[] { String.valueOf(id) });
+ 		db.close();
+ 	}
+
+
+
+ 	
 
     // Add job search
     public void addJobSearch(JobSearch js) {

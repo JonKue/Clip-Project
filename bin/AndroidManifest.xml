@@ -105,6 +105,51 @@
         <activity
             android:name=".DisplayScholarshipActivity"
             android:label="@string/title_activity_display_scholarship"/>
+        <activity
+            android:name=".HealthActivity"
+            android:label="Health" />
+        <activity
+            android:name=".VitalSignActivity"
+            android:label="Vital Sign" />
+        <activity
+            android:name=".ExercisePlanActivity"
+            android:label="Excercise Plan" />
+        <activity
+            android:name=".DisplayExercisePlanActivity"
+            android:label="Exercise Plan" />
+        <activity
+            android:name=".DietPlanActivity"
+            android:label="activity_diet_plan" />
+        <activity
+            android:name=".DisplayDietPlanActivity"
+            android:label="Diet Plan" />
+        <activity
+            android:name=".MedicationActivity"
+            android:label="Medication" />
+        <activity
+            android:name=".DisplayMedicationActivity"
+            android:label="Medication" />
+        <activity
+            android:name=".AllergyActivity"
+            android:label="Allergy" />
+        <activity
+            android:name=".CareerActivity"
+            android:label="Career" />
+        <activity
+            android:name=".GoalActivity"
+            android:label="activity_goal" />
+        <activity
+            android:name=".JobSearchActivity"
+            android:label="Job Search" />
+        <activity
+            android:name=".CompanyInfoActivity"
+            android:label="Company Information" />
+        <activity
+            android:name=".ElectronicIdentityActivity"
+            android:label="Electronic Identity" />
+        <activity
+            android:name=".ContactListActivity"
+            android:label="Contact List" />
     </application>
 
 </manifest>
