@@ -18,7 +18,7 @@
         android:layout_weight="1"
         android:text="Education"
         android:background="@drawable/educationBlue"
-        android:drawableLeft="@drawable/ic_education" />
+         />
 
     <Button
         android:id="@+id/bFinance"
@@ -33,7 +33,7 @@
         android:layout_weight="1"
         android:text="@string/finance"
         android:background="@drawable/financeGreen"
-        android:drawableLeft="@drawable/ic_finance" />
+        />
 
     <Button
         android:id="@+id/bHealth"
@@ -48,7 +48,7 @@
         android:layout_weight="1"
         android:text="@string/health"
         android:background="@drawable/healthRed"
-        android:drawableLeft="@drawable/ic_health" />
+         />
 
     <Button
         android:id="@+id/bCareer"
@@ -65,6 +65,6 @@
         android:layout_weight="1"
         android:text="@string/career"
         android:background="@drawable/careerYellow"
-        android:drawableLeft="@drawable/ic_career" />
+         />
 
 </LinearLayout>

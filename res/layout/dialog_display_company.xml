@@ -6,6 +6,7 @@
     android:scrollbars="vertical"
     android:scrollbarAlwaysDrawVerticalTrack="true"
     android:orientation="vertical"
+    android:background="@drawable/careerYellow"
     tools:context=".CompanyInfoActivity">
 
     <LinearLayout

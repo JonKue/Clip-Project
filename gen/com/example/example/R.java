@@ -16,6 +16,7 @@ public final class R {
         /**  Enums for Spinners
          */
         public static final int PASSWORD_RESET_QUESTIONS=0x7f070000;
+        public static final int ROUTINE=0x7f070005;
     }
     public static final class attr {
     }
@@ -32,7 +33,11 @@ public final class R {
         public static final int navigation_drawer_width=0x7f050002;
     }
     public static final class drawable {
+        public static final int careerYellow=0x7f020006;
         public static final int drawer_shadow=0x7f020000;
+        public static final int educationBlue=0x7f020004;
+        public static final int financeGreen=0x7f020003;
+        public static final int healthRed=0x7f020005;
         public static final int ic_drawer=0x7f020001;
         public static final int ic_launcher=0x7f020002;
     }
@@ -108,10 +113,10 @@ public final class R {
         public static final int bScholarship=0x7f0a0090;
         public static final int bStocksAndSecurities=0x7f0a007e;
         public static final int bStocksSubmit=0x7f0a00d8;
-        public static final int bVSBloodPressure=0x7f0a00df;
+        public static final int bVSBloodPressure=0x7f0a00dc;
         public static final int bVSBodyTemperature=0x7f0a00d9;
-        public static final int bVSPulse=0x7f0a00db;
-        public static final int bVSRespirationRate=0x7f0a00dd;
+        public static final int bVSPulse=0x7f0a00da;
+        public static final int bVSRespirationRate=0x7f0a00db;
         public static final int bVSsave=0x7f0a010a;
         public static final int bVitalSign=0x7f0a00ab;
         public static final int buttonRegister=0x7f0a0128;
@@ -219,6 +224,7 @@ public final class R {
         public static final int rbSTG=0x7f0a00fb;
         public static final int registerlinear=0x7f0a012e;
         public static final int rgGoal=0x7f0a00fa;
+        public static final int sEProutine=0x7f0a0076;
         public static final int scrollView=0x7f0a012d;
         public static final int scrollView1=0x7f0a0003;
         public static final int spAppStatus=0x7f0a00a0;
@@ -307,7 +313,6 @@ public final class R {
         public static final int tvDisplayRequirements=0x7f0a0069;
         public static final int tvEPname=0x7f0a0074;
         public static final int tvEPotherInfo=0x7f0a007a;
-        public static final int tvEProutine=0x7f0a0076;
         public static final int tvEnrollmentStatus=0x7f0a0025;
         public static final int tvFDate=0x7f0a004c;
         public static final int tvFDegree=0x7f0a0097;
@@ -346,9 +351,9 @@ public final class R {
         public static final int tvSchoolName=0x7f0a001f;
         public static final int tvSystolic=0x7f0a010b;
         public static final int tvVSbloodPressure=0x7f0a00e0;
-        public static final int tvVSbodyTemp=0x7f0a00da;
-        public static final int tvVSpulse=0x7f0a00dc;
-        public static final int tvVSrespirationRate=0x7f0a00de;
+        public static final int tvVSbodyTemp=0x7f0a00de;
+        public static final int tvVSpulse=0x7f0a00dd;
+        public static final int tvVSrespirationRate=0x7f0a00df;
         public static final int wrongPass=0x7f0a0127;
     }
     public static final class layout {
@@ -369,48 +374,46 @@ public final class R {
         public static final int activity_display_future_education=0x7f04000e;
         public static final int activity_display_job_search=0x7f04000f;
         public static final int activity_display_loan=0x7f040010;
-        public static final int activity_display_medication=0x7f040011;
-        public static final int activity_display_pill_info=0x7f040012;
-        public static final int activity_display_scholarship=0x7f040013;
-        public static final int activity_electronic_identity=0x7f040014;
-        public static final int activity_electronic_identity_info=0x7f040015;
-        public static final int activity_exercise_plan=0x7f040016;
-        public static final int activity_exercise_plan_info=0x7f040017;
-        public static final int activity_finance=0x7f040018;
-        public static final int activity_finance_goals_info=0x7f040019;
-        public static final int activity_financial_state_info=0x7f04001a;
-        public static final int activity_financial_support=0x7f04001b;
-        public static final int activity_forgot_password=0x7f04001c;
-        public static final int activity_future_education=0x7f04001d;
-        public static final int activity_future_education_info=0x7f04001e;
-        public static final int activity_goal=0x7f04001f;
-        public static final int activity_health=0x7f040020;
-        public static final int activity_job_search=0x7f040021;
-        public static final int activity_job_search_info=0x7f040022;
-        public static final int activity_jobsearch_add=0x7f040023;
-        public static final int activity_loan=0x7f040024;
-        public static final int activity_loan_info=0x7f040025;
-        public static final int activity_medication=0x7f040026;
-        public static final int activity_none=0x7f040027;
-        public static final int activity_scholarship=0x7f040028;
-        public static final int activity_scholarship_info=0x7f040029;
-        public static final int activity_stocks_info=0x7f04002a;
-        public static final int activity_vital_sign=0x7f04002b;
-        public static final int dialog_allergy_info=0x7f04002c;
-        public static final int dialog_diet_plan_info=0x7f04002d;
-        public static final int dialog_display_company=0x7f04002e;
-        public static final int dialog_goal_entry=0x7f04002f;
-        public static final int dialog_pick_date=0x7f040030;
-        public static final int dialog_pill_info=0x7f040031;
-        public static final int dialog_vital_sign_entry=0x7f040032;
-        public static final int dialog_vs_blood_pressure=0x7f040033;
-        public static final int display_contact=0x7f040034;
-        public static final int display_electronic_identity=0x7f040035;
-        public static final int education_activity=0x7f040036;
-        public static final int login_activity=0x7f040037;
-        public static final int menu_activity=0x7f040038;
-        public static final int register_activity=0x7f040039;
-        public static final int settings=0x7f04003a;
+        public static final int activity_display_pill_info=0x7f040011;
+        public static final int activity_display_scholarship=0x7f040012;
+        public static final int activity_electronic_identity=0x7f040013;
+        public static final int activity_electronic_identity_info=0x7f040014;
+        public static final int activity_exercise_plan=0x7f040015;
+        public static final int activity_exercise_plan_info=0x7f040016;
+        public static final int activity_finance=0x7f040017;
+        public static final int activity_finance_goals_info=0x7f040018;
+        public static final int activity_financial_state_info=0x7f040019;
+        public static final int activity_financial_support=0x7f04001a;
+        public static final int activity_forgot_password=0x7f04001b;
+        public static final int activity_future_education=0x7f04001c;
+        public static final int activity_future_education_info=0x7f04001d;
+        public static final int activity_goal=0x7f04001e;
+        public static final int activity_health=0x7f04001f;
+        public static final int activity_job_search_info=0x7f040020;
+        public static final int activity_jobsearch_add=0x7f040021;
+        public static final int activity_loan=0x7f040022;
+        public static final int activity_loan_info=0x7f040023;
+        public static final int activity_medication=0x7f040024;
+        public static final int activity_none=0x7f040025;
+        public static final int activity_scholarship=0x7f040026;
+        public static final int activity_scholarship_info=0x7f040027;
+        public static final int activity_stocks_info=0x7f040028;
+        public static final int activity_vital_sign=0x7f040029;
+        public static final int dialog_allergy_info=0x7f04002a;
+        public static final int dialog_diet_plan_info=0x7f04002b;
+        public static final int dialog_display_company=0x7f04002c;
+        public static final int dialog_goal_entry=0x7f04002d;
+        public static final int dialog_pick_date=0x7f04002e;
+        public static final int dialog_pill_info=0x7f04002f;
+        public static final int dialog_vital_sign_entry=0x7f040030;
+        public static final int dialog_vs_blood_pressure=0x7f040031;
+        public static final int display_contact=0x7f040032;
+        public static final int display_electronic_identity=0x7f040033;
+        public static final int education_activity=0x7f040034;
+        public static final int login_activity=0x7f040035;
+        public static final int menu_activity=0x7f040036;
+        public static final int register_activity=0x7f040037;
+        public static final int settings=0x7f040038;
     }
     public static final class menu {
         public static final int global=0x7f090000;

@@ -13,6 +13,5 @@ public class EnumClasses {
     public enum ApplicationStatus {
         APPLIED, ACCEPTED, REJECTED, NONE
     }
-
-
+    
 }

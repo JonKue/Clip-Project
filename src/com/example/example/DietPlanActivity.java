@@ -11,125 +11,137 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.List;
 
 public class DietPlanActivity extends Activity {
 
-    private final Context context = this;
-    String dietType;
-    String dietDescription;
-    String startDate;
-    String dateEnd;
-    private DatabaseHelper db;
-    private List<Diet> dpList;
+	private final Context context = this;
+	String dietType;
+	String dietDescription;
+	String startDate;
+	String dateEnd;
+	private DatabaseHelper db;
+	private List<Diet> dpList;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diet_plan);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_diet_plan);
 
-        db = new DatabaseHelper(this);
-        LinearLayout ll = (LinearLayout) findViewById(R.id.llDP);
-        dpList = db.getAllDietPlan();
+		db = new DatabaseHelper(this);
+		LinearLayout ll = (LinearLayout) findViewById(R.id.llDP);
+		dpList = db.getAllDietPlan();
 
-        // Dynamically add buttons
-        Button[] b = new Button[dpList.size()];
-        for (int i = 0; i < dpList.size(); i++) {
-            final int index = i;
-            b[i] = new Button(getApplicationContext());
-            b[i].setText(dpList.get(index).getDietType());
-            b[i].setTextSize(20);
-            b[i].setPadding(15, 15, 15, 15);
-            b[i].setOnClickListener(new OnClickListener() {
+		// Dynamically add buttons
 
-                public void onClick(View v) {
-                    Intent j = new Intent(DietPlanActivity.this,
-                            DisplayDietPlanActivity.class);
-                    j.putExtra("dietType", dpList.get(index).getDietType());
-                    j.putExtra("dietDescription", dpList.get(index)
-                            .getOtherInfo());
-                    j.putExtra("startDate", dpList.get(index).getStartDate());
-                    j.putExtra("endDate", dpList.get(index).getEndDate());
+		TextView tv;
 
-                    startActivity(j);
-                }
-            });
-            b[i].setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    db.deleteMedication(dpList.get(index).get_id());
-                    ViewGroup parentView = (ViewGroup) v.getParent();
-                    parentView.removeView(v);
-                    return true;
-                }
-            });
-            ll.addView(b[i]);
+		if (dpList.size() == 0) {
+			tv = new TextView(getApplicationContext());
+			tv.setText("None");
+			tv.setTextSize(20);
+			tv.setPadding(15, 15, 15, 15);
+			ll.addView(tv);
+		} else {
+			Button[] b = new Button[dpList.size()];
+			for (int i = 0; i < dpList.size(); i++) {
+				final int index = i;
+				b[i] = new Button(getApplicationContext());
+				b[i].setText(dpList.get(index).getDietType());
+				b[i].setTextSize(20);
+				b[i].setPadding(15, 15, 15, 15);
+				b[i].setOnClickListener(new OnClickListener() {
 
-        }
+					public void onClick(View v) {
+						Intent j = new Intent(DietPlanActivity.this,
+								DisplayDietPlanActivity.class);
+						j.putExtra("dietType", dpList.get(index).getDietType());
+						j.putExtra("dietDescription", dpList.get(index)
+								.getOtherInfo());
+						j.putExtra("startDate", dpList.get(index)
+								.getStartDate());
+						j.putExtra("endDate", dpList.get(index).getEndDate());
 
-        Button add = (Button) findViewById(R.id.bDPadd);
+						startActivity(j);
+					}
+				});
+				b[i].setOnLongClickListener(new View.OnLongClickListener() {
+					@Override
+					public boolean onLongClick(View v) {
+						db.deleteMedication(dpList.get(index).get_id());
+						ViewGroup parentView = (ViewGroup) v.getParent();
+						parentView.removeView(v);
+						return true;
+					}
+				});
+				ll.addView(b[i]);
+			}
+		}
 
-        add.setOnClickListener(new OnClickListener() {
+		Button add = (Button) findViewById(R.id.bDPadd);
 
-            EditText dietTypeEntry, dietDescriptionEntry, startDateEntry,
-                    endDateEntry;
-            Button save;
+		add.setOnClickListener(new OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.dialog_diet_plan_info);
-                dialog.setTitle("Add Diet Plan");
+			EditText dietTypeEntry, dietDescriptionEntry, startDateEntry,
+					endDateEntry;
+			Button save;
 
-                dietTypeEntry = (EditText) dialog.findViewById(R.id.etDPtype);
-                dietDescriptionEntry = (EditText) dialog
-                        .findViewById(R.id.etDPdescription);
-                startDateEntry = (EditText) dialog
-                        .findViewById(R.id.etDPstartDate);
-                endDateEntry = (EditText) dialog.findViewById(R.id.etDPendDate);
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				final Dialog dialog = new Dialog(context);
+				dialog.setContentView(R.layout.dialog_diet_plan_info);
+				dialog.setTitle("Add Diet Plan");
 
-                save = (Button) dialog.findViewById(R.id.bDPsave);
+				dietTypeEntry = (EditText) dialog.findViewById(R.id.etDPtype);
+				dietDescriptionEntry = (EditText) dialog
+						.findViewById(R.id.etDPdescription);
+				startDateEntry = (EditText) dialog
+						.findViewById(R.id.etDPstartDate);
+				endDateEntry = (EditText) dialog.findViewById(R.id.etDPendDate);
 
-                save.setOnClickListener(new OnClickListener() {
+				save = (Button) dialog.findViewById(R.id.bDPsave);
 
-                    @Override
-                    public void onClick(View v) {
-                        // TODO Auto-generated method stub
-                        Diet dietPlan = new Diet(0);
-                        dietPlan.setDietType(dietTypeEntry.getText().toString());
-                        dietPlan.setOtherInfo(dietDescriptionEntry.getText()
-                                .toString());
-                        dietPlan.setStartDate(startDateEntry.getText()
-                                .toString());
-                        dietPlan.setEndDate(endDateEntry.getText().toString());
+				save.setOnClickListener(new OnClickListener() {
 
-                        db.addDietPlan(dietPlan);
-                        dialog.dismiss();
-                        // need implementaion here.......
-                        recreate();
-                    }
-                });
-                dialog.show();
-            }
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						Diet dietPlan = new Diet(0);
+						dietPlan.setDietType(dietTypeEntry.getText().toString());
+						dietPlan.setOtherInfo(dietDescriptionEntry.getText()
+								.toString());
+						dietPlan.setStartDate(startDateEntry.getText()
+								.toString());
+						dietPlan.setEndDate(endDateEntry.getText().toString());
 
-        });
+						db.addDietPlan(dietPlan);
+						dialog.dismiss();
+						// need implementaion here.......
+						recreate();
+					}
+				});
+				dialog.show();
+			}
 
-        Button back = (Button) findViewById(R.id.bDPback);
+		});
 
-        back.setOnClickListener(new OnClickListener() {
+		Button back = (Button) findViewById(R.id.bDPback);
 
-            public void onClick(View v) {
-                Intent startHealth = new Intent(DietPlanActivity.this,
-                        HealthActivity.class);
-                startActivity(startHealth);
-                finish(); // need to change of modify this
-            }
+		back.setOnClickListener(new OnClickListener() {
 
-        });
-    }
+			public void onClick(View v) {
+				Intent startHealth = new Intent(DietPlanActivity.this,
+						HealthActivity.class);
+				startActivity(startHealth);
+				finish(); // need to change of modify this
+			}
+
+		});
+	}
 }
 
 /*

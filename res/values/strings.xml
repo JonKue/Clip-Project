@@ -82,6 +82,11 @@
         <item>SHORT/-TERM</item>
         <item>LONG-TERM</item>
     </string-array>
+    <string-array name="ROUTINE">
+        <item>DAILY</item>
+        <item>WEEKLY</item>
+        <item>MONTHLY</item>
+    </string-array>
 
 
 
