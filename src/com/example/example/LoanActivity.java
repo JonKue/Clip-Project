@@ -32,6 +32,7 @@ public class LoanActivity extends Activity {
         label.setText("Loans");
 
         LinearLayout ll = (LinearLayout) findViewById(R.id.NoneLayout);
+        ll.setBackgroundDrawable(getResources().getDrawable(R.drawable.educationBlue));
 
         final DatabaseHelper db = new DatabaseHelper(this);
 

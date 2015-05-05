@@ -33,6 +33,8 @@ public class ScholarshipActivity extends Activity {
 
         LinearLayout ll = (LinearLayout) findViewById(R.id.NoneLayout);
 
+        ll.setBackgroundDrawable(getResources().getDrawable(R.drawable.educationBlue));
+
         final DatabaseHelper db = new DatabaseHelper(this);
 
         scholarships = db.getAllScholarships();

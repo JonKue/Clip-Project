@@ -31,11 +31,13 @@ public class CurrentEducationActivity extends Activity {
 
         setContentView(R.layout.activity_none);
 
+
         Button enter = (Button) findViewById(R.id.bEnter);
         TextView label = (TextView) findViewById(R.id.tvNone);
         enter.setText("Add");
         label.setText("Current Education");
         LinearLayout ll = (LinearLayout) findViewById(R.id.NoneLayout);
+        ll.setBackgroundDrawable(getResources().getDrawable(R.drawable.educationBlue));
 
         final DatabaseHelper db = new DatabaseHelper(this);
 

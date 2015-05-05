@@ -35,6 +35,8 @@ public class FutureEducationActivity extends Activity {
         label.setText("Future Education");
         LinearLayout ll = (LinearLayout) findViewById(R.id.NoneLayout);
 
+        ll.setBackgroundDrawable(getResources().getDrawable(R.drawable.educationBlue));
+
         final DatabaseHelper db = new DatabaseHelper(this);
 
         plan = db.getAllFutureSchools();
