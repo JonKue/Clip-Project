@@ -32,9 +32,9 @@ public class RegisterActivity extends Activity {
         answer = (EditText) findViewById(R.id.answer);
         Button register = (Button) findViewById(R.id.buttonRegister);
         final Spinner dropdown = (Spinner) findViewById(R.id.spinner1);
-        String[] items = new String[]{"Select security question", "What is your first pet's name?", "What is your hometown?"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
-        dropdown.setAdapter(adapter);
+        ArrayAdapter<CharSequence> spinnerMenuList3 = ArrayAdapter.createFromResource(this, R.array.PASSWORD_RESET_QUESTIONS, android.R.layout.simple_spinner_item);
+        spinnerMenuList3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dropdown.setAdapter(spinnerMenuList3);
 
         final DatabaseHelper db = new DatabaseHelper(this);
 
