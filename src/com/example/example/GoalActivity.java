@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -16,9 +15,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.ScrollView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 // change
 public class GoalActivity extends Activity {
@@ -44,9 +40,8 @@ public class GoalActivity extends Activity {
 		b = new CheckBox[stgList.size()];
 
 		for (int i = 0; i < stgList.size(); i++) {
-			final int index = i;
 			b[i] = new CheckBox(getApplicationContext());
-			String name = stgList.get(index).getName();
+			String name = stgList.get(i).getName();
 			b[i].setText(name);
 			b[i].setTextColor(Color.BLUE);
 
@@ -56,9 +51,8 @@ public class GoalActivity extends Activity {
 		c = new CheckBox[ltgList.size()];
 
 		for (int i = 0; i < ltgList.size(); i++) {
-			final int index = i;
 			c[i] = new CheckBox(getApplicationContext());
-			String name = ltgList.get(index).getName();
+			String name = ltgList.get(i).getName();
 			c[i].setText(name);
 			c[i].setTextColor(Color.BLUE);
 
@@ -131,18 +125,16 @@ public class GoalActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				for (int i = 0; i < stgList.size(); i++) {
-					final int index = i;
-					if (b[index].isChecked()) {
-						db.deleteCareerGoal(stgList.get(index).get_id());
+					if (b[i].isChecked()) {
+						db.deleteCareerGoal(stgList.get(i).get_id());
 						recreate();
 					}
 
 				}
 				
 				for (int i = 0; i < ltgList.size(); i++) {
-					final int index = i;
-					if (c[index].isChecked()) {
-						db.deleteCareerGoal(ltgList.get(index).get_id());
+					if (c[i].isChecked()) {
+						db.deleteCareerGoal(ltgList.get(i).get_id());
 						recreate();
 					}
 

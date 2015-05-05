@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.io.FileOutputStream;
-
 public class FutureEducationInfoActivity extends Activity {
     private final Context context = this;
 

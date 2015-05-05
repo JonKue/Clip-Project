@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="100">
+    android:weightSum="100"
+    android:background="@drawable/educationBlue">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -82,9 +83,9 @@
                 android:text="Application Status:" />
 
             <Spinner
+                android:id="@+id/spAppStatus"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/spAppStatus" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>

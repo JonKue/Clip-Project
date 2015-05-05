@@ -820,7 +820,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
  	
  // Get all short term goal
  	public List<Goal> getAllShortTermGoal() {
- 		List<Goal> goalList = new ArrayList<Goal>();
+ 		List<Goal> goalList = new ArrayList<>();
  		// Select All Query
  		String selectQuery = "SELECT * FROM GOAL WHERE " + KEY_GTYPE
  				+ " = 'SHORT_TERM'";
@@ -846,7 +846,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
 
  	
  	public List<Goal> getAllLongTermGoal() {
- 		List<Goal> goalList = new ArrayList<Goal>();
+ 		List<Goal> goalList = new ArrayList<>();
  		// Select All Query
  		String selectQuery = "SELECT * FROM GOAL WHERE " + KEY_GTYPE
  				+ " = 'LONG_TERM'";
@@ -876,10 +876,6 @@ class DatabaseHelper extends SQLiteOpenHelper {
  		db.delete("GOAL", "id" + " = ?", new String[] { String.valueOf(id) });
  		db.close();
  	}
-
-
-
- 	
 
     // Add job search
     public void addJobSearch(JobSearch js) {

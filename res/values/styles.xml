@@ -16,5 +16,9 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    <drawable name="financeGreen">#73f47b</drawable>
+    <drawable name="educationBlue">#7e7cde</drawable>
+    <drawable name="healthRed">#eb7070</drawable>
+    <drawable name="careerYellow">#f5ff70</drawable>
 
 </resources>
