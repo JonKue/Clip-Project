@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="${relativePackage}.${activityClass}"
-    android:background="@drawable/healthRed">
+    android:background="@drawable/educationBlue">
 
     <ScrollView
         android:layout_width="fill_parent"
