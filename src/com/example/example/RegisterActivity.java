@@ -22,7 +22,6 @@ public class RegisterActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_activity);
 
@@ -32,9 +31,9 @@ public class RegisterActivity extends Activity {
         answer = (EditText) findViewById(R.id.answer);
         Button register = (Button) findViewById(R.id.buttonRegister);
         final Spinner dropdown = (Spinner) findViewById(R.id.spinner1);
-        String[] items = new String[]{"Select security question", "What is your first pet's name?", "What is your hometown?"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
-        dropdown.setAdapter(adapter);
+        ArrayAdapter<CharSequence> spinnerMenuList2 = ArrayAdapter.createFromResource(this, R.array.PASSWORD_RESET_QUESTIONS, android.R.layout.simple_spinner_item);
+        spinnerMenuList2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dropdown.setAdapter(spinnerMenuList2);
 
         final DatabaseHelper db = new DatabaseHelper(this);
 

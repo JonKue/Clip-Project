@@ -223,7 +223,6 @@ class DatabaseHelper extends SQLiteOpenHelper {
         } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        Log.d("CLIP-DEBUG:: --", "" + hashedpass);
         ContentValues values = new ContentValues();
         values.put("name", inputName);
 
@@ -241,12 +240,59 @@ class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
+    Cursor getUser() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String selectQuery = "SELECT * FROM USER";
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+
+        return cursor;
+    }
+
+    boolean checkAnswer(String answ) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String hashedansw = "error";
+        try {
+            hashedansw = Encryption.SHA1(answ);
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        if(hashedansw.equals("error")) return false;
+
+        String selectQuery = "SELECT * FROM USER";
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        cursor.moveToFirst();
+        Log.d("CLIP-DEBUG", "" + hashedansw);
+        Log.d("CLIP-DEBUG", cursor.getString(4)+"");
+        boolean res = hashedansw.equals(cursor.getString(4));
+        cursor.close();
+        db.close();
+        return res;
+    }
+
+    void resetPassword(String newpass) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String hashedpass = "";
+        try {
+            hashedpass = Encryption.SHA1(newpass);
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        ContentValues values = new ContentValues();
+        values.put("password", hashedpass);
+
+        // updating row
+        db.update("USER", values, "uid" + " = ?",
+                new String[]{String.valueOf("1") });
+    }
+
+
     boolean isEmpty() {
         SQLiteDatabase db = this.getReadableDatabase();
 
         String selectQuery = "SELECT * FROM USER";
-
-
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         boolean res = !cursor.moveToFirst(); // True if Empty
