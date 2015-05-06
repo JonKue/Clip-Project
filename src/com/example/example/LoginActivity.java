@@ -32,12 +32,22 @@ public class LoginActivity extends Activity {
 
         final DatabaseHelper db = new DatabaseHelper(this);
 
-
+        /* this was being used for wiping data
         forgotPassword.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) { //TODO -- USING TO RESET DATABASE
                 Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
                 db.onWipe();
+                startActivity(i);
+                finish();
+            }
+        });
+*/
+        
+        forgotPassword.setOnClickListener(new OnClickListener() {
+
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
                 startActivity(i);
                 finish();
             }
