@@ -48,7 +48,7 @@ public class RegisterActivity extends Activity {
                 String answ = answer.getText().toString();
                 int question = dropdown.getSelectedItemPosition();
 
-                if (question != 0 && conf.equals(pass) && !user.equals("") && !pass.equals("") && !answ.equals("")) {
+                if (conf.equals(pass) && !user.equals("") && !pass.equals("") && !answ.equals("")) {
                     boolean hash_success = db.registerUser(user, pass, question, answ);
                     if (hash_success) {
                         Intent i = new Intent(RegisterActivity.this, MenuActivity.class);
