@@ -74,19 +74,4 @@ public class VitalSign {
         this.bloodPressure = bp;
     }
 	
-	
-
-	
-
-	/*
-	public boolean isNormal (){
-		if ((this.getPulse() > this.getPulseRateRange()[0]) && (this.getPulse() < this.getPulseRateRange()[1])
-				&& (this.getRespirationRate() > this.getRespirationRateRange()[0]) && (this.getRespirationRate() < this.getRespirationRateRange()[1])
-				&& (this.getBloodPressure() > this.getBloodPressureRange()[0]) && (this.getBloodPressure() < this.getBloodPressureRange()[1]))
-			return true;
-		else 
-			return false;
-	}*/
-
-
 }
