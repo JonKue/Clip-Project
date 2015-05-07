@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/healthRed"
+    android:orientation="vertical" >
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="6" >
+ 
+        <Button
+            android:id="@+id/bVSBodyTemperature"
+            style="@android:style/DeviceDefault.Light.ButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+           
+            android:text="@string/vs_body_temperature" />
+
+        <Button
+            android:id="@+id/bVSPulse"
+            style="@android:style/DeviceDefault.Light.ButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_row="0"
+            android:layout_weight="1"
+            android:text="@string/vs_pulse" />
+
+        <Button
+            android:id="@+id/bVSRespirationRate"
+            style="@android:style/DeviceDefault.Light.ButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="2"
+            android:layout_weight="1"
+            android:text="@string/vs_respiration_rate" />
+
+        <Button
+            android:id="@+id/bVSBloodPressure"
+            style="@android:style/DeviceDefault.Light.ButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_row="2"
+            android:layout_weight="1"
+            android:text="@string/vs_blood_pressure" />
+
+        <TextView
+            android:id="@+id/tvVSpulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_row="1" />
+
+        <TextView
+            android:id="@+id/tvVSbodyTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_row="1" />
+
+        <TextView
+            android:id="@+id/tvVSrespirationRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_row="4" />
+
+        <TextView
+            android:id="@+id/tvVSbloodPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_row="4" />
+
+    </GridLayout>
+
+</LinearLayout>

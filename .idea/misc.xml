@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.example.example.AllergyActivity$2 description" />
+      <entry_point TYPE="field" FQNAME="com.example.example.AllergyActivity$2 name" />
+      <entry_point TYPE="method" FQNAME="com.example.example.AllergyActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.AllergyActivity" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ApplicationStatus NONE" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ApplicationStatus REJECTED" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ApplicationStatus ACCEPTED" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ApplicationStatus APPLIED" />
+      <entry_point TYPE="class" FQNAME="com.example.example.ApplicationStatus" />
+      <entry_point TYPE="method" FQNAME="com.example.example.CareerActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.CareerActivity boolean onOptionsItemSelected(android.view.MenuItem item)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.CareerActivity boolean onCreateOptionsMenu(android.view.Menu menu)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.CareerActivity void onCreate(android.os.Bundle careerState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.CareerActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.CompanyInfoActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.CompanyInfoActivity" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ContactListActivity$5 contactName" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ContactListActivity$5 nameDis" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ContactListActivity$5 scroll" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ContactListActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.ContactListActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.CurrentEducationActivity void onCreate(android.os.Bundle noneState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.CurrentEducationActivity course" />
+      <entry_point TYPE="field" FQNAME="com.example.example.CurrentEducationActivity tuition" />
+      <entry_point TYPE="field" FQNAME="com.example.example.CurrentEducationActivity dateGrad" />
+      <entry_point TYPE="field" FQNAME="com.example.example.CurrentEducationActivity dateStart" />
+      <entry_point TYPE="field" FQNAME="com.example.example.CurrentEducationActivity enrollment" />
+      <entry_point TYPE="field" FQNAME="com.example.example.CurrentEducationActivity program" />
+      <entry_point TYPE="field" FQNAME="com.example.example.CurrentEducationActivity degreeType" />
+      <entry_point TYPE="field" FQNAME="com.example.example.CurrentEducationActivity schoolName" />
+      <entry_point TYPE="class" FQNAME="com.example.example.CurrentEducationActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.CurrentEducationInfoActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.CurrentEducationInfoActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.CurrentEducationInfoActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DatabaseHelper com.example.example.Allergy getAllergy(java.lang.String name)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DatabaseHelper void deleteDietPlan(int id)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DatabaseHelper void deleteExercisePlan(int id)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DatabaseHelper com.example.example.Scholarship selectScholarship(int id)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DatabaseHelper com.example.example.Loan selectLoan(int id)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DatabaseHelper com.example.example.School selectSchool(int id)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DatabaseHelper java.util.List&lt;com.example.example.User&gt; getAllUsers()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DatabaseHelper boolean isValidName(java.lang.String inputName)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.DatabaseHelper LOG" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DatabaseHelper DatabaseHelper(android.content.Context context)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DatabaseHelper" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DietPlanActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.DietPlanActivity dateEnd" />
+      <entry_point TYPE="field" FQNAME="com.example.example.DietPlanActivity startDate" />
+      <entry_point TYPE="field" FQNAME="com.example.example.DietPlanActivity dietDescription" />
+      <entry_point TYPE="field" FQNAME="com.example.example.DietPlanActivity dietType" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DietPlanActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DisplayCurrentEducationActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DisplayCurrentEducationActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DisplayDietPlanActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DisplayDietPlanActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DisplayExercisePlanActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DisplayExercisePlanActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DisplayFinancialGoalsActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DisplayFinancialGoalsActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DisplayFinancialStateActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DisplayFinancialStateActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DisplayFutureEducationActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DisplayFutureEducationActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DisplayLoanActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DisplayLoanActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DisplayMedicationActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DisplayMedicationActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.DisplayScholarshipActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.DisplayScholarshipActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.EducationActivity void onCreate(android.os.Bundle educationState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EducationActivity financialSupport" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EducationActivity futureEducation" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EducationActivity currentEducation" />
+      <entry_point TYPE="class" FQNAME="com.example.example.EducationActivity" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ElectronicIdentityActivity$5 scroll" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ElectronicIdentityActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.ElectronicIdentityActivity" />
+      <entry_point TYPE="class" FQNAME="com.example.example.EnumClasses.ApplicationStatus" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EnumClasses.EnrollmentStatus NONE" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EnumClasses.EnrollmentStatus FULLTIME" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EnumClasses.EnrollmentStatus PARTTIME" />
+      <entry_point TYPE="class" FQNAME="com.example.example.EnumClasses.EnrollmentStatus" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EnumClasses.DegreeType PHD" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EnumClasses.DegreeType MASTER" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EnumClasses.DegreeType BACHELOR" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EnumClasses.DegreeType DIPLOMA" />
+      <entry_point TYPE="field" FQNAME="com.example.example.EnumClasses.DegreeType ASSOCIATE" />
+      <entry_point TYPE="class" FQNAME="com.example.example.EnumClasses.DegreeType" />
+      <entry_point TYPE="class" FQNAME="com.example.example.EnumClasses" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ExercisePlan void setSetReminder(boolean setReminder)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ExercisePlan boolean isSetReminder()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ExercisePlan ExercisePlan(int _id)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.ExercisePlan" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ExercisePlanActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ExercisePlanActivity otherInfo" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ExercisePlanActivity endTime" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ExercisePlanActivity startTime" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ExercisePlanActivity routine" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ExercisePlanActivity exercisePlan" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ExercisePlanActivity ExercisePlanActivity" />
+      <entry_point TYPE="class" FQNAME="com.example.example.ExercisePlanActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinanceActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FinanceActivity summary" />
+      <entry_point TYPE="class" FQNAME="com.example.example.FinanceActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinanceGoalsInfoActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinanceGoalsInfoActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.FinanceGoalsInfoActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialGoalsActivity void onCreate(android.os.Bundle nonestates)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FinancialGoalsActivity date" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FinancialGoalsActivity type" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FinancialGoalsActivity description" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FinancialGoalsActivity name" />
+      <entry_point TYPE="class" FQNAME="com.example.example.FinancialGoalsActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialStateActivity void onCreate(android.os.Bundle nonestates)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.FinancialStateActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialStateInfoActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialStateInfoActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.FinancialStateInfoActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialSupport void setApplicationStatus(java.lang.String applicationStatus)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialSupport void setApplicationStatus(com.example.example.EnumClasses.ApplicationStatus applicationStatus)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialSupport com.example.example.EnumClasses.ApplicationStatus getApplicationStatus()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialSupport void setAmount(int amount)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialSupport int getAmount()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialSupport void setId(int id)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialSupport int getId()" />
+      <entry_point TYPE="class" FQNAME="com.example.example.FinancialSupport" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FinancialSupportActivity void onCreate(android.os.Bundle financialSupportState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.FinancialSupportActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ForgotPasswordActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.ForgotPasswordActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FutureEducationActivity void onCreate(android.os.Bundle noneState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FutureEducationActivity appStat" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FutureEducationActivity appDate" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FutureEducationActivity enrollment" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FutureEducationActivity program" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FutureEducationActivity degreeType" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FutureEducationActivity schoolName" />
+      <entry_point TYPE="class" FQNAME="com.example.example.FutureEducationActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FutureEducationInfoActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.FutureEducationInfoActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.FutureEducationInfoActivity fFuEdInfo" />
+      <entry_point TYPE="class" FQNAME="com.example.example.FutureEducationInfoActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.GoalActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.GoalActivity goalEntry" />
+      <entry_point TYPE="field" FQNAME="com.example.example.GoalActivity ltgButton" />
+      <entry_point TYPE="class" FQNAME="com.example.example.GoalActivity" />
+      <entry_point TYPE="class" FQNAME="com.example.example.GoalType" />
+      <entry_point TYPE="method" FQNAME="com.example.example.HealthActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.HealthActivity boolean onOptionsItemSelected(android.view.MenuItem item)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.HealthActivity boolean onCreateOptionsMenu(android.view.Menu menu)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.HealthActivity void onCreate(android.os.Bundle healthState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.HealthActivity" />
+      <entry_point TYPE="field" FQNAME="com.example.example.JobSearchActivity$7 note" />
+      <entry_point TYPE="field" FQNAME="com.example.example.JobSearchActivity$7 status" />
+      <entry_point TYPE="field" FQNAME="com.example.example.JobSearchActivity$7 appFor" />
+      <entry_point TYPE="method" FQNAME="com.example.example.JobSearchActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.JobSearchActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.Loan void setApplicationStatus(com.example.example.EnumClasses.ApplicationStatus applicationStatus)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.Loan void setId(int id)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.Loan Loan(int id)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.Loan" />
+      <entry_point TYPE="method" FQNAME="com.example.example.LoanActivity void onCreate(android.os.Bundle noneState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.LoanActivity appStat" />
+      <entry_point TYPE="field" FQNAME="com.example.example.LoanActivity amount" />
+      <entry_point TYPE="field" FQNAME="com.example.example.LoanActivity companyName" />
+      <entry_point TYPE="class" FQNAME="com.example.example.LoanActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.LoanInfoActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.LoanInfoActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.LoanInfoActivity" />
+      <entry_point TYPE="field" FQNAME="com.example.example.LoginActivity password" />
+      <entry_point TYPE="field" FQNAME="com.example.example.LoginActivity userId" />
+      <entry_point TYPE="field" FQNAME="com.example.example.LoginActivity registerActivity" />
+      <entry_point TYPE="class" FQNAME="com.example.example.LoginActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.Medication void setSetReminder(boolean setReminder)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.Medication boolean isSetReminder()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.Medication Medication(int _id)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.Medication" />
+      <entry_point TYPE="field" FQNAME="com.example.example.MedicationActivity$4 endDate" />
+      <entry_point TYPE="field" FQNAME="com.example.example.MedicationActivity$4 startDate" />
+      <entry_point TYPE="field" FQNAME="com.example.example.MedicationActivity$4 pillName" />
+      <entry_point TYPE="method" FQNAME="com.example.example.MedicationActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.MedicationActivity dateEnd" />
+      <entry_point TYPE="field" FQNAME="com.example.example.MedicationActivity startDate" />
+      <entry_point TYPE="field" FQNAME="com.example.example.MedicationActivity noDosage" />
+      <entry_point TYPE="field" FQNAME="com.example.example.MedicationActivity pillName" />
+      <entry_point TYPE="class" FQNAME="com.example.example.MedicationActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.MenuActivity boolean onOptionsItemSelected(android.view.MenuItem item)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.MenuActivity boolean onCreateOptionsMenu(android.view.Menu menu)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.MenuActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.MenuActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.RegisterActivity boolean onOptionsItemSelected(android.view.MenuItem item)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.RegisterActivity boolean onCreateOptionsMenu(android.view.Menu menu)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.RegisterActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.RegisterActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ScholarshipActivity void onCreate(android.os.Bundle noneState)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ScholarshipActivity appStat" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ScholarshipActivity amount" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ScholarshipActivity req" />
+      <entry_point TYPE="field" FQNAME="com.example.example.ScholarshipActivity name" />
+      <entry_point TYPE="class" FQNAME="com.example.example.ScholarshipActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ScholarshipInfoActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.ScholarshipInfoActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.ScholarshipInfoActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.School java.lang.String get_type()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.School School(int _id)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.School" />
+      <entry_point TYPE="method" FQNAME="com.example.example.Settings void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.Settings" />
+      <entry_point TYPE="method" FQNAME="com.example.example.StocksActivity void onCreate(android.os.Bundle nonestates)" />
+      <entry_point TYPE="field" FQNAME="com.example.example.StocksActivity stock" />
+      <entry_point TYPE="field" FQNAME="com.example.example.StocksActivity numStock" />
+      <entry_point TYPE="class" FQNAME="com.example.example.StocksActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.StocksInfoActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.StocksInfoActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.StocksInfoActivity" />
+      <entry_point TYPE="method" FQNAME="com.example.example.User User(int id, java.lang.String name, java.lang.String password)" />
+      <entry_point TYPE="method" FQNAME="com.example.example.User User()" />
+      <entry_point TYPE="field" FQNAME="com.example.example.User userCount" />
+      <entry_point TYPE="class" FQNAME="com.example.example.User" />
+      <entry_point TYPE="method" FQNAME="com.example.example.VitalSignActivity void setUpVariables()" />
+      <entry_point TYPE="method" FQNAME="com.example.example.VitalSignActivity void onCreate(android.os.Bundle savedInstanceState)" />
+      <entry_point TYPE="class" FQNAME="com.example.example.VitalSignActivity" />
+    </entry_points>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

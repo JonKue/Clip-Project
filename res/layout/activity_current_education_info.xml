@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="@drawable/educationBlue">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="20"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSchoolName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School Name:" />
+
+            <EditText
+                android:id="@+id/etSchoolName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+
+            <TextView
+                android:id="@+id/tvDegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Degree Type:" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spDegreeType" />
+
+            <TextView
+                android:id="@+id/tvProgram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Program:" />
+
+            <EditText
+                android:id="@+id/etProgram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+
+            <TextView
+                android:id="@+id/tvEnrollmentStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enrollment Status:" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spEnrollment" />
+
+            <TextView
+                android:id="@+id/tvAppDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tuition:" />
+
+            <EditText
+                android:id="@+id/etTuition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/tvAppStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Course:" />
+
+            <EditText
+                android:id="@+id/etCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+
+            <TextView
+                android:id="@+id/tvDateStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date Started" />
+
+            <EditText
+                android:id="@+id/etDateStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/tvDateGraduate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date Graduating" />
+
+            <EditText
+                android:id="@+id/etDateGraduate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="80"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/bCuEdSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text="Submit" />
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bCuEdSubmit"
+            android:layout_centerHorizontal="true"
+            android:text="Please fill in all fields before submitting."
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

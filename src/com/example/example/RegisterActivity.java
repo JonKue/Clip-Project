@@ -2,26 +2,69 @@ package com.example.example;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 
-public class RegisterActivity extends Activity{
+public class RegisterActivity extends Activity {
 
-	TextView text;
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.register_activity);
-		//text = (TextView) findViewById(R.id.textView1);
-		
-		//Bundle b = getIntent().getExtras();
-		//String importedText = b.getString("item");
-		//text.setText("Register");
-	}
+    private EditText username;
+    private EditText password;
+    private EditText confirm;
+    private EditText answer;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.register_activity);
+
+        username = (EditText) findViewById(R.id.UsernameInput);
+        password = (EditText) findViewById(R.id.passwordInput);
+        confirm = (EditText) findViewById(R.id.passwordInputConfirmed);
+        answer = (EditText) findViewById(R.id.answer);
+        Button register = (Button) findViewById(R.id.buttonRegister);
+        final Spinner dropdown = (Spinner) findViewById(R.id.spinner1);
+        ArrayAdapter<CharSequence> spinnerMenuList2 = ArrayAdapter.createFromResource(this, R.array.PASSWORD_RESET_QUESTIONS, android.R.layout.simple_spinner_item);
+        spinnerMenuList2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dropdown.setAdapter(spinnerMenuList2);
+
+        final DatabaseHelper db = new DatabaseHelper(this);
+
+        register.setOnClickListener(new OnClickListener() {
+
+            public void onClick(View v) {
+
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
+                String conf = confirm.getText().toString();
+                String answ = answer.getText().toString();
+                int question = dropdown.getSelectedItemPosition();
+
+                if (conf.equals(pass) && !user.equals("") && !pass.equals("") && !answ.equals("")) {
+                    boolean hash_success = db.registerUser(user, pass, question, answ);
+                    if (hash_success) {
+                        Intent i = new Intent(RegisterActivity.this, MenuActivity.class);
+                        i.putExtra("item", user);
+                        startActivity(i);
+                        finish();
+                    }
+                } else {
+                    username.setHintTextColor(Color.RED);
+                    password.setHintTextColor(Color.RED);
+                    confirm.setHintTextColor(Color.RED);
+                    answer.setHintTextColor(Color.RED);
+                }
+            }
+        });
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -37,30 +80,13 @@ public class RegisterActivity extends Activity{
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
-        	Intent i = new Intent(this, Settings.class);
-        	i.putExtra("name", "string2");
-			startActivity(i);
-			//finish();
+            Intent i = new Intent(this, Settings.class);
+            i.putExtra("name", "string2");
+            startActivity(i);
+            //finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-	@Override
-	protected void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-	}
-
-	@Override
-	protected void onPause() {
-		// TODO Auto-generated method stub
-		super.onPause();
-	}
-
-	@Override
-	protected void onDestroy() {
-		// TODO Auto-generated method stub
-		super.onDestroy();
-	}
 }

@@ -2,40 +2,154 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.example"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0" android:installLocation="auto">
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:icon="@mipmap/rough_icon"
+        android:label="@string/CLIP"
+        android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".LoginActivity"
+            android:label="@string/CLIP">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SecondActivity"
-            android:label="@string/app_name" >
-        </activity>
+        <activity android:name=".MenuActivity"/>
         <activity
             android:name=".Settings"
-            android:label="@string/app_name" >
-        </activity>
-        
+            android:label="@string/CLIP"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:label="@string/title_activity_forgot_password"/>
+        <activity
+            android:name=".EducationActivity"
+            android:label="Education" />
+        <activity
+            android:name=".CurrentEducationActivity"
+            android:label="Education" />
+        <activity
+            android:name=".CurrentEducationInfoActivity"
+            android:label="Education" />
+        <activity
+            android:name=".DisplayCurrentEducationActivity"
+            android:label="Education" />
+        <activity
+            android:name=".FutureEducationActivity"
+            android:label="Education" />
+        <activity
+            android:name=".FutureEducationInfoActivity"
+            android:label="Education" />
+        <activity
+            android:name=".DisplayFutureEducationActivity"
+            android:label="Education" />
+        <activity
+            android:name=".LoanActivity"
+            android:label="Education" />
+        <activity
+            android:name=".LoanInfoActivity"
+            android:label="Education" />
+        <activity
+            android:name=".DisplayLoanActivity"
+            android:label="Education" />
+        <activity
+            android:name=".FinancialSupportActivity"
+            android:label="Education" />
+        <activity
+            android:name=".ScholarshipActivity"
+            android:label="Education" />
+        <activity
+            android:name=".ScholarshipInfoActivity"
+            android:label="Education" />
+        <activity
+            android:name=".FinanceActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".FinancialStateActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".DisplayFinancialStateActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".FinancialStateInfoActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".StocksActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".StocksInfoActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".FinancialGoalsActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".DisplayFinancialGoalsActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".FinanceGoalsInfoActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".DisplayScholarshipActivity"
+            android:label="Finance"/>
+        <activity
+            android:name=".HealthActivity"
+            android:label="Health" />
+        <activity
+            android:name=".VitalSignActivity"
+            android:label="Vital Sign" />
+        <activity
+            android:name=".ExercisePlanActivity"
+            android:label="Excercise Plan" />
+        <activity
+            android:name=".DisplayExercisePlanActivity"
+            android:label="Exercise Plan" />
+        <activity
+            android:name=".DietPlanActivity"
+            android:label="Diet Plan" />
+        <activity
+            android:name=".DisplayDietPlanActivity"
+            android:label="Diet Plan" />
+        <activity
+            android:name=".MedicationActivity"
+            android:label="Medication" />
+        <activity
+            android:name=".DisplayMedicationActivity"
+            android:label="Medication" />
+        <activity
+            android:name=".AllergyActivity"
+            android:label="Allergy" />
+        <activity
+            android:name=".CareerActivity"
+            android:label="Career" />
+        <activity
+            android:name=".GoalActivity"
+            android:label="Goals" />
+        <activity
+            android:name=".JobSearchActivity"
+            android:label="Job Search" />
+        <activity
+            android:name=".CompanyInfoActivity"
+            android:label="Company Information" />
+        <activity
+            android:name=".ElectronicIdentityActivity"
+            android:label="Electronic Identity" />
+        <activity
+            android:name=".ContactListActivity"
+            android:label="Contact List" />
     </application>
 
 </manifest>

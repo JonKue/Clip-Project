@@ -2,13 +2,73 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="#5780511d"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textViewActivity2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <Button
+        android:id="@+id/bEducation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignLeft="@+id/bFinance"
+        android:layout_below="@+id/bFinance"
+        android:drawableLeft="@drawable/ic_education"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_row="3"
+        android:layout_weight="1"
+        android:text="Education"
+        android:background="@drawable/educationBlue"
+         />
+
+    <Button
+        android:id="@+id/bFinance"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignLeft="@+id/bHealth"
+        android:layout_below="@+id/bHealth"
+        android:drawableLeft="@drawable/ic_finance"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_row="2"
+        android:layout_weight="1"
+        android:text="@string/finance"
+        android:background="@drawable/financeGreen"
+        />
+
+    <Button
+        android:id="@+id/bHealth"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignLeft="@+id/forgotPassword"
+        android:layout_column="0"
+        android:drawableLeft="@drawable/ic_health"
+        android:layout_gravity="left|center"
+        android:layout_margin="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_row="1"
+        android:layout_weight="1"
+        android:text="@string/health"
+        android:background="@drawable/healthRed"
+         />
+
+    <Button
+        android:id="@+id/bCareer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:drawableLeft="@drawable/ic_career"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_column="0"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginStart="144dp"
+        android:layout_row="0"
+        android:layout_weight="1"
+        android:text="@string/career"
+        android:background="@drawable/careerYellow"
+         />
 
 </LinearLayout>

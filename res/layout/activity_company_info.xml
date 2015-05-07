@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/compinfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/careerYellow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/companyNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Company Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/companyProductEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Line" />
+
+        <EditText
+            android:id="@+id/companyAddressEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textPostalAddress" />
+
+        <EditText
+            android:id="@+id/companyPhoneEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:hint="Phone number"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/companyFactsEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Key Facts"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/companyReasonsEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Reasons for Applying"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/companySubmissionEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Resume Submission Date"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/companyInterviewEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Interview Date"
+            android:inputType="date" />
+
+        <Spinner
+            android:id="@+id/companyResultEdit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/companyNotesEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Notes"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/company_submit"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Submit" />
+    </LinearLayout>
+
+</ScrollView>

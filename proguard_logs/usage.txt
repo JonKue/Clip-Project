@@ -1,0 +1,135 @@
+com.example.example.BuildConfig
+com.example.example.ContactListActivity$3:
+    android.widget.ScrollView scroll
+    android.widget.TextView nameDis
+    android.widget.Button contactName
+com.example.example.CurrentEducationActivity:
+    java.lang.String schoolName
+    java.lang.String degreeType
+    java.lang.String program
+    java.lang.String enrollment
+    java.lang.String dateStart
+    java.lang.String dateGrad
+    java.lang.String tuition
+    java.lang.String course
+com.example.example.DatabaseHelper:
+    private static final java.lang.String LOG
+    private static final int DATABASE_VERSION
+    private static final java.lang.String DATABASE_NAME
+    private static final java.lang.String GOAL
+    private static final java.lang.String JOB_SEARCH
+    private static final java.lang.String KEY_GTYPE
+    private static final java.lang.String KEY_GNAME
+    private static final java.lang.String KEY_JSNAME
+    private static final java.lang.String KEY_JSDATE
+    private static final java.lang.String KEY_JSSTATUS
+    private static final java.lang.String KEY_JSOTHERNOTE
+    private static final java.lang.String VITAL_SIGN
+    private static final java.lang.String EXERCISE_PLAN
+    private static final java.lang.String DIET_PLAN
+    private static final java.lang.String MEDICATION
+    private static final java.lang.String ALLERGY
+    private static final java.lang.String KEY_BT
+    private static final java.lang.String KEY_PULSE
+    private static final java.lang.String KEY_RR
+    private static final java.lang.String KEY_SBP
+    private static final java.lang.String KEY_DBP
+    private static final java.lang.String KEY_AGNAME
+    private static final java.lang.String KEY_AGDESCRIPTION
+    184:210:public void onWipe()
+    349:369:public java.util.List getAllUsers()
+    446:466:com.example.example.School selectSchool(int)
+    558:572:com.example.example.Loan selectLoan(int)
+    625:640:com.example.example.Scholarship selectScholarship(int)
+    861:864:public android.database.Cursor getAllGoal()
+    1317:1321:public void deleteExercisePlan(int)
+    1325:1329:public void deleteDietPlan(int)
+    1375:1389:public com.example.example.Allergy getAllergy(java.lang.String)
+com.example.example.DietPlanActivity:
+    java.lang.String dietType
+    java.lang.String dietDescription
+    java.lang.String startDate
+    java.lang.String dateEnd
+com.example.example.EducationActivity:
+    private android.widget.Button currentEducation
+    private android.widget.Button futureEducation
+    private android.widget.Button financialSupport
+com.example.example.Encryption:
+    7:7:Encryption()
+com.example.example.EnumClasses:
+    4:13:public EnumClasses()
+com.example.example.EnumClasses$DegreeType
+com.example.example.EnumClasses$EnrollmentStatus
+com.example.example.ExercisePlan:
+    private boolean setReminder
+    56:56:public boolean isSetReminder()
+    60:61:public void setSetReminder(boolean)
+com.example.example.ExercisePlanActivity:
+    java.lang.String exercisePlan
+    java.lang.String routine
+    java.lang.String startTime
+    java.lang.String endTime
+    java.lang.String otherInfo
+com.example.example.FinanceActivity:
+    android.widget.Button summary
+com.example.example.FinancialGoalsActivity:
+    java.lang.String name
+    java.lang.String description
+    java.lang.String type
+    java.lang.String date
+com.example.example.FinancialSupport:
+    14:15:public void setId(int)
+    40:41:public void setApplicationStatus(com.example.example.EnumClasses$ApplicationStatus)
+com.example.example.FutureEducationActivity:
+    java.lang.String schoolName
+    java.lang.String degreeType
+    java.lang.String program
+    java.lang.String enrollment
+    java.lang.String appDate
+    java.lang.String appStat
+com.example.example.GoalType
+com.example.example.Loan:
+    32:33:public void setId(int)
+    50:51:public void setApplicationStatus(com.example.example.EnumClasses$ApplicationStatus)
+com.example.example.LoanActivity:
+    java.lang.String companyName
+    java.lang.String amount
+    java.lang.String appStat
+com.example.example.LoginActivity:
+    android.widget.Button registerActivity
+    java.lang.String userId
+    java.lang.String password
+com.example.example.Medication:
+    private boolean setReminder
+    66:66:public boolean isSetReminder()
+    70:71:public void setSetReminder(boolean)
+com.example.example.MedicationActivity:
+    java.lang.String pillName
+    java.lang.String noDosage
+    java.lang.String startDate
+    java.lang.String dateEnd
+com.example.example.R
+com.example.example.R$array
+com.example.example.R$attr
+com.example.example.R$dimen
+com.example.example.R$drawable
+com.example.example.R$id
+com.example.example.R$layout
+com.example.example.R$menu
+com.example.example.R$mipmap
+com.example.example.R$string
+com.example.example.R$style
+com.example.example.Scholarship:
+    37:38:public void setId(int)
+    67:68:public void setApplicationStatus(com.example.example.EnumClasses$ApplicationStatus)
+com.example.example.ScholarshipActivity:
+    java.lang.String name
+    java.lang.String[] req
+    java.lang.String amount
+    java.lang.String appStat
+com.example.example.School:
+    110:110:public java.lang.String get_type()
+com.example.example.StocksActivity:
+    java.lang.String numStock
+    java.lang.String stock
+com.example.example.User

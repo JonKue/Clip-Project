@@ -1,10 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Example</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Logout</string>
     <string name="button1">Activity 2</string>
     <string name="title_activity_main_activity2">MainActivity2</string>
+    <string name="CLIP">CLIP</string>
+    <string name="username">Username:</string>
+    <string name="career">Career</string>
+    <string name="health">Health</string>
+    <string name="finance">Finance</string>
+    <string name="edu">Education</string>
+    <string name="register">Register</string>
+    <string name="denied">Incorrect username or password. Please try again.</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="answer">Answer:</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="wipe">Wipe All Data!?</string>
+    <string name="title_activity_finance">FinanceActivity</string>
+    <string name="title_activity_financial_state">FinancialStateActivity</string>
+    <string name="title_activity_display_financial_state">DisplayFinancialStateActivity</string>
+    <string name="title_activity_financial_state_info">FinancialStateInfoActivity</string>
+    <string name="title_activity_stocks">StocksActivity</string>
+    <string name="title_activity_stocks_info">StocksInfoActivity</string>
+    <string name="title_activity_financial_goals">FinancialGoalsActivity</string>
+    <string name="title_activity_display_financial_goals">DisplayFinancialGoalsActivity</string>
+    <string name="title_activity_finance_goals_info">FinanceGoalsInfoActivity</string>
+    <string name="title_activity_display_scholarship">DisplayScholarshipActivity</string>
+
+    <string name="vital_sign">Vital Sign</string>
+    <string name="exercise_plan">Exercise Plan</string>
+    <string name="diet_plan">Diet Plan</string>
+    <string name="medication">Medication</string>
+    <string name="allergy">Allergy</string>
+    <string name="others">Others</string>
+
+
+    <string name="vs_body_temperature">Body Temperature</string>
+    <string name="vs_pulse">Pulse</string>
+    <string name="vs_respiration_rate">Respiration Rate</string>
+    <string name="vs_blood_pressure">Blood Pressure</string>
+    <string name="vsdialog_save">Save</string>
+    <string name="epdialog_add">+</string>
+    <string name="name">Name</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="other_info">Other Information</string>
+    <string name="save">Save</string>
+    <string name="title_activity_health">Health</string>
+
+    <!-- Enums for Spinners-->
+    <string-array name="PASSWORD_RESET_QUESTIONS">
+        <item>What was your first pet\'s name?</item>
+        <item>What is your hometown?</item>
+    </string-array>
+    <string-array name="APP_STATUS">
+        <item>APPLIED</item>
+        <item>ACCEPTED</item>
+        <item>REJECTED</item>
+        <item>OTHER</item>
+    </string-array>
+    <string-array name="DEGREE_TYPE">
+        <item>ASSOCIATE</item>
+        <item>DIPLOMA</item>
+        <item>BACHELOR</item>
+        <item>MASTER</item>
+        <item>PHD</item>
+    </string-array>
+    <string-array name="ENROLLMENT_STATUS">
+        <item>PARTTIME</item>
+        <item>FULLTIME</item>
+        <item>NONE</item>
+    </string-array>
+    <string-array name="GOAL_TYPE">
+        <item>SHORT-TERM</item>
+        <item>LONG-TERM</item>
+    </string-array>
+    <string-array name="ROUTINE">
+        <item>DAILY</item>
+        <item>WEEKLY</item>
+        <item>MONTHLY</item>
+    </string-array>
+
+
+
 
 </resources>

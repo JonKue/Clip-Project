@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DisplayLoanActivity"/>
+      <point      
+        x = "500"      
+        y = "2860"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.CurrentEducationActivity"/>
+      <point      
+        x = "550"      
+        y = "2910"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DisplayCurrentEducationActivity"/>
+      <point      
+        x = "700"      
+        y = "3060"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.FinanceActivity"/>
+      <point      
+        x = "650"      
+        y = "3010"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DisplayFinancialStateActivity"/>
+      <point      
+        x = "600"      
+        y = "2960"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.AllergyActivity"/>
+      <point      
+        x = "750"      
+        y = "3110"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DisplayFutureEducationActivity"/>
+      <point      
+        x = "800"      
+        y = "3160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DisplayFinancialGoalsActivity"/>
+      <point      
+        x = "850"      
+        y = "3210"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.ContactListActivity"/>
+      <point      
+        x = "900"      
+        y = "3260"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "com.example.example.MenuActivity"/>
+      <point      
+        x = "1768"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.MenuActivity"/>
+      <point      
+        x = "500"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.ForgotPasswordActivity"/>
+      <point      
+        x = "950"      
+        y = "3310"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.LoginActivity"/>
+      <point      
+        x = "3036"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DietPlanActivity"/>
+      <point      
+        x = "1000"      
+        y = "3360"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.FutureEducationActivity"/>
+      <point      
+        x = "1050"      
+        y = "3410"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.LoanActivity"/>
+      <point      
+        x = "1100"      
+        y = "3460"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.JobSearchActivity"/>
+      <point      
+        x = "1150"      
+        y = "3510"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DisplayScholarshipActivity"/>
+      <point      
+        x = "1200"      
+        y = "3560"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.LoanInfoActivity"/>
+      <point      
+        x = "1250"      
+        y = "3610"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.FinanceGoalsInfoActivity"/>
+      <point      
+        x = "1300"      
+        y = "3660"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.FinancialStateActivity"/>
+      <point      
+        x = "1350"      
+        y = "3710"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.ScholarshipInfoActivity"/>
+      <point      
+        x = "1600"      
+        y = "3960"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.ExercisePlanActivity"/>
+      <point      
+        x = "1550"      
+        y = "3910"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DisplayExercisePlanActivity"/>
+      <point      
+        x = "1500"      
+        y = "3860"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.MedicationActivity"/>
+      <point      
+        x = "1450"      
+        y = "3810"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.StocksActivity"/>
+      <point      
+        x = "1400"      
+        y = "3760"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.CareerActivity"/>
+      <point      
+        x = "1650"      
+        y = "4010"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DisplayDietPlanActivity"/>
+      <point      
+        x = "1700"      
+        y = "4060"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.DisplayMedicationActivity"/>
+      <point      
+        x = "1800"      
+        y = "4160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.StocksInfoActivity"/>
+      <point      
+        x = "1750"      
+        y = "4110"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.FinancialSupportActivity"/>
+      <point      
+        x = "1850"      
+        y = "4210"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "com.example.example.RegisterActivity"/>
+      <point      
+        x = "1768"      
+        y = "1480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.RegisterActivity"/>
+      <point      
+        x = "500"      
+        y = "1480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.FutureEducationInfoActivity"/>
+      <point      
+        x = "1900"      
+        y = "4260"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.CurrentEducationInfoActivity"/>
+      <point      
+        x = "1950"      
+        y = "4310"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.Settings"/>
+      <point      
+        x = "3036"      
+        y = "1480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.VitalSignActivity"/>
+      <point      
+        x = "2000"      
+        y = "4360"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.CompanyInfoActivity"/>
+      <point      
+        x = "2150"      
+        y = "4510"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.ScholarshipActivity"/>
+      <point      
+        x = "2100"      
+        y = "4460"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.FinancialStateInfoActivity"/>
+      <point      
+        x = "2050"      
+        y = "4410"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.FinancialGoalsActivity"/>
+      <point      
+        x = "2200"      
+        y = "4560"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.EducationActivity"/>
+      <point      
+        x = "2250"      
+        y = "4610"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.HealthActivity"/>
+      <point      
+        x = "2300"      
+        y = "4660"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.ElectronicIdentityActivity"/>
+      <point      
+        x = "2400"      
+        y = "4760"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.example.example.GoalActivity"/>
+      <point      
+        x = "2350"      
+        y = "4710"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>
