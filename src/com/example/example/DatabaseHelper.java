@@ -144,6 +144,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE MEDICATION ( id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "pillName TEXT, numdose TEXT, datestart TEXT, dateend TEXT)");
+
     }
 
     // Upgrading database
@@ -859,9 +860,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
  	public Cursor getAllGoal() {
  		SQLiteDatabase db = this.getWritableDatabase();
  		String selectQuery = "Select * from GOAL";
- 		Cursor cursor = db.rawQuery(selectQuery, null);
- 		return cursor;
-
+ 		return  db.rawQuery(selectQuery, null);
  	}
  	
  // Get all short term goal

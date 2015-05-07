@@ -67,7 +67,7 @@
             android:layout_gravity="right"
             android:layout_toLeftOf="@+id/TextView01"
             android:background="@android:color/darker_gray"
-            android:text="@string/wipe"
+            android:text="@string/forgot"
             android:textColor="@android:color/holo_blue_dark" />
 
         <TextView
