@@ -1,0 +1,555 @@
+com.example.example.AllergyActivity
+com.example.example.AllergyActivity: AllergyActivity()
+com.example.example.ApplicationStatus: com.example.example.ApplicationStatus[] values()
+com.example.example.ApplicationStatus: com.example.example.ApplicationStatus valueOf(java.lang.String)
+com.example.example.CareerActivity
+com.example.example.CareerActivity: CareerActivity()
+com.example.example.CompanyInfoActivity
+com.example.example.CompanyInfoActivity: CompanyInfoActivity()
+com.example.example.ContactListActivity
+com.example.example.ContactListActivity: ContactListActivity()
+com.example.example.CurrentEducationActivity
+com.example.example.CurrentEducationActivity: CurrentEducationActivity()
+com.example.example.CurrentEducationInfoActivity
+com.example.example.CurrentEducationInfoActivity: CurrentEducationInfoActivity()
+com.example.example.DietPlanActivity
+com.example.example.DietPlanActivity: DietPlanActivity()
+com.example.example.DisplayCurrentEducationActivity
+com.example.example.DisplayCurrentEducationActivity: DisplayCurrentEducationActivity()
+com.example.example.DisplayDietPlanActivity
+com.example.example.DisplayDietPlanActivity: DisplayDietPlanActivity()
+com.example.example.DisplayExercisePlanActivity
+com.example.example.DisplayExercisePlanActivity: DisplayExercisePlanActivity()
+com.example.example.DisplayFinancialGoalsActivity
+com.example.example.DisplayFinancialGoalsActivity: DisplayFinancialGoalsActivity()
+com.example.example.DisplayFinancialStateActivity
+com.example.example.DisplayFinancialStateActivity: DisplayFinancialStateActivity()
+com.example.example.DisplayFutureEducationActivity
+com.example.example.DisplayFutureEducationActivity: DisplayFutureEducationActivity()
+com.example.example.DisplayLoanActivity
+com.example.example.DisplayLoanActivity: DisplayLoanActivity()
+com.example.example.DisplayMedicationActivity
+com.example.example.DisplayMedicationActivity: DisplayMedicationActivity()
+com.example.example.DisplayScholarshipActivity
+com.example.example.DisplayScholarshipActivity: DisplayScholarshipActivity()
+com.example.example.EducationActivity
+com.example.example.EducationActivity: EducationActivity()
+com.example.example.ElectronicIdentityActivity
+com.example.example.ElectronicIdentityActivity: ElectronicIdentityActivity()
+com.example.example.EnumClasses$ApplicationStatus: com.example.example.EnumClasses$ApplicationStatus[] values()
+com.example.example.EnumClasses$ApplicationStatus: com.example.example.EnumClasses$ApplicationStatus valueOf(java.lang.String)
+com.example.example.EnumClasses$DegreeType: com.example.example.EnumClasses$DegreeType[] values()
+com.example.example.EnumClasses$DegreeType: com.example.example.EnumClasses$DegreeType valueOf(java.lang.String)
+com.example.example.EnumClasses$EnrollmentStatus: com.example.example.EnumClasses$EnrollmentStatus[] values()
+com.example.example.EnumClasses$EnrollmentStatus: com.example.example.EnumClasses$EnrollmentStatus valueOf(java.lang.String)
+com.example.example.ExercisePlanActivity
+com.example.example.ExercisePlanActivity: ExercisePlanActivity()
+com.example.example.FinanceActivity
+com.example.example.FinanceActivity: FinanceActivity()
+com.example.example.FinanceGoalsInfoActivity
+com.example.example.FinanceGoalsInfoActivity: FinanceGoalsInfoActivity()
+com.example.example.FinancialGoalsActivity
+com.example.example.FinancialGoalsActivity: FinancialGoalsActivity()
+com.example.example.FinancialStateActivity
+com.example.example.FinancialStateActivity: FinancialStateActivity()
+com.example.example.FinancialStateInfoActivity
+com.example.example.FinancialStateInfoActivity: FinancialStateInfoActivity()
+com.example.example.FinancialSupportActivity
+com.example.example.FinancialSupportActivity: FinancialSupportActivity()
+com.example.example.ForgotPasswordActivity
+com.example.example.ForgotPasswordActivity: ForgotPasswordActivity()
+com.example.example.FutureEducationActivity
+com.example.example.FutureEducationActivity: FutureEducationActivity()
+com.example.example.FutureEducationInfoActivity
+com.example.example.FutureEducationInfoActivity: FutureEducationInfoActivity()
+com.example.example.GoalActivity
+com.example.example.GoalActivity: GoalActivity()
+com.example.example.GoalType: com.example.example.GoalType[] values()
+com.example.example.GoalType: com.example.example.GoalType valueOf(java.lang.String)
+com.example.example.HealthActivity
+com.example.example.HealthActivity: HealthActivity()
+com.example.example.JobSearchActivity
+com.example.example.JobSearchActivity: JobSearchActivity()
+com.example.example.LoanActivity
+com.example.example.LoanActivity: LoanActivity()
+com.example.example.LoanInfoActivity
+com.example.example.LoanInfoActivity: LoanInfoActivity()
+com.example.example.LoginActivity
+com.example.example.LoginActivity: LoginActivity()
+com.example.example.MedicationActivity
+com.example.example.MedicationActivity: MedicationActivity()
+com.example.example.MenuActivity
+com.example.example.MenuActivity: MenuActivity()
+com.example.example.R$array: int APP_STATUS
+com.example.example.R$array: int DEGREE_TYPE
+com.example.example.R$array: int ENROLLMENT_STATUS
+com.example.example.R$array: int GOAL_TYPE
+com.example.example.R$array: int PASSWORD_RESET_QUESTIONS
+com.example.example.R$array: int ROUTINE
+com.example.example.R$dimen: int activity_horizontal_margin
+com.example.example.R$dimen: int activity_vertical_margin
+com.example.example.R$dimen: int navigation_drawer_width
+com.example.example.R$drawable: int careerYellow
+com.example.example.R$drawable: int drawer_shadow
+com.example.example.R$drawable: int educationBlue
+com.example.example.R$drawable: int financeGreen
+com.example.example.R$drawable: int healthRed
+com.example.example.R$drawable: int ic_career
+com.example.example.R$drawable: int ic_drawer
+com.example.example.R$drawable: int ic_education
+com.example.example.R$drawable: int ic_finance
+com.example.example.R$drawable: int ic_health
+com.example.example.R$drawable: int ic_launcher
+com.example.example.R$id: int DisplayEILayout
+com.example.example.R$id: int EditText01
+com.example.example.R$id: int LinearLayout1
+com.example.example.R$id: int Main
+com.example.example.R$id: int NoneLayout
+com.example.example.R$id: int RelativeLayout1
+com.example.example.R$id: int TextView01
+com.example.example.R$id: int TextView02
+com.example.example.R$id: int TextView03
+com.example.example.R$id: int TextView04
+com.example.example.R$id: int UsernameInput
+com.example.example.R$id: int action_example
+com.example.example.R$id: int action_settings
+com.example.example.R$id: int answer
+com.example.example.R$id: int bAadd
+com.example.example.R$id: int bAdelete
+com.example.example.R$id: int bAllergy
+com.example.example.R$id: int bAsave
+com.example.example.R$id: int bBPsave
+com.example.example.R$id: int bCLsave
+com.example.example.R$id: int bCareer
+com.example.example.R$id: int bCareerAdd
+com.example.example.R$id: int bCompanyAdd
+com.example.example.R$id: int bCompanyInfo
+com.example.example.R$id: int bContactList
+com.example.example.R$id: int bCuEdSubmit
+com.example.example.R$id: int bCurrentEducation
+com.example.example.R$id: int bDDPback
+com.example.example.R$id: int bDEPback
+com.example.example.R$id: int bDMback
+com.example.example.R$id: int bDPadd
+com.example.example.R$id: int bDPback
+com.example.example.R$id: int bDPsave
+com.example.example.R$id: int bDPsetDate
+com.example.example.R$id: int bDietPlan
+com.example.example.R$id: int bDismiss
+com.example.example.R$id: int bDismissPassword
+com.example.example.R$id: int bEIsave
+com.example.example.R$id: int bEPadd
+com.example.example.R$id: int bEPback
+com.example.example.R$id: int bEPsave
+com.example.example.R$id: int bEducation
+com.example.example.R$id: int bElectronicIdentity
+com.example.example.R$id: int bEnter
+com.example.example.R$id: int bExercisPlan
+com.example.example.R$id: int bFGoalsSubmit
+com.example.example.R$id: int bFSSubmit
+com.example.example.R$id: int bFinance
+com.example.example.R$id: int bFinancialGoals
+com.example.example.R$id: int bFinancialState
+com.example.example.R$id: int bFinancialSupport
+com.example.example.R$id: int bFuEdSubmit
+com.example.example.R$id: int bFutureEducation
+com.example.example.R$id: int bGadd
+com.example.example.R$id: int bGback
+com.example.example.R$id: int bGdelete
+com.example.example.R$id: int bGdone
+com.example.example.R$id: int bGoal
+com.example.example.R$id: int bGsave
+com.example.example.R$id: int bHealth
+com.example.example.R$id: int bJSdate
+com.example.example.R$id: int bJSsave
+com.example.example.R$id: int bJobSearch
+com.example.example.R$id: int bLoSubmit
+com.example.example.R$id: int bLoan
+com.example.example.R$id: int bMadd
+com.example.example.R$id: int bMback
+com.example.example.R$id: int bMedication
+com.example.example.R$id: int bMsave
+com.example.example.R$id: int bScSubmit
+com.example.example.R$id: int bScholarship
+com.example.example.R$id: int bStocksAndSecurities
+com.example.example.R$id: int bStocksSubmit
+com.example.example.R$id: int bSubmitAnswer
+com.example.example.R$id: int bSubmitUserName
+com.example.example.R$id: int bVSBloodPressure
+com.example.example.R$id: int bVSBodyTemperature
+com.example.example.R$id: int bVSPulse
+com.example.example.R$id: int bVSRespirationRate
+com.example.example.R$id: int bVSsave
+com.example.example.R$id: int bVitalSign
+com.example.example.R$id: int buttonRegister
+com.example.example.R$id: int companyAddressEdit
+com.example.example.R$id: int companyFactsEdit
+com.example.example.R$id: int companyInterviewEdit
+com.example.example.R$id: int companyNameEdit
+com.example.example.R$id: int companyNotesEdit
+com.example.example.R$id: int companyPhoneEdit
+com.example.example.R$id: int companyProductEdit
+com.example.example.R$id: int companyReasonsEdit
+com.example.example.R$id: int companyResultEdit
+com.example.example.R$id: int companySubmissionEdit
+com.example.example.R$id: int company_address
+com.example.example.R$id: int company_dismiss
+com.example.example.R$id: int company_facts
+com.example.example.R$id: int company_intvwDate
+com.example.example.R$id: int company_intvwType
+com.example.example.R$id: int company_name
+com.example.example.R$id: int company_notes
+com.example.example.R$id: int company_phone
+com.example.example.R$id: int company_product
+com.example.example.R$id: int company_reasons
+com.example.example.R$id: int company_subDate
+com.example.example.R$id: int company_submit
+com.example.example.R$id: int compinfo
+com.example.example.R$id: int dpDPselectDate
+com.example.example.R$id: int editPassword
+com.example.example.R$id: int editUserName
+com.example.example.R$id: int error
+com.example.example.R$id: int etAdescription
+com.example.example.R$id: int etAname
+com.example.example.R$id: int etAnswer
+com.example.example.R$id: int etApplicationDate
+com.example.example.R$id: int etAssets
+com.example.example.R$id: int etCLNumTimes
+com.example.example.R$id: int etCLaffiliation
+com.example.example.R$id: int etCLcomments
+com.example.example.R$id: int etCLestablishedDate
+com.example.example.R$id: int etCLname
+com.example.example.R$id: int etCash
+com.example.example.R$id: int etCourse
+com.example.example.R$id: int etCreditCards
+com.example.example.R$id: int etDPdescription
+com.example.example.R$id: int etDPendDate
+com.example.example.R$id: int etDPstartDate
+com.example.example.R$id: int etDPtype
+com.example.example.R$id: int etDSysentry
+com.example.example.R$id: int etDateGraduate
+com.example.example.R$id: int etDateStart
+com.example.example.R$id: int etEIname
+com.example.example.R$id: int etEIpassword
+com.example.example.R$id: int etEIusername
+com.example.example.R$id: int etEIwebsite
+com.example.example.R$id: int etEPendtime
+com.example.example.R$id: int etEPname
+com.example.example.R$id: int etEPotherInfo
+com.example.example.R$id: int etEProutine
+com.example.example.R$id: int etEPstarttime
+com.example.example.R$id: int etFGoalDate
+com.example.example.R$id: int etFGoalDesc
+com.example.example.R$id: int etFGoalName
+com.example.example.R$id: int etFProgram
+com.example.example.R$id: int etFSchoolName
+com.example.example.R$id: int etGoalEntry
+com.example.example.R$id: int etJSappliedFor
+com.example.example.R$id: int etJSnote
+com.example.example.R$id: int etLiabilities
+com.example.example.R$id: int etLoAmount
+com.example.example.R$id: int etLoCompanyName
+com.example.example.R$id: int etMendDate
+com.example.example.R$id: int etMnoDosage
+com.example.example.R$id: int etMpillName
+com.example.example.R$id: int etMstartDate
+com.example.example.R$id: int etNameStocks
+com.example.example.R$id: int etNumStocks
+com.example.example.R$id: int etOther
+com.example.example.R$id: int etProgram
+com.example.example.R$id: int etScAmount
+com.example.example.R$id: int etScName
+com.example.example.R$id: int etScRequirement
+com.example.example.R$id: int etSchoolName
+com.example.example.R$id: int etSetPassword
+com.example.example.R$id: int etSysentry
+com.example.example.R$id: int etTuition
+com.example.example.R$id: int etUsername
+com.example.example.R$id: int etVSentry
+com.example.example.R$id: int forgotPassword
+com.example.example.R$id: int jobsearch_applied
+com.example.example.R$id: int jobsearch_date
+com.example.example.R$id: int jobsearch_dismiss
+com.example.example.R$id: int jobsearch_notes
+com.example.example.R$id: int jobsearch_status
+com.example.example.R$id: int linearLayout1
+com.example.example.R$id: int llA
+com.example.example.R$id: int llCompany
+com.example.example.R$id: int llDP
+com.example.example.R$id: int llEP
+com.example.example.R$id: int llGLTG
+com.example.example.R$id: int llGSTG
+com.example.example.R$id: int llJobSearch
+com.example.example.R$id: int llM
+com.example.example.R$id: int llsvA
+com.example.example.R$id: int llsvM
+com.example.example.R$id: int passwordInput
+com.example.example.R$id: int passwordInputConfirmed
+com.example.example.R$id: int rbLTG
+com.example.example.R$id: int rbSTG
+com.example.example.R$id: int registerlinear
+com.example.example.R$id: int rgGoal
+com.example.example.R$id: int sEProutine
+com.example.example.R$id: int scrollView
+com.example.example.R$id: int scrollView1
+com.example.example.R$id: int spAppStatus
+com.example.example.R$id: int spDegreeType
+com.example.example.R$id: int spEnrollment
+com.example.example.R$id: int spFDegree
+com.example.example.R$id: int spFEnrollment
+com.example.example.R$id: int spFGoalType
+com.example.example.R$id: int spJSstatus
+com.example.example.R$id: int spLoApplicationStatus
+com.example.example.R$id: int spScApplicationStatus
+com.example.example.R$id: int spinner1
+com.example.example.R$id: int svCareerAdd
+com.example.example.R$id: int svCompanyAdd
+com.example.example.R$id: int svDP
+com.example.example.R$id: int svEI
+com.example.example.R$id: int svEP
+com.example.example.R$id: int svGLTG
+com.example.example.R$id: int svGSTG
+com.example.example.R$id: int svM
+com.example.example.R$id: int textView1
+com.example.example.R$id: int textView3
+com.example.example.R$id: int textViewSettings
+com.example.example.R$id: int tvAdescription
+com.example.example.R$id: int tvAname
+com.example.example.R$id: int tvAppDate
+com.example.example.R$id: int tvAppStat
+com.example.example.R$id: int tvApplicationDate
+com.example.example.R$id: int tvApplicationStatus
+com.example.example.R$id: int tvAssets
+com.example.example.R$id: int tvCash
+com.example.example.R$id: int tvCompanyName
+com.example.example.R$id: int tvCreditCards
+com.example.example.R$id: int tvDDPdate
+com.example.example.R$id: int tvDDPdescription
+com.example.example.R$id: int tvDDPdietType
+com.example.example.R$id: int tvDEPdes
+com.example.example.R$id: int tvDEPplanName
+com.example.example.R$id: int tvDEProutDate
+com.example.example.R$id: int tvDMdate
+com.example.example.R$id: int tvDMnumDosage
+com.example.example.R$id: int tvDMpillName
+com.example.example.R$id: int tvDPdescription
+com.example.example.R$id: int tvDPendDate
+com.example.example.R$id: int tvDPstartDate
+com.example.example.R$id: int tvDPtype
+com.example.example.R$id: int tvDateGraduate
+com.example.example.R$id: int tvDateStart
+com.example.example.R$id: int tvDegree
+com.example.example.R$id: int tvDiastolic
+com.example.example.R$id: int tvDisplayAppDate
+com.example.example.R$id: int tvDisplayAppStat
+com.example.example.R$id: int tvDisplayAssets
+com.example.example.R$id: int tvDisplayCash
+com.example.example.R$id: int tvDisplayCompanyName
+com.example.example.R$id: int tvDisplayContactAffiliation
+com.example.example.R$id: int tvDisplayContactComments
+com.example.example.R$id: int tvDisplayContactDate
+com.example.example.R$id: int tvDisplayContactName
+com.example.example.R$id: int tvDisplayContactUse
+com.example.example.R$id: int tvDisplayCreditCards
+com.example.example.R$id: int tvDisplayDateGrad
+com.example.example.R$id: int tvDisplayDateStarted
+com.example.example.R$id: int tvDisplayEIName
+com.example.example.R$id: int tvDisplayEIPword
+com.example.example.R$id: int tvDisplayEIUName
+com.example.example.R$id: int tvDisplayEIWebsite
+com.example.example.R$id: int tvDisplayEntAssets
+com.example.example.R$id: int tvDisplayEntCash
+com.example.example.R$id: int tvDisplayEntCreditCards
+com.example.example.R$id: int tvDisplayEntLiabilities
+com.example.example.R$id: int tvDisplayEntOther
+com.example.example.R$id: int tvDisplayFDegree
+com.example.example.R$id: int tvDisplayFES
+com.example.example.R$id: int tvDisplayFGoalDate
+com.example.example.R$id: int tvDisplayFGoalDesc
+com.example.example.R$id: int tvDisplayFGoalName
+com.example.example.R$id: int tvDisplayFGoalType
+com.example.example.R$id: int tvDisplayFProgram
+com.example.example.R$id: int tvDisplayFSchoolName
+com.example.example.R$id: int tvDisplayLiabilities
+com.example.example.R$id: int tvDisplayLoanAmount
+com.example.example.R$id: int tvDisplayLoanApplicationStatus
+com.example.example.R$id: int tvDisplayOther
+com.example.example.R$id: int tvDisplayPassword
+com.example.example.R$id: int tvDisplayRequirements
+com.example.example.R$id: int tvEPname
+com.example.example.R$id: int tvEPotherInfo
+com.example.example.R$id: int tvEnrollmentStatus
+com.example.example.R$id: int tvFDate
+com.example.example.R$id: int tvFDegree
+com.example.example.R$id: int tvFEnrollmentStatus
+com.example.example.R$id: int tvFGoalDesc
+com.example.example.R$id: int tvFGoalName
+com.example.example.R$id: int tvFGoalType
+com.example.example.R$id: int tvFProgram
+com.example.example.R$id: int tvFSchoolName
+com.example.example.R$id: int tvGLTG
+com.example.example.R$id: int tvGSTG
+com.example.example.R$id: int tvGoalName
+com.example.example.R$id: int tvJSappliedFor
+com.example.example.R$id: int tvJSdate
+com.example.example.R$id: int tvJSnote
+com.example.example.R$id: int tvJSstatus
+com.example.example.R$id: int tvLiabilities
+com.example.example.R$id: int tvLoAmount
+com.example.example.R$id: int tvLoApplicationStatus
+com.example.example.R$id: int tvLoCompanyName
+com.example.example.R$id: int tvLoanAmount
+com.example.example.R$id: int tvLoanApplicationStatus
+com.example.example.R$id: int tvMendDate
+com.example.example.R$id: int tvMpillName
+com.example.example.R$id: int tvMstartDate
+com.example.example.R$id: int tvNameStocks
+com.example.example.R$id: int tvNone
+com.example.example.R$id: int tvNumStocks
+com.example.example.R$id: int tvOther
+com.example.example.R$id: int tvProgram
+com.example.example.R$id: int tvQuestion
+com.example.example.R$id: int tvRequirements
+com.example.example.R$id: int tvScAmount
+com.example.example.R$id: int tvScApplicationStatus
+com.example.example.R$id: int tvScName
+com.example.example.R$id: int tvScRequirement
+com.example.example.R$id: int tvSchoolName
+com.example.example.R$id: int tvSystolic
+com.example.example.R$id: int tvVSbloodPressure
+com.example.example.R$id: int tvVSbodyTemp
+com.example.example.R$id: int tvVSpulse
+com.example.example.R$id: int tvVSrespirationRate
+com.example.example.R$id: int wrongAnsw
+com.example.example.R$id: int wrongPass
+com.example.example.R$layout: int activity_allergy
+com.example.example.R$layout: int activity_career
+com.example.example.R$layout: int activity_company_add
+com.example.example.R$layout: int activity_company_info
+com.example.example.R$layout: int activity_contact_list
+com.example.example.R$layout: int activity_contact_list_info
+com.example.example.R$layout: int activity_current_education
+com.example.example.R$layout: int activity_current_education_info
+com.example.example.R$layout: int activity_diet_plan
+com.example.example.R$layout: int activity_display_current_education
+com.example.example.R$layout: int activity_display_diet_plan
+com.example.example.R$layout: int activity_display_exercise_plan
+com.example.example.R$layout: int activity_display_financial_goals
+com.example.example.R$layout: int activity_display_financial_state
+com.example.example.R$layout: int activity_display_future_education
+com.example.example.R$layout: int activity_display_job_search
+com.example.example.R$layout: int activity_display_loan
+com.example.example.R$layout: int activity_display_pill_info
+com.example.example.R$layout: int activity_display_scholarship
+com.example.example.R$layout: int activity_electronic_identity
+com.example.example.R$layout: int activity_electronic_identity_info
+com.example.example.R$layout: int activity_exercise_plan
+com.example.example.R$layout: int activity_exercise_plan_info
+com.example.example.R$layout: int activity_finance
+com.example.example.R$layout: int activity_finance_goals_info
+com.example.example.R$layout: int activity_financial_state_info
+com.example.example.R$layout: int activity_financial_support
+com.example.example.R$layout: int activity_forgot_password
+com.example.example.R$layout: int activity_future_education
+com.example.example.R$layout: int activity_future_education_info
+com.example.example.R$layout: int activity_goal
+com.example.example.R$layout: int activity_goal_entry
+com.example.example.R$layout: int activity_health
+com.example.example.R$layout: int activity_job_search_info
+com.example.example.R$layout: int activity_jobsearch_add
+com.example.example.R$layout: int activity_loan
+com.example.example.R$layout: int activity_loan_info
+com.example.example.R$layout: int activity_medication
+com.example.example.R$layout: int activity_none
+com.example.example.R$layout: int activity_scholarship
+com.example.example.R$layout: int activity_scholarship_info
+com.example.example.R$layout: int activity_stocks_info
+com.example.example.R$layout: int activity_vital_sign
+com.example.example.R$layout: int dialog_allergy_info
+com.example.example.R$layout: int dialog_diet_plan_info
+com.example.example.R$layout: int dialog_display_company
+com.example.example.R$layout: int dialog_display_password
+com.example.example.R$layout: int dialog_goal_entry
+com.example.example.R$layout: int dialog_pick_date
+com.example.example.R$layout: int dialog_pill_info
+com.example.example.R$layout: int dialog_security_question
+com.example.example.R$layout: int dialog_vital_sign_entry
+com.example.example.R$layout: int dialog_vs_blood_pressure
+com.example.example.R$layout: int display_contact
+com.example.example.R$layout: int display_electronic_identity
+com.example.example.R$layout: int education_activity
+com.example.example.R$layout: int login_activity
+com.example.example.R$layout: int menu_activity
+com.example.example.R$layout: int register_activity
+com.example.example.R$layout: int settings
+com.example.example.R$menu: int global
+com.example.example.R$menu: int main
+com.example.example.R$menu: int test
+com.example.example.R$mipmap: int icon_rough
+com.example.example.R$mipmap: int rough_icon
+com.example.example.R$string: int CLIP
+com.example.example.R$string: int action_example
+com.example.example.R$string: int action_settings
+com.example.example.R$string: int allergy
+com.example.example.R$string: int answer
+com.example.example.R$string: int button1
+com.example.example.R$string: int career
+com.example.example.R$string: int denied
+com.example.example.R$string: int diet_plan
+com.example.example.R$string: int edu
+com.example.example.R$string: int end_time
+com.example.example.R$string: int epdialog_add
+com.example.example.R$string: int exercise_plan
+com.example.example.R$string: int finance
+com.example.example.R$string: int forgot
+com.example.example.R$string: int health
+com.example.example.R$string: int medication
+com.example.example.R$string: int name
+com.example.example.R$string: int navigation_drawer_close
+com.example.example.R$string: int navigation_drawer_open
+com.example.example.R$string: int other_info
+com.example.example.R$string: int others
+com.example.example.R$string: int register
+com.example.example.R$string: int save
+com.example.example.R$string: int start_time
+com.example.example.R$string: int title_activity_display_financial_goals
+com.example.example.R$string: int title_activity_display_financial_state
+com.example.example.R$string: int title_activity_display_scholarship
+com.example.example.R$string: int title_activity_finance
+com.example.example.R$string: int title_activity_finance_goals_info
+com.example.example.R$string: int title_activity_financial_goals
+com.example.example.R$string: int title_activity_financial_state
+com.example.example.R$string: int title_activity_financial_state_info
+com.example.example.R$string: int title_activity_forgot_password
+com.example.example.R$string: int title_activity_health
+com.example.example.R$string: int title_activity_main_activity2
+com.example.example.R$string: int title_activity_stocks
+com.example.example.R$string: int title_activity_stocks_info
+com.example.example.R$string: int title_activity_test
+com.example.example.R$string: int title_section1
+com.example.example.R$string: int title_section2
+com.example.example.R$string: int title_section3
+com.example.example.R$string: int username
+com.example.example.R$string: int vital_sign
+com.example.example.R$string: int vs_blood_pressure
+com.example.example.R$string: int vs_body_temperature
+com.example.example.R$string: int vs_pulse
+com.example.example.R$string: int vs_respiration_rate
+com.example.example.R$string: int vsdialog_save
+com.example.example.R$string: int wipe
+com.example.example.R$style: int AppBaseTheme
+com.example.example.R$style: int AppTheme
+com.example.example.RegisterActivity
+com.example.example.RegisterActivity: RegisterActivity()
+com.example.example.ScholarshipActivity
+com.example.example.ScholarshipActivity: ScholarshipActivity()
+com.example.example.ScholarshipInfoActivity
+com.example.example.ScholarshipInfoActivity: ScholarshipInfoActivity()
+com.example.example.Settings
+com.example.example.Settings: Settings()
+com.example.example.StocksActivity
+com.example.example.StocksActivity: StocksActivity()
+com.example.example.StocksInfoActivity
+com.example.example.StocksInfoActivity: StocksInfoActivity()
+com.example.example.VitalSignActivity
+com.example.example.VitalSignActivity: VitalSignActivity()

@@ -1,0 +1,1195 @@
+com.example.example.Allergy -> com.example.example.a:
+    int _id -> a
+    java.lang.String allergyName -> b
+    java.lang.String allergyDescription -> c
+    int get_id() -> a
+    java.lang.String getAllergyName() -> b
+    void setAllergyName(java.lang.String) -> a
+    java.lang.String getAllergyDescription() -> c
+    void setAllergyDescription(java.lang.String) -> b
+com.example.example.AllergyActivity -> com.example.example.AllergyActivity:
+    android.content.Context context -> a
+    com.example.example.DatabaseHelper db -> b
+    java.util.List agList -> c
+    android.widget.CheckBox[] b -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    android.content.Context access$000(com.example.example.AllergyActivity) -> a
+    com.example.example.DatabaseHelper access$100(com.example.example.AllergyActivity) -> b
+    java.util.List access$200(com.example.example.AllergyActivity) -> c
+    android.widget.CheckBox[] access$300(com.example.example.AllergyActivity) -> d
+com.example.example.AllergyActivity$1 -> com.example.example.b:
+    android.widget.TextView name -> a
+    android.widget.TextView description -> b
+    android.widget.EditText nameEntry -> c
+    android.widget.EditText descriptionEntry -> d
+    android.widget.Button save -> e
+    com.example.example.AllergyActivity this$0 -> f
+    void onClick(android.view.View) -> onClick
+com.example.example.AllergyActivity$1$1 -> com.example.example.c:
+    android.app.Dialog val$dialog -> a
+    com.example.example.AllergyActivity$1 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.AllergyActivity$2 -> com.example.example.d:
+    com.example.example.AllergyActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.ApplicationStatus -> com.example.example.e:
+    com.example.example.ApplicationStatus APPLIED -> a
+    com.example.example.ApplicationStatus ACCEPTED -> b
+    com.example.example.ApplicationStatus REJECTED -> c
+    com.example.example.ApplicationStatus NONE -> d
+    com.example.example.ApplicationStatus[] $VALUES -> e
+    com.example.example.ApplicationStatus[] values() -> values
+    com.example.example.ApplicationStatus valueOf(java.lang.String) -> valueOf
+com.example.example.CareerActivity -> com.example.example.CareerActivity:
+    android.widget.Button goal -> a
+    android.widget.Button jobSearch -> b
+    android.widget.Button comInfo -> c
+    android.widget.Button elecIdentity -> d
+    android.widget.Button contactList -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void setUpVariables() -> a
+com.example.example.CareerActivity$1 -> com.example.example.f:
+    com.example.example.CareerActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.CareerActivity$2 -> com.example.example.g:
+    com.example.example.CareerActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.CareerActivity$3 -> com.example.example.h:
+    com.example.example.CareerActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.CareerActivity$4 -> com.example.example.i:
+    com.example.example.CareerActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.CareerActivity$5 -> com.example.example.j:
+    com.example.example.CareerActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.CompanyInfoActivity -> com.example.example.CompanyInfoActivity:
+    android.content.Context context -> a
+    com.example.example.DatabaseHelper db -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    android.content.Context access$000(com.example.example.CompanyInfoActivity) -> a
+    com.example.example.DatabaseHelper access$100(com.example.example.CompanyInfoActivity) -> b
+com.example.example.CompanyInfoActivity$1 -> com.example.example.k:
+    java.lang.String val$comName -> a
+    java.lang.String val$comProduct -> b
+    java.lang.String val$location -> c
+    java.lang.String val$phoneNum -> d
+    java.lang.String val$keyFacts -> e
+    java.lang.String val$reasons -> f
+    java.lang.String val$resumeSubDate -> g
+    java.lang.String val$interviewDate -> h
+    java.lang.String val$interviewResult -> i
+    java.lang.String val$notes -> j
+    com.example.example.CompanyInfoActivity this$0 -> k
+    void onClick(android.view.View) -> onClick
+com.example.example.CompanyInfoActivity$1$1 -> com.example.example.l:
+    android.app.Dialog val$dialog -> a
+    com.example.example.CompanyInfoActivity$1 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.CompanyInfoActivity$2 -> com.example.example.m:
+    int val$id -> a
+    com.example.example.CompanyInfoActivity this$0 -> b
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.CompanyInfoActivity$3 -> com.example.example.n:
+    com.example.example.CompanyInformation companyInformation -> a
+    com.example.example.CompanyInfoActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.CompanyInfoActivity$3$1 -> com.example.example.o:
+    android.widget.EditText val$company_name -> a
+    android.widget.EditText val$company_product -> b
+    android.widget.EditText val$company_address -> c
+    android.widget.EditText val$company_phone -> d
+    android.widget.EditText val$company_facts -> e
+    android.widget.EditText val$company_reasons -> f
+    android.widget.EditText val$company_subDate -> g
+    android.widget.EditText val$company_intvwDate -> h
+    android.widget.Spinner val$company_intvwType -> i
+    android.widget.EditText val$company_notes -> j
+    com.example.example.CompanyInfoActivity$3 this$1 -> k
+    void onClick(android.view.View) -> onClick
+com.example.example.CompanyInformation -> com.example.example.p:
+    java.lang.String comName -> a
+    java.lang.String comProduct -> b
+    java.lang.String phoneNum -> c
+    java.lang.String location -> d
+    java.lang.String keyFacts -> e
+    java.lang.String reasons -> f
+    java.lang.String resumeSubDate -> g
+    java.lang.String interviewDate -> h
+    com.example.example.ApplicationStatus interviewResult -> i
+    java.lang.String notes -> j
+    java.lang.String getComName() -> a
+    void setComName(java.lang.String) -> a
+    java.lang.String getComProduct() -> b
+    void setComProduct(java.lang.String) -> b
+    java.lang.String getPhoneNum() -> c
+    void setPhoneNum(java.lang.String) -> c
+    java.lang.String getLocation() -> d
+    void setLocation(java.lang.String) -> d
+    java.lang.String getKeyFacts() -> e
+    void setKeyFacts(java.lang.String) -> e
+    java.lang.String getReasons() -> f
+    void setReasons(java.lang.String) -> f
+    java.lang.String getResumeSubDate() -> g
+    void setResumeSubDate(java.lang.String) -> g
+    java.lang.String getInterviewDate() -> h
+    void setInterviewDate(java.lang.String) -> h
+    com.example.example.ApplicationStatus getInterviewResult() -> i
+    void setInterviewResult(java.lang.String) -> i
+    void setInterviewResult(com.example.example.ApplicationStatus) -> a
+    java.lang.String getNotes() -> j
+    void setNotes(java.lang.String) -> j
+com.example.example.ContactList -> com.example.example.q:
+    int _id -> a
+    java.lang.String name -> b
+    java.lang.String affiliation -> c
+    java.lang.String establishedDate -> d
+    java.lang.String timesUsed -> e
+    java.lang.String comments -> f
+    java.lang.String getName() -> a
+    void setName(java.lang.String) -> a
+    java.lang.String getAffiliation() -> b
+    void setAffiliation(java.lang.String) -> b
+    java.lang.String getEstablishedDate() -> c
+    void setEstablishedDate(java.lang.String) -> c
+    java.lang.String getTimesUsed() -> d
+    void setTimesUsed(java.lang.String) -> d
+    java.lang.String getComments() -> e
+    void setComments(java.lang.String) -> e
+    int get_id() -> f
+com.example.example.ContactListActivity -> com.example.example.ContactListActivity:
+    android.content.Context context -> a
+    java.util.List contacts -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    android.content.Context access$000(com.example.example.ContactListActivity) -> a
+    java.util.List access$100(com.example.example.ContactListActivity) -> b
+com.example.example.ContactListActivity$1 -> com.example.example.r:
+    java.lang.String val$n -> a
+    java.lang.String val$aff -> b
+    java.lang.String val$date -> c
+    java.lang.String val$times -> d
+    java.lang.String val$comm -> e
+    com.example.example.ContactListActivity this$0 -> f
+    void onClick(android.view.View) -> onClick
+com.example.example.ContactListActivity$1$1 -> com.example.example.s:
+    android.app.Dialog val$dialog -> a
+    com.example.example.ContactListActivity$1 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.ContactListActivity$2 -> com.example.example.t:
+    com.example.example.DatabaseHelper val$db -> a
+    int val$index -> b
+    com.example.example.ContactListActivity this$0 -> c
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.ContactListActivity$3 -> com.example.example.u:
+    android.widget.EditText affiliation -> a
+    android.widget.EditText establishedDate -> b
+    android.widget.EditText comments -> c
+    android.widget.EditText name -> d
+    android.widget.EditText timesUsed -> e
+    android.widget.Button save -> f
+    com.example.example.DatabaseHelper val$db -> g
+    com.example.example.ContactListActivity this$0 -> h
+    void onClick(android.view.View) -> onClick
+    void setUpVariable() -> a
+com.example.example.ContactListActivity$3$1 -> com.example.example.v:
+    com.example.example.ContactListActivity$3 this$1 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.CurrentEducationActivity -> com.example.example.CurrentEducationActivity:
+    java.util.List plan -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.CurrentEducationActivity) -> a
+com.example.example.CurrentEducationActivity$1 -> com.example.example.w:
+    int val$index -> a
+    com.example.example.CurrentEducationActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.CurrentEducationActivity$2 -> com.example.example.x:
+    com.example.example.DatabaseHelper val$db -> a
+    int val$index -> b
+    com.example.example.CurrentEducationActivity this$0 -> c
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.CurrentEducationActivity$3 -> com.example.example.y:
+    com.example.example.CurrentEducationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.CurrentEducationActivity$4 -> com.example.example.z:
+    com.example.example.CurrentEducationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.CurrentEducationInfoActivity -> com.example.example.CurrentEducationInfoActivity:
+    android.content.Context context -> a
+    android.widget.EditText enterSchoolName -> b
+    android.widget.Spinner enterDegree -> c
+    android.widget.EditText enterProgram -> d
+    android.widget.Spinner enterEnrollmentStatus -> e
+    android.widget.EditText enterTuition -> f
+    android.widget.EditText enterCourse -> g
+    android.widget.EditText enterDateStart -> h
+    android.widget.EditText enterDateGraduate -> i
+    android.widget.Button submit -> j
+    android.widget.TextView error -> k
+    void onCreate(android.os.Bundle) -> onCreate
+    void setUpVariables() -> a
+    android.widget.EditText access$000(com.example.example.CurrentEducationInfoActivity) -> a
+    android.widget.Spinner access$100(com.example.example.CurrentEducationInfoActivity) -> b
+    android.widget.EditText access$200(com.example.example.CurrentEducationInfoActivity) -> c
+    android.widget.Spinner access$300(com.example.example.CurrentEducationInfoActivity) -> d
+    android.widget.EditText access$400(com.example.example.CurrentEducationInfoActivity) -> e
+    android.widget.EditText access$500(com.example.example.CurrentEducationInfoActivity) -> f
+    android.widget.EditText access$600(com.example.example.CurrentEducationInfoActivity) -> g
+    android.widget.EditText access$700(com.example.example.CurrentEducationInfoActivity) -> h
+    android.widget.TextView access$800(com.example.example.CurrentEducationInfoActivity) -> i
+com.example.example.CurrentEducationInfoActivity$1 -> com.example.example.aa:
+    com.example.example.DatabaseHelper val$db -> a
+    com.example.example.CurrentEducationInfoActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.DatabaseHelper -> com.example.example.ab:
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+    boolean registerUser(java.lang.String,java.lang.String,int,java.lang.String) -> a
+    android.database.Cursor getUser() -> a
+    boolean checkAnswer(java.lang.String) -> a
+    void resetPassword(java.lang.String) -> b
+    boolean isEmpty() -> b
+    boolean isValidName(java.lang.String) -> c
+    boolean loginUser(java.lang.String,java.lang.String) -> a
+    void addSchool_Current(com.example.example.School) -> a
+    void addSchool_Future(com.example.example.School) -> b
+    java.util.List getAllCurrentSchools() -> c
+    java.util.List getAllFutureSchools() -> d
+    void deleteSchool(int) -> a
+    void addLoan(com.example.example.Loan) -> a
+    java.util.List getAllLoans() -> e
+    void deleteLoan(int) -> b
+    void addScholarship(com.example.example.Scholarship) -> a
+    java.util.List getAllScholarships() -> f
+    void deleteScholarship(int) -> c
+    void addStock(com.example.example.Stocks) -> a
+    void addState(com.example.example.FinancialState) -> a
+    void addFGoal(com.example.example.FinanceGoal) -> a
+    java.util.List getAllStocks() -> g
+    java.util.List getAllStates() -> h
+    java.util.List getAllFGoals() -> i
+    void deleteStock(int) -> d
+    void deleteState(int) -> e
+    void deleteFGoal(int) -> f
+    void addGoal(com.example.example.Goal) -> a
+    java.util.List getAllShortTermGoal() -> j
+    java.util.List getAllLongTermGoal() -> k
+    void deleteCareerGoal(int) -> g
+    void addJobSearch(com.example.example.JobSearch) -> a
+    android.database.Cursor getAllJobSearch() -> l
+    void deleteJobSearch(int) -> h
+    void addCompany(com.example.example.CompanyInformation) -> a
+    android.database.Cursor getAllCompany() -> m
+    void deleteCompany(int) -> i
+    void addIdentity(com.example.example.ElectronicIdentity) -> a
+    java.util.List getAllIdentities() -> n
+    void deleteIdentity(int) -> j
+    void addContact(com.example.example.ContactList) -> a
+    java.util.List getAllContacts() -> o
+    void deleteContact(int) -> k
+    void addVitalSign(com.example.example.VitalSign) -> a
+    com.example.example.VitalSign getVitalSign() -> p
+    void addExercisePlan(com.example.example.ExercisePlan) -> a
+    void addDietPlan(com.example.example.Diet) -> a
+    void addMedication(com.example.example.Medication) -> a
+    java.util.List getAllExercisePlan() -> q
+    java.util.List getAllDietPlan() -> r
+    java.util.List getAllMedication() -> s
+    java.util.List getAllAllergy() -> t
+    void deleteMedication(int) -> l
+    void deleteAllergy(int) -> m
+    void addAllergy(com.example.example.Allergy) -> a
+com.example.example.Diet -> com.example.example.ac:
+    int _id -> a
+    java.lang.String dietType -> b
+    java.lang.String startDate -> c
+    java.lang.String endDate -> d
+    java.lang.String otherInfo -> e
+    java.lang.String getDietType() -> a
+    void setDietType(java.lang.String) -> a
+    java.lang.String getStartDate() -> b
+    void setStartDate(java.lang.String) -> b
+    java.lang.String getEndDate() -> c
+    void setEndDate(java.lang.String) -> c
+    int get_id() -> d
+    java.lang.String getOtherInfo() -> e
+    void setOtherInfo(java.lang.String) -> d
+com.example.example.DietPlanActivity -> com.example.example.DietPlanActivity:
+    android.content.Context context -> a
+    com.example.example.DatabaseHelper db -> b
+    java.util.List dpList -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.DietPlanActivity) -> a
+    com.example.example.DatabaseHelper access$100(com.example.example.DietPlanActivity) -> b
+    android.content.Context access$200(com.example.example.DietPlanActivity) -> c
+com.example.example.DietPlanActivity$1 -> com.example.example.ad:
+    int val$index -> a
+    com.example.example.DietPlanActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.DietPlanActivity$2 -> com.example.example.ae:
+    int val$index -> a
+    com.example.example.DietPlanActivity this$0 -> b
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.DietPlanActivity$3 -> com.example.example.af:
+    android.widget.EditText dietTypeEntry -> a
+    android.widget.EditText dietDescriptionEntry -> b
+    android.widget.EditText startDateEntry -> c
+    android.widget.EditText endDateEntry -> d
+    android.widget.Button save -> e
+    com.example.example.DietPlanActivity this$0 -> f
+    void onClick(android.view.View) -> onClick
+com.example.example.DietPlanActivity$3$1 -> com.example.example.ag:
+    android.app.Dialog val$dialog -> a
+    com.example.example.DietPlanActivity$3 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.DietPlanActivity$4 -> com.example.example.ah:
+    com.example.example.DietPlanActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.DisplayCurrentEducationActivity -> com.example.example.DisplayCurrentEducationActivity:
+    java.lang.String schoolName -> a
+    java.lang.String degreeType -> b
+    java.lang.String program -> c
+    java.lang.String enrollment -> d
+    java.lang.String dateStart -> e
+    java.lang.String dateGrad -> f
+    java.lang.String tuition -> g
+    java.lang.String course -> h
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.DisplayDietPlanActivity -> com.example.example.DisplayDietPlanActivity:
+    java.lang.String type -> a
+    java.lang.String des -> b
+    java.lang.String dstart -> c
+    java.lang.String dend -> d
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.DisplayDietPlanActivity$1 -> com.example.example.ai:
+    com.example.example.DisplayDietPlanActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.DisplayExercisePlanActivity -> com.example.example.DisplayExercisePlanActivity:
+    java.lang.String exercisePlan -> a
+    java.lang.String routine -> b
+    java.lang.String startTime -> c
+    java.lang.String endTime -> d
+    java.lang.String otherInfo -> e
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.DisplayExercisePlanActivity$1 -> com.example.example.aj:
+    com.example.example.DisplayExercisePlanActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.DisplayFinancialGoalsActivity -> com.example.example.DisplayFinancialGoalsActivity:
+    java.lang.String entName -> a
+    java.lang.String entDesc -> b
+    java.lang.String entType -> c
+    java.lang.String entDate -> d
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.DisplayFinancialStateActivity -> com.example.example.DisplayFinancialStateActivity:
+    java.lang.String entCash -> a
+    java.lang.String entAssets -> b
+    java.lang.String entLiabilities -> c
+    java.lang.String entCreditCards -> d
+    java.lang.String entOther -> e
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.DisplayFutureEducationActivity -> com.example.example.DisplayFutureEducationActivity:
+    java.lang.String schoolName -> a
+    java.lang.String degreeType -> b
+    java.lang.String program -> c
+    java.lang.String enrollment -> d
+    java.lang.String appDate -> e
+    java.lang.String appStat -> f
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.DisplayLoanActivity -> com.example.example.DisplayLoanActivity:
+    java.lang.String companyName -> a
+    java.lang.String amt -> b
+    java.lang.String appStat -> c
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.DisplayMedicationActivity -> com.example.example.DisplayMedicationActivity:
+    java.lang.String pill -> a
+    java.lang.String numDose -> b
+    java.lang.String dstart -> c
+    java.lang.String dend -> d
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.DisplayMedicationActivity$1 -> com.example.example.ak:
+    com.example.example.DisplayMedicationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.DisplayScholarshipActivity -> com.example.example.DisplayScholarshipActivity:
+    java.lang.String companyName -> a
+    java.lang.String reqs -> b
+    java.lang.String amt -> c
+    java.lang.String appStat -> d
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.EducationActivity -> com.example.example.EducationActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.EducationActivity$1 -> com.example.example.al:
+    com.example.example.EducationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.EducationActivity$2 -> com.example.example.am:
+    com.example.example.EducationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.EducationActivity$3 -> com.example.example.an:
+    com.example.example.EducationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.ElectronicIdentity -> com.example.example.ao:
+    int _id -> a
+    java.lang.String name -> b
+    java.lang.String website -> c
+    java.lang.String userName -> d
+    java.lang.String passWord -> e
+    java.lang.String getName() -> a
+    void setName(java.lang.String) -> a
+    java.lang.String getWebsite() -> b
+    void setWebsite(java.lang.String) -> b
+    java.lang.String getUserName() -> c
+    void setUserName(java.lang.String) -> c
+    java.lang.String getPassWord() -> d
+    void setPassWord(java.lang.String) -> d
+    int get_id() -> e
+com.example.example.ElectronicIdentityActivity -> com.example.example.ElectronicIdentityActivity:
+    android.content.Context context -> a
+    java.util.List id -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    android.content.Context access$000(com.example.example.ElectronicIdentityActivity) -> a
+    java.util.List access$100(com.example.example.ElectronicIdentityActivity) -> b
+com.example.example.ElectronicIdentityActivity$1 -> com.example.example.ap:
+    java.lang.String val$n -> a
+    java.lang.String val$site -> b
+    java.lang.String val$uName -> c
+    java.lang.String val$pWord -> d
+    com.example.example.ElectronicIdentityActivity this$0 -> e
+    void onClick(android.view.View) -> onClick
+com.example.example.ElectronicIdentityActivity$1$1 -> com.example.example.aq:
+    android.app.Dialog val$dialog -> a
+    com.example.example.ElectronicIdentityActivity$1 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.ElectronicIdentityActivity$2 -> com.example.example.ar:
+    com.example.example.DatabaseHelper val$db -> a
+    int val$index -> b
+    com.example.example.ElectronicIdentityActivity this$0 -> c
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.ElectronicIdentityActivity$3 -> com.example.example.as:
+    android.widget.ScrollView scroll -> a
+    android.widget.EditText name -> b
+    android.widget.EditText website -> c
+    android.widget.EditText username -> d
+    android.widget.EditText password -> e
+    android.widget.Button save -> f
+    com.example.example.DatabaseHelper val$db -> g
+    com.example.example.ElectronicIdentityActivity this$0 -> h
+    void onClick(android.view.View) -> onClick
+    void setUpVariable() -> a
+com.example.example.ElectronicIdentityActivity$3$1 -> com.example.example.at:
+    com.example.example.ElectronicIdentityActivity$3 this$1 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.Encryption -> com.example.example.au:
+    java.lang.String convertToHex(byte[]) -> a
+    java.lang.String SHA1(java.lang.String) -> a
+com.example.example.EnumClasses -> com.example.example.av:
+com.example.example.EnumClasses$ApplicationStatus -> com.example.example.aw:
+    com.example.example.EnumClasses$ApplicationStatus APPLIED -> a
+    com.example.example.EnumClasses$ApplicationStatus ACCEPTED -> b
+    com.example.example.EnumClasses$ApplicationStatus REJECTED -> c
+    com.example.example.EnumClasses$ApplicationStatus NONE -> d
+    com.example.example.EnumClasses$ApplicationStatus[] $VALUES -> e
+    com.example.example.EnumClasses$ApplicationStatus[] values() -> values
+    com.example.example.EnumClasses$ApplicationStatus valueOf(java.lang.String) -> valueOf
+com.example.example.ExercisePlan -> com.example.example.ax:
+    int _id -> a
+    java.lang.String exerciseName -> b
+    java.lang.String routine -> c
+    java.lang.String startTime -> d
+    java.lang.String endTime -> e
+    java.lang.String otherInfo -> f
+    int get_id() -> a
+    java.lang.String getExerciseName() -> b
+    void setExerciseName(java.lang.String) -> a
+    java.lang.String getRoutine() -> c
+    void setRoutine(java.lang.String) -> b
+    java.lang.String getStartTime() -> d
+    void setStartTime(java.lang.String) -> c
+    java.lang.String getEndTime() -> e
+    void setEndTime(java.lang.String) -> d
+    java.lang.String getOtherInfo() -> f
+    void setOtherInfo(java.lang.String) -> e
+com.example.example.ExercisePlanActivity -> com.example.example.ExercisePlanActivity:
+    android.content.Context context -> a
+    com.example.example.DatabaseHelper db -> b
+    java.util.List epList -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.ExercisePlanActivity) -> a
+    com.example.example.DatabaseHelper access$100(com.example.example.ExercisePlanActivity) -> b
+    android.content.Context access$200(com.example.example.ExercisePlanActivity) -> c
+com.example.example.ExercisePlanActivity$1 -> com.example.example.ay:
+    int val$index -> a
+    com.example.example.ExercisePlanActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.ExercisePlanActivity$2 -> com.example.example.az:
+    int val$index -> a
+    com.example.example.ExercisePlanActivity this$0 -> b
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.ExercisePlanActivity$3 -> com.example.example.ba:
+    android.widget.EditText nameEntry -> a
+    android.widget.EditText startTime -> b
+    android.widget.EditText endTime -> c
+    android.widget.EditText otherInfoEntry -> d
+    android.widget.Button save -> e
+    com.example.example.ExercisePlanActivity this$0 -> f
+    void onClick(android.view.View) -> onClick
+    void setUpVariable() -> a
+com.example.example.ExercisePlanActivity$3$1 -> com.example.example.bb:
+    android.widget.Spinner val$routine -> a
+    com.example.example.ExercisePlanActivity$3 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.ExercisePlanActivity$4 -> com.example.example.bc:
+    com.example.example.ExercisePlanActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FinanceActivity -> com.example.example.FinanceActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.FinanceActivity$1 -> com.example.example.bd:
+    com.example.example.FinanceActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FinanceActivity$2 -> com.example.example.be:
+    com.example.example.FinanceActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FinanceActivity$3 -> com.example.example.bf:
+    com.example.example.FinanceActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FinanceGoal -> com.example.example.bg:
+    int _id -> a
+    java.lang.String name -> b
+    java.lang.String description -> c
+    java.lang.String type -> d
+    java.lang.String date -> e
+    java.lang.String getName() -> a
+    void setName(java.lang.String) -> a
+    java.lang.String getDescription() -> b
+    void setDescription(java.lang.String) -> b
+    java.lang.String getDate() -> c
+    void setDate(java.lang.String) -> c
+    java.lang.String getType() -> d
+    void setType(java.lang.String) -> d
+    int get_id() -> e
+com.example.example.FinanceGoalsInfoActivity -> com.example.example.FinanceGoalsInfoActivity:
+    android.content.Context context -> a
+    android.widget.EditText enterName -> b
+    android.widget.EditText enterDesc -> c
+    android.widget.Spinner enterType -> d
+    android.widget.EditText enterDate -> e
+    android.widget.Button submit -> f
+    android.widget.TextView error -> g
+    void onCreate(android.os.Bundle) -> onCreate
+    void setUpVariables() -> a
+    android.widget.EditText access$000(com.example.example.FinanceGoalsInfoActivity) -> a
+    android.widget.EditText access$100(com.example.example.FinanceGoalsInfoActivity) -> b
+    android.widget.Spinner access$200(com.example.example.FinanceGoalsInfoActivity) -> c
+    android.widget.EditText access$300(com.example.example.FinanceGoalsInfoActivity) -> d
+    android.widget.TextView access$400(com.example.example.FinanceGoalsInfoActivity) -> e
+com.example.example.FinanceGoalsInfoActivity$1 -> com.example.example.bh:
+    com.example.example.DatabaseHelper val$db -> a
+    com.example.example.FinanceGoalsInfoActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.FinancialGoalsActivity -> com.example.example.FinancialGoalsActivity:
+    java.util.List goals -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.FinancialGoalsActivity) -> a
+com.example.example.FinancialGoalsActivity$1 -> com.example.example.bi:
+    int val$index -> a
+    com.example.example.FinancialGoalsActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.FinancialGoalsActivity$2 -> com.example.example.bj:
+    com.example.example.DatabaseHelper val$db -> a
+    int val$index -> b
+    com.example.example.FinancialGoalsActivity this$0 -> c
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.FinancialGoalsActivity$3 -> com.example.example.bk:
+    com.example.example.FinancialGoalsActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FinancialGoalsActivity$4 -> com.example.example.bl:
+    com.example.example.FinancialGoalsActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FinancialState -> com.example.example.bm:
+    int _id -> a
+    java.lang.String date -> b
+    java.lang.String cash -> c
+    java.lang.String assets -> d
+    java.lang.String liabilities -> e
+    java.lang.String creditCards -> f
+    java.lang.String other -> g
+    java.lang.String getCash() -> a
+    void setCash(java.lang.String) -> a
+    java.lang.String getAssets() -> b
+    void setAssets(java.lang.String) -> b
+    java.lang.String getLiabilities() -> c
+    void setLiabilities(java.lang.String) -> c
+    java.lang.String getCreditCards() -> d
+    void setCreditCards(java.lang.String) -> d
+    java.lang.String getDate() -> e
+    void setDate(java.lang.String) -> e
+    java.lang.String getOther() -> f
+    void setOther(java.lang.String) -> f
+    int get_id() -> g
+com.example.example.FinancialStateActivity -> com.example.example.FinancialStateActivity:
+    java.util.List states -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.FinancialStateActivity) -> a
+com.example.example.FinancialStateActivity$1 -> com.example.example.bn:
+    int val$index -> a
+    com.example.example.FinancialStateActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.FinancialStateActivity$2 -> com.example.example.bo:
+    com.example.example.DatabaseHelper val$db -> a
+    int val$index -> b
+    com.example.example.FinancialStateActivity this$0 -> c
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.FinancialStateActivity$3 -> com.example.example.bp:
+    com.example.example.FinancialStateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FinancialStateActivity$4 -> com.example.example.bq:
+    com.example.example.FinancialStateActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FinancialStateInfoActivity -> com.example.example.FinancialStateInfoActivity:
+    android.widget.EditText enterCash -> a
+    android.widget.EditText enterAssets -> b
+    android.widget.EditText enterLiabilities -> c
+    android.widget.EditText enterCreditCards -> d
+    android.widget.EditText enterOther -> e
+    android.widget.Button submit -> f
+    android.widget.TextView error -> g
+    void onCreate(android.os.Bundle) -> onCreate
+    void setUpVariables() -> a
+    android.widget.EditText access$000(com.example.example.FinancialStateInfoActivity) -> a
+    android.widget.EditText access$100(com.example.example.FinancialStateInfoActivity) -> b
+    android.widget.EditText access$200(com.example.example.FinancialStateInfoActivity) -> c
+    android.widget.EditText access$300(com.example.example.FinancialStateInfoActivity) -> d
+    android.widget.EditText access$400(com.example.example.FinancialStateInfoActivity) -> e
+    android.widget.TextView access$500(com.example.example.FinancialStateInfoActivity) -> f
+com.example.example.FinancialStateInfoActivity$1 -> com.example.example.br:
+    com.example.example.DatabaseHelper val$db -> a
+    com.example.example.FinancialStateInfoActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.FinancialSupport -> com.example.example.bs:
+    int id -> a
+    int amount -> b
+    com.example.example.EnumClasses$ApplicationStatus applicationStatus -> c
+    int getId() -> a
+    int getAmount() -> b
+    void setAmount(int) -> a
+    com.example.example.EnumClasses$ApplicationStatus getApplicationStatus() -> c
+    void setApplicationStatus(java.lang.String) -> a
+com.example.example.FinancialSupportActivity -> com.example.example.FinancialSupportActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.FinancialSupportActivity$1 -> com.example.example.bt:
+    com.example.example.FinancialSupportActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FinancialSupportActivity$2 -> com.example.example.bu:
+    com.example.example.FinancialSupportActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.ForgotPasswordActivity -> com.example.example.ForgotPasswordActivity:
+    android.content.Context context -> b
+    android.widget.Button submit -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    android.content.Context access$000(com.example.example.ForgotPasswordActivity) -> a
+com.example.example.ForgotPasswordActivity$1 -> com.example.example.bv:
+    com.example.example.DatabaseHelper val$db -> a
+    android.widget.EditText val$name -> b
+    android.widget.TextView val$error -> c
+    com.example.example.ForgotPasswordActivity this$0 -> d
+    void onClick(android.view.View) -> onClick
+com.example.example.ForgotPasswordActivity$1$1 -> com.example.example.bw:
+    android.app.Dialog val$dialog -> a
+    android.widget.EditText val$answer -> b
+    com.example.example.ForgotPasswordActivity$1 this$1 -> c
+    void onClick(android.view.View) -> onClick
+com.example.example.ForgotPasswordActivity$1$1$1 -> com.example.example.bx:
+    android.widget.EditText val$password -> a
+    android.app.Dialog val$dialog2 -> b
+    com.example.example.ForgotPasswordActivity$1$1 this$2 -> c
+    void onClick(android.view.View) -> onClick
+com.example.example.FutureEducationActivity -> com.example.example.FutureEducationActivity:
+    java.util.List plan -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.FutureEducationActivity) -> a
+com.example.example.FutureEducationActivity$1 -> com.example.example.by:
+    int val$index -> a
+    com.example.example.FutureEducationActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.FutureEducationActivity$2 -> com.example.example.bz:
+    com.example.example.DatabaseHelper val$db -> a
+    int val$index -> b
+    com.example.example.FutureEducationActivity this$0 -> c
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.FutureEducationActivity$3 -> com.example.example.ca:
+    com.example.example.FutureEducationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FutureEducationActivity$4 -> com.example.example.cb:
+    com.example.example.FutureEducationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.FutureEducationInfoActivity -> com.example.example.FutureEducationInfoActivity:
+    android.content.Context context -> a
+    android.widget.EditText enterSchoolName -> b
+    android.widget.Spinner enterDegree -> c
+    android.widget.EditText enterProgram -> d
+    android.widget.Spinner enterEnrollmentStatus -> e
+    android.widget.EditText enterApplicationDate -> f
+    android.widget.Spinner enterApplicationStatus -> g
+    android.widget.Button submit -> h
+    android.widget.TextView error -> i
+    void onCreate(android.os.Bundle) -> onCreate
+    void setUpVariables() -> a
+    android.widget.EditText access$000(com.example.example.FutureEducationInfoActivity) -> a
+    android.widget.Spinner access$100(com.example.example.FutureEducationInfoActivity) -> b
+    android.widget.EditText access$200(com.example.example.FutureEducationInfoActivity) -> c
+    android.widget.Spinner access$300(com.example.example.FutureEducationInfoActivity) -> d
+    android.widget.EditText access$400(com.example.example.FutureEducationInfoActivity) -> e
+    android.widget.Spinner access$500(com.example.example.FutureEducationInfoActivity) -> f
+    android.widget.TextView access$600(com.example.example.FutureEducationInfoActivity) -> g
+com.example.example.FutureEducationInfoActivity$1 -> com.example.example.cc:
+    com.example.example.DatabaseHelper val$db -> a
+    com.example.example.FutureEducationInfoActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.Goal -> com.example.example.cd:
+    int _id -> a
+    java.lang.String name -> b
+    java.lang.String type -> c
+    int get_id() -> a
+    java.lang.String getType() -> b
+    void setType(java.lang.String) -> a
+    java.lang.String getName() -> c
+    void setName(java.lang.String) -> b
+com.example.example.GoalActivity -> com.example.example.GoalActivity:
+    android.content.Context context -> i
+    android.widget.Button add -> a
+    android.widget.Button delete -> b
+    android.widget.Button back -> c
+    com.example.example.DatabaseHelper db -> d
+    java.util.List stgList -> e
+    java.util.List ltgList -> f
+    android.widget.CheckBox[] b -> g
+    android.widget.CheckBox[] c -> h
+    void onCreate(android.os.Bundle) -> onCreate
+    android.content.Context access$000(com.example.example.GoalActivity) -> a
+com.example.example.GoalActivity$1 -> com.example.example.ce:
+    com.example.example.GoalActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.GoalActivity$1$1 -> com.example.example.cf:
+    android.app.Dialog val$dialog -> a
+    com.example.example.GoalActivity$1 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.GoalActivity$2 -> com.example.example.cg:
+    com.example.example.GoalActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.GoalActivity$3 -> com.example.example.ch:
+    com.example.example.GoalActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.HealthActivity -> com.example.example.HealthActivity:
+    android.widget.Button vitalSign -> a
+    android.widget.Button exercisePlan -> b
+    android.widget.Button dietPlan -> c
+    android.widget.Button medication -> d
+    android.widget.Button allergy -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void setUpVariables() -> a
+com.example.example.HealthActivity$1 -> com.example.example.ci:
+    com.example.example.HealthActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.HealthActivity$2 -> com.example.example.cj:
+    com.example.example.HealthActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.HealthActivity$3 -> com.example.example.ck:
+    com.example.example.HealthActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.HealthActivity$4 -> com.example.example.cl:
+    com.example.example.HealthActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.HealthActivity$5 -> com.example.example.cm:
+    com.example.example.HealthActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.JobSearch -> com.example.example.cn:
+    java.lang.String jobName -> a
+    java.lang.String date -> b
+    java.lang.String status -> c
+    java.lang.String note -> d
+    java.lang.String getJobName() -> a
+    void setJobName(java.lang.String) -> a
+    java.lang.String getDate() -> b
+    void setDate(java.lang.String) -> b
+    java.lang.String getStatus() -> c
+    void setStatus(java.lang.String) -> c
+    java.lang.String getNote() -> d
+    void setNote(java.lang.String) -> d
+com.example.example.JobSearchActivity -> com.example.example.JobSearchActivity:
+    android.content.Context context -> a
+    com.example.example.DatabaseHelper db -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    android.content.Context access$000(com.example.example.JobSearchActivity) -> a
+    com.example.example.DatabaseHelper access$100(com.example.example.JobSearchActivity) -> b
+com.example.example.JobSearchActivity$1 -> com.example.example.co:
+    java.lang.String val$app -> a
+    java.lang.String val$dates -> b
+    java.lang.String val$stat -> c
+    java.lang.String val$note -> d
+    com.example.example.JobSearchActivity this$0 -> e
+    void onClick(android.view.View) -> onClick
+com.example.example.JobSearchActivity$1$1 -> com.example.example.cp:
+    android.app.Dialog val$dialog -> a
+    com.example.example.JobSearchActivity$1 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.JobSearchActivity$2 -> com.example.example.cq:
+    int val$id -> a
+    com.example.example.JobSearchActivity this$0 -> b
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.JobSearchActivity$3 -> com.example.example.cr:
+    com.example.example.JobSearch jobSearch -> a
+    android.widget.TextView appFor -> b
+    android.widget.TextView status -> c
+    android.widget.TextView dateDisplay -> d
+    android.widget.TextView note -> e
+    android.widget.EditText appForEntry -> f
+    android.widget.EditText noteEntry -> g
+    android.widget.Spinner statusEntry -> h
+    android.widget.Button date -> i
+    android.widget.Button save -> j
+    com.example.example.JobSearchActivity this$0 -> k
+    void onClick(android.view.View) -> onClick
+    void setUpVariable() -> a
+com.example.example.JobSearchActivity$3$1 -> com.example.example.cs:
+    com.example.example.JobSearchActivity$3 this$1 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.JobSearchActivity$3$1$1 -> com.example.example.ct:
+    android.app.Dialog val$dialog -> a
+    com.example.example.JobSearchActivity$3$1 this$2 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.JobSearchActivity$3$2 -> com.example.example.cu:
+    com.example.example.JobSearchActivity$3 this$1 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.Loan -> com.example.example.cv:
+    int id -> a
+    java.lang.String companyName -> b
+    int amount -> c
+    com.example.example.EnumClasses$ApplicationStatus applicationStatus -> d
+    int getAmount() -> a
+    void setAmount(int) -> a
+    int getId() -> b
+    com.example.example.EnumClasses$ApplicationStatus getApplicationStatus() -> c
+    void setApplicationStatus(java.lang.String) -> a
+    java.lang.String getCompanyName() -> d
+    void setCompanyName(java.lang.String) -> b
+com.example.example.LoanActivity -> com.example.example.LoanActivity:
+    java.util.List loans -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.LoanActivity) -> a
+com.example.example.LoanActivity$1 -> com.example.example.cw:
+    int val$index -> a
+    com.example.example.LoanActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.LoanActivity$2 -> com.example.example.cx:
+    com.example.example.DatabaseHelper val$db -> a
+    int val$index -> b
+    com.example.example.LoanActivity this$0 -> c
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.LoanActivity$3 -> com.example.example.cy:
+    com.example.example.LoanActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.LoanActivity$4 -> com.example.example.cz:
+    com.example.example.LoanActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.LoanInfoActivity -> com.example.example.LoanInfoActivity:
+    android.content.Context context -> a
+    android.widget.EditText enterCompanyName -> b
+    android.widget.EditText enterAmount -> c
+    android.widget.Spinner enterApplicationStatus -> d
+    android.widget.Button submit -> e
+    android.widget.TextView error -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void setUpVariables() -> a
+    android.widget.EditText access$000(com.example.example.LoanInfoActivity) -> a
+    android.widget.EditText access$100(com.example.example.LoanInfoActivity) -> b
+    android.widget.Spinner access$200(com.example.example.LoanInfoActivity) -> c
+    android.widget.TextView access$300(com.example.example.LoanInfoActivity) -> d
+com.example.example.LoanInfoActivity$1 -> com.example.example.da:
+    com.example.example.DatabaseHelper val$db -> a
+    com.example.example.LoanInfoActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.LoginActivity -> com.example.example.LoginActivity:
+    android.widget.EditText userIdValue -> a
+    android.widget.EditText passValue -> b
+    android.widget.TextView wrongPass -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    android.widget.EditText access$000(com.example.example.LoginActivity) -> a
+    android.widget.EditText access$100(com.example.example.LoginActivity) -> b
+    android.widget.TextView access$200(com.example.example.LoginActivity) -> c
+com.example.example.LoginActivity$1 -> com.example.example.db:
+    com.example.example.LoginActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.LoginActivity$2 -> com.example.example.dc:
+    com.example.example.DatabaseHelper val$db -> a
+    com.example.example.LoginActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.Medication -> com.example.example.dd:
+    int _id -> a
+    java.lang.String pillName -> b
+    java.lang.String noOfDosage -> c
+    java.lang.String dateStarted -> d
+    java.lang.String dateEnded -> e
+    java.lang.String getPillName() -> a
+    void setPillName(java.lang.String) -> a
+    int get_id() -> b
+    java.lang.String getNoOfDosage() -> c
+    void setNoOfDosage(java.lang.String) -> b
+    java.lang.String getDateStarted() -> d
+    void setDateStarted(java.lang.String) -> c
+    java.lang.String getDateEnded() -> e
+    void setDateEnded(java.lang.String) -> d
+com.example.example.MedicationActivity -> com.example.example.MedicationActivity:
+    android.content.Context context -> a
+    com.example.example.DatabaseHelper db -> b
+    java.util.List mdList -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.MedicationActivity) -> a
+    com.example.example.DatabaseHelper access$100(com.example.example.MedicationActivity) -> b
+    android.content.Context access$200(com.example.example.MedicationActivity) -> c
+com.example.example.MedicationActivity$1 -> com.example.example.de:
+    int val$index -> a
+    com.example.example.MedicationActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.MedicationActivity$2 -> com.example.example.df:
+    int val$index -> a
+    com.example.example.MedicationActivity this$0 -> b
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.MedicationActivity$3 -> com.example.example.dg:
+    android.widget.TextView pillName -> a
+    android.widget.TextView startDate -> b
+    android.widget.TextView endDate -> c
+    android.widget.EditText pillNameEntry -> d
+    android.widget.EditText noDosage -> e
+    android.widget.EditText startDateEntry -> f
+    android.widget.EditText endDateEntry -> g
+    android.widget.Button save -> h
+    com.example.example.MedicationActivity this$0 -> i
+    void onClick(android.view.View) -> onClick
+com.example.example.MedicationActivity$3$1 -> com.example.example.dh:
+    android.app.Dialog val$dialog -> a
+    com.example.example.MedicationActivity$3 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.MedicationActivity$4 -> com.example.example.di:
+    com.example.example.MedicationActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.MenuActivity -> com.example.example.MenuActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+com.example.example.MenuActivity$1 -> com.example.example.dj:
+    com.example.example.MenuActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.MenuActivity$2 -> com.example.example.dk:
+    com.example.example.MenuActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.MenuActivity$3 -> com.example.example.dl:
+    com.example.example.MenuActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.MenuActivity$4 -> com.example.example.dm:
+    com.example.example.MenuActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.RegisterActivity -> com.example.example.RegisterActivity:
+    android.widget.EditText username -> a
+    android.widget.EditText password -> b
+    android.widget.EditText confirm -> c
+    android.widget.EditText answer -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    android.widget.EditText access$000(com.example.example.RegisterActivity) -> a
+    android.widget.EditText access$100(com.example.example.RegisterActivity) -> b
+    android.widget.EditText access$200(com.example.example.RegisterActivity) -> c
+    android.widget.EditText access$300(com.example.example.RegisterActivity) -> d
+com.example.example.RegisterActivity$1 -> com.example.example.dn:
+    android.widget.Spinner val$dropdown -> a
+    com.example.example.DatabaseHelper val$db -> b
+    com.example.example.RegisterActivity this$0 -> c
+    void onClick(android.view.View) -> onClick
+com.example.example.Scholarship -> com.example.example.do:
+    int id -> a
+    java.lang.String name -> b
+    java.lang.String requirement -> c
+    int amount -> d
+    com.example.example.EnumClasses$ApplicationStatus applicationStatus -> e
+    java.lang.String getName() -> d
+    void setName(java.lang.String) -> b
+    java.lang.String getRequirement() -> e
+    void setRequirement(java.lang.String) -> c
+    int getId() -> a
+    int getAmount() -> b
+    void setAmount(int) -> a
+    com.example.example.EnumClasses$ApplicationStatus getApplicationStatus() -> c
+    void setApplicationStatus(java.lang.String) -> a
+com.example.example.ScholarshipActivity -> com.example.example.ScholarshipActivity:
+    java.util.List scholarships -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.ScholarshipActivity) -> a
+com.example.example.ScholarshipActivity$1 -> com.example.example.dp:
+    int val$index -> a
+    com.example.example.ScholarshipActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.ScholarshipActivity$2 -> com.example.example.dq:
+    com.example.example.DatabaseHelper val$db -> a
+    int val$index -> b
+    com.example.example.ScholarshipActivity this$0 -> c
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.ScholarshipActivity$3 -> com.example.example.dr:
+    com.example.example.ScholarshipActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.ScholarshipActivity$4 -> com.example.example.ds:
+    com.example.example.ScholarshipActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.ScholarshipInfoActivity -> com.example.example.ScholarshipInfoActivity:
+    android.content.Context context -> a
+    android.widget.EditText enterName -> b
+    android.widget.EditText enterRequirement -> c
+    android.widget.EditText enterAmount -> d
+    android.widget.Spinner enterApplicationStatus -> e
+    android.widget.Button submit -> f
+    android.widget.TextView error -> g
+    void onCreate(android.os.Bundle) -> onCreate
+    void setUpVariables() -> a
+    android.widget.EditText access$000(com.example.example.ScholarshipInfoActivity) -> a
+    android.widget.EditText access$100(com.example.example.ScholarshipInfoActivity) -> b
+    android.widget.EditText access$200(com.example.example.ScholarshipInfoActivity) -> c
+    android.widget.Spinner access$300(com.example.example.ScholarshipInfoActivity) -> d
+    android.widget.TextView access$400(com.example.example.ScholarshipInfoActivity) -> e
+com.example.example.ScholarshipInfoActivity$1 -> com.example.example.dt:
+    com.example.example.DatabaseHelper val$db -> a
+    com.example.example.ScholarshipInfoActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.School -> com.example.example.du:
+    int _id -> a
+    java.lang.String _schoolName -> b
+    java.lang.String _degreeType -> c
+    java.lang.String _program -> d
+    java.lang.String _enrollment -> e
+    java.lang.String _dateStart -> f
+    java.lang.String _dateGrad -> g
+    java.lang.String _tuition -> h
+    java.lang.String _course -> i
+    java.lang.String _appDate -> j
+    java.lang.String _appStat -> k
+    java.lang.String _type -> l
+    int get_id() -> a
+    java.lang.String get_schoolName() -> b
+    void set_schoolName(java.lang.String) -> a
+    java.lang.String get_degreeType() -> c
+    void set_degreeType(java.lang.String) -> b
+    java.lang.String get_program() -> d
+    void set_program(java.lang.String) -> c
+    java.lang.String get_enrollment() -> e
+    void set_enrollment(java.lang.String) -> d
+    java.lang.String get_dateStart() -> f
+    void set_dateStart(java.lang.String) -> e
+    java.lang.String get_dateGrad() -> g
+    void set_dateGrad(java.lang.String) -> f
+    java.lang.String get_tuition() -> h
+    void set_tuition(java.lang.String) -> g
+    java.lang.String get_course() -> i
+    void set_course(java.lang.String) -> h
+    java.lang.String get_appDate() -> j
+    void set_appDate(java.lang.String) -> i
+    java.lang.String get_appStat() -> k
+    void set_appStat(java.lang.String) -> j
+    void set_type(java.lang.String) -> k
+    java.lang.String toString() -> toString
+com.example.example.Settings -> com.example.example.Settings:
+    void onCreate(android.os.Bundle) -> onCreate
+com.example.example.Stocks -> com.example.example.dv:
+    int _id -> a
+    java.lang.String numStock -> b
+    java.lang.String name -> c
+    java.lang.String getNumStock() -> a
+    void setNumStock(java.lang.String) -> a
+    java.lang.String getName() -> b
+    void setName(java.lang.String) -> b
+    int get_id() -> c
+com.example.example.StocksActivity -> com.example.example.StocksActivity:
+    java.util.List stocks -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    java.util.List access$000(com.example.example.StocksActivity) -> a
+com.example.example.StocksActivity$1 -> com.example.example.dw:
+    com.example.example.DatabaseHelper val$db -> a
+    int val$index -> b
+    com.example.example.StocksActivity this$0 -> c
+    boolean onLongClick(android.view.View) -> onLongClick
+com.example.example.StocksActivity$2 -> com.example.example.dx:
+    com.example.example.StocksActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.StocksActivity$3 -> com.example.example.dy:
+    com.example.example.StocksActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.StocksInfoActivity -> com.example.example.StocksInfoActivity:
+    android.widget.EditText enterNum -> a
+    android.widget.EditText enterName -> b
+    android.widget.Button submit -> c
+    android.widget.TextView error -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void setUpVariables() -> a
+    android.widget.EditText access$000(com.example.example.StocksInfoActivity) -> a
+    android.widget.EditText access$100(com.example.example.StocksInfoActivity) -> b
+    android.widget.TextView access$200(com.example.example.StocksInfoActivity) -> c
+com.example.example.StocksInfoActivity$1 -> com.example.example.dz:
+    com.example.example.DatabaseHelper val$db -> a
+    com.example.example.StocksInfoActivity this$0 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.VitalSign -> com.example.example.ea:
+    double bodyTemperature -> a
+    int pulse -> b
+    int respirationRate -> c
+    int[] bloodPressure -> d
+    java.lang.String getBodyTemperature() -> a
+    void setBodyTemperature(java.lang.String) -> a
+    java.lang.String getPulse() -> b
+    void setPulse(java.lang.String) -> b
+    java.lang.String getRespirationRate() -> c
+    void setRespirationRate(java.lang.String) -> c
+    java.lang.String[] getBloodPressure() -> d
+    void setBloodPressure(java.lang.String[]) -> a
+com.example.example.VitalSignActivity -> com.example.example.VitalSignActivity:
+    android.content.Context context -> a
+    android.widget.Button bodyTemperature -> b
+    android.widget.Button pulseRate -> c
+    android.widget.Button respirationRate -> d
+    android.widget.Button bloodPressure -> e
+    android.widget.TextView bodyTempDisplay -> f
+    android.widget.TextView pulseDisplay -> g
+    android.widget.TextView respRateDisplay -> h
+    android.widget.TextView bldPressDisplay -> i
+    com.example.example.DatabaseHelper db -> j
+    com.example.example.VitalSign myVitalSign -> k
+    void onCreate(android.os.Bundle) -> onCreate
+    void setUpVariables() -> a
+    android.content.Context access$000(com.example.example.VitalSignActivity) -> a
+    com.example.example.VitalSign access$100(com.example.example.VitalSignActivity) -> b
+    com.example.example.DatabaseHelper access$200(com.example.example.VitalSignActivity) -> c
+com.example.example.VitalSignActivity$1 -> com.example.example.eb:
+    com.example.example.VitalSignActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.VitalSignActivity$1$1 -> com.example.example.ec:
+    android.app.Dialog val$dialog -> a
+    com.example.example.VitalSignActivity$1 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.VitalSignActivity$2 -> com.example.example.ed:
+    com.example.example.VitalSignActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.VitalSignActivity$2$1 -> com.example.example.ee:
+    android.app.Dialog val$dialog -> a
+    com.example.example.VitalSignActivity$2 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.VitalSignActivity$3 -> com.example.example.ef:
+    com.example.example.VitalSignActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.VitalSignActivity$3$1 -> com.example.example.eg:
+    android.app.Dialog val$dialog -> a
+    com.example.example.VitalSignActivity$3 this$1 -> b
+    void onClick(android.view.View) -> onClick
+com.example.example.VitalSignActivity$4 -> com.example.example.eh:
+    com.example.example.VitalSignActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.example.example.VitalSignActivity$4$1 -> com.example.example.ei:
+    android.app.Dialog val$dialog -> a
+    com.example.example.VitalSignActivity$4 this$1 -> b
+    void onClick(android.view.View) -> onClick
